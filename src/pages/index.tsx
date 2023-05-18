@@ -4,7 +4,7 @@ import {
   Code,
   List,
   ListIcon,
-  ListItem,
+  ListItem
 } from '@chakra-ui/react'
 import { CheckCircleIcon, LinkIcon } from '@chakra-ui/icons'
 
@@ -17,7 +17,7 @@ import { Footer } from '../components/Footer'
 
 const Index = () => (
   <Container height="100vh">
-    <Hero />
+    <Hero title="Studio Kura" />
     <Main>
       <Text color="text">
         Example repository of <Code>Next.js</Code> + <Code>chakra-ui</Code> +{' '}

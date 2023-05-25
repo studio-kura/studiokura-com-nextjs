@@ -54,7 +54,6 @@ const Index = () => (
       <Footer>
         <Text>Next ❤️ Chakra</Text>
       </Footer>
-      <CTA />
     </Container>
   </>
 )

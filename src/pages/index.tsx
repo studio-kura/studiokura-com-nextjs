@@ -52,7 +52,7 @@ const Index = () => (
         </List>
       </Main>
       <Footer>
-        <Text>Next ❤️ Chakra</Text>
+        <Text>© 2009-2023 Studio Kura 絵画教室 All rights reserved</Text>
       </Footer>
     </Container>
   </>

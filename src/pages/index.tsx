@@ -1,54 +1,45 @@
-import {
-  Link as ChakraLink,
-  Text,
-  Code,
-  List,
-  ListIcon,
-  ListItem
-} from '@chakra-ui/react'
-import { CheckCircleIcon, LinkIcon } from '@chakra-ui/icons'
+import { Text, Stack } from '@chakra-ui/react'
 
-import { Hero } from '../components/Hero'
-import { Container } from '../components/Container'
-import { Main } from '../components/Main'
-import { Footer } from '../components/Footer'
-import { Navigation } from '../components/Navigation'
+import { Container } from '@/components/Container'
+import { Main } from '@/components/Main'
+import { Footer } from '@/components/Footer'
+import { Navigation } from '@/components/Navigation'
+import { ClassTypeCard } from '@/components/ClassTypeCard'
 
 const Index = () => (
   <>
     <Navigation />
-    <Container height="100vh">
-      <Hero title="Studio Kura" />
+    <Container height="100vh" pt="12em">
       <Main>
-        <Text color="text">
-          Example repository of <Code>Next.js</Code> + <Code>chakra-ui</Code> +{' '}
-          <Code>TypeScript</Code>.
-        </Text>
-
-        <List spacing={3} my={0} color="text">
-          <ListItem>
-            <ListIcon as={CheckCircleIcon} color="green.500" />
-            <ChakraLink
-              isExternal
-              href="https://chakra-ui.com"
-              flexGrow={1}
-              mr={2}
-            >
-              Chakra UI <LinkIcon />
-            </ChakraLink>
-          </ListItem>
-          <ListItem>
-            <ListIcon as={CheckCircleIcon} color="green.500" />
-            <ChakraLink
-              isExternal
-              href="https://nextjs.org"
-              flexGrow={1}
-              mr={2}
-            >
-              Next.js <LinkIcon />
-            </ChakraLink>
-          </ListItem>
-        </List>
+        <Stack align={'center'} justify={'center'} direction={'row'} mt={6}>
+          <ClassTypeCard
+            title="こども絵画造形教室"
+            imageSrc="card-kodomo.jpg"
+            linkHref="/kids"
+          >
+            スタジオ
+            クラ絵画造形教室は、現代の子どもを取り巻く環境の中で、どんどん減ってきている創造的に遊ぶ場、創作活動する場を子どもたちに提供しています。
+            発展段階に応じたカリキュラムを通じて、こどもの心をのびのびと育て、創造性をぐんぐん伸ばします。
+          </ClassTypeCard>
+          <ClassTypeCard
+            title="大人の絵画教室"
+            imageSrc="card-otona.jpg"
+            linkHref="/adults"
+          >
+            Studio
+            Kuraの絵画教室は全く初めての方も気軽にいらしていただけるアトリエです。
+            当教室では様々な素材(アクリル，水彩，油絵，鉛筆，木炭など）を使った絵画表現を習得し、楽しく美術に親しんでいただくことを目的としています。
+          </ClassTypeCard>
+          <ClassTypeCard
+            title="電子工作教室"
+            imageSrc="card-denshi.jpg"
+            linkHref="/programming"
+          >
+            Studio
+            Kuraの電子工作室ではProcessingやArduino、Scratchなどのプログラミング言語を使って制作します。プログラミングの基礎を楽しく学びながら、ゲームやアプリ、アート作品を作ります。
+            大人の方もお子様も受講できます。
+          </ClassTypeCard>
+        </Stack>
       </Main>
       <Footer>
         <Text>© 2009-2023 Studio Kura 絵画教室 All rights reserved</Text>

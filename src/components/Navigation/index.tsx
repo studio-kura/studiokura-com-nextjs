@@ -9,6 +9,7 @@ import {
   Stack,
   Collapse,
   Icon,
+  Link,
   Popover,
   PopoverTrigger,
   PopoverContent,
@@ -225,29 +226,20 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
     <Stack spacing={4} onClick={children && onToggle}>
       <Flex
         py={2}
+        as={Link}
+        href={href ?? '#'}
         justify={'space-between'}
         align={'center'}
         _hover={{
           textDecoration: 'none'
         }}
       >
-        {children ? (
-          <Text
-            fontWeight={600}
-            color={useColorModeValue('gray.600', 'gray.200')}
-          >
-            {label}
-          </Text>
-        ) : (
-          <NextLink href={href ?? '/'}>
-            <Text
-              fontWeight={600}
-              color={useColorModeValue('gray.600', 'gray.200')}
-            >
-              {label}
-            </Text>
-          </NextLink>
-        )}
+        <Text
+          fontWeight={600}
+          color={useColorModeValue('gray.600', 'gray.200')}
+        >
+          {label}
+        </Text>
         {children && (
           <Icon
             as={ChevronDownIcon}

@@ -12,7 +12,14 @@ const Index = () => (
     <Navigation />
     <Container height="100vh" pt="12em">
       <Main>
-        <Stack align={'center'} justify={'center'} direction={'row'} mt={6}>
+        <Stack
+          align={'center'}
+          justify={'center'}
+          direction={'row'}
+          mt={6}
+          display={'flex'}
+          alignItems={'flex-start'}
+        >
           <ClassTypeCard
             title="こども絵画造形教室"
             imageSrc="card-kodomo.jpg"
@@ -42,7 +49,14 @@ const Index = () => (
           </ClassTypeCard>
         </Stack>
         <Heading>教室一覧</Heading>
-        <Stack align={'center'} justify={'center'} direction={'row'} mt={6}>
+        <Stack
+          align={'center'}
+          justify={'center'}
+          direction={'row'}
+          mt={6}
+          display={'flex'}
+          alignItems={'flex-start'}
+        >
           <ClassPlaceCard
             placeName="糸島校"
             imageSrc="placecard-itoshima.jpg"

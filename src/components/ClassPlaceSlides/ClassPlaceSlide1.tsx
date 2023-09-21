@@ -26,7 +26,7 @@ const ClassPlaceSlide1 = (props: ClassPlaceSlide1Props) => {
           textAlign={'center'}
           mt="-10vw"
         >
-          <Hero title={placeName} />
+          <Hero title={placeName} color={'white'} />
           <Main>
             <Text color="white" fontSize={'2em'}>
               {tagline}
@@ -37,14 +37,12 @@ const ClassPlaceSlide1 = (props: ClassPlaceSlide1Props) => {
             <Box>
               <Button
                 as={'a'}
-                size={'sm'}
-                fontSize={'sm'}
                 fontWeight={600}
                 color={'white'}
-                bg={'green.500'}
+                bg={'blue.500'}
                 href={'/trial'}
                 _hover={{
-                  bg: 'green.400'
+                  bg: 'blue.400'
                 }}
               >
                 <EditIcon />
@@ -52,12 +50,10 @@ const ClassPlaceSlide1 = (props: ClassPlaceSlide1Props) => {
               </Button>{' '}
               <Button
                 as={'a'}
-                size={'sm'}
-                fontSize={'sm'}
                 fontWeight={600}
                 href={'tel:092-325-1773'}
                 _hover={{
-                  bg: 'green.400'
+                  bg: 'green.100'
                 }}
               >
                 <PhoneIcon />

@@ -29,5 +29,5 @@ wget -O "placeslide-denshi.jpg" https://www.studiokura.com/kasuga.studiokura.com
 # ClassPlace slides: Itoshima
 wget -O "placeslide1-itoshima.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/itoshima-title.jpg
 wget -O "placeslide2-itoshima.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/itoshima-timetable.jpg
-wget -O "placeslide2-itoshima.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/itoshima-map.jpg
+wget -O "placeslide3-itoshima.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/itoshima-map.jpg
 wget -O "place-map-itoshima.jpg" https://www.studiokura.com/img/map-itoshima-wide.jpg

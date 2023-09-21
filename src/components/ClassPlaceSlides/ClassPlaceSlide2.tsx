@@ -27,10 +27,10 @@ const ClassPlaceSlide2 = (props: ClassPlaceSlide2Props) => {
           textAlign={'center'}
           mt="30vw"
         >
-          <Main>
+          <Main bgColor={'#fff'} pt={'2em'} pb={'1em'}>
             <Heading>時間割</Heading>
             {`https://${cdnDomain}/${cdnDirectory}${bgImageUrl}`}
-            <Box bgColor={'#fff'} width={'90vw'} height={'80vh'}>
+            <Box bgColor={'#fff'} width={'80vw'} height={'70vh'}>
               <Iframe
                 url={
                   'https://online.studiokura.com/cake/class_places/calendarwidget/itoshima'
@@ -43,6 +43,19 @@ const ClassPlaceSlide2 = (props: ClassPlaceSlide2Props) => {
             </Box>
             <Text color="white" fontSize={'2em'}>
               <>{children}</>
+              <Button
+                as={'a'}
+                fontWeight={600}
+                color={'white'}
+                bg={'blue.500'}
+                href={'/trial'}
+                _hover={{
+                  bg: 'blue.400'
+                }}
+              >
+                <EditIcon />
+                &nbsp;体験レッスン
+              </Button>
             </Text>
           </Main>
         </Box>

@@ -1,6 +1,5 @@
 import { Text, Center, Box, Heading, Button } from '@chakra-ui/react'
-import { PhoneIcon, EditIcon } from '@chakra-ui/icons'
-import { Hero } from '@/components/Hero'
+import { EditIcon } from '@chakra-ui/icons'
 import { Container } from '@/components/Container'
 import { Main } from '@/components/Main'
 import Iframe from 'react-iframe'

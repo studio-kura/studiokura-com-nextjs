@@ -30,12 +30,24 @@ const ClassPlaceSlide1 = (props: ClassPlaceSlide1Props) => {
           textAlign={'center'}
           mt="-10vw"
         >
-          <Hero title={placeName} color={'white'} />
+          <Hero
+            title={placeName}
+            color={'white'}
+            textShadow={'black 0.03em 0.03em 0.03em;'}
+          />
           <Main>
-            <Text color="white" fontSize={'2em'}>
+            <Text
+              color="white"
+              fontSize={'2em'}
+              textShadow={'black 0.03em 0.03em 0.03em;'}
+            >
               {tagline}
             </Text>
-            <Text color="white" fontSize={'2em'}>
+            <Text
+              color="white"
+              fontSize={'2em'}
+              textShadow={'black 0.03em 0.03em 0.03em;'}
+            >
               <>{children}</>
             </Text>
             <Box>

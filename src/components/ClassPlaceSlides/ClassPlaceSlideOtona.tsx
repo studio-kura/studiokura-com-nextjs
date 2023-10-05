@@ -14,6 +14,8 @@ const ClassPlaceSlideOtona = (props: ClassPlaceSlideOtonaProps) => {
   return (
     <Container
       bgImage={`https://${cdnDomain}/${cdnDirectory}placeslide-otona.jpg`}
+      backgroundSize={'cover'}
+      backgroundPosition={'center'}
     >
       <Center py={6} px={4}>
         <Box

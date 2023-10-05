@@ -22,6 +22,8 @@ const ClassPlaceSlideDenshi = (props: ClassPlaceSlideDenshiProps) => {
   return (
     <Container
       bgImage={`https://${cdnDomain}/${cdnDirectory}placeslide-denshi.jpg`}
+      backgroundSize={'cover'}
+      backgroundPosition={'center'}
     >
       <Center py={6} px={4}>
         <Box

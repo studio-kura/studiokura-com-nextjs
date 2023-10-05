@@ -32,21 +32,21 @@ const ClassPlaceSlideDenshi = (props: ClassPlaceSlideDenshiProps) => {
           textAlign={'center'}
           mt="30vw"
         >
-          <Main bgColor={'#fff'} pt={'2em'} pb={'1em'}>
+          <Main bgColor={'#fffd'} pt={'2em'} pb={'1em'} maxWidth={'800px'}>
             <Heading>電子工作教室</Heading>
-            <Box bgColor={'#fff'} textAlign={'left'}>
-              <Text>
+            <Box textAlign={'left'} pl={16} pr={16}>
+              <Text mb={4}>
                 面白いものを作りながら、ためになるスキルを身につけましょう！
                 子供から大人まで楽しんでいただけます。
               </Text>
-              <UnorderedList>
+              <UnorderedList mb={4} ml={8}>
                 <ListItem>初めてのプログラミング（Processing）</ListItem>
                 <ListItem>小学校低学年向けプログラミング（Scratch）</ListItem>
                 <ListItem>電子回路で工作（Arduino）</ListItem>
               </UnorderedList>
-              <Text>お仕事につかえる技術もプロから習えます！</Text>
-              <Text>是非おすすめしたい人：</Text>
-              <UnorderedList>
+              <Text mb={4}>お仕事につかえる技術もプロから習えます！</Text>
+              <Text mb={4}>是非おすすめしたい人：</Text>
+              <UnorderedList mb={4} ml={8}>
                 <ListItem>学校やお仕事でパソコンを使う予定がある人</ListItem>
                 <ListItem>ゲームが好きな人</ListItem>
                 <ListItem>ものを分解するのが好きな人</ListItem>

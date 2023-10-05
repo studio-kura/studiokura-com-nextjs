@@ -24,17 +24,17 @@ const ClassPlaceSlideOtona = (props: ClassPlaceSlideOtonaProps) => {
           textAlign={'center'}
           mt="30vw"
         >
-          <Main bgColor={'#fff'} pt={'2em'} pb={'1em'}>
+          <Main bgColor={'#fffd'} pt={'2em'} pb={'1em'} maxWidth={'800px'}>
             <Heading>大人の絵画教室</Heading>
-            <Box bgColor={'#fff'} textAlign={'left'}>
-              <Text>
+            <Box textAlign={'left'} pl={16} pr={16}>
+              <Text mb={4}>
                 Studio
                 Kuraの絵画・美術教室は全く初めての方も気軽にいらしていただけるアトリエです。
               </Text>
-              <Text>
+              <Text mb={4}>
                 当アトリエでは様々な素材を使った絵画表現を習得し、楽しく美術に親しんでいただくことを目的としています。
               </Text>
-              <Text>
+              <Text mb={4}>
                 またStudio
                 Kuraのレジデンスプログラムを訪れる海外のアーティストが行うワークショプや、様々な交流を通して美術の面白さを体験できます。
               </Text>

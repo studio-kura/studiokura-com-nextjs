@@ -14,6 +14,8 @@ const ClassPlaceSlideKodomo = (props: ClassPlaceSlideKodomoProps) => {
   return (
     <Container
       bgImage={`https://${cdnDomain}/${cdnDirectory}placeslide-kodomo.jpg`}
+      backgroundSize={'cover'}
+      backgroundPosition={'center'}
     >
       <Center py={6} px={4}>
         <Box

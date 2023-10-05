@@ -34,7 +34,11 @@ const ClassPlaceSlide3 = (props: ClassPlaceSlide3Props) => {
   const cdnDomain = process.env.NEXT_PUBLIC_CDN_DOMAIN ?? ''
   const cdnDirectory = process.env.NEXT_PUBLIC_CDN_DIRECTORY ?? ''
   return (
-    <Container bgImage={`https://${cdnDomain}/${cdnDirectory}${bgImageUrl}`}>
+    <Container
+      bgImage={`https://${cdnDomain}/${cdnDirectory}${bgImageUrl}`}
+      backgroundSize={'cover'}
+      backgroundPosition={'center'}
+    >
       <Center py={6} px={4}>
         <Box
           w={'full'}

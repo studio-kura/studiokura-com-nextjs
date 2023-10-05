@@ -8,11 +8,12 @@ type ClassPlaceSlide2Props = {
   placeName: string
   tagline: string
   bgImageUrl: string
+  calendarUrl: string
   children?: string | Element
 }
 
 const ClassPlaceSlide2 = (props: ClassPlaceSlide2Props) => {
-  const { placeName, tagline, bgImageUrl, children } = props
+  const { placeName, tagline, bgImageUrl, calendarUrl, children } = props
   const cdnDomain = process.env.NEXT_PUBLIC_CDN_DOMAIN ?? ''
   const cdnDirectory = process.env.NEXT_PUBLIC_CDN_DIRECTORY ?? ''
   return (
@@ -35,9 +36,7 @@ const ClassPlaceSlide2 = (props: ClassPlaceSlide2Props) => {
             {`https://${cdnDomain}/${cdnDirectory}${bgImageUrl}`}
             <Box bgColor={'#fff'} width={'80vw'} height={'70vh'}>
               <Iframe
-                url={
-                  'https://online.studiokura.com/cake/class_places/calendarwidget/itoshima'
-                }
+                url={calendarUrl}
                 width={'100%'}
                 height={'100%'}
                 display={'block'}

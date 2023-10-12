@@ -67,3 +67,10 @@ wget -O "placeslide3-hashimoto.jpg" https://www.studiokura.com/kasuga.studiokura
 wget -O "place-map-hashimoto.jpg" https://www.studiokura.com/img/map-hashimoto-wide.jpg
 wget -O "place-map-hashimoto-big.jpg" https://www.studiokura.com/img/map-hashimoto-wide.jpg
 
+# ClassPlace slides: Sarayama
+wget -O "placeslide1-sarayama.jpg" https://farm2.staticflickr.com/1458/24812995195_e409791844_z.jpg
+wget -O "placeslide2-sarayama.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/karatsu-timetable.jpg
+wget -O "placeslide3-sarayama.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/karatsu-map.jpg
+wget -O "place-map-sarayama.jpg" https://www.studiokura.com/img/map-sarayama-wide.jpg
+wget -O "place-map-sarayama-big.jpg" https://www.studiokura.com/img/map-sarayama-wide.jpg
+

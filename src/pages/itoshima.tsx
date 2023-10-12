@@ -1,11 +1,13 @@
 import { Container, Text } from '@chakra-ui/react'
 import { Navigation } from '@/components/Navigation'
-import { ClassPlaceSlide1 } from '@/components/ClassPlaceSlides/ClassPlaceSlide1'
-import { ClassPlaceSlide2 } from '@/components/ClassPlaceSlides/ClassPlaceSlide2'
-import { ClassPlaceSlide3 } from '@/components/ClassPlaceSlides/ClassPlaceSlide3'
-import { ClassPlaceSlideOtona } from '@/components/ClassPlaceSlides/ClassPlaceSlideOtona'
-import { ClassPlaceSlideKodomo } from '@/components/ClassPlaceSlides/ClassPlaceSlideKodomo'
-import { ClassPlaceSlideDenshi } from '@/components/ClassPlaceSlides/ClassPlaceSlideDenshi'
+import {
+  ClassPlaceSlide1,
+  ClassPlaceSlide2,
+  ClassPlaceSlide3,
+  ClassPlaceSlideOtona,
+  ClassPlaceSlideKodomo,
+  ClassPlaceSlideDenshi
+} from '@/components/ClassPlaceSlides/'
 import { Footer } from '@/components/Footer'
 
 const ItoshimaPlace = () => (

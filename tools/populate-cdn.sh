@@ -98,6 +98,12 @@ wget -O "place-map-motooka-big.jpg" https://www.studiokura.com/img/map-motooka-w
 wget -O "placeslide1-befu.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/kasuga-title.jpg
 wget -O "placeslide2-befu.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/kasuga-title.jpg
 wget -O "placeslide3-befu.jpg" https://www.studiokura.com/befu.studiokura.com/img/befuback.png
-wget -O "place-map-befu.jpg" https://www.studiokura.com/befu.studiokura.com/img/befuback.png
-wget -O "place-map-befu-big.jpg" https://www.studiokura.com/befu.studiokura.com/img/befuback.png
+wget -O "place-map-befu.jpg" https://www.studiokura.com/img/map-befu-wide.jpg
+wget -O "place-map-befu-big.jpg" https://www.studiokura.com/img/map-befu-wide.jpg
+
+# ClassPlace slides: Kurume
+wget -O "placeslide1-kurume.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/otemon-title.jpg
+wget -O "placeslide3-kurume.jpg" https://www.studiokura.com/img/kurumsoto.png
+wget -O "place-map-kurume.jpg" https://www.studiokura.com/img/map-kurume-wide.jpg
+wget -O "place-map-kurume-big.jpg" https://www.studiokura.com/img/map-kurume-wide.jpg
 

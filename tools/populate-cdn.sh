@@ -40,8 +40,16 @@ wget -O "placeslide3-nishijin.jpg" https://estate.inclead.jp/wp-content/uploads/
 wget -O "place-map-nishijin.jpg" https://www.studiokura.com/img/map-nishijin-wide.jpg
 wget -O "place-map-nishijin-big.jpg" https://www.studiokura.com/img/map-nishijin-wide.jpg
 
-# ClassPlace slides: Nishijin
-wget -O "placeslide1-nishijin.jpg" https://artsitoya.com/img/header-bg.jpg
-wget -O "placeslide2-nishijin.jpg" https://artsitoya.com/img/portfolio/artsitoya-outside2.jpg
-wget -O "place-map-nishijin.jpg" https://www.studiokura.com/img/map-takeo-wide.jpg
-wget -O "place-map-nishijin-big.jpg" https://www.studiokura.com/img/map-takeo-wide.jpg
+# ClassPlace slides: Takeo
+wget -O "placeslide1-takeo.jpg" https://artsitoya.com/img/header-bg.jpg
+wget -O "placeslide2-takeo.jpg" https://artsitoya.com/img/portfolio/artsitoya-outside2.jpg
+wget -O "place-map-takeo.jpg" https://www.studiokura.com/img/map-takeo-wide.jpg
+wget -O "place-map-takeo-big.jpg" https://www.studiokura.com/img/map-takeo-wide.jpg
+
+# ClassPlace slides: Karatsu
+wget -O "placeslide1-karatsu.jpg" https://farm2.staticflickr.com/1458/24812995195_e409791844_z.jpg
+wget -O "placeslide2-karatsu.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/karatsu-timetable.jpg
+wget -O "placeslide3-karatsu.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/karatsu-map.jpg
+wget -O "place-map-karatsu.jpg" https://www.studiokura.com/img/map-karatsu-wide.jpg
+wget -O "place-map-karatsu-big.jpg" https://www.studiokura.com/img/map-karatsu-wide.jpg
+

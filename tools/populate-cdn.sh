@@ -94,3 +94,10 @@ wget -O "placeslide2-motooka.jpg" https://www.studiokura.com/kasuga.studiokura.c
 wget -O "place-map-motooka.jpg" https://www.studiokura.com/img/map-motooka-wide.jpg
 wget -O "place-map-motooka-big.jpg" https://www.studiokura.com/img/map-motooka-wide.jpg
 
+# ClassPlace slides: Befu
+wget -O "placeslide1-befu.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/kasuga-title.jpg
+wget -O "placeslide2-befu.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/kasuga-title.jpg
+wget -O "placeslide3-befu.jpg" https://www.studiokura.com/befu.studiokura.com/img/befuback.png
+wget -O "place-map-befu.jpg" https://www.studiokura.com/befu.studiokura.com/img/befuback.png
+wget -O "place-map-befu-big.jpg" https://www.studiokura.com/befu.studiokura.com/img/befuback.png
+

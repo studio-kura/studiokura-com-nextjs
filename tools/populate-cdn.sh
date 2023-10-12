@@ -81,3 +81,10 @@ wget -O "placeslide3-momochi.jpg" https://www.studiokura.com/img/okusuback.jpg
 wget -O "place-map-momochi.jpg" https://www.studiokura.com/img/map-momochi-wide.jpg
 wget -O "place-map-momochi-big.jpg" https://www.studiokura.com/img/map-momochi-wide.jpg
 
+# ClassPlace slides: Kashii
+wget -O "placeslide1-kashii.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/kasuga-title.jpg
+wget -O "placeslide2-kashii.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/kasuga-timetable.jpg
+wget -O "placeslide3-kashii.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/kasuya-map.jpg
+wget -O "place-map-kashii.jpg" https://www.studiokura.com/img/map-kashi-wide.jpg
+wget -O "place-map-kashii-big.jpg" https://www.studiokura.com/img/map-kashi-wide.jpg
+

@@ -53,3 +53,10 @@ wget -O "placeslide3-karatsu.jpg" https://www.studiokura.com/kasuga.studiokura.c
 wget -O "place-map-karatsu.jpg" https://www.studiokura.com/img/map-karatsu-wide.jpg
 wget -O "place-map-karatsu-big.jpg" https://www.studiokura.com/img/map-karatsu-wide.jpg
 
+# ClassPlace slides: Hakozaki
+wget -O "placeslide1-hakozaki.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/hakozaki-title.jpg
+wget -O "placeslide2-hakozaki.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/hakozaki-timetable.jpg
+wget -O "placeslide3-hakozaki.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/hakozaki-map.jpg
+wget -O "place-map-hakozaki.jpg" https://www.studiokura.com/img/map-hakozaki-wide.jpg
+wget -O "place-map-hakozaki-big.jpg" https://www.studiokura.com/img/map-hakozaki-wide.jpg
+

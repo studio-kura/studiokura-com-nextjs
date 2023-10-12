@@ -185,7 +185,7 @@ const Index = () => (
             linkHref="/kurume"
             adultsClass={true}
             kidsClass={true}
-            programmingClass={false}
+            programmingClass={true}
           >
             福岡県久留米市天神町31-6 朝日ビル502
           </ClassPlaceCard>

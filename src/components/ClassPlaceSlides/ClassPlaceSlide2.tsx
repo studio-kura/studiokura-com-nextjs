@@ -7,7 +7,7 @@ import Iframe from 'react-iframe'
 type ClassPlaceSlide2Props = {
   placeName: string
   tagline: string
-  bgImageUrl: string
+  bgImageUrl?: string
   calendarUrl: string
   children?: string | Element
 }
@@ -18,7 +18,9 @@ const ClassPlaceSlide2 = (props: ClassPlaceSlide2Props) => {
   const cdnDirectory = process.env.NEXT_PUBLIC_CDN_DIRECTORY ?? ''
   return (
     <Container
-      bgImage={`https://${cdnDomain}/${cdnDirectory}${bgImageUrl}`}
+      bgImage={
+        bgImageUrl && `https://${cdnDomain}/${cdnDirectory}${bgImageUrl}`
+      }
       backgroundSize={'cover'}
       backgroundPosition={'center'}
     >

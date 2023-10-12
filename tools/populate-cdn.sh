@@ -39,3 +39,71 @@ wget -O "placeslide2-nishijin.jpg" https://www.studiokura.com/kasuga.studiokura.
 wget -O "placeslide3-nishijin.jpg" https://estate.inclead.jp/wp-content/uploads/2018/05/GF007744_001-e1526438395942.jpg
 wget -O "place-map-nishijin.jpg" https://www.studiokura.com/img/map-nishijin-wide.jpg
 wget -O "place-map-nishijin-big.jpg" https://www.studiokura.com/img/map-nishijin-wide.jpg
+
+# ClassPlace slides: Takeo
+wget -O "placeslide1-takeo.jpg" https://artsitoya.com/img/header-bg.jpg
+wget -O "placeslide2-takeo.jpg" https://artsitoya.com/img/portfolio/artsitoya-outside2.jpg
+wget -O "place-map-takeo.jpg" https://www.studiokura.com/img/map-takeo-wide.jpg
+wget -O "place-map-takeo-big.jpg" https://www.studiokura.com/img/map-takeo-wide.jpg
+
+# ClassPlace slides: Karatsu
+wget -O "placeslide1-karatsu.jpg" https://farm2.staticflickr.com/1458/24812995195_e409791844_z.jpg
+wget -O "placeslide2-karatsu.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/karatsu-timetable.jpg
+wget -O "placeslide3-karatsu.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/karatsu-map.jpg
+wget -O "place-map-karatsu.jpg" https://www.studiokura.com/img/map-karatsu-wide.jpg
+wget -O "place-map-karatsu-big.jpg" https://www.studiokura.com/img/map-karatsu-wide.jpg
+
+# ClassPlace slides: Hakozaki
+wget -O "placeslide1-hakozaki.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/hakozaki-title.jpg
+wget -O "placeslide2-hakozaki.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/hakozaki-timetable.jpg
+wget -O "placeslide3-hakozaki.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/hakozaki-map.jpg
+wget -O "place-map-hakozaki.jpg" https://www.studiokura.com/img/map-hakozaki-wide.jpg
+wget -O "place-map-hakozaki-big.jpg" https://www.studiokura.com/img/map-hakozaki-wide.jpg
+
+# ClassPlace slides: Hashimoto
+wget -O "placeslide1-hashimoto.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/kasuga-title.jpg
+wget -O "placeslide2-hashimoto.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/kasuga-timetable.jpg
+wget -O "placeslide3-hashimoto.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/hashimoto-map.jpg
+wget -O "place-map-hashimoto.jpg" https://www.studiokura.com/img/map-hashimoto-wide.jpg
+wget -O "place-map-hashimoto-big.jpg" https://www.studiokura.com/img/map-hashimoto-wide.jpg
+
+# ClassPlace slides: Sarayama
+wget -O "placeslide1-sarayama.jpg" https://farm2.staticflickr.com/1458/24812995195_e409791844_z.jpg
+wget -O "placeslide2-sarayama.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/karatsu-timetable.jpg
+wget -O "placeslide3-sarayama.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/karatsu-map.jpg
+wget -O "place-map-sarayama.jpg" https://www.studiokura.com/img/map-sarayama-wide.jpg
+wget -O "place-map-sarayama-big.jpg" https://www.studiokura.com/img/map-sarayama-wide.jpg
+
+# ClassPlace slides: Momochi
+wget -O "placeslide1-momochi.jpg" http://www.bssa.co.jp/momochihama/files/2017/06/b4354c181d23385a7ccb3498126e744a-456x342.jpg
+wget -O "placeslide2-momochi.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/kasuga-timetable.jpg
+wget -O "placeslide3-momochi.jpg" https://www.studiokura.com/img/okusuback.jpg
+wget -O "place-map-momochi.jpg" https://www.studiokura.com/img/map-momochi-wide.jpg
+wget -O "place-map-momochi-big.jpg" https://www.studiokura.com/img/map-momochi-wide.jpg
+
+# ClassPlace slides: Kashii
+wget -O "placeslide1-kashii.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/kasuga-title.jpg
+wget -O "placeslide2-kashii.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/kasuga-timetable.jpg
+wget -O "placeslide3-kashii.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/kasuya-map.jpg
+wget -O "place-map-kashii.jpg" https://www.studiokura.com/img/map-kashi-wide.jpg
+wget -O "place-map-kashii-big.jpg" https://www.studiokura.com/img/map-kashi-wide.jpg
+
+# ClassPlace slides: Motooka
+wget -O "placeslide1-motooka.jpg" https://www.studiokura.com/img/motooka2.jpg
+wget -O "placeslide2-motooka.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/kasuga-timetable.jpg
+wget -O "place-map-motooka.jpg" https://www.studiokura.com/img/map-motooka-wide.jpg
+wget -O "place-map-motooka-big.jpg" https://www.studiokura.com/img/map-motooka-wide.jpg
+
+# ClassPlace slides: Befu
+wget -O "placeslide1-befu.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/kasuga-title.jpg
+wget -O "placeslide2-befu.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/kasuga-title.jpg
+wget -O "placeslide3-befu.jpg" https://www.studiokura.com/befu.studiokura.com/img/befuback.png
+wget -O "place-map-befu.jpg" https://www.studiokura.com/img/map-befu-wide.jpg
+wget -O "place-map-befu-big.jpg" https://www.studiokura.com/img/map-befu-wide.jpg
+
+# ClassPlace slides: Kurume
+wget -O "placeslide1-kurume.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/otemon-title.jpg
+wget -O "placeslide3-kurume.jpg" https://www.studiokura.com/img/kurumsoto.png
+wget -O "place-map-kurume.jpg" https://www.studiokura.com/img/map-kurume-wide.jpg
+wget -O "place-map-kurume-big.jpg" https://www.studiokura.com/img/map-kurume-wide.jpg
+

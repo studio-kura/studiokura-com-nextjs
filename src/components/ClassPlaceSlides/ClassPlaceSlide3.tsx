@@ -14,7 +14,7 @@ import { Main } from '@/components/Main'
 type ClassPlaceSlide3Props = {
   placeName: string
   tagline: string
-  bgImageUrl: string
+  bgImageUrl?: string
   mapImageUrl: string
   mapUrl: string
   address: string
@@ -35,7 +35,9 @@ const ClassPlaceSlide3 = (props: ClassPlaceSlide3Props) => {
   const cdnDirectory = process.env.NEXT_PUBLIC_CDN_DIRECTORY ?? ''
   return (
     <Container
-      bgImage={`https://${cdnDomain}/${cdnDirectory}${bgImageUrl}`}
+      bgImage={
+        bgImageUrl && `https://${cdnDomain}/${cdnDirectory}${bgImageUrl}`
+      }
       backgroundSize={'cover'}
       backgroundPosition={'center'}
     >
@@ -50,7 +52,6 @@ const ClassPlaceSlide3 = (props: ClassPlaceSlide3Props) => {
         >
           <Main bgColor={'#fff'} pt={'2em'} pb={'1em'}>
             <Heading>{placeName}</Heading>
-            {`https://${cdnDomain}/${cdnDirectory}${bgImageUrl}`}
             <Box bgColor={'#fff'}>
               <NextLink href={mapUrl}>
                 <Image

@@ -74,3 +74,10 @@ wget -O "placeslide3-sarayama.jpg" https://www.studiokura.com/kasuga.studiokura.
 wget -O "place-map-sarayama.jpg" https://www.studiokura.com/img/map-sarayama-wide.jpg
 wget -O "place-map-sarayama-big.jpg" https://www.studiokura.com/img/map-sarayama-wide.jpg
 
+# ClassPlace slides: Momochi
+wget -O "placeslide1-momochi.jpg" http://www.bssa.co.jp/momochihama/files/2017/06/b4354c181d23385a7ccb3498126e744a-456x342.jpg
+wget -O "placeslide2-momochi.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/kasuga-timetable.jpg
+wget -O "placeslide3-momochi.jpg" https://www.studiokura.com/img/okusuback.jpg
+wget -O "place-map-momochi.jpg" https://www.studiokura.com/img/map-momochi-wide.jpg
+wget -O "place-map-momochi-big.jpg" https://www.studiokura.com/img/map-momochi-wide.jpg
+

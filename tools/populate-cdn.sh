@@ -39,3 +39,9 @@ wget -O "placeslide2-nishijin.jpg" https://www.studiokura.com/kasuga.studiokura.
 wget -O "placeslide3-nishijin.jpg" https://estate.inclead.jp/wp-content/uploads/2018/05/GF007744_001-e1526438395942.jpg
 wget -O "place-map-nishijin.jpg" https://www.studiokura.com/img/map-nishijin-wide.jpg
 wget -O "place-map-nishijin-big.jpg" https://www.studiokura.com/img/map-nishijin-wide.jpg
+
+# ClassPlace slides: Nishijin
+wget -O "placeslide1-nishijin.jpg" https://artsitoya.com/img/header-bg.jpg
+wget -O "placeslide2-nishijin.jpg" https://artsitoya.com/img/portfolio/artsitoya-outside2.jpg
+wget -O "place-map-nishijin.jpg" https://www.studiokura.com/img/map-takeo-wide.jpg
+wget -O "place-map-nishijin-big.jpg" https://www.studiokura.com/img/map-takeo-wide.jpg

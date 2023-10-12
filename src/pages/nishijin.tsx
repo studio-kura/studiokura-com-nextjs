@@ -5,7 +5,6 @@ import { ClassPlaceSlide2 } from '@/components/ClassPlaceSlides/ClassPlaceSlide2
 import { ClassPlaceSlide3 } from '@/components/ClassPlaceSlides/ClassPlaceSlide3'
 import { ClassPlaceSlideOtona } from '@/components/ClassPlaceSlides/ClassPlaceSlideOtona'
 import { ClassPlaceSlideKodomo } from '@/components/ClassPlaceSlides/ClassPlaceSlideKodomo'
-import { ClassPlaceSlideDenshi } from '@/components/ClassPlaceSlides/ClassPlaceSlideDenshi'
 import { Footer } from '@/components/Footer'
 
 const NishijinPlace = () => (
@@ -31,7 +30,7 @@ const NishijinPlace = () => (
       bgImageUrl="placeslide3-nishijin.jpg"
       mapImageUrl="place-map-nishijin-big.jpg"
       mapUrl="https://www.google.co.jp/maps/place/%E7%A6%8F%E5%B2%A1%E7%9C%8C%E7%A6%8F%E5%B2%A1%E5%B8%82%E8%A5%BF%E6%96%B01%E4%B8%81%E7%9B%AE11-27+"
-      address=" 福岡県福岡市西新1丁目11-27　ロフティ西新903号室 "
+      address="福岡県福岡市西新1丁目11-27　ロフティ西新903号室"
     ></ClassPlaceSlide3>
     <ClassPlaceSlideOtona />
     <ClassPlaceSlideKodomo />

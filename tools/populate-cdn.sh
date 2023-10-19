@@ -96,7 +96,7 @@ wget -O "place-map-motooka-big.jpg" https://www.studiokura.com/img/map-motooka-w
 
 # ClassPlace slides: Befu
 wget -O "placeslide1-befu.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/kasuga-title.jpg
-wget -O "placeslide2-befu.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/kasuga-title.jpg
+wget -O "placeslide2-befu.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/kasuga-timetable.jpg
 wget -O "placeslide3-befu.jpg" https://www.studiokura.com/befu.studiokura.com/img/befuback.png
 wget -O "place-map-befu.jpg" https://www.studiokura.com/img/map-befu-wide.jpg
 wget -O "place-map-befu-big.jpg" https://www.studiokura.com/img/map-befu-wide.jpg
@@ -107,3 +107,26 @@ wget -O "placeslide3-kurume.jpg" https://www.studiokura.com/img/kurumsoto.png
 wget -O "place-map-kurume.jpg" https://www.studiokura.com/img/map-kurume-wide.jpg
 wget -O "place-map-kurume-big.jpg" https://www.studiokura.com/img/map-kurume-wide.jpg
 
+# ClassPlace slides: Kasuya
+wget -O "placeslide1-kasuya.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/kasuga-title.jpg
+wget -O "placeslide2-kasuya.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/kasuga-timetable.jpg
+wget -O "placeslide3-kasuya.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/kasuya-map.jpg
+wget -O "place-map-kasuya.jpg" https://www.studiokura.com/img/map-kasuya-wide.jpg
+wget -O "place-map-kasuya-big.jpg" https://www.studiokura.com/img/map-kasuya-wide.jpg
+
+# ClassPlace slides: Onojyo
+wget -O "placeslide1-onojyo.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/kasuga-title.jpg
+wget -O "placeslide2-onojyo.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/kasuga-timetable.jpg
+wget -O "place-map-onojyo.jpg" https://www.studiokura.com/img/map-onojyo-wide.jpg
+wget -O "place-map-onojyo-big.jpg" https://www.studiokura.com/img/map-onojyo-wide.jpg
+
+# ClassPlace slides: Nagazumi
+wget -O "placeslide1-nagazumi.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/kasuga-title.jpg
+wget -O "placeslide2-nagazumi.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/kasuga-timetable.jpg
+wget -O "placeslide3-nagazumi.jpg" https://www.studiokura.com/img/okusuback.jpg
+wget -O "place-map-nagazumi.jpg" https://www.studiokura.com/img/map-nagazumi-wide.jpg
+wget -O "place-map-nagazumi-big.jpg" https://www.studiokura.com/img/map-nagazumi-wide.jpg
+
+# ClassPlace slides: Online
+wget -O "placeslide1-online.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/online-bg-1.jpg
+wget -O "placeslide3-online.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/online-bg-2.jpg

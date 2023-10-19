@@ -1,5 +1,6 @@
 import { Text, Stack, Heading } from '@chakra-ui/react'
 
+import { Layout } from '@/components/Layout'
 import { Container } from '@/components/Container'
 import { Main } from '@/components/Main'
 import { Footer } from '@/components/Footer'
@@ -8,7 +9,7 @@ import { ClassTypeCard } from '@/components/ClassTypeCard'
 import { ClassPlaceCard } from '@/components/ClassPlaceCard'
 
 const Index = () => (
-  <>
+  <Layout>
     <Navigation />
     <Container height="100vh" pt="12em">
       <Main>
@@ -241,7 +242,7 @@ const Index = () => (
         <Text>© 2009-2023 Studio Kura 絵画教室 All rights reserved</Text>
       </Footer>
     </Container>
-  </>
+  </Layout>
 )
 
 export default Index

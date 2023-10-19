@@ -1,4 +1,6 @@
 import { Container, Text } from '@chakra-ui/react'
+
+import { Layout } from '@/components/Layout'
 import { Navigation } from '@/components/Navigation'
 import {
   ClassPlaceSlide1,
@@ -11,7 +13,7 @@ import {
 import { Footer } from '@/components/Footer'
 
 const KaratsuPlace = () => (
-  <>
+  <Layout title="Studio Kura 絵画教室 唐津校">
     <Navigation />
     <ClassPlaceSlide1
       placeName="Studio Kura 唐津校"
@@ -38,7 +40,7 @@ const KaratsuPlace = () => (
         <Text>© 2009-2023 Studio Kura 絵画教室 All rights reserved</Text>
       </Footer>
     </Container>
-  </>
+  </Layout>
 )
 
 export default KaratsuPlace

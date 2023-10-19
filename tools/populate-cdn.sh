@@ -117,20 +117,16 @@ wget -O "place-map-kasuya-big.jpg" https://www.studiokura.com/img/map-kasuya-wid
 # ClassPlace slides: Onojyo
 wget -O "placeslide1-onojyo.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/kasuga-title.jpg
 wget -O "placeslide2-onojyo.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/kasuga-timetable.jpg
-wget -O "placeslide3-onojyo.jpg" https://www.studiokura.com/onojyo.studiokura.com/img/onojyoback.png
 wget -O "place-map-onojyo.jpg" https://www.studiokura.com/img/map-onojyo-wide.jpg
 wget -O "place-map-onojyo-big.jpg" https://www.studiokura.com/img/map-onojyo-wide.jpg
 
 # ClassPlace slides: Nagazumi
 wget -O "placeslide1-nagazumi.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/kasuga-title.jpg
-wget -O "placeslide2-nagazumi.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/kasuga-title.jpg
-wget -O "placeslide3-nagazumi.jpg" https://www.studiokura.com/nagazumi.studiokura.com/img/nagazumiback.png
+wget -O "placeslide2-nagazumi.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/kasuga-timetable.jpg
+wget -O "placeslide3-nagazumi.jpg" https://www.studiokura.com/img/okusuback.jpg
 wget -O "place-map-nagazumi.jpg" https://www.studiokura.com/img/map-nagazumi-wide.jpg
 wget -O "place-map-nagazumi-big.jpg" https://www.studiokura.com/img/map-nagazumi-wide.jpg
 
 # ClassPlace slides: Online
-wget -O "placeslide1-online.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/kasuga-title.jpg
-wget -O "placeslide2-online.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/kasuga-title.jpg
-wget -O "placeslide3-online.jpg" https://www.studiokura.com/online.studiokura.com/img/onlineback.png
-wget -O "place-map-online.jpg" https://www.studiokura.com/img/map-online-wide.jpg
-wget -O "place-map-online-big.jpg" https://www.studiokura.com/img/map-online-wide.jpg
+wget -O "placeslide1-online.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/online-bg-1.jpg
+wget -O "placeslide3-online.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/online-bg-2.jpg

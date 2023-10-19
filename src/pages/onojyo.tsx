@@ -30,7 +30,6 @@ const OnojyoPlace = () => (
     <ClassPlaceSlide3
       placeName="Studio Kura 大野城校"
       tagline="子ども絵画造形教室"
-      bgImageUrl="placeslide3-onojyo.jpg"
       mapImageUrl="place-map-onojyo-big.jpg"
       mapUrl="https://www.google.co.jp/maps/place/%E3%80%92816-0935+%E7%A6%8F%E5%B2%A1%E7%9C%8C%E5%A4%A7%E9%87%8E%E5%9F%8E%E5%B8%82%E9%8C%A6%E7%94%BA%EF%BC%94%E4%B8%81%E7%9B%AE%EF%BC%91%E2%88%92%EF%BC%91"
       address="〒816-0935 福岡県大野城市錦町４丁目１−１ イオン大野城ショッピングセンター カルチャータウン イオン大野城校内"

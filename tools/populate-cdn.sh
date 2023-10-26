@@ -21,6 +21,16 @@ wget -O "placecard-onojyo.jpg" https://www.studiokura.com/img/map-onojyo.jpg
 wget -O "placecard-nagazumi.jpg" https://www.studiokura.com/img/map-nagazumi.jpg
 wget -O "placecard-online.jpg" https://www.studiokura.com/img/online.jpg
 
+# ClassType page: kodomo
+wget -O "kids-headercarousel-1.jpg" https://www.studiokura.com/img/kinder1.jpg
+wget -O "kids-headercarousel-2.jpg" https://www.studiokura.com/img/kinder2.jpg
+wget -O "kids-headercarousel-3.jpg" https://www.studiokura.com/img/kinder3.jpg
+wget -O "kids-headercarousel-4.jpg" https://www.studiokura.com/img/kinder4.jpg
+wget -O "kids-body-1.jpg" https://farm6.staticflickr.com/5178/5397120149_8f988196c2_z.jpg
+wget -O "kids-body-2.jpg" https://farm9.staticflickr.com/8474/8149911678_ba758096b5_z.jpg
+wget -O "kids-body-3.jpg" https://farm6.staticflickr.com/5275/6909929538_4282393c4d_z.jpg
+wget -O "kids-body-4.jpg" https://farm8.staticflickr.com/7018/6706845717_30cdd81772_z.jpg
+
 # ClassPlace slides: generic
 wget -O "placeslide-otona.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/itoshima-otona.jpg
 wget -O "placeslide-kodomo.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/itoshima-kodomo.jpg

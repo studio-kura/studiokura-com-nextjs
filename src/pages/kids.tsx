@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import {
   Text,
+  AspectRatio,
   Heading,
   Card,
   CardHeader,
@@ -47,24 +48,24 @@ const KidsClass = () => {
           <Heading mt={'1em'} mb={'1em'} size={['2xl', '4xl', '4xl']}>
             子ども絵画造形教室
           </Heading>
-          <Card mt={'1em'} mb={'1em'}>
+          <Card mt={'1em'} mb={'1em'} minW={'100%'}>
             <CardHeader p={'0px'}>
               <Image
                 src={`https://${cdnDomain}/${cdnDirectory}kids-body-1.jpg`}
               />
             </CardHeader>
             <CardBody>
-              <Heading size="md">創造する子どものために</Heading>
+              <Heading size="lg">創造する子どものために</Heading>
             </CardBody>
           </Card>
-          <Card mt={'1em'} mb={'1em'}>
+          <Card mt={'1em'} mb={'1em'} minW={'100%'}>
             <CardHeader p={'0px'}>
               <Image
                 src={`https://${cdnDomain}/${cdnDirectory}kids-body-2.jpg`}
               />
             </CardHeader>
             <CardBody>
-              <Heading size="md">スタジオ クラ子ども絵画造形教室の方針</Heading>
+              <Heading size="lg">スタジオ クラ子ども絵画造形教室の方針</Heading>
               <Text mt={'0.5em'} mb={'0.5em'}>
                 <b>プロセス</b>
                 完成作品を作ることに自体に重きをおくのではなく、様々な制作の過程で子どもの感性が輝き、揺さぶられ、豊かに育つことを目的としています。
@@ -79,14 +80,14 @@ const KidsClass = () => {
               </Text>
             </CardBody>
           </Card>
-          <Card mt={'1em'} mb={'1em'}>
+          <Card mt={'1em'} mb={'1em'} minW={'100%'}>
             <CardHeader p={'0px'}>
               <Image
                 src={`https://${cdnDomain}/${cdnDirectory}kids-body-3.jpg`}
               />
             </CardHeader>
             <CardBody>
-              <Heading size="md">スタジオクラ子ども絵画造形教室の特色</Heading>
+              <Heading size="lg">スタジオクラ子ども絵画造形教室の特色</Heading>
               <Text mt={'0.5em'} mb={'0.5em'}>
                 <b>創造力</b>{' '}
                 様々な道具や素材を使った多彩な創作活動が子どもの想像力を高めます。
@@ -105,14 +106,14 @@ const KidsClass = () => {
               </Text>
             </CardBody>
           </Card>
-          <Card mt={'1em'} mb={'1em'}>
+          <Card mt={'1em'} mb={'1em'} minW={'100%'}>
             <CardHeader p={'0px'}>
               <Image
                 src={`https://${cdnDomain}/${cdnDirectory}kids-body-4.jpg`}
               />
             </CardHeader>
             <CardBody>
-              <Heading size="md">スタジオクラ子ども絵画造形教室の環境</Heading>
+              <Heading size="lg">スタジオクラ子ども絵画造形教室の環境</Heading>
               <Text mt={'0.5em'} mb={'0.5em'}>
                 大人の絵画教室、電子工作室の多様性に富んだ製作環境、創造物に囲まれることが子どもたちの創作意欲を掻き立てます。
               </Text>
@@ -129,6 +130,47 @@ const KidsClass = () => {
               </Text>
               <Text mt={'0.5em'} mb={'0.5em'}>
                 教室の前は雄大な田、後ろには山海があり、糸島の豊かな自然の中での造形活動が子どもの心をのびのびと開放させます。
+              </Text>
+            </CardBody>
+          </Card>
+          <Card mt={'1em'} mb={'1em'} minW={'100%'}>
+            <CardBody>
+              <Heading size="lg" mb={'0.5em'}>
+                受講料
+              </Heading>
+              <Text>
+                月額 5,500円（月2回）
+                <br />
+                月額 11,000円（月4回）
+              </Text>
+            </CardBody>
+          </Card>
+          <Card mt={'1em'} mb={'1em'} minW={'100%'}>
+            <CardBody p={'0px'}>
+              <AspectRatio ratio={16 / 9}>
+                <iframe
+                  width="640"
+                  height="360"
+                  src="https://www.youtube.com/embed/JJt_fkEJvKU"
+                />
+              </AspectRatio>
+            </CardBody>
+          </Card>
+          <Card mt={'1em'} mb={'1em'} minW={'100%'}>
+            <CardBody>
+              <Heading size="lg">よくあるご質問</Heading>
+              <Heading size="md" mt={'0.5em'} mb={'0.5em'}>
+                絵画造形教室ではどんな事をするのですか？
+              </Heading>
+              <Text mt={'0.5em'} mb={'0.5em'}>
+                Studio
+                Kura絵画造形教室では、想像力、造形力を高め、ポジティブでクリエイティブな子どもに育てることを目的としています。そのために絵を描くだけではなく、粘土や木片など様々な素材を組み合わせた造形活動を積極的に行なっています。
+              </Text>
+              <Heading size="md" mt={'0.5em'} mb={'0.5em'}>
+                電車で通わせたいのですが、送迎はありますか？
+              </Heading>
+              <Text mt={'0.5em'} mb={'0.5em'}>
+                はい、糸島校はJR一貴山駅からの送迎をしております。
               </Text>
             </CardBody>
           </Card>

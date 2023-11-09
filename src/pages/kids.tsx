@@ -10,8 +10,10 @@ import {
   Image,
   Stack,
   Box,
+  Button,
   Link
 } from '@chakra-ui/react'
+import { EditIcon, PhoneIcon, EmailIcon } from '@chakra-ui/icons'
 
 import { Layout } from '@/components/Layout'
 import { Container } from '@/components/Container'
@@ -191,11 +193,55 @@ const KidsClass = () => {
                   <Heading size="lg" mb={'0.5em'}>
                     体験教室
                   </Heading>
+                  <Button
+                    as={'a'}
+                    fontWeight={600}
+                    color={'white'}
+                    bg={'blue.500'}
+                    href={'/trial'}
+                    _hover={{
+                      bg: 'blue.400'
+                    }}
+                  >
+                    <EditIcon />
+                    &nbsp;体験レッスンのお申し込み
+                  </Button>{' '}
                   <Text>
                     初心者・希望者の方には、ご希望のお日にちで体験レッスンを行っております。
                     ご一緒に参加していただきながらの体験レッスンですので
                     教室の雰囲気や講師の指導方法などを実際に感じていただけます。
                     お気軽にご参加くださいませ。
+                  </Text>
+                  <Button
+                    as={Link}
+                    size={'sm'}
+                    variant="outline"
+                    href={'/contact'}
+                    fontWeight={600}
+                    color={'text'}
+                    _hover={{
+                      bg: 'gray.100'
+                    }}
+                  >
+                    <EmailIcon />
+                    &nbsp;info@studiokura.com
+                  </Button>{' '}
+                  <Button
+                    as={'a'}
+                    size={'sm'}
+                    variant="outline"
+                    fontWeight={600}
+                    href={'tel:092-325-1773'}
+                    color={'text'}
+                    _hover={{
+                      bg: 'gray.100'
+                    }}
+                  >
+                    <PhoneIcon />
+                    &nbsp;092-325-1773
+                  </Button>{' '}
+                  <Text>
+                    ◊ 前日・当日のお申し込みはお電話のみとさせていただきます。
                   </Text>
                 </CardBody>
               </Card>

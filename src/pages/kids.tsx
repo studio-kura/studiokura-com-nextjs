@@ -21,6 +21,19 @@ import { Footer } from '@/components/Footer'
 import { Navigation } from '@/components/Navigation'
 import React from 'react'
 
+type classWeekday = {
+  title: string
+  slots: string[]
+}
+type classTime = {
+  name: string
+  weekdays: classWeekday[]
+}
+type classTimesResponse = {
+  status: string
+  classTimes: classTime[]
+}
+
 const cdnDomain = process.env.NEXT_PUBLIC_CDN_DOMAIN ?? ''
 const cdnDirectory = process.env.NEXT_PUBLIC_CDN_DIRECTORY ?? ''
 const totalCarouselImages = 4
@@ -28,7 +41,16 @@ const carouselPeriod = 5000
 
 const KidsClass = () => {
   const [carouselIndex, setCarouselIndex] = useState(0)
-
+  const [classTimes, setClassTimes] = useState<classTimesResponse | null>()
+  const [isLoading, setLoading] = useState(true)
+  useEffect(() => {
+    fetch('/api/get-class-times')
+      .then((res) => res.json())
+      .then((data) => {
+        setClassTimes(data)
+        setLoading(false)
+      })
+  }, [])
   useEffect(() => {
     const timer = setTimeout(
       () => setCarouselIndex((carouselIndex + 1) % totalCarouselImages),
@@ -244,6 +266,19 @@ const KidsClass = () => {
                   <Text mt={'0.5em'} mb={'0.5em'}>
                     ◊ 前日・当日のお申し込みはお電話のみとさせていただきます。
                   </Text>
+                </CardBody>
+              </Card>
+              <Card mt={'1em'} mb={'1em'} minW={'100%'}>
+                <CardBody>
+                  <Heading size="lg" mb={'0.5em'}>
+                    子ども絵画造形教室 実施校の時間
+                  </Heading>
+                  {isLoading && (
+                    <Text mt={'0.5em'} mb={'0.5em'}>
+                      'Loading...'
+                    </Text>
+                  )}
+                  {classTimes && JSON.stringify(classTimes.classTimes)}
                 </CardBody>
               </Card>
             </Box>

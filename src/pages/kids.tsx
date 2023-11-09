@@ -194,7 +194,8 @@ const KidsClass = () => {
                     体験教室
                   </Heading>
                   <Button
-                    as={'a'}
+                    as={Link}
+                    size={'sm'}
                     fontWeight={600}
                     color={'white'}
                     bg={'blue.500'}
@@ -206,7 +207,7 @@ const KidsClass = () => {
                     <EditIcon />
                     &nbsp;体験レッスンのお申し込み
                   </Button>{' '}
-                  <Text>
+                  <Text mt={'0.5em'} mb={'0.5em'}>
                     初心者・希望者の方には、ご希望のお日にちで体験レッスンを行っております。
                     ご一緒に参加していただきながらの体験レッスンですので
                     教室の雰囲気や講師の指導方法などを実際に感じていただけます。
@@ -240,7 +241,7 @@ const KidsClass = () => {
                     <PhoneIcon />
                     &nbsp;092-325-1773
                   </Button>{' '}
-                  <Text>
+                  <Text mt={'0.5em'} mb={'0.5em'}>
                     ◊ 前日・当日のお申し込みはお電話のみとさせていただきます。
                   </Text>
                 </CardBody>

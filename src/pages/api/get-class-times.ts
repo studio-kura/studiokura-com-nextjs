@@ -5,20 +5,40 @@ type PinResponseData = {
   error?: string
   classTimes?: string
 }
+
+interface StringToStringObjectProps {
+  [index: string]: string
+}
+const classTypeIds: StringToStringObjectProps = {
+  adults: '1',
+  kids: '2',
+  programming: '3'
+}
+
 const handler = async (
   req: NextApiRequest,
   res: NextApiResponse<PinResponseData>
 ) => {
+  const args = req.query
   if (req.method !== 'GET') {
     res
       .status(405)
       .json({ status: 'error', error: `'${req.method}' method not allowed` })
+    return
+  }
+  if (!Object.hasOwn(args, 'classtype')) {
+    res
+      .status(400)
+      .json({ status: 'error', error: `Bad request: missing parameter` })
+    return
   }
 
+  const classtype = args['classtype'] as string
+  const classTypeId: string = classTypeIds[classtype]
+  const backendUrl = `https://online.studiokura.com/cake/class_types/listwidget/${classTypeId}/json`
+
   try {
-    const classTimes = fetch(
-      'https://online.studiokura.com/cake/class_types/listwidget/2/json'
-    ).then((res) => res.json())
+    const classTimes = fetch(backendUrl).then((res) => res.json())
 
     let resultBody = {
       status: 'success',

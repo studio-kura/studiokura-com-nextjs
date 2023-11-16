@@ -21,7 +21,7 @@ wget -O "placecard-onojyo.jpg" https://www.studiokura.com/img/map-onojyo.jpg
 wget -O "placecard-nagazumi.jpg" https://www.studiokura.com/img/map-nagazumi.jpg
 wget -O "placecard-online.jpg" https://www.studiokura.com/img/online.jpg
 
-# ClassType page: kodomo
+# ClassType page: kids
 wget -O "kids-headercarousel-1.jpg" https://www.studiokura.com/img/kinder1.jpg
 wget -O "kids-headercarousel-2.jpg" https://www.studiokura.com/img/kinder2.jpg
 wget -O "kids-headercarousel-3.jpg" https://www.studiokura.com/img/kinder3.jpg
@@ -30,6 +30,27 @@ wget -O "kids-body-1.jpg" https://farm6.staticflickr.com/5178/5397120149_8f98819
 wget -O "kids-body-2.jpg" https://farm9.staticflickr.com/8474/8149911678_ba758096b5_z.jpg
 wget -O "kids-body-3.jpg" https://farm6.staticflickr.com/5275/6909929538_4282393c4d_z.jpg
 wget -O "kids-body-4.jpg" https://farm8.staticflickr.com/7018/6706845717_30cdd81772_z.jpg
+
+# ClassType page: adults
+wget -O "adults-headercarousel-1.jpg" https://farm5.staticflickr.com/4736/27411383599_128bcac169_o.jpg
+wget -O "adults-headercarousel-2.jpg" https://farm5.staticflickr.com/4680/27411383699_1b86640b71_o.jpg
+wget -O "adults-headercarousel-3.jpg" https://farm5.staticflickr.com/4647/27411383909_62cfeb22b8_o.jpg
+wget -O "adults-body-1.jpg" https://farm6.staticflickr.com/5012/5421765280_d8293bb143_z.jpg
+wget -O "adults-body-2.jpg" https://farm9.staticflickr.com/8478/8178105894_ff9a3f6418_z.jpg
+
+# Page: adults-works
+wget -O "adults-works-1.jpg" https://live.staticflickr.com/5220/5421436344_baa63dc0c0.jpg
+wget -O "adults-works-2.jpg" https://live.staticflickr.com/5275/5847184438_3e8801d176.jpg
+wget -O "adults-works-3.jpg" https://live.staticflickr.com/6086/6154523420_d158bdf72d.jpg
+wget -O "adults-works-4.jpg" https://live.staticflickr.com/6060/6320863046_ceb2fcf71c.jpg
+wget -O "adults-works-5.jpg" https://live.staticflickr.com/8009/7307465518_554a96b993.jpg
+wget -O "adults-works-6.jpg" https://live.staticflickr.com/6115/6366976179_32f887a3c1.jpg
+wget -O "adults-works-7.jpg" https://live.staticflickr.com/7147/6429964155_1e30a371d4.jpg
+wget -O "adults-works-8.jpg" https://live.staticflickr.com/8047/8077027588_272bb69be7.jpg
+wget -O "adults-works-8.jpg" https://live.staticflickr.com/8240/8571857146_a22fdfdd00.jpg
+wget -O "adults-works-10.jpg" https://live.staticflickr.com/8485/8237097430_6eca3a40b9.jpg
+wget -O "adults-works-11.jpg" https://live.staticflickr.com/8536/8684355741_4a7fb96b65.jpg
+wget -O "adults-works-12.jpg" https://live.staticflickr.com/3753/8753586608_498f133625.jpg
 
 # ClassPlace slides: generic
 wget -O "placeslide-otona.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/itoshima-otona.jpg

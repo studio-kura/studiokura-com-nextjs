@@ -13,7 +13,7 @@ const Layout: React.FC<Props> = ({ children, title }) => {
         <title>{title}</title>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </Head>
-      <body>{children}</body>
+      <>{children}</>
     </>
   )
 }

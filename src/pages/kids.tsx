@@ -25,13 +25,13 @@ type classWeekday = {
   title: string
   slots: string[]
 }
-type classTime = {
+type classPlace = {
   name: string
   weekdays: classWeekday[]
 }
 type classTimesResponse = {
   status: string
-  classTimes: classTime[]
+  classTimes: classPlace[]
 }
 
 const cdnDomain = process.env.NEXT_PUBLIC_CDN_DOMAIN ?? ''
@@ -41,13 +41,15 @@ const carouselPeriod = 5000
 
 const KidsClass = () => {
   const [carouselIndex, setCarouselIndex] = useState(0)
-  const [classTimes, setClassTimes] = useState<classTimesResponse | null>()
+  const [classTimes, setClassTimes] = useState<Array<classPlace> | null>()
   const [isLoading, setLoading] = useState(true)
   useEffect(() => {
     fetch('/api/get-class-times')
       .then((res) => res.json())
       .then((data) => {
-        setClassTimes(data)
+        const responseData = data as classTimesResponse
+        if (responseData.status != 'success') return
+        setClassTimes(responseData.classTimes)
         setLoading(false)
       })
   }, [])
@@ -278,7 +280,22 @@ const KidsClass = () => {
                       'Loading...'
                     </Text>
                   )}
-                  {classTimes && JSON.stringify(classTimes.classTimes)}
+                  {classTimes != null &&
+                    classTimes.map((place) => (
+                      <>
+                        <Heading size={'md'} mt={'0.5em'}>
+                          {place.name}
+                        </Heading>
+                        {place.weekdays.map((weekday) => (
+                          <>
+                            <Text mt={'1em'}>{weekday.title}</Text>
+                            {weekday.slots.map((slot) => (
+                              <Text>{slot}</Text>
+                            ))}
+                          </>
+                        ))}
+                      </>
+                    ))}
                 </CardBody>
               </Card>
             </Box>

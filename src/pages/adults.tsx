@@ -44,7 +44,7 @@ const AdultsClass = () => {
   const [classTimes, setClassTimes] = useState<Array<classPlace> | null>()
   const [isLoading, setLoading] = useState(true)
   useEffect(() => {
-    fetch('/api/get-class-times')
+    fetch('/api/get-class-times?classtype=adults')
       .then((res) => res.json())
       .then((data) => {
         const responseData = data as classTimesResponse
@@ -222,7 +222,7 @@ const AdultsClass = () => {
                   <Heading size="lg" mb={'0.5em'}>
                     大人のための絵画教室 実施校の時間
                   </Heading>
-                  {/* {isLoading && (
+                  {isLoading && (
                     <Text mt={'0.5em'} mb={'0.5em'}>
                       読み込み中・・・
                     </Text>
@@ -242,7 +242,7 @@ const AdultsClass = () => {
                           </>
                         ))}
                       </>
-                    ))} */}
+                    ))}
                 </CardBody>
               </Card>
             </Box>

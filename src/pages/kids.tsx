@@ -44,7 +44,7 @@ const KidsClass = () => {
   const [classTimes, setClassTimes] = useState<Array<classPlace> | null>()
   const [isLoading, setLoading] = useState(true)
   useEffect(() => {
-    fetch('/api/get-class-times')
+    fetch('/api/get-class-times?classtype=kids')
       .then((res) => res.json())
       .then((data) => {
         const responseData = data as classTimesResponse

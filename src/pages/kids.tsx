@@ -277,7 +277,7 @@ const KidsClass = () => {
                   </Heading>
                   {isLoading && (
                     <Text mt={'0.5em'} mb={'0.5em'}>
-                      'Loading...'
+                      読み込み中・・・
                     </Text>
                   )}
                   {classTimes != null &&

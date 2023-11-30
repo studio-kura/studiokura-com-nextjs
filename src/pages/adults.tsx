@@ -120,18 +120,6 @@ const AdultsClass = () => {
                     <b>豊富な資料</b>{' '}
                     教室内に沢山のアート系の本があり、貸し出しもしています。
                   </Text>
-                  <Button
-                    as={Link}
-                    variant="outline"
-                    href={'/adults-works'}
-                    fontWeight={600}
-                    color={'text'}
-                    _hover={{
-                      bg: 'gray.100'
-                    }}
-                  >
-                    制作例
-                  </Button>
                 </CardBody>
               </Card>
               <Card mt={'1em'} mb={'1em'} minW={'100%'}>

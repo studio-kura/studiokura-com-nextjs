@@ -10,18 +10,28 @@ const nextConfig = {
         permanent: false
       },
       {
-        source: '/kodomo',
+        source: '/kodomo(/?)',
         destination: '/kids',
         permanent: false
       },
       {
-        source: '/otona',
+        source: '/otona(/?)',
         destination: '/adults',
         permanent: false
       },
       {
-        source: '/otona/otona-works.php',
-        destination: '/adults-works',
+        source: '/otona/otona-works(/?)',
+        destination: '/adults',
+        permanent: false
+      },
+      {
+        source: '/otona/otona-works.php(/?)',
+        destination: '/adults',
+        permanent: false
+      },
+      {
+        source: '/denshikousaku(/?)',
+        destination: '/programming',
         permanent: false
       }
     ]

@@ -1,3 +1,4 @@
+import NextLink from 'next/link'
 import {
   Text,
   Center,
@@ -19,6 +20,24 @@ import { Navigation } from '@/components/Navigation'
 const cdnDomain = process.env.NEXT_PUBLIC_CDN_DOMAIN ?? ''
 const cdnDirectory = process.env.NEXT_PUBLIC_CDN_DIRECTORY ?? ''
 
+const ClassPlaceLinkButton = (props: { name: string; href: string }) => (
+  <Box px={['50px', '40px', '50px']} py={'20px'}>
+    <Button
+      as={NextLink}
+      fontWeight={600}
+      color={'white'}
+      bg={'orange.500'}
+      href={props.href}
+      borderRadius={20}
+      _hover={{
+        bg: 'orange.400'
+      }}
+    >
+      {props.name}
+    </Button>
+  </Box>
+)
+
 const ProgrammingClass = () => (
   <Layout title="Studio Kura 電子工作教室 | Studio Kura 絵画美術教室（福岡県 糸島市 二丈 西新 武雄 橋本 久留米）">
     <Navigation />
@@ -30,6 +49,7 @@ const ProgrammingClass = () => (
       backgroundPosition={'center'}
     ></Container>
     <Center>
+      {/* Top section */}
       <Container maxW={['95%', '80%', '70%']}>
         <Heading mt={'1em'} mb={'1em'} size={['2xl', '4xl', '4xl']}>
           電子工作教室
@@ -87,6 +107,18 @@ const ProgrammingClass = () => (
               />
             </AspectRatio>
           </Box>
+        </Stack>
+        {/* Links to places doing programming classes */}
+        <Box mt={'4em'}>
+          近くの教室、もしくはオンラインで授業を受けましょう。
+          <br />
+          時間割、アクセスは各教室のリンク先をご確認ください。
+        </Box>
+        <Stack direction={['column', 'column', 'row']} mt={'1em'}>
+          <ClassPlaceLinkButton name={'糸島校'} href={'/itoshima'} />
+          <ClassPlaceLinkButton name={'橋本校'} href={'/hashimoto'} />
+          <ClassPlaceLinkButton name={'久留米校'} href={'/kurume'} />
+          <ClassPlaceLinkButton name={'オンライン校'} href={'/online'} />
         </Stack>
       </Container>
     </Center>

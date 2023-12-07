@@ -38,6 +38,11 @@ wget -O "adults-headercarousel-3.jpg" https://farm5.staticflickr.com/4647/274113
 wget -O "adults-body-1.jpg" https://farm6.staticflickr.com/5012/5421765280_d8293bb143_z.jpg
 wget -O "adults-body-2.jpg" https://farm9.staticflickr.com/8478/8178105894_ff9a3f6418_z.jpg
 
+# ClassType page: programming
+wget -O "programming-logo-scratch.png" https://www.studiokura.com/denshikousaku/assets/img/gallery/logo-scratch.png
+wget -O "programming-logo-p5js.png" https://www.studiokura.com/denshikousaku/assets/img/gallery/logo-p5js.png
+wget -O "programming-logo-arduino.jpg" https://www.studiokura.com/denshikousaku/assets/img/gallery/logo-arduino.jpg
+
 # ClassPlace slides: generic
 wget -O "placeslide-otona.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/itoshima-otona.jpg
 wget -O "placeslide-kodomo.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/itoshima-kodomo.jpg

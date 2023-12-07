@@ -8,6 +8,7 @@ import {
   Tag,
   TagLabel,
   Box,
+  Image,
   Button
 } from '@chakra-ui/react'
 import { EditIcon, PhoneIcon, CheckCircleIcon } from '@chakra-ui/icons'
@@ -119,6 +120,76 @@ const ProgrammingClass = () => (
           <ClassPlaceLinkButton name={'橋本校'} href={'/hashimoto'} />
           <ClassPlaceLinkButton name={'久留米校'} href={'/kurume'} />
           <ClassPlaceLinkButton name={'オンライン校'} href={'/online'} />
+        </Stack>
+        {/* Languages section */}
+        <Stack direction={['column', 'column', 'row']} mt={'4em'}>
+          <Box w={['100%', '530px', '530px']}>
+            <iframe
+              src="https://scratch.mit.edu/projects/645939820/embed"
+              width="485"
+              height="402"
+            ></iframe>
+          </Box>
+          <Box>
+            <Heading>
+              学べる言語や
+              <br />
+              フレームワーク
+            </Heading>
+            <Text>
+              わかりやすさ、楽しさ、また役に立つことを考慮してカリキュラムを作成しています。楽しみながらプログラミング能力が身につきます。
+            </Text>
+            <Stack direction={'column'}>
+              <Box mt={'1em'}>
+                <Stack direction={'row'}>
+                  <Image
+                    src={`https://${cdnDomain}/${cdnDirectory}programming-logo-scratch.png`}
+                    w={'64px'}
+                    h={'64px'}
+                  ></Image>
+                  <Box>
+                    <Heading size={'l'}>Scratch</Heading>
+                    <Text>
+                      MITで開発されて、世界中で使われている
+                      ドラッグ&ドロッププログラミング環境
+                    </Text>
+                  </Box>
+                </Stack>
+              </Box>
+              <Box mt={'1em'}>
+                <Stack direction={'row'}>
+                  <Image
+                    src={`https://${cdnDomain}/${cdnDirectory}programming-logo-p5js.png`}
+                    w={'64px'}
+                    h={'64px'}
+                  ></Image>
+                  <Box>
+                    <Heading size={'l'}>p5.js</Heading>
+                    <Text>
+                      ゲームからNFTアートまで作ることができる
+                      JavaScriptで書くフレームワーク
+                    </Text>
+                  </Box>
+                </Stack>
+              </Box>
+              <Box mt={'1em'}>
+                <Stack direction={'row'}>
+                  <Image
+                    src={`https://${cdnDomain}/${cdnDirectory}programming-logo-arduino.jpg`}
+                    w={'64px'}
+                    h={'64px'}
+                  ></Image>
+                  <Box>
+                    <Heading size={'l'}>Arduino</Heading>
+                    <Text>
+                      電子回路をコンピューターで制御できる
+                      C言語を駆使したフレームワーク
+                    </Text>
+                  </Box>
+                </Stack>
+              </Box>
+            </Stack>
+          </Box>
         </Stack>
       </Container>
     </Center>

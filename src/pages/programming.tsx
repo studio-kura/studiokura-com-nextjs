@@ -191,6 +191,24 @@ const ProgrammingClass = () => (
             </Stack>
           </Box>
         </Stack>
+        <Stack
+          direction={['column', 'column', 'row']}
+          mt={'1em'}
+          maxW={['100%', '80%', '80%']}
+        >
+          <Heading minW={'50%'} py={'40px'}>
+            どの端末でも学べる
+          </Heading>
+          <Text
+            minW={'50%'}
+            borderLeft={'1px'}
+            borderColor={'#ccc'}
+            paddingLeft={'1em'}
+            py={'40px'}
+          >
+            特に新しくないパソコン、タブレットなどでも、ブラウザーだけあれば使えるプログラミング環境を教えておりますので、練習・制作・オンライン授業はどこでもできます。
+          </Text>
+        </Stack>
       </Container>
     </Center>
     <Container>

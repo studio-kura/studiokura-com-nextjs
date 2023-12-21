@@ -9,7 +9,10 @@ import {
   TagLabel,
   Box,
   Image,
-  Button
+  Avatar,
+  Card,
+  Button,
+  CardBody
 } from '@chakra-ui/react'
 import { EditIcon, PhoneIcon, CheckCircleIcon } from '@chakra-ui/icons'
 
@@ -51,11 +54,11 @@ const ProgrammingClass = () => (
     ></Container>
     <Center>
       {/* Top section */}
-      <Container maxW={['95%', '80%', '70%']}>
+      <Container maxW={['95%', '95%', '70%']}>
         <Heading mt={'1em'} mb={'1em'} size={['2xl', '4xl', '4xl']}>
           電子工作教室
         </Heading>
-        <Stack direction={['column', 'column', 'row']}>
+        <Stack direction={['column', 'column', 'row']} my={16}>
           <Box minW={'40vw'}>
             <Tag
               size={'lg'}
@@ -110,19 +113,19 @@ const ProgrammingClass = () => (
           </Box>
         </Stack>
         {/* Links to places doing programming classes */}
-        <Box mt={'4em'}>
+        <Box mt={16} mb={8}>
           近くの教室、もしくはオンラインで授業を受けましょう。
           <br />
           時間割、アクセスは各教室のリンク先をご確認ください。
         </Box>
-        <Stack direction={['column', 'column', 'row']} mt={'1em'}>
+        <Stack direction={['column', 'column', 'row']} mb={16}>
           <ClassPlaceLinkButton name={'糸島校'} href={'/itoshima'} />
           <ClassPlaceLinkButton name={'橋本校'} href={'/hashimoto'} />
           <ClassPlaceLinkButton name={'久留米校'} href={'/kurume'} />
           <ClassPlaceLinkButton name={'オンライン校'} href={'/online'} />
         </Stack>
         {/* Languages section */}
-        <Stack direction={['column', 'column', 'row']} mt={'4em'}>
+        <Stack direction={['column', 'column', 'row']} my={'16'}>
           <Box w={['100%', '530px', '530px']}>
             <iframe
               src="https://scratch.mit.edu/projects/645939820/embed"
@@ -188,6 +191,258 @@ const ProgrammingClass = () => (
                   </Box>
                 </Stack>
               </Box>
+            </Stack>
+          </Box>
+        </Stack>
+        {/* Devices section */}
+        <Stack
+          direction={['column', 'column', 'row']}
+          mt={'1em'}
+          maxW={['100%', '80%', '80%']}
+          my={16}
+        >
+          <Heading minW={'50%'} py={'40px'}>
+            どの端末でも学べる
+          </Heading>
+          <Text
+            minW={'50%'}
+            borderLeft={'1px'}
+            borderColor={'#ccc'}
+            paddingLeft={'1em'}
+            py={'40px'}
+          >
+            特に新しくないパソコン、タブレットなどでも、ブラウザーだけあれば使えるプログラミング環境を教えておりますので、練習・制作・オンライン授業はどこでもできます。
+          </Text>
+        </Stack>
+        {/* Details section */}
+        <Stack
+          direction={['column', 'column', 'row']}
+          mt={'1em'}
+          maxW={['100%', '80%', '80%']}
+          justifyContent="flex-start"
+          gap={16}
+        >
+          <Stack
+            direction={['column']}
+            mt={'1em'}
+            maxW={['100%', '80%', '80%']}
+          >
+            <Image
+              src={`https://${cdnDomain}/${cdnDirectory}programming-clipart-1.jpg`}
+              w={'96px'}
+              h={'96px'}
+            ></Image>
+            <Box>
+              <Heading py={4} size={'sm'}>
+                作品を簡単に共有
+              </Heading>
+              <Text>
+                Scratchやp5.jsは、作品へのリンクを共有することでスマートフォーンを含めてどの端末でも再生・プレイできますので、できたものの共有を通じてモチベーションを保ちましょう。
+              </Text>
+            </Box>
+          </Stack>
+          <Stack
+            direction={['column']}
+            mt={'1em'}
+            maxW={['100%', '80%', '80%']}
+          >
+            <Image
+              src={`https://${cdnDomain}/${cdnDirectory}programming-clipart-2.jpg`}
+              w={'96px'}
+              h={'96px'}
+            ></Image>
+            <Box>
+              <Heading py={4} size={'sm'}>
+                復習のときもサポート
+              </Heading>
+              <Text>
+                小学校高学年からの方が多いp5.jsの場合は、講師が用意したドキュメントや動画を見ながらプログラミングできる自社開発の環境も提供いたします。
+              </Text>
+            </Box>
+          </Stack>
+          <Stack
+            direction={['column']}
+            mt={'1em'}
+            maxW={['100%', '80%', '80%']}
+          >
+            <Image
+              src={`https://${cdnDomain}/${cdnDirectory}programming-clipart-3.jpg`}
+              w={'96px'}
+              h={'96px'}
+            ></Image>
+            <Box>
+              <Heading py={4} size={'sm'}>
+                素材・サンプル豊富
+              </Heading>
+              <Text>
+                Scratchは提供されている素材を使うとすぐプログラミングに取り掛かることができるし、インスピレーションももらえます。両環境は、暖かいコミュニティーによるサンプルもいっぱい。
+              </Text>
+            </Box>
+          </Stack>
+        </Stack>
+        {/* Pricing section */}
+        <Heading mt={16} mb={8}>
+          Studio Kura絵画教室料金表
+        </Heading>
+        <Text mb={8}>
+          絵画教室から電子工作室までどの教室も同一料金です。
+          <br />
+          入会金は4400円です（
+          <Button
+            variant={'link'}
+            as={'a'}
+            fontWeight={600}
+            color={'blue.500'}
+            href={'/pricing'}
+            _hover={{
+              color: 'blue.400'
+            }}
+          >
+            受講料詳細
+          </Button>
+          ）。
+        </Text>
+        <Stack
+          direction={['column', 'column', 'row']}
+          mt={'1em'}
+          maxW={['100%', '80%', '80%']}
+          my={16}
+          gap={16}
+        >
+          <Card w={'300px'} px={8} py={'32px'}>
+            <CardBody textAlign={'center'}>
+              <Heading>￥5.500/月</Heading>
+              <Heading size={'s'}>月2回コース</Heading>
+              <Button
+                mt={'48px'}
+                borderRadius={100}
+                as={'a'}
+                fontWeight={600}
+                color={'white'}
+                bg={'blue.500'}
+                href={'/trial'}
+                _hover={{
+                  bg: 'blue.400'
+                }}
+              >
+                体験レッスン
+              </Button>
+            </CardBody>
+          </Card>
+          <Card w={'300px'} px={8} py={'32px'}>
+            <CardBody textAlign={'center'}>
+              <Heading>￥11.000/月</Heading>
+              <Heading size={'s'}>月4回コース</Heading>
+              <Button
+                mt={'48px'}
+                borderRadius={100}
+                as={'a'}
+                fontWeight={600}
+                color={'white'}
+                bg={'blue.500'}
+                href={'/trial'}
+                _hover={{
+                  bg: 'blue.400'
+                }}
+              >
+                体験レッスン
+              </Button>
+            </CardBody>
+          </Card>
+        </Stack>
+        {/* Teachers section */}
+        <Stack
+          direction={['column', 'column', 'row']}
+          mt={'1em'}
+          maxW={['100%', '40%', '80%']}
+          my={16}
+          gap={8}
+        >
+          <Box
+            w={['100%', '530px', '530px']}
+            minW={['90%', '30vw', '30vw']}
+            minH={320}
+          >
+            <AspectRatio ratio={1}>
+              <iframe
+                width={'100%'}
+                height={'100%'}
+                src={'https://editor.p5js.org/alecrem/full/n4DEIJP55'}
+              ></iframe>
+            </AspectRatio>
+          </Box>
+          <Box>
+            <Heading>講師紹介</Heading>
+            <Text my={8}>Studio Kura電子工作教室のチームをご紹介します！</Text>
+            <Stack gap={4}>
+              <Card minW={240} maxW={640} p={4}>
+                <CardBody>
+                  <Text mb={8}>
+                    1979年福岡県糸島市生まれ。広島市立大学芸術学部油絵科
+                    卒業後、ドイツハノーバー専科大学で学ぶ。ヨーロッパを中心に世界各地で展示を行う。糸島から世界へ文
+                    化発信をモットーに2009年アート カンパニー（株）Studio
+                    Kuraを設立。糸島芸術祭「糸島芸農」実行委員長
+                  </Text>
+                  <Stack direction={'row'}>
+                    <Avatar
+                      name={'松崎 宏史'}
+                      size={'lg'}
+                      src={`https://${cdnDomain}/${cdnDirectory}programming-teachers-1.jpg`}
+                    />
+                    <Box>
+                      <Heading size={'m'}>松崎 宏史</Heading>
+                      <Text>代表取締役</Text>
+                    </Box>
+                  </Stack>
+                </CardBody>
+              </Card>
+              <Card minW={240} maxW={640} p={4}>
+                <CardBody>
+                  <Text mb={8}>
+                    1980年、スペイン出身。 2002年にMiguel Hernández大学
+                    工学部電気通信工学科卒業。
+                    <br />
+                    2004年にゲームボーイの音源を使ったバンド「pepino」を結成。ヨーロッパの諸国、アメリカ、日本でライブ。
+                    <br />
+                    2012年度のNHK「テレビでスペイン語」に定期的出演。
+                    <br />
+                    2012年9月〜 Studio Kura 電子工作教室を担当。
+                  </Text>
+                  <Stack direction={'row'}>
+                    <Avatar
+                      name={'アレハンドロ・クレマデス'}
+                      size={'lg'}
+                      src={`https://${cdnDomain}/${cdnDirectory}programming-teachers-2.jpg`}
+                    />
+                    <Box>
+                      <Heading size={'m'}>Alejandro Cremades</Heading>
+                      <Text>アレハンドロ・クレマデス</Text>
+                    </Box>
+                  </Stack>
+                </CardBody>
+              </Card>
+              <Card minW={240} maxW={640} p={4}>
+                <CardBody>
+                  <Text mb={8}>
+                    福岡市出身 Studio
+                    <br />
+                    Kura電子工作教室卒業生！コンピュータ大好き高校生です！
+                    <br />
+                    よろしくお願いします！ 　
+                  </Text>
+                  <Stack direction={'row'}>
+                    <Avatar
+                      name={'小関 英斗'}
+                      size={'lg'}
+                      src={`https://${cdnDomain}/${cdnDirectory}programming-teachers-3.jpg`}
+                    />
+                    <Box>
+                      <Heading size={'m'}>小関 英斗</Heading>
+                      <Text>教室 卒業生</Text>
+                    </Box>
+                  </Stack>
+                </CardBody>
+              </Card>
             </Stack>
           </Box>
         </Stack>

@@ -55,7 +55,7 @@ const ProgrammingClass = () => (
         <Heading mt={'1em'} mb={'1em'} size={['2xl', '4xl', '4xl']}>
           電子工作教室
         </Heading>
-        <Stack direction={['column', 'column', 'row']}>
+        <Stack direction={['column', 'column', 'row']} my={16}>
           <Box minW={'40vw'}>
             <Tag
               size={'lg'}
@@ -110,19 +110,19 @@ const ProgrammingClass = () => (
           </Box>
         </Stack>
         {/* Links to places doing programming classes */}
-        <Box mt={'4em'}>
+        <Box mt={16} mb={8}>
           近くの教室、もしくはオンラインで授業を受けましょう。
           <br />
           時間割、アクセスは各教室のリンク先をご確認ください。
         </Box>
-        <Stack direction={['column', 'column', 'row']} mt={'1em'}>
+        <Stack direction={['column', 'column', 'row']} mb={16}>
           <ClassPlaceLinkButton name={'糸島校'} href={'/itoshima'} />
           <ClassPlaceLinkButton name={'橋本校'} href={'/hashimoto'} />
           <ClassPlaceLinkButton name={'久留米校'} href={'/kurume'} />
           <ClassPlaceLinkButton name={'オンライン校'} href={'/online'} />
         </Stack>
         {/* Languages section */}
-        <Stack direction={['column', 'column', 'row']} mt={'4em'}>
+        <Stack direction={['column', 'column', 'row']} my={'16'}>
           <Box w={['100%', '530px', '530px']}>
             <iframe
               src="https://scratch.mit.edu/projects/645939820/embed"
@@ -191,10 +191,12 @@ const ProgrammingClass = () => (
             </Stack>
           </Box>
         </Stack>
+        {/* Devices section */}
         <Stack
           direction={['column', 'column', 'row']}
           mt={'1em'}
           maxW={['100%', '80%', '80%']}
+          my={16}
         >
           <Heading minW={'50%'} py={'40px'}>
             どの端末でも学べる

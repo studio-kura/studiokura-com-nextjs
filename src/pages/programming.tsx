@@ -9,7 +9,9 @@ import {
   TagLabel,
   Box,
   Image,
-  Button
+  Card,
+  Button,
+  CardBody
 } from '@chakra-ui/react'
 import { EditIcon, PhoneIcon, CheckCircleIcon } from '@chakra-ui/icons'
 
@@ -17,6 +19,7 @@ import { Layout } from '@/components/Layout'
 import { Container } from '@/components/Container'
 import { Footer } from '@/components/Footer'
 import { Navigation } from '@/components/Navigation'
+import Head from 'next/head'
 
 const cdnDomain = process.env.NEXT_PUBLIC_CDN_DOMAIN ?? ''
 const cdnDirectory = process.env.NEXT_PUBLIC_CDN_DIRECTORY ?? ''
@@ -276,6 +279,76 @@ const ProgrammingClass = () => (
               </Text>
             </Box>
           </Stack>
+        </Stack>
+        {/* Pricing section */}
+        <Heading mt={16} mb={8}>
+          Studio Kura絵画教室料金表
+        </Heading>
+        <Text mb={8}>
+          絵画教室から電子工作室までどの教室も同一料金です。
+          <br />
+          入会金は4400円です（
+          <Button
+            variant={'link'}
+            as={'a'}
+            fontWeight={600}
+            color={'blue.500'}
+            href={'/pricing'}
+            _hover={{
+              color: 'blue.400'
+            }}
+          >
+            受講料詳細
+          </Button>
+          ）。
+        </Text>
+        <Stack
+          direction={['column', 'column', 'row']}
+          mt={'1em'}
+          maxW={['100%', '80%', '80%']}
+          my={16}
+          gap={16}
+        >
+          <Card w={'300px'} px={8} py={'32px'}>
+            <CardBody textAlign={'center'}>
+              <Heading>￥5.500/月</Heading>
+              <Heading size={'s'}>月2回コース</Heading>
+              <Button
+                mt={'48px'}
+                borderRadius={100}
+                as={'a'}
+                fontWeight={600}
+                color={'white'}
+                bg={'blue.500'}
+                href={'/trial'}
+                _hover={{
+                  bg: 'blue.400'
+                }}
+              >
+                体験レッスン
+              </Button>
+            </CardBody>
+          </Card>
+          <Card w={'300px'} px={8} py={'32px'}>
+            <CardBody textAlign={'center'}>
+              <Heading>￥11.000/月</Heading>
+              <Heading size={'s'}>月4回コース</Heading>
+              <Button
+                mt={'48px'}
+                borderRadius={100}
+                as={'a'}
+                fontWeight={600}
+                color={'white'}
+                bg={'blue.500'}
+                href={'/trial'}
+                _hover={{
+                  bg: 'blue.400'
+                }}
+              >
+                体験レッスン
+              </Button>
+            </CardBody>
+          </Card>
         </Stack>
       </Container>
     </Center>

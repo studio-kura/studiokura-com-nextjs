@@ -9,6 +9,7 @@ import {
   TagLabel,
   Box,
   Image,
+  Avatar,
   Card,
   Button,
   CardBody
@@ -19,7 +20,6 @@ import { Layout } from '@/components/Layout'
 import { Container } from '@/components/Container'
 import { Footer } from '@/components/Footer'
 import { Navigation } from '@/components/Navigation'
-import Head from 'next/head'
 
 const cdnDomain = process.env.NEXT_PUBLIC_CDN_DOMAIN ?? ''
 const cdnDirectory = process.env.NEXT_PUBLIC_CDN_DIRECTORY ?? ''
@@ -54,7 +54,7 @@ const ProgrammingClass = () => (
     ></Container>
     <Center>
       {/* Top section */}
-      <Container maxW={['95%', '80%', '70%']}>
+      <Container maxW={['95%', '95%', '70%']}>
         <Heading mt={'1em'} mb={'1em'} size={['2xl', '4xl', '4xl']}>
           電子工作教室
         </Heading>
@@ -349,6 +349,102 @@ const ProgrammingClass = () => (
               </Button>
             </CardBody>
           </Card>
+        </Stack>
+        {/* Teachers section */}
+        <Stack
+          direction={['column', 'column', 'row']}
+          mt={'1em'}
+          maxW={['100%', '40%', '80%']}
+          my={16}
+          gap={8}
+        >
+          <Box
+            w={['100%', '530px', '530px']}
+            minW={['90%', '30vw', '30vw']}
+            minH={320}
+          >
+            <AspectRatio ratio={1}>
+              <iframe
+                width={'100%'}
+                height={'100%'}
+                src={'https://editor.p5js.org/alecrem/full/n4DEIJP55'}
+              ></iframe>
+            </AspectRatio>
+          </Box>
+          <Box>
+            <Heading>講師紹介</Heading>
+            <Text my={8}>Studio Kura電子工作教室のチームをご紹介します！</Text>
+            <Stack gap={4}>
+              <Card minW={240} maxW={640} p={4}>
+                <CardBody>
+                  <Text mb={8}>
+                    1979年福岡県糸島市生まれ。広島市立大学芸術学部油絵科
+                    卒業後、ドイツハノーバー専科大学で学ぶ。ヨーロッパを中心に世界各地で展示を行う。糸島から世界へ文
+                    化発信をモットーに2009年アート カンパニー（株）Studio
+                    Kuraを設立。糸島芸術祭「糸島芸農」実行委員長
+                  </Text>
+                  <Stack direction={'row'}>
+                    <Avatar
+                      name={'松崎 宏史'}
+                      size={'lg'}
+                      src={`https://${cdnDomain}/${cdnDirectory}programming-teachers-1.jpg`}
+                    />
+                    <Box>
+                      <Heading size={'m'}>松崎 宏史</Heading>
+                      <Text>代表取締役</Text>
+                    </Box>
+                  </Stack>
+                </CardBody>
+              </Card>
+              <Card minW={240} maxW={640} p={4}>
+                <CardBody>
+                  <Text mb={8}>
+                    1980年、スペイン出身。 2002年にMiguel Hernández大学
+                    工学部電気通信工学科卒業。
+                    <br />
+                    2004年にゲームボーイの音源を使ったバンド「pepino」を結成。ヨーロッパの諸国、アメリカ、日本でライブ。
+                    <br />
+                    2012年度のNHK「テレビでスペイン語」に定期的出演。
+                    <br />
+                    2012年9月〜 Studio Kura 電子工作教室を担当。
+                  </Text>
+                  <Stack direction={'row'}>
+                    <Avatar
+                      name={'アレハンドロ・クレマデス'}
+                      size={'lg'}
+                      src={`https://${cdnDomain}/${cdnDirectory}programming-teachers-2.jpg`}
+                    />
+                    <Box>
+                      <Heading size={'m'}>Alejandro Cremades</Heading>
+                      <Text>アレハンドロ・クレマデス</Text>
+                    </Box>
+                  </Stack>
+                </CardBody>
+              </Card>
+              <Card minW={240} maxW={640} p={4}>
+                <CardBody>
+                  <Text mb={8}>
+                    福岡市出身 Studio
+                    <br />
+                    Kura電子工作教室卒業生！コンピュータ大好き高校生です！
+                    <br />
+                    よろしくお願いします！ 　
+                  </Text>
+                  <Stack direction={'row'}>
+                    <Avatar
+                      name={'小関 英斗'}
+                      size={'lg'}
+                      src={`https://${cdnDomain}/${cdnDirectory}programming-teachers-3.jpg`}
+                    />
+                    <Box>
+                      <Heading size={'m'}>小関 英斗</Heading>
+                      <Text>教室 卒業生</Text>
+                    </Box>
+                  </Stack>
+                </CardBody>
+              </Card>
+            </Stack>
+          </Box>
         </Stack>
       </Container>
     </Center>

@@ -209,6 +209,72 @@ const ProgrammingClass = () => (
             特に新しくないパソコン、タブレットなどでも、ブラウザーだけあれば使えるプログラミング環境を教えておりますので、練習・制作・オンライン授業はどこでもできます。
           </Text>
         </Stack>
+        {/* Details section */}
+        <Stack
+          direction={['column', 'column', 'row']}
+          mt={'1em'}
+          maxW={['100%', '80%', '80%']}
+          justifyContent="flex-start"
+          gap={16}
+        >
+          <Stack
+            direction={['column']}
+            mt={'1em'}
+            maxW={['100%', '80%', '80%']}
+          >
+            <Image
+              src={`https://${cdnDomain}/${cdnDirectory}programming-clipart-1.jpg`}
+              w={'96px'}
+              h={'96px'}
+            ></Image>
+            <Box>
+              <Heading py={4} size={'sm'}>
+                作品を簡単に共有
+              </Heading>
+              <Text>
+                Scratchやp5.jsは、作品へのリンクを共有することでスマートフォーンを含めてどの端末でも再生・プレイできますので、できたものの共有を通じてモチベーションを保ちましょう。
+              </Text>
+            </Box>
+          </Stack>
+          <Stack
+            direction={['column']}
+            mt={'1em'}
+            maxW={['100%', '80%', '80%']}
+          >
+            <Image
+              src={`https://${cdnDomain}/${cdnDirectory}programming-clipart-2.jpg`}
+              w={'96px'}
+              h={'96px'}
+            ></Image>
+            <Box>
+              <Heading py={4} size={'sm'}>
+                復習のときもサポート
+              </Heading>
+              <Text>
+                小学校高学年からの方が多いp5.jsの場合は、講師が用意したドキュメントや動画を見ながらプログラミングできる自社開発の環境も提供いたします。
+              </Text>
+            </Box>
+          </Stack>
+          <Stack
+            direction={['column']}
+            mt={'1em'}
+            maxW={['100%', '80%', '80%']}
+          >
+            <Image
+              src={`https://${cdnDomain}/${cdnDirectory}programming-clipart-3.jpg`}
+              w={'96px'}
+              h={'96px'}
+            ></Image>
+            <Box>
+              <Heading py={4} size={'sm'}>
+                素材・サンプル豊富
+              </Heading>
+              <Text>
+                Scratchは提供されている素材を使うとすぐプログラミングに取り掛かることができるし、インスピレーションももらえます。両環境は、暖かいコミュニティーによるサンプルもいっぱい。
+              </Text>
+            </Box>
+          </Stack>
+        </Stack>
       </Container>
     </Center>
     <Container>

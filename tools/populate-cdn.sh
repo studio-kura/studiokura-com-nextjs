@@ -42,6 +42,9 @@ wget -O "adults-body-2.jpg" https://farm9.staticflickr.com/8478/8178105894_ff9a3
 wget -O "programming-logo-scratch.png" https://www.studiokura.com/denshikousaku/assets/img/gallery/logo-scratch.png
 wget -O "programming-logo-p5js.png" https://www.studiokura.com/denshikousaku/assets/img/gallery/logo-p5js.png
 wget -O "programming-logo-arduino.jpg" https://www.studiokura.com/denshikousaku/assets/img/gallery/logo-arduino.jpg
+wget -O "programming-clipart-1.jpg" https://www.studiokura.com/denshikousaku/assets/img/illustrations/app.png
+wget -O "programming-clipart-2.jpg" https://www.studiokura.com/denshikousaku/assets/img/illustrations/automatic.png
+wget -O "programming-clipart-3.jpg" https://www.studiokura.com/denshikousaku/assets/img/illustrations/rewards.png
 
 # ClassPlace slides: generic
 wget -O "placeslide-otona.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/itoshima-otona.jpg

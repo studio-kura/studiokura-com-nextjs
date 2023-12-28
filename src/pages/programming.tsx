@@ -1,7 +1,6 @@
 import NextLink from 'next/link'
 import {
   Text,
-  Center,
   Heading,
   Stack,
   AspectRatio,
@@ -25,6 +24,7 @@ import { Layout } from '@/components/Layout'
 import { Container } from '@/components/Container'
 import { Footer } from '@/components/Footer'
 import { Navigation } from '@/components/Navigation'
+import { HeaderSketch } from '@/components/Programming/HeaderSketch'
 
 const cdnDomain = process.env.NEXT_PUBLIC_CDN_DOMAIN ?? ''
 const cdnDirectory = process.env.NEXT_PUBLIC_CDN_DIRECTORY ?? ''
@@ -50,13 +50,12 @@ const ClassPlaceLinkButton = (props: { name: string; href: string }) => (
 const ProgrammingClass = () => (
   <Layout title="Studio Kura 電子工作教室 | Studio Kura 絵画美術教室（福岡県 糸島市 二丈 西新 武雄 橋本 久留米）">
     <Navigation />
-    <Container
-      // TODO: Add p5.js script
-      height={'300px'}
-      bgImage={`https://${cdnDomain}/${cdnDirectory}adults-headercarousel-2.jpg`}
-      backgroundSize={'cover'}
-      backgroundPosition={'center'}
-    ></Container>
+    <Container height={'300px'} minW={'100%'}>
+      <HeaderSketch />
+      <Heading mt={'1em'} mb={'1em'} size={['2xl', '4xl', '4xl']}>
+        電子工作教室
+      </Heading>
+    </Container>
     <Stack direction={'column'} alignItems={'center'} bg="gray.50">
       <Container maxW={['95%', '95%', '70%']}>
         {/* Top section */}

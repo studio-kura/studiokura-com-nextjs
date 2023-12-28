@@ -57,7 +57,7 @@ const ProgrammingClass = () => (
       backgroundSize={'cover'}
       backgroundPosition={'center'}
     ></Container>
-    <Stack direction={'column'} alignItems={'center'}>
+    <Stack direction={'column'} alignItems={'center'} bg="gray.50">
       <Container maxW={['95%', '95%', '70%']}>
         {/* Top section */}
         <Heading mt={'1em'} mb={'1em'} size={['2xl', '4xl', '4xl']}>

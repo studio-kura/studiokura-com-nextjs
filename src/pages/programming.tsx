@@ -12,6 +12,11 @@ import {
   Avatar,
   Card,
   Button,
+  Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionPanel,
+  AccordionIcon,
   CardBody
 } from '@chakra-ui/react'
 import { EditIcon, PhoneIcon, CheckCircleIcon } from '@chakra-ui/icons'
@@ -445,6 +450,53 @@ const ProgrammingClass = () => (
               </Card>
             </Stack>
           </Box>
+        </Stack>
+        {/* FAQ section */}
+        <Stack direction={'column'} w={'100%'} maxW={800}>
+          <Heading>FAQ: よくあるご質問</Heading>
+          <Accordion defaultIndex={[0]} w={'100%'}>
+            <AccordionItem>
+              <h2>
+                <AccordionButton>
+                  <Box as="span" flex="1" textAlign="left" fontWeight={'bold'}>
+                    キーボード入力に慣れていない人でも大丈夫でしょうか？
+                  </Box>
+                  <AccordionIcon />
+                </AccordionButton>
+              </h2>
+              <AccordionPanel pb={4}>
+                キーボードに慣れるのにも目標があると早くなるかもしれません。さらに、キーボード入力せずにできるプログラミング環境Scratchを導入していますので、小学校低学年でもすぐ入り込むことができます。
+              </AccordionPanel>
+            </AccordionItem>
+            <AccordionItem>
+              <h2>
+                <AccordionButton>
+                  <Box as="span" flex="1" textAlign="left" fontWeight={'bold'}>
+                    英語が全くわからない人でも大丈夫でしょうか？
+                  </Box>
+                  <AccordionIcon />
+                </AccordionButton>
+              </h2>
+              <AccordionPanel pb={4}>
+                プログラミング言語のキーワードは確かに英単語ですが、Scratchの場合はキーボード入力が不要なだけではなく、インターフェースが完全に日本語に対応しています。それも、ひらがなのみという設定もありますので未就学のお子様も使われています。
+              </AccordionPanel>
+            </AccordionItem>
+            <AccordionItem>
+              <h2>
+                <AccordionButton>
+                  <Box as="span" flex="1" textAlign="left" fontWeight={'bold'}>
+                    教えている技術ではスマートフォン向けアプリが作られるでしょうか？
+                  </Box>
+                  <AccordionIcon />
+                </AccordionButton>
+              </h2>
+              <AccordionPanel pb={4}>
+                p5.jsの場合は、可能です（Scratchはウェブ上でスマートフォンで使えるに限ります）。p5.jsでできたものをPWAやApp
+                Store/Google
+                Playで配信できるハイブリッドアプリケーションにすることが可能です。
+              </AccordionPanel>
+            </AccordionItem>
+          </Accordion>
         </Stack>
       </Container>
     </Center>

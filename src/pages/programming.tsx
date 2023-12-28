@@ -57,9 +57,9 @@ const ProgrammingClass = () => (
       backgroundSize={'cover'}
       backgroundPosition={'center'}
     ></Container>
-    <Center>
-      {/* Top section */}
+    <Stack direction={'column'} alignItems={'center'}>
       <Container maxW={['95%', '95%', '70%']}>
+        {/* Top section */}
         <Heading mt={'1em'} mb={'1em'} size={['2xl', '4xl', '4xl']}>
           電子工作教室
         </Heading>
@@ -452,7 +452,7 @@ const ProgrammingClass = () => (
           </Box>
         </Stack>
         {/* FAQ section */}
-        <Stack direction={'column'} w={'100%'} maxW={800}>
+        <Stack direction={'column'} w={'100%'} maxW={800} my={16}>
           <Heading>FAQ: よくあるご質問</Heading>
           <Accordion defaultIndex={[0]} w={'100%'}>
             <AccordionItem>
@@ -498,8 +498,57 @@ const ProgrammingClass = () => (
             </AccordionItem>
           </Accordion>
         </Stack>
+        {/* CTA section */}
       </Container>
-    </Center>
+      <Container minW={'100%'}>
+        <Box
+          minW={'100%'}
+          bgImage={`linear-gradient(0deg, rgba(255,255,255,0.1), rgba(255,255,255,0.1) 10%, rgba(255,255,255,0.7) 30%), url(https://${cdnDomain}/${cdnDirectory}programming-cta-bg.jpg)`}
+          backgroundSize={'cover'}
+          backgroundPosition={'center'}
+        >
+          <Stack
+            direction={'column'}
+            w={'100%'}
+            maxW={600}
+            my={16}
+            alignItems={'center'}
+          >
+            <Heading my={8}>是非体験レッスンを</Heading>
+            <Text my={8}>
+              どちらの言語にご興味あるでしょうか？ぜひご相談ください。体験教室を受けていただきましたら、プログラミングとは何か想像がつくと思います。
+            </Text>
+            <Box my={16}>
+              <Button
+                as={'a'}
+                fontWeight={600}
+                color={'white'}
+                bg={'blue.500'}
+                href={'/trial'}
+                _hover={{
+                  bg: 'blue.400'
+                }}
+              >
+                <EditIcon />
+                &nbsp;体験レッスン
+              </Button>{' '}
+              <Button
+                as={'a'}
+                fontWeight={600}
+                href={'tel:092-325-1773'}
+                color={'text'}
+                _hover={{
+                  bg: 'green.100'
+                }}
+              >
+                <PhoneIcon />
+                &nbsp;092-325-1773
+              </Button>{' '}
+            </Box>
+          </Stack>
+        </Box>
+      </Container>
+    </Stack>
     <Container>
       <Footer>
         <Text>© 2009-2023 Studio Kura 絵画教室 All rights reserved</Text>

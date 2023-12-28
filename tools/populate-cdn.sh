@@ -48,6 +48,7 @@ wget -O "programming-clipart-3.jpg" https://www.studiokura.com/denshikousaku/ass
 wget -O "programming-teachers-1.jpg" https://www.studiokura.com/denshikousaku/assets/img/gallery/matsuzaki.jpg
 wget -O "programming-teachers-2.jpg" https://www.studiokura.com/denshikousaku/assets/img/gallery/alejandro.jpg
 wget -O "programming-teachers-3.jpg" https://www.studiokura.com/denshikousaku/assets/img/gallery/ozeki.jpg
+wget -O "programming-cta-bg.jpg" https://www.studiokura.com/denshikousaku/assets/img/illustrations/kura-photo-bg.jpg
 
 # ClassPlace slides: generic
 wget -O "placeslide-otona.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/itoshima-otona.jpg

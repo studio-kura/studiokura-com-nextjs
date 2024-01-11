@@ -15,9 +15,7 @@ const Kindergartens = () => (
       <Main>
         <Text color="text">本文です。</Text>
       </Main>
-      <Footer>
-        <Text>© 2009-2023 Studio Kura 絵画教室 All rights reserved</Text>
-      </Footer>
+      <Footer />
     </Container>
   </Layout>
 )

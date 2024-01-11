@@ -39,9 +39,7 @@ const KasuyaPlace = () => (
     <ClassPlaceSlideOtona />
     <ClassPlaceSlideKodomo />
     <Container>
-      <Footer>
-        <Text>© 2009-2023 Studio Kura 絵画教室 All rights reserved</Text>
-      </Footer>
+      <Footer />
     </Container>
   </Layout>
 )

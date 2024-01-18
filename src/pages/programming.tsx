@@ -18,13 +18,15 @@ import {
   AccordionIcon,
   CardBody
 } from '@chakra-ui/react'
-import { EditIcon, PhoneIcon, CheckCircleIcon } from '@chakra-ui/icons'
+import { CheckCircleIcon } from '@chakra-ui/icons'
 
 import { Layout } from '@/components/Layout'
 import { Container } from '@/components/Container'
 import { Footer } from '@/components/Footer'
 import { Navigation } from '@/components/Navigation'
 import { HeaderSketch } from '@/components/Programming/HeaderSketch'
+import { PricingBox } from '@/components/Pricing'
+import { PhoneButton, TrialButton } from '@/components/Buttons'
 
 const cdnDomain = process.env.NEXT_PUBLIC_CDN_DOMAIN ?? ''
 const cdnDirectory = process.env.NEXT_PUBLIC_CDN_DIRECTORY ?? ''
@@ -80,31 +82,8 @@ const ProgrammingClass = () => (
             <Text mt={'1em'} mb={'1em'}>
               キーボードがまだ打てない方からアプリやウェブサイトを既にリリースされている方まで
             </Text>
-            <Button
-              as={'a'}
-              fontWeight={600}
-              color={'white'}
-              bg={'blue.500'}
-              href={'/trial'}
-              _hover={{
-                bg: 'blue.400'
-              }}
-            >
-              <EditIcon />
-              &nbsp;体験レッスン
-            </Button>{' '}
-            <Button
-              as={'a'}
-              fontWeight={600}
-              href={'tel:092-325-1773'}
-              color={'text'}
-              _hover={{
-                bg: 'green.100'
-              }}
-            >
-              <PhoneIcon />
-              &nbsp;092-325-1773
-            </Button>{' '}
+            <TrialButton color={'white'} bg={'blue.500'} hoverbg={'blue.400'} />{' '}
+            <PhoneButton />{' '}
           </Box>
           <Box minW={'40vw'}>
             <AspectRatio ratio={16 / 9}>
@@ -306,54 +285,7 @@ const ProgrammingClass = () => (
           </Button>
           ）。
         </Text>
-        <Stack
-          direction={['column', 'column', 'row']}
-          mt={'1em'}
-          maxW={['100%', '80%', '80%']}
-          my={16}
-          gap={16}
-        >
-          <Card w={'300px'} px={8} py={'32px'}>
-            <CardBody textAlign={'center'}>
-              <Heading>￥5.500/月</Heading>
-              <Heading size={'s'}>月2回コース</Heading>
-              <Button
-                mt={'48px'}
-                borderRadius={100}
-                as={'a'}
-                fontWeight={600}
-                color={'white'}
-                bg={'blue.500'}
-                href={'/trial'}
-                _hover={{
-                  bg: 'blue.400'
-                }}
-              >
-                体験レッスン
-              </Button>
-            </CardBody>
-          </Card>
-          <Card w={'300px'} px={8} py={'32px'}>
-            <CardBody textAlign={'center'}>
-              <Heading>￥11.000/月</Heading>
-              <Heading size={'s'}>月4回コース</Heading>
-              <Button
-                mt={'48px'}
-                borderRadius={100}
-                as={'a'}
-                fontWeight={600}
-                color={'white'}
-                bg={'blue.500'}
-                href={'/trial'}
-                _hover={{
-                  bg: 'blue.400'
-                }}
-              >
-                体験レッスン
-              </Button>
-            </CardBody>
-          </Card>
-        </Stack>
+        <PricingBox />
         {/* Teachers section */}
         <Stack
           direction={['column', 'column', 'row']}
@@ -518,31 +450,12 @@ const ProgrammingClass = () => (
               どちらの言語にご興味あるでしょうか？ぜひご相談ください。体験教室を受けていただきましたら、プログラミングとは何か想像がつくと思います。
             </Text>
             <Box my={16}>
-              <Button
-                as={'a'}
-                fontWeight={600}
+              <TrialButton
                 color={'white'}
                 bg={'blue.500'}
-                href={'/trial'}
-                _hover={{
-                  bg: 'blue.400'
-                }}
-              >
-                <EditIcon />
-                &nbsp;体験レッスン
-              </Button>{' '}
-              <Button
-                as={'a'}
-                fontWeight={600}
-                href={'tel:092-325-1773'}
-                color={'text'}
-                _hover={{
-                  bg: 'green.100'
-                }}
-              >
-                <PhoneIcon />
-                &nbsp;092-325-1773
-              </Button>{' '}
+                hoverbg={'blue.400'}
+              />{' '}
+              <PhoneButton />{' '}
             </Box>
           </Stack>
         </Box>

@@ -1,4 +1,4 @@
-import { Heading, Stack, Card, Button, CardBody } from '@chakra-ui/react'
+import { Heading, Stack, Card, CardBody } from '@chakra-ui/react'
 import { TrialButton } from '@/components/Buttons'
 
 const PricingBox = () => (

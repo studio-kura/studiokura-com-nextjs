@@ -1,6 +1,6 @@
-import { Stack, Heading } from '@chakra-ui/react'
+import { Heading } from '@chakra-ui/react'
 
-import { Layout } from '@/components/Layout'
+import { Layout, CardStack } from '@/components/Layout'
 import { Container } from '@/components/Container'
 import { Main } from '@/components/Main'
 import { Footer } from '@/components/Footer'
@@ -30,14 +30,7 @@ const Index = () => (
     <Navigation />
     <Container height="100vh" pt="12em">
       <Main>
-        <Stack
-          align={'center'}
-          justify={'center'}
-          direction={'row'}
-          mt={6}
-          display={'flex'}
-          alignItems={'flex-start'}
-        >
+        <CardStack>
           <ClassTypeCard
             title="こども絵画造形教室"
             imageSrc="card-kodomo.jpg"
@@ -65,43 +58,36 @@ const Index = () => (
             Kuraの電子工作室ではProcessingやArduino、Scratchなどのプログラミング言語を使って制作します。プログラミングの基礎を楽しく学びながら、ゲームやアプリ、アート作品を作ります。
             大人の方もお子様も受講できます。
           </ClassTypeCard>
-        </Stack>
+        </CardStack>
         <Heading>教室一覧</Heading>
-        <Stack
-          align={'center'}
-          justify={'center'}
-          direction={'row'}
-          mt={6}
-          display={'flex'}
-          alignItems={'flex-start'}
-        >
+        <CardStack>
           <ItoshimaCard />
           <NishijinCard />
           <TakeoCard />
-        </Stack>
-        <Stack align={'center'} justify={'center'} direction={'row'} mt={6}>
+        </CardStack>
+        <CardStack>
           <KaratsuCard />
           <HakozakiCard />
           <HashimotoCard />
-        </Stack>
-        <Stack align={'center'} justify={'center'} direction={'row'} mt={6}>
+        </CardStack>
+        <CardStack>
           <SarayamaCard />
           <MomochiCard />
-        </Stack>
-        <Stack align={'center'} justify={'center'} direction={'row'} mt={6}>
+        </CardStack>
+        <CardStack>
           <KashiiCard />
           <MotookaCard />
           <BefuCard />
-        </Stack>
-        <Stack align={'center'} justify={'center'} direction={'row'} mt={6}>
+        </CardStack>
+        <CardStack>
           <KurumeCard />
           <KasuyaCard />
-        </Stack>
-        <Stack align={'center'} justify={'center'} direction={'row'} mt={6}>
+        </CardStack>
+        <CardStack>
           <OnojyoCard />
           <NagazumiCard />
           <OnlineCard />
-        </Stack>
+        </CardStack>
       </Main>
       <Footer />
     </Container>

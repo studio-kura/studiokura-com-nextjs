@@ -159,3 +159,32 @@ wget -O "place-map-nagazumi-big.jpg" https://www.studiokura.com/img/map-nagazumi
 # ClassPlace slides: Online
 wget -O "placeslide1-online.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/online-bg-1.jpg
 wget -O "placeslide3-online.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/online-bg-2.jpg
+
+# Teachers
+wget -O "teachers-matsuzaki-thumbnail.jpg" https://farm6.static.flickr.com/5219/5474566134_db1371a10b_q.jpg
+wget -O "teachers-alejandro-thumbnail.jpg" https://www.studiokura.com/img/alejandro-q.jpg
+wget -O "teachers-azuma-thumbnail.jpg" https://live.staticflickr.com/65535/49962861046_e0a7b0a91e_q.jpg
+wget -O "teachers-ogawa-thumbnail.jpg" https://live.staticflickr.com/65535/51006912003_73b54903d1_q.jpg
+wget -O "teachers-ito-thumbnail.jpg" https://farm1.staticflickr.com/633/22675718246_381c68cfa7_q.jpg
+
+wget -O "teachers-nakamura-thumbnail.jpg" https://live.staticflickr.com/65535/53098941672_c452221914_q.jpg
+wget -O "teachers-jou-thumbnail.jpg" https://live.staticflickr.com/65535/53098941672_c452221914_q.jpg
+wget -O "teachers-watanabe-thumbnail.jpg" https://farm5.staticflickr.com/4727/38636045855_fc615877d4_q.jpg
+wget -O "teachers-tanoue-thumbnail.jpg" https://live.staticflickr.com/65535/52869733235_3671216856_q.jpg
+wget -O "teachers-tanaka-thumbnail.jpg" https://live.staticflickr.com/65535/51098916938_5f3f9d22cc_q.jpg
+
+wget -O "teachers-nakajima-thumbnail.jpg" https://live.staticflickr.com/65535/48264744752_b2d18a7fd3_q.jpg
+wget -O "teachers-moriyama-thumbnail.jpg" https://live.staticflickr.com/65535/50240089926_ffe3dfe437_q.jpg
+wget -O "teachers-sakai-thumbnail.jpg" https://live.staticflickr.com/65535/52869789058_795b56273a_q.jpg
+wget -O "teachers-maki-thumbnail.jpg" https://live.staticflickr.com/65535/51007622086_539025eb8e_q.jpg
+
+wget -O "teachers-matsuzaki-1.jpg" https://www.studiokura.com/bilder/hiro2.jpg
+wget -O "teachers-matsuzaki-2.jpg" https://www.studiokura.com/bilder/hiroexhibition2.jpg
+wget -O "teachers-matsuzaki-3.jpg" https://www.studiokura.com/bilder/hiroexhibition1.jpg
+wget -O "teachers-matsuzaki-4.jpg" https://www.studiokura.com/bilder/hiroanimation.jpg
+wget -O "teachers-matsuzaki-5.jpg" https://www.studiokura.com/bilder/triangularexplosion6.jpg
+wget -O "teachers-matsuzaki-6.jpg" https://www.studiokura.com/bilder/hiroexhibition3.jpg
+
+wget -O "teachers-alejandro-1.jpg" https://www.studiokura.com/koushi/images/alejandro.jpg
+wget -O "teachers-alejandro-2.jpg" https://www.studiokura.com/koushi/images/ale-sonarconjapon.jpg
+

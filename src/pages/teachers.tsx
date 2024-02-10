@@ -6,6 +6,7 @@ import {
   Card,
   CardBody,
   CardHeader,
+  Spinner,
   SimpleGrid
 } from '@chakra-ui/react'
 import { Layout } from '@/components/Layout'
@@ -43,22 +44,26 @@ const TeacherList = () => {
         </Heading>
       </Container>
       <Container>
-        <SimpleGrid columns={{ sm: 3, md: 4 }}>
-          {teachersData.map((teacher) => (
-            <NextLink href={`/teachers/${teacher.slug}`}>
-              <Card maxW={150} m={4}>
-                <CardHeader p={0}>
-                  <Image
-                    src={`https://${cdnDomain}/${cdnDirectory}teachers-${teacher.slug}-thumbnail.jpg`}
-                    alt={`${teacher.name}の写真`}
-                    mb={4}
-                  />
-                </CardHeader>
-                <CardBody>{teacher.name}</CardBody>
-              </Card>
-            </NextLink>
-          ))}
-        </SimpleGrid>
+        {teachersData[0].name == undefined ? (
+          <Spinner />
+        ) : (
+          <SimpleGrid columns={{ sm: 3, md: 4 }}>
+            {teachersData.map((teacher) => (
+              <NextLink href={`/teachers/${teacher.slug}`}>
+                <Card maxW={150} m={4}>
+                  <CardHeader p={0}>
+                    <Image
+                      src={`https://${cdnDomain}/${cdnDirectory}teachers-${teacher.slug}-thumbnail.jpg`}
+                      alt={`${teacher.name}の写真`}
+                      mb={4}
+                    />
+                  </CardHeader>
+                  <CardBody>{teacher.name}</CardBody>
+                </Card>
+              </NextLink>
+            ))}
+          </SimpleGrid>
+        )}
         <Footer />
       </Container>
     </Layout>

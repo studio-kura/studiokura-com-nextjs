@@ -43,7 +43,7 @@ const TeacherProfilePage = () => {
       <Container>
         <Box
           dangerouslySetInnerHTML={{ __html: teacherData.content ?? '' }}
-          maxW={['100%', '80%', '80%', '60%']}
+          maxW={['100%', '80%', '70%', '60%', '800px']}
           px={8}
         />
         {teacherData?.images?.length && teacherData.images.length < 2 ? (

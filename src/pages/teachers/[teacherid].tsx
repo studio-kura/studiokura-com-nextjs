@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
-import { Heading, Image, Box } from '@chakra-ui/react'
+import { Heading, Image, Box, SimpleGrid } from '@chakra-ui/react'
 import { Layout } from '@/components/Layout'
 import { Container } from '@/components/Container'
 import { Footer } from '@/components/Footer'
@@ -41,16 +41,30 @@ const TeacherProfilePage = () => {
         </Heading>
       </Container>
       <Container>
-        <Box dangerouslySetInnerHTML={{ __html: teacherData.content ?? '' }} />
-        <Box mt={8}>
-          {teacherData.images?.map((imageSrc: string) => (
-            <Image
-              src={`https://${cdnDomain}/${cdnDirectory}${imageSrc}`}
-              alt={`${teacherData.name}の写真`}
-              mb={4}
-            />
-          ))}
-        </Box>
+        <Box
+          dangerouslySetInnerHTML={{ __html: teacherData.content ?? '' }}
+          maxW={['100%', '80%', '80%', '60%']}
+          px={8}
+        />
+        {teacherData?.images?.length && teacherData.images.length < 2 ? (
+          /* 写真が一つだけの場合、その写真だけを表示 */
+          <Image
+            src={`https://${cdnDomain}/${cdnDirectory}${teacherData.images[0]}`}
+            alt={`${teacherData.name}の写真`}
+            p={4}
+          />
+        ) : (
+          /* 写真が二つ以上の場合、グリッドに並べる */
+          <SimpleGrid columns={[1, 2]} mt={8}>
+            {teacherData.images?.map((imageSrc: string) => (
+              <Image
+                src={`https://${cdnDomain}/${cdnDirectory}${imageSrc}`}
+                alt={`${teacherData.name}の写真`}
+                p={4}
+              />
+            ))}
+          </SimpleGrid>
+        )}
         <Footer />
       </Container>
     </Layout>

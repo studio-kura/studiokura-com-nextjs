@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import NextLink from 'next/link'
 import {
   Heading,
   Image,
@@ -44,16 +45,18 @@ const TeacherList = () => {
       <Container>
         <SimpleGrid columns={{ sm: 3, md: 4 }}>
           {teachersData.map((teacher) => (
-            <Card maxW={150} m={4}>
-              <CardHeader p={0}>
-                <Image
-                  src={`https://${cdnDomain}/${cdnDirectory}teachers-${teacher.slug}-thumbnail.jpg`}
-                  alt={`${teacher.name}の写真`}
-                  mb={4}
-                />
-              </CardHeader>
-              <CardBody>{teacher.name}</CardBody>
-            </Card>
+            <NextLink href={`/teachers/${teacher.slug}`}>
+              <Card maxW={150} m={4}>
+                <CardHeader p={0}>
+                  <Image
+                    src={`https://${cdnDomain}/${cdnDirectory}teachers-${teacher.slug}-thumbnail.jpg`}
+                    alt={`${teacher.name}の写真`}
+                    mb={4}
+                  />
+                </CardHeader>
+                <CardBody>{teacher.name}</CardBody>
+              </Card>
+            </NextLink>
           ))}
         </SimpleGrid>
         <Footer />

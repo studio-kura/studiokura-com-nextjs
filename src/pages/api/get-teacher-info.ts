@@ -1,5 +1,5 @@
-import { promises as fs } from 'fs'
 import type { NextApiRequest, NextApiResponse } from 'next'
+import { teachers } from '@/data/teachers'
 
 export type TeacherData = {
   slug: string
@@ -26,15 +26,10 @@ const handler = async (
     return
   }
 
-  const file = await fs.readFile(
-    process.cwd() + '/src/data/teachers.json',
-    'utf8'
-  )
-  const data = JSON.parse(file)
   const teacherid = args['teacherid'] as string
 
   try {
-    const teacherData: TeacherData[] = data.filter(
+    const teacherData: TeacherData[] = teachers.filter(
       (teacher: TeacherData) => teacher.slug == teacherid
     )
     if (teacherData.length < 1)

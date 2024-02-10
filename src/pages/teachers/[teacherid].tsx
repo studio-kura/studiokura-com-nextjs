@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
-import { Heading, Image, Box, HStack } from '@chakra-ui/react'
+import { Heading, Image, Box } from '@chakra-ui/react'
 import { Layout } from '@/components/Layout'
 import { Container } from '@/components/Container'
 import { Footer } from '@/components/Footer'
@@ -42,7 +42,7 @@ const Classrooms = () => {
       </Container>
       <Container>
         <Box dangerouslySetInnerHTML={{ __html: teacherData.content ?? '' }} />
-        <HStack spacing="24px">
+        <Box mt={8}>
           {teacherData.images?.map((imageSrc: string) => (
             <Image
               src={`https://${cdnDomain}/${cdnDirectory}${imageSrc}`}
@@ -50,7 +50,7 @@ const Classrooms = () => {
               mb={4}
             />
           ))}
-        </HStack>
+        </Box>
         <Footer />
       </Container>
     </Layout>

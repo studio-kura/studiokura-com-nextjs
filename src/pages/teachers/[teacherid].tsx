@@ -13,7 +13,7 @@ const dummyTeacher: TeacherData = {
 const cdnDomain = process.env.NEXT_PUBLIC_CDN_DOMAIN ?? ''
 const cdnDirectory = process.env.NEXT_PUBLIC_CDN_DIRECTORY ?? ''
 
-const Classrooms = () => {
+const TeacherProfilePage = () => {
   const router = useRouter()
   const [teacherData, setTeacherData] = useState<TeacherData>(dummyTeacher)
   const [teacherId, setTeacherId] = useState<string>()
@@ -57,4 +57,4 @@ const Classrooms = () => {
   )
 }
 
-export default Classrooms
+export default TeacherProfilePage

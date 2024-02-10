@@ -168,7 +168,7 @@ wget -O "teachers-ogawa-thumbnail.jpg" https://live.staticflickr.com/65535/51006
 wget -O "teachers-ito-thumbnail.jpg" https://farm1.staticflickr.com/633/22675718246_381c68cfa7_q.jpg
 
 wget -O "teachers-nakamura-thumbnail.jpg" https://live.staticflickr.com/65535/53098941672_c452221914_q.jpg
-wget -O "teachers-jou-thumbnail.jpg" https://live.staticflickr.com/65535/53098941672_c452221914_q.jpg
+wget -O "teachers-jou-thumbnail.jpg" https://farm2.staticflickr.com/1745/28599407938_3152a51f89_q.jpg
 wget -O "teachers-watanabe-thumbnail.jpg" https://farm5.staticflickr.com/4727/38636045855_fc615877d4_q.jpg
 wget -O "teachers-tanoue-thumbnail.jpg" https://live.staticflickr.com/65535/52869733235_3671216856_q.jpg
 wget -O "teachers-tanaka-thumbnail.jpg" https://live.staticflickr.com/65535/51098916938_5f3f9d22cc_q.jpg
@@ -188,3 +188,26 @@ wget -O "teachers-matsuzaki-6.jpg" https://www.studiokura.com/bilder/hiroexhibit
 wget -O "teachers-alejandro-1.jpg" https://www.studiokura.com/koushi/images/alejandro.jpg
 wget -O "teachers-alejandro-2.jpg" https://www.studiokura.com/koushi/images/ale-sonarconjapon.jpg
 
+wget -O "teachers-azuma-1.jpg" https://live.staticflickr.com/65535/49962861046_e0a7b0a91e_n.jpg
+wget -O "teachers-ogawa-1.jpg" https://live.staticflickr.com/65535/51006912003_73b54903d1.jpg
+wget -O "teachers-ito-1.jpg" https://farm1.staticflickr.com/633/22675718246_381c68cfa7_n.jpg
+wget -O "teachers-nakamura-1.jpg" https://live.staticflickr.com/65535/53098941672_c452221914_w.jpg
+wget -O "teachers-jou-1.jpg" https://farm2.staticflickr.com/1745/28599407938_3152a51f89.jpg
+wget -O "teachers-watanabe-1.jpg" https://farm5.staticflickr.com/4727/38636045855_fc615877d4_q.jpg
+wget -O "teachers-tanoue-1.jpg" https://live.staticflickr.com/65535/52874667564_eb3a184ab4.jpg
+wget -O "teachers-tanaka-1.jpg" https://live.staticflickr.com/65535/51098916938_5f3f9d22cc_n.jpg
+
+wget -O "teachers-nakajima-1.jpg" https://live.staticflickr.com/65535/48264744752_b2d18a7fd3_b.jpg
+wget -O "teachers-nakajima-2.jpg" https://live.staticflickr.com/65535/48264670661_2d33158ca8_b.jpg
+wget -O "teachers-nakajima-3.jpg" https://live.staticflickr.com/65535/48264744932_77b1563e07_b.jpg
+
+wget -O "teachers-moriyama-1.jpg" https://live.staticflickr.com/65535/50240089926_ffe3dfe437_n.jpg
+wget -O "teachers-moriyama-2.jpg" https://live.staticflickr.com/65535/50239445013_92fc3da79a_n.jpg
+wget -O "teachers-moriyama-3.jpg" https://live.staticflickr.com/65535/50239444848_e8180c7463_n.jpg
+
+wget -O "teachers-sakai-1.jpg" https://live.staticflickr.com/65535/52869789058_795b56273a.jpg
+wget -O "teachers-sakai-2.jpg" https://live.staticflickr.com/65535/52869349101_c4be50e9ca.jpg
+wget -O "teachers-sakai-3.jpg" https://live.staticflickr.com/65535/52869789108_d081ecd9bf.jpg
+wget -O "teachers-sakai-4.jpg" https://live.staticflickr.com/65535/52868802242_36b1ce48e8.jpg
+
+wget -O "teachers-maki-1.jpg" https://live.staticflickr.com/65535/51007622086_539025eb8e.jpg

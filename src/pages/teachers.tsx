@@ -1,23 +1,73 @@
-import { Text } from '@chakra-ui/react'
-
+import { useState, useEffect } from 'react'
+import NextLink from 'next/link'
+import {
+  Heading,
+  Image,
+  Card,
+  CardBody,
+  CardHeader,
+  Spinner,
+  SimpleGrid
+} from '@chakra-ui/react'
 import { Layout } from '@/components/Layout'
-import { Hero } from '@/components/Hero'
 import { Container } from '@/components/Container'
-import { Main } from '@/components/Main'
 import { Footer } from '@/components/Footer'
 import { Navigation } from '@/components/Navigation'
+import type { TeacherData } from '@/pages/api/get-teacher-info'
 
-const TeacherList = () => (
-  <Layout title="講師の紹介｜Studio Kura 絵画美術教室（福岡県　糸島市　二丈）">
-    <Navigation />
-    <Container height="100vh">
-      <Hero title="講師紹介" />
-      <Main>
-        <Text color="text">本文です。</Text>
-      </Main>
-      <Footer />
-    </Container>
-  </Layout>
-)
+const dummyTeacher: TeacherData = {
+  slug: '読み込み中・・・'
+}
+const cdnDomain = process.env.NEXT_PUBLIC_CDN_DOMAIN ?? ''
+const cdnDirectory = process.env.NEXT_PUBLIC_CDN_DIRECTORY ?? ''
+
+const TeacherList = () => {
+  const [teachersData, setTeachersData] = useState<TeacherData[]>([
+    dummyTeacher
+  ])
+  const fetchTeachers = async () => {
+    const teacherReq = await fetch('/api/get-teachers-info')
+    setTeachersData(await teacherReq.json())
+  }
+  useEffect(() => {
+    if (teachersData[0].slug == dummyTeacher.slug) {
+      fetchTeachers()
+    }
+  }, [])
+
+  return (
+    <Layout title="講師の紹介｜Studio Kura 絵画美術教室（福岡県　糸島市　二丈）">
+      <Navigation />
+      <Container height={'200px'} minW={'100%'}>
+        <Heading mt={'1em'} size={['2xl', '2xl', '2xl']}>
+          講師一覧
+        </Heading>
+      </Container>
+      <Container>
+        {teachersData[0].name == undefined ? (
+          <Spinner />
+        ) : (
+          <SimpleGrid columns={{ sm: 3, md: 4 }}>
+            {teachersData.map((teacher) => (
+              <NextLink href={`/teachers/${teacher.slug}`}>
+                <Card maxW={150} m={4}>
+                  <CardHeader p={0}>
+                    <Image
+                      src={`https://${cdnDomain}/${cdnDirectory}teachers-${teacher.slug}-thumbnail.jpg`}
+                      alt={`${teacher.name}の写真`}
+                      mb={4}
+                    />
+                  </CardHeader>
+                  <CardBody>{teacher.name}</CardBody>
+                </Card>
+              </NextLink>
+            ))}
+          </SimpleGrid>
+        )}
+        <Footer />
+      </Container>
+    </Layout>
+  )
+}
 
 export default TeacherList

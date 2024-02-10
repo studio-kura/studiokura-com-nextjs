@@ -28,7 +28,7 @@ import {
 const Index = () => (
   <Layout>
     <Navigation />
-    <Container height="100vh" pt="12em">
+    <Container height="100vh" pt="18em">
       <Main>
         <CardStack>
           <ClassTypeCard

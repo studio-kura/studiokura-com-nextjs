@@ -14,12 +14,8 @@ import { Footer } from '@/components/Footer'
 import { Navigation } from '@/components/Navigation'
 import { ChangeEventHandler, useState } from 'react'
 import { CheckCircleIcon, WarningIcon } from '@chakra-ui/icons'
+import { type FormData } from '@/utils'
 
-type FormData = {
-  name: string
-  email: string
-  message: string
-}
 const formWidth = ['90%', '90%', '80%', '60%']
 const emailPattern: RegExp = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
 
@@ -49,8 +45,13 @@ const Contact = () => {
   ) => {
     setMessageInput(event.target.value)
   }
-  const handleSubmit = () => {
-    console.log('FORM SUBMITTED', formData)
+  const handleSubmit = async () => {
+    const apiRequest = await fetch('/api/post-contact-form', {
+      method: 'POST',
+      body: JSON.stringify(formData)
+    })
+    const apiResponse = await apiRequest.json()
+    console.log('FORM SUBMITTED', formData, apiResponse)
   }
 
   return (

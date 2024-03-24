@@ -12,10 +12,47 @@ import { Layout } from '@/components/Layout'
 import { Container } from '@/components/Container'
 import { Footer } from '@/components/Footer'
 import { Navigation } from '@/components/Navigation'
+import { ChangeEventHandler, useState } from 'react'
+import { CheckCircleIcon, WarningIcon } from '@chakra-ui/icons'
 
+type FormData = {
+  name: string
+  email: string
+  message: string
+}
 const formWidth = ['90%', '90%', '80%', '60%']
+const emailPattern: RegExp = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
 
 const Contact = () => {
+  const [nameInput, setNameInput] = useState('')
+  const [emailInput, setEmailInput] = useState('')
+  const [messageInput, setMessageInput] = useState('')
+  const formData: FormData = {
+    name: nameInput,
+    email: emailInput,
+    message: messageInput
+  }
+  const nameIsValid = nameInput.length > 0
+  const emailIsValid = emailPattern.test(emailInput)
+  const messageIsValid = messageInput.length > 0
+  const formSubmittable = emailIsValid && nameIsValid && messageIsValid
+
+  const handleNameChange: ChangeEventHandler<HTMLInputElement> = (event) => {
+    setNameInput(event.target.value)
+  }
+  const handleEmailChange: ChangeEventHandler<HTMLInputElement> = (event) => {
+    const email = event.target.value
+    setEmailInput(email)
+  }
+  const handleMessageChange: ChangeEventHandler<HTMLTextAreaElement> = (
+    event
+  ) => {
+    setMessageInput(event.target.value)
+  }
+  const handleSubmit = () => {
+    console.log('FORM SUBMITTED', formData)
+  }
+
   return (
     <Layout title="お問い合わせ｜Studio Kura 絵画美術教室（福岡県　糸島市　二丈）">
       <Navigation />
@@ -28,19 +65,46 @@ const Contact = () => {
         <Container w={'100%'}>
           <FormControl mt={'2rem'} as={'fieldset'} w={formWidth} isRequired>
             <FormLabel as={'legend'}>お名前</FormLabel>
-            <Input type={'text'} name={'name'} id={'name'} />
-            <FormHelperText>個人情報は誰とも共有しません。</FormHelperText>
+            <Input type={'text'} onChange={handleNameChange} />
+            <FormHelperText>
+              {nameIsValid ? (
+                <>
+                  <CheckCircleIcon color={'green.500'} />{' '}
+                  個人情報は誰とも共有しません。
+                </>
+              ) : (
+                <>
+                  <WarningIcon /> 必須項目です。
+                </>
+              )}
+            </FormHelperText>
           </FormControl>
           <FormControl mt={'2rem'} as={'fieldset'} w={formWidth} isRequired>
             <FormLabel as={'legend'}>メールアドレス</FormLabel>
-            <Input type={'email'} name={'email'} id={'email'} />
+            <Input type={'email'} onChange={handleEmailChange} />
             <FormHelperText>
-              メールアドレスは誰とも共有しません。
+              {emailIsValid ? (
+                <>
+                  <CheckCircleIcon color={'green.500'} />{' '}
+                  メールアドレスは誰とも共有しません。
+                </>
+              ) : (
+                <>
+                  <WarningIcon /> 正しいメールアドレスが必要です。
+                </>
+              )}
             </FormHelperText>
           </FormControl>
           <FormControl mt={'2rem'} as={'fieldset'} w={formWidth} isRequired>
             <FormLabel as={'legend'}>お問い合わせ内容</FormLabel>
-            <Textarea name={'message'} id={'message'} rows={5} isRequired />
+            <Textarea rows={5} onChange={handleMessageChange} />
+            <FormHelperText>
+              {!messageIsValid && (
+                <>
+                  <WarningIcon /> 必須項目です。
+                </>
+              )}
+            </FormHelperText>
           </FormControl>
           <FormControl mt={'2rem'} w={formWidth}>
             <Button
@@ -49,6 +113,8 @@ const Contact = () => {
               _hover={{
                 bg: 'blue.400'
               }}
+              onClick={handleSubmit}
+              isDisabled={!formSubmittable}
             >
               送信
             </Button>

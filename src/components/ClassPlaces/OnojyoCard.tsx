@@ -13,4 +13,4 @@ const OnojyoCard = () => (
   </ClassPlaceCard>
 )
 
-export default OnojyoCard
+export { OnojyoCard }

@@ -14,4 +14,4 @@ const BefuCard = () => (
   </ClassPlaceCard>
 )
 
-export default BefuCard
+export { BefuCard }

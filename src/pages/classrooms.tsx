@@ -12,6 +12,7 @@ import {
   KashiiCard,
   KasuyaCard,
   KurumeCard,
+  MeinohamaCard,
   MomochiCard,
   MotookaCard,
   NagazumiCard,
@@ -102,6 +103,7 @@ const Classrooms = () => (
       </Heading>
       <CardStack>
         <MotookaCard />
+        <MeinohamaCard />
         <HashimotoCard />
       </CardStack>
       <Heading mt={16} size={'xl'} id={'jonanku'}>

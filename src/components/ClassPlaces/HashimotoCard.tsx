@@ -13,4 +13,4 @@ const HashimotoCard = () => (
   </ClassPlaceCard>
 )
 
-export default HashimotoCard
+export { HashimotoCard }

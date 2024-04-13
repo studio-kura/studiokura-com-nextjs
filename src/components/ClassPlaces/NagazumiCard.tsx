@@ -14,4 +14,4 @@ const NagazumiCard = () => (
   </ClassPlaceCard>
 )
 
-export default NagazumiCard
+export { NagazumiCard }

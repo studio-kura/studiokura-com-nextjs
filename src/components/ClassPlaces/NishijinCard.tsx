@@ -13,4 +13,4 @@ const NishijinCard = () => (
   </ClassPlaceCard>
 )
 
-export default NishijinCard
+export { NishijinCard }

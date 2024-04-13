@@ -13,4 +13,4 @@ const ItoshimaCard = () => (
   </ClassPlaceCard>
 )
 
-export default ItoshimaCard
+export { ItoshimaCard }

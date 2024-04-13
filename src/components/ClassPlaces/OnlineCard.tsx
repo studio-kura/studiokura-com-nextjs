@@ -13,4 +13,4 @@ const OnlineCard = () => (
   </ClassPlaceCard>
 )
 
-export default OnlineCard
+export { OnlineCard }

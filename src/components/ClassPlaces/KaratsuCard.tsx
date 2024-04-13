@@ -13,4 +13,4 @@ const KaratsuCard = () => (
   </ClassPlaceCard>
 )
 
-export default KaratsuCard
+export { KaratsuCard }

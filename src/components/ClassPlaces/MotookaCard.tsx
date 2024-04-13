@@ -13,4 +13,4 @@ const MotookaCard = () => (
   </ClassPlaceCard>
 )
 
-export default MotookaCard
+export { MotookaCard }

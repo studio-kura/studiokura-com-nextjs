@@ -14,4 +14,4 @@ const KashiiCard = () => (
   </ClassPlaceCard>
 )
 
-export default KashiiCard
+export { KashiiCard }

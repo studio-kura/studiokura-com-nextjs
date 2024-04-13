@@ -14,4 +14,4 @@ const KasuyaCard = () => (
   </ClassPlaceCard>
 )
 
-export default KasuyaCard
+export { KasuyaCard }

@@ -14,7 +14,7 @@ import OnlineCard from '@/components/ClassPlaces/OnlineCard'
 import OnojyoCard from '@/components/ClassPlaces/OnojyoCard'
 import SarayamaCard from '@/components/ClassPlaces/SarayamaCard'
 import TakeoCard from '@/components/ClassPlaces/TakeoCard'
-
+export * from '@/components/ClassPlaces/MeinohamaCard'
 export {
   BefuCard,
   HakozakiCard,

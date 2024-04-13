@@ -12,6 +12,7 @@ wget -O "placecard-hakozaki.jpg" https://www.studiokura.com/img/hakozaki.jpg
 wget -O "placecard-hashimoto.jpg" https://www.studiokura.com/img/map-hashimoto.jpg
 wget -O "placecard-sarayama.jpg" https://www.studiokura.com/img/sarayama.jpg
 wget -O "placecard-momochi.jpg" https://www.studiokura.com/img/map-momochi.jpg
+wget -O "placecard-meinohama.jpg" "https://studiokura.punyu.jp/img/20240209_104049%20(1).jpg"
 wget -O "placecard-kashii.jpg" https://www.studiokura.com/img/map-kashi.jpg
 wget -O "placecard-motooka.jpg" https://www.studiokura.com/img/map-motooka.jpg
 wget -O "placecard-befu.jpg" https://www.studiokura.com/befu.studiokura.com/img/befuback.png

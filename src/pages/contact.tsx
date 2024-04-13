@@ -23,6 +23,7 @@ const Contact = () => {
   const [nameInput, setNameInput] = useState('')
   const [emailInput, setEmailInput] = useState('')
   const [messageInput, setMessageInput] = useState('')
+  const [formWasSubmitted, setFormWasSubmitted] = useState(false)
   const formData: FormData = {
     name: nameInput,
     email: emailInput,
@@ -31,7 +32,8 @@ const Contact = () => {
   const nameIsValid = nameInput.length > 0
   const emailIsValid = emailPattern.test(emailInput)
   const messageIsValid = messageInput.length > 0
-  const formSubmittable = emailIsValid && nameIsValid && messageIsValid
+  const formSubmittable =
+    emailIsValid && nameIsValid && messageIsValid && !formWasSubmitted
 
   const handleNameChange: ChangeEventHandler<HTMLInputElement> = (event) => {
     setNameInput(event.target.value)
@@ -46,6 +48,7 @@ const Contact = () => {
     setMessageInput(event.target.value)
   }
   const handleSubmit = async () => {
+    setFormWasSubmitted(true)
     const apiRequest = await fetch('/api/post-contact-form', {
       method: 'POST',
       body: JSON.stringify(formData)
@@ -117,7 +120,7 @@ const Contact = () => {
               onClick={handleSubmit}
               isDisabled={!formSubmittable}
             >
-              送信
+              {formWasSubmitted ? '送信されました' : '送信する'}
             </Button>
           </FormControl>
         </Container>

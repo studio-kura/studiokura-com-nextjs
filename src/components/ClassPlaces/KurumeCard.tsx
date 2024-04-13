@@ -13,4 +13,4 @@ const KurumeCard = () => (
   </ClassPlaceCard>
 )
 
-export default KurumeCard
+export { KurumeCard }

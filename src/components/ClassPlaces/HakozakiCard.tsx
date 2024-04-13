@@ -13,4 +13,4 @@ const HakozakiCard = () => (
   </ClassPlaceCard>
 )
 
-export default HakozakiCard
+export { HakozakiCard }

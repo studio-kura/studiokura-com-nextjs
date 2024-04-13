@@ -13,4 +13,4 @@ const SarayamaCard = () => (
   </ClassPlaceCard>
 )
 
-export default SarayamaCard
+export { SarayamaCard }

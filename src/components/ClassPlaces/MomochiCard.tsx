@@ -14,4 +14,4 @@ const MomochiCard = () => (
   </ClassPlaceCard>
 )
 
-export default MomochiCard
+export { MomochiCard }

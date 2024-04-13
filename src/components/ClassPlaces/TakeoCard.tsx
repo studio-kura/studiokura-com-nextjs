@@ -13,4 +13,4 @@ const TakeoCard = () => (
   </ClassPlaceCard>
 )
 
-export default TakeoCard
+export { TakeoCard }

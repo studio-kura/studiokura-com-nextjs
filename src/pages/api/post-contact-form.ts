@@ -12,22 +12,19 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   }
 
   try {
-    const formData: FormData = {
-      name: req.body.name,
-      email: req.body.email,
-      message: req.body.message
-    }
+    const reqFields = JSON.parse(req.body)
+    const formData = new FormData()
+    formData.append('name', reqFields.name)
+    formData.append('email', reqFields.email)
+    formData.append('message', reqFields.message)
     const apiRequest = await fetch(uri, {
       method: 'POST',
-      body: JSON.stringify(formData)
+      body: formData
     })
     const apiResponse = await apiRequest.json()
-
     res.status(200).json({
       message: 'ok',
-      apiResponse: apiResponse,
-      formData: formData,
-      uri: uri
+      data: apiResponse
     })
   } catch (error: any) {
     res.status(500).json([{ slug: 'error', content: error }])

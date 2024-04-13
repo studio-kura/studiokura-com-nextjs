@@ -110,6 +110,13 @@ wget -O "placeslide3-momochi.jpg" https://www.studiokura.com/img/okusuback.jpg
 wget -O "place-map-momochi.jpg" https://www.studiokura.com/img/map-momochi-wide.jpg
 wget -O "place-map-momochi-big.jpg" https://www.studiokura.com/img/map-momochi-wide.jpg
 
+# ClassPlace slides: Meinohama
+wget -O "placeslide1-meinohama.jpg" https://www.studiokura.com/img/meinohama.jpg
+wget -O "placeslide2-meinohama.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/karatsu-timetable.jpg
+wget -O "placeslide3-meinohama.jpg" https://www.studiokura.com/img/meinohama2.jpg
+wget -O "place-map-meinohama.jpg" https://www.studiokura.com/img/map-meinohama-wide.jpg
+wget -O "place-map-meinohama-big.jpg" https://www.studiokura.com/img/map-meinohama-wide.jpg
+
 # ClassPlace slides: Kashii
 wget -O "placeslide1-kashii.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/kasuga-title.jpg
 wget -O "placeslide2-kashii.jpg" https://www.studiokura.com/kasuga.studiokura.com/img/kasuga-timetable.jpg

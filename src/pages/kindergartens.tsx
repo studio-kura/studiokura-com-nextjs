@@ -1,20 +1,19 @@
-import { Text } from '@chakra-ui/react'
+import { Container } from '@chakra-ui/react'
 
 import { Layout } from '@/components/Layout'
-import { Hero } from '@/components/Hero'
-import { Container } from '@/components/Container'
-import { Main } from '@/components/Main'
-import { Footer } from '@/components/Footer'
 import { Navigation } from '@/components/Navigation'
+import { KindergartenSlide1 } from '@/components/KindergartenSlides'
+import { Footer } from '@/components/Footer'
 
 const Kindergartens = () => (
-  <Layout title="Studio Kura絵画造形教室 課内・課外教室">
+  <Layout title="Studio Kura絵画造形教室 幼稚園・保育園 課内・課外教室">
     <Navigation />
-    <Container height="100vh">
-      <Hero title="幼稚園・保育園" />
-      <Main>
-        <Text color="text">本文です。</Text>
-      </Main>
+    <KindergartenSlide1
+      title="Studio Kura 絵画造形教室"
+      tagline="幼稚園・保育園向けの絵画造形出張レッスン"
+      bgImageUrl="kindergartens-slide-1.jpg"
+    />
+    <Container>
       <Footer />
     </Container>
   </Layout>

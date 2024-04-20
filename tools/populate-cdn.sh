@@ -219,3 +219,15 @@ wget -O "teachers-sakai-3.jpg" https://live.staticflickr.com/65535/52869789108_d
 wget -O "teachers-sakai-4.jpg" https://live.staticflickr.com/65535/52868802242_36b1ce48e8.jpg
 
 wget -O "teachers-maki-1.jpg" https://live.staticflickr.com/65535/51007622086_539025eb8e.jpg
+
+# Kindergarten
+
+wget -O "kindergartens-slide-1.jpg" https://www.studiokura.com/kindergarten/img/fish.jpg
+wget -O "kindergartens-slide-2.jpg" https://www.studiokura.com/kindergarten/img/sunflower.jpg
+wget -O "kindergartens-slide-3.jpg" https://www.studiokura.com/kindergarten/img/nendo.jpg
+wget -O "kindergartens-slide-4.jpg" https://www.studiokura.com/kindergarten/img/ausstellung.jpg
+wget -O "kindergartens-slide-5.jpg" https://www.studiokura.com/kindergarten/img/bbg-sunset.jpg
+wget -O "kindergartens-slide-6.jpg" https://www.studiokura.com/kindergarten/img/pjimage.jpg
+wget -O "kindergartens-slide-7.jpg" https://www.studiokura.com/kindergarten/img/back.jpg
+wget -O "kindergartens-slide-8.jpg" https://www.studiokura.com/kindergarten/img/bbg-map.jpg
+wget -O "kindergartens-slide-8.jpg" https://www.studiokura.com/kindergarten/img/bbg-calltoaction.jpg

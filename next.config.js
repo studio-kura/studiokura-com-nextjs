@@ -33,6 +33,11 @@ const nextConfig = {
         source: '/denshikousaku(/?)',
         destination: '/programming',
         permanent: false
+      },
+      {
+        source: '/kindergarten/koushi(/?)',
+        destination: '/teachers',
+        permanent: false
       }
     ]
   }

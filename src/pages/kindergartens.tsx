@@ -3,8 +3,8 @@ import { Box, Container, Heading, List, ListItem } from '@chakra-ui/react'
 import { Layout } from '@/components/Layout'
 import { Navigation } from '@/components/Navigation'
 import {
-  KindergartenSlide1,
-  KindergartenSlide2
+  KindergartenTitleSlide,
+  KindergartenBoxSlide
 } from '@/components/KindergartenSlides'
 import { Footer } from '@/components/Footer'
 
@@ -12,12 +12,12 @@ const Kindergartens = () => {
   return (
     <Layout title="Studio Kura絵画造形教室 幼稚園・保育園 課内・課外教室">
       <Navigation />
-      <KindergartenSlide1
+      <KindergartenTitleSlide
         title="Studio Kura 絵画造形教室"
         tagline="幼稚園・保育園向けの絵画造形出張レッスン"
         bgImageUrl="kindergartens-slide-1.jpg"
       />
-      <KindergartenSlide2
+      <KindergartenBoxSlide
         title="カリキュラム導入のご案内"
         bgImageUrl="kindergartens-slide-2.jpg"
       >
@@ -46,7 +46,7 @@ const Kindergartens = () => {
             <ListItem>貴園の費用負担は一切ありません。</ListItem>
           </List>
         </Box>
-      </KindergartenSlide2>
+      </KindergartenBoxSlide>
       <Container>
         <Footer />
       </Container>

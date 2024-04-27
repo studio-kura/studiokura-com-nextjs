@@ -1,2 +1,2 @@
-export * from './KindergartenSlide1'
-export * from './KindergartenSlide2'
+export * from './KindergartenTitleSlide'
+export * from './KindergartenBoxSlide'

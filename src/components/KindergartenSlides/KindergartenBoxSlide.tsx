@@ -1,13 +1,13 @@
 import { Text, Center, Box } from '@chakra-ui/react'
 import { Container } from '@/components/Container'
 
-type KindergartenSlide2Props = {
+type KindergartenBoxSlideProps = {
   title: string
   bgImageUrl: string
   children?: JSX.Element
 }
 
-const KindergartenSlide2 = (props: KindergartenSlide2Props) => {
+const KindergartenBoxSlide = (props: KindergartenBoxSlideProps) => {
   const { title, bgImageUrl, children } = props
   const cdnDomain = process.env.NEXT_PUBLIC_CDN_DOMAIN ?? ''
   const cdnDirectory = process.env.NEXT_PUBLIC_CDN_DIRECTORY ?? ''
@@ -44,4 +44,4 @@ const KindergartenSlide2 = (props: KindergartenSlide2Props) => {
   )
 }
 
-export { KindergartenSlide2 }
+export { KindergartenBoxSlide }

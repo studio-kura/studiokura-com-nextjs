@@ -1,13 +1,11 @@
-import { Text, Center, Box } from '@chakra-ui/react'
-import { Hero } from '@/components/Hero'
+import { Text, Center, Box, Heading } from '@chakra-ui/react'
 import { Container } from '@/components/Container'
-import { Main } from '@/components/Main'
 
 type KindergartenSlide1Props = {
   title: string
   tagline: string
   bgImageUrl: string
-  children?: string | Element
+  children?: JSX.Element
 }
 
 const KindergartenSlide1 = (props: KindergartenSlide1Props) => {
@@ -19,37 +17,33 @@ const KindergartenSlide1 = (props: KindergartenSlide1Props) => {
       bgImage={`https://${cdnDomain}/${cdnDirectory}${bgImageUrl}`}
       backgroundSize={'cover'}
       backgroundPosition={'center'}
+      h={'90vh'}
     >
       <Center py={6} px={4}>
-        <Box
-          w={'full'}
-          rounded={'xl'}
-          p={0}
-          pb={2}
-          textAlign={'center'}
-          mt="-10vw"
-        >
-          <Hero
-            title={title}
+        <Box w={'full'} rounded={'xl'} p={0} pb={2} textAlign={'center'}>
+          <Heading
+            fontSize={['2.5em', '3em', '6vw']}
+            pt={'30vh'}
+            pb={'0.5em'}
             color={'white'}
             textShadow={'black 0.03em 0.03em 0.03em;'}
-          />
-          <Main>
-            <Text
-              color="white"
-              fontSize={'2em'}
-              textShadow={'black 0.03em 0.03em 0.03em;'}
-            >
-              {tagline}
-            </Text>
-            <Text
-              color="white"
-              fontSize={'2em'}
-              textShadow={'black 0.03em 0.03em 0.03em;'}
-            >
-              <>{children}</>
-            </Text>
-          </Main>
+          >
+            {title}
+          </Heading>
+          <Text
+            color="white"
+            fontSize={['1.5em', '2em']}
+            textShadow={'black 0.03em 0.03em 0.03em;'}
+          >
+            {tagline}
+          </Text>
+          <Text
+            color="white"
+            fontSize={'2em'}
+            textShadow={'black 0.03em 0.03em 0.03em;'}
+          >
+            <>{children}</>
+          </Text>
         </Box>
       </Center>
     </Container>

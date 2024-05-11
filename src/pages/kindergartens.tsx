@@ -115,6 +115,15 @@ const Kindergartens = () => {
         ]}
       />
 
+      <KindergartenBoxSlide
+        title="経験豊富な講師陣"
+        bgImageUrl="kindergartens-slide-6.jpg"
+      >
+        <Box>
+          専門の美術教育を受けた、幼児造形教育の経験豊富な講師陣が多数在籍しています。幼児に絵画や造形を教える熱意や姿勢を重視して採用を行なっております。
+        </Box>
+      </KindergartenBoxSlide>
+
       <Container>
         <Footer />
       </Container>

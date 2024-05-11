@@ -4,7 +4,8 @@ import { Layout } from '@/components/Layout'
 import { Navigation } from '@/components/Navigation'
 import {
   KindergartenTitleSlide,
-  KindergartenBoxSlide
+  KindergartenBoxSlide,
+  KindergartenVideoSlide
 } from '@/components/KindergartenSlides'
 import { Footer } from '@/components/Footer'
 
@@ -102,6 +103,17 @@ const Kindergartens = () => {
           </dl>
         </Box>
       </KindergartenBoxSlide>
+
+      <KindergartenVideoSlide
+        title="制作例"
+        bgImageUrl="kindergartens-slide-5.jpg"
+        iframeUrls={[
+          'https://www.youtube.com/embed/PhoKEZPiVO4?list=PLPXP4x-4k9UI7ftxWK4NHvYZRsmPga45S&amp;controls=0&amp;showinfo=0',
+          'https://www.youtube.com/embed/YrAsSjsRoEc?list=PLPXP4x-4k9UI7ftxWK4NHvYZRsmPga45S&amp;controls=0&amp;showinfo=0',
+          'https://www.youtube.com/embed/PaxQnw6RXJQ?list=PLPXP4x-4k9UI7ftxWK4NHvYZRsmPga45S&amp;controls=0&amp;showinfo=0',
+          'https://www.youtube.com/embed/eAE5OIA_BvY?list=PLPXP4x-4k9UI7ftxWK4NHvYZRsmPga45S&amp;controls=0&amp;showinfo=0'
+        ]}
+      />
 
       <Container>
         <Footer />

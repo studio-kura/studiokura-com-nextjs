@@ -1,5 +1,15 @@
-import { Box, Container, Heading, List, ListItem } from '@chakra-ui/react'
-
+import {
+  Box,
+  Container,
+  Heading,
+  List,
+  ListItem,
+  Table,
+  Text,
+  Tbody,
+  Tr,
+  Td as ChakraTd
+} from '@chakra-ui/react'
 import { Layout } from '@/components/Layout'
 import { Navigation } from '@/components/Navigation'
 import {
@@ -8,6 +18,17 @@ import {
   KindergartenVideoSlide
 } from '@/components/KindergartenSlides'
 import { Footer } from '@/components/Footer'
+
+type TdProps = {
+  children?: JSX.Element | string
+}
+const Td = (props: TdProps) => (
+  <ChakraTd p={'8px'}>
+    <Box>
+      <Text fontSize={'12px'}>{props.children}</Text>
+    </Box>
+  </ChakraTd>
+)
 
 const Kindergartens = () => {
   return (
@@ -121,6 +142,132 @@ const Kindergartens = () => {
       >
         <Box>
           専門の美術教育を受けた、幼児造形教育の経験豊富な講師陣が多数在籍しています。幼児に絵画や造形を教える熱意や姿勢を重視して採用を行なっております。
+        </Box>
+      </KindergartenBoxSlide>
+
+      <KindergartenBoxSlide
+        title="レッスンが行われている幼稚園・保育園を一部ご紹介します"
+        bgImageUrl="kindergartens-slide-7.jpg"
+      >
+        <Box>
+          <Table variant={'striped'} bgColor={'#ccc8'}>
+            <Tbody>
+              <Tr>
+                <Td>
+                  <strong>福岡県</strong>
+                </Td>
+                <Td></Td>
+                <Td></Td>
+                <Td></Td>
+              </Tr>
+              <Tr>
+                <Td>
+                  <strong>福岡市</strong>
+                </Td>
+                <Td>あけぼの保育園（中央区）</Td>
+                <Td>春陽保育園(中央区)</Td>
+                <Td>堅粕保育園（博多区）</Td>
+              </Tr>
+              <Tr>
+                <Td>五十川保育園（博多区）</Td>
+                <Td>わかな保育園（博多区）</Td>
+                <Td>第三ポケット保育園（博多区）</Td>
+                <Td>福岡デザイン＆テクノロジー専門学校(博多区)</Td>
+              </Tr>
+              <Tr>
+                <Td>きぼうの森保育園（東区）</Td>
+                <Td>みらいの森保育園（東区）</Td>
+                <Td>香住ヶ丘保育園（東区）</Td>
+                <Td>御幸保育園（東区）</Td>
+              </Tr>
+              <Tr>
+                <Td>第二ポケット保育園（東区）</Td>
+                <Td>城浜保育園（東区）</Td>
+                <Td>ちいさな目のクジラ（南区）</Td>
+                <Td>ひかりの森保育園（城南区）</Td>
+              </Tr>
+              <Tr>
+                <Td>紅葉幼稚園（早良区）</Td>
+                <Td>ここは保育園（早良区）</Td>
+                <Td>発達子どもアカデミー西新校（早良区）</Td>
+                <Td>原西保育園（早良区）</Td>
+              </Tr>
+              <Tr>
+                <Td>ゆめの森保育園（福岡市西区）</Td>
+                <Td>こじか保育園（福岡市西区）</Td>
+                <Td>大塚第一保育園（福岡市西区）</Td>
+                <Td>大塚第二保育園（福岡市西区）</Td>
+              </Tr>
+              <Tr>
+                <Td>もみじの森保育園（福岡市西区）</Td>
+                <Td>姪浜もみじの森保育園（福岡市西区）</Td>
+                <Td>内浜保育園（福岡市西区）</Td>
+                <Td>
+                  <strong>福岡県その他の市</strong>
+                </Td>
+              </Tr>
+              <Tr>
+                <Td>前原中央保育園（糸島市）</Td>
+                <Td>笹山幼稚園（糸島市）</Td>
+                <Td>ひじり保育園（大野城市）</Td>
+                <Td>平等寺保育園（宗像市）</Td>
+              </Tr>
+              <Tr>
+                <Td>三葉幼稚園(宇美町)</Td>
+                <Td>味坂保育園（小郡市）</Td>
+                <Td>立石保育園（朝倉市）</Td>
+                <Td>和田幼稚園（篠栗町）</Td>
+              </Tr>
+              <Tr>
+                <Td>日の里東保育園（宗像市）</Td>
+                <Td>潤野保育園(飯塚市)</Td>
+                <Td>横田保育園(飯塚市)</Td>
+                <Td>遠賀中央幼稚園(遠賀町)</Td>
+              </Tr>
+              <Tr>
+                <Td>ポケット保育園（粕屋町）</Td>
+                <Td>かよいちょう保育園（粕屋町）</Td>
+                <Td>こでまり保育園（久留米市）</Td>
+                <Td>
+                  <strong>佐賀県</strong>
+                </Td>
+              </Tr>
+              <Tr>
+                <Td>尚賢保育園（佐賀市）</Td>
+                <Td>諸富北幼稚園（佐賀市）</Td>
+                <Td>諸富南幼稚園（佐賀市）</Td>
+                <Td>あけぼの保育園（唐津市）</Td>
+              </Tr>
+              <Tr>
+                <Td>昭和幼稚園（唐津市）</Td>
+                <Td>唐房保育園（唐津市）</Td>
+                <Td>西唐津保育園（唐津市）</Td>
+                <Td>湊保育園（唐津市）</Td>
+              </Tr>
+              <Tr>
+                <Td>西唐津児童館(唐津市)</Td>
+                <Td>青い鳥保育園（多久市）</Td>
+                <Td>南波多保育園（伊万里市）</Td>
+                <Td>立花保育園（伊万里市）</Td>
+              </Tr>
+              <Tr>
+                <Td>みなみ保育園（伊万里市）</Td>
+                <Td>大川内保育園（伊万里市）</Td>
+                <Td>波多津保育園（伊万里市）</Td>
+                <Td>
+                  <strong>大分県</strong>
+                </Td>
+              </Tr>
+              <Tr>
+                <Td>ひかり保育園（日田市）</Td>
+                <Td>日隈こども園（日田市）</Td>
+                <Td>
+                  <strong>山口県</strong>
+                </Td>
+                <Td>稗田保育園（下関市）</Td>
+              </Tr>
+            </Tbody>
+          </Table>
         </Box>
       </KindergartenBoxSlide>
 

@@ -16,7 +16,7 @@ const KindergartenBoxSlide = (props: KindergartenBoxSlideProps) => {
       bgImage={`https://${cdnDomain}/${cdnDirectory}${bgImageUrl}`}
       backgroundSize={'cover'}
       backgroundPosition={'center'}
-      h={'90vh'}
+      minH={'90vh'}
     >
       <Center py={6} px={4}>
         <Box w={'full'} rounded={'xl'} p={0} pb={2}>
@@ -35,6 +35,7 @@ const KindergartenBoxSlide = (props: KindergartenBoxSlideProps) => {
             minH={'30vh'}
             maxW={'1000px'}
             p={['1em', '2em', '4em']}
+            my={'64px'}
           >
             <>{children}</>
           </Box>

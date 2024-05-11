@@ -8,6 +8,7 @@ import {
   Text,
   Tbody,
   Tr,
+  Th,
   Td as ChakraTd
 } from '@chakra-ui/react'
 import { Layout } from '@/components/Layout'
@@ -17,6 +18,7 @@ import {
   KindergartenBoxSlide,
   KindergartenVideoSlide
 } from '@/components/KindergartenSlides'
+import { PhoneButton, MailButton } from '@/components/Buttons'
 import { Footer } from '@/components/Footer'
 
 type TdProps = {
@@ -268,6 +270,67 @@ const Kindergartens = () => {
               </Tr>
             </Tbody>
           </Table>
+        </Box>
+      </KindergartenBoxSlide>
+
+      <KindergartenBoxSlide
+        title="さらに"
+        bgImageUrl="kindergartens-slide-8.jpg"
+      >
+        <Box>
+          <dl>
+            <dt style={{ marginTop: '0.5em' }}>先生への研修：</dt>
+            <dd>
+              造形教育に必要な様々なカリキュラム、指導方法をワークショップ形式でお伝えしていきます。
+            </dd>
+            <dt style={{ marginTop: '0.5em' }}>作品展の充実：</dt>
+            <dd>
+              作品展の飾り付けのアドバイスやお手伝いも行っています。これまでにないアートフルな作品展になります！
+            </dd>
+            <dt style={{ marginTop: '0.5em' }}>Studio Kuraへの社会科見学：</dt>
+            <dd>
+              糸島にあるStudio
+              Kuraには毎月6名の海外の芸術家が滞在制作を行いに来ています。彼らの制作風景や展示作品を見ること、彼らが何を考え作品を作っているかを実際に会って話すことは子どもたちにとっても非常に貴重な経験になります。
+            </dd>
+          </dl>
+        </Box>
+      </KindergartenBoxSlide>
+
+      <KindergartenBoxSlide
+        title={''}
+        addButtons={false}
+        bgImageUrl="kindergartens-slide-9.jpg"
+      >
+        <Box>
+          <Heading mb={'1em'}>Studio Kura 絵画造形教室</Heading>
+          <Table>
+            <Tbody>
+              <Tr>
+                <Th>社名</Th>
+                <Td>株式会社 Studio Kura</Td>
+              </Tr>
+              <Tr>
+                <Th>創業</Th>
+                <Td>2010年3月</Td>
+              </Tr>
+              <Tr>
+                <Th>代表者</Th>
+                <Td>代表取締役 松崎 宏史</Td>
+              </Tr>
+              <Tr>
+                <Th>従業員数</Th>
+                <Td>14名</Td>
+              </Tr>
+              <Tr>
+                <Th>所在地</Th>
+                <Td>〒819-1613 福岡県糸島市二丈松末586</Td>
+              </Tr>
+            </Tbody>
+          </Table>
+          <Text mt={'1em'}>お問い合わせをお待ちしております。</Text>
+          <Box mt={'1em'}>
+            <PhoneButton /> <MailButton />
+          </Box>
         </Box>
       </KindergartenBoxSlide>
 

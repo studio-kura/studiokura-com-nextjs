@@ -230,4 +230,4 @@ wget -O "kindergartens-slide-5.jpg" https://www.studiokura.com/kindergarten/img/
 wget -O "kindergartens-slide-6.jpg" https://www.studiokura.com/kindergarten/img/pjimage.jpg
 wget -O "kindergartens-slide-7.jpg" https://www.studiokura.com/kindergarten/img/back.jpg
 wget -O "kindergartens-slide-8.jpg" https://www.studiokura.com/kindergarten/img/bbg-map.jpg
-wget -O "kindergartens-slide-8.jpg" https://www.studiokura.com/kindergarten/img/bbg-calltoaction.jpg
+wget -O "kindergartens-slide-9.jpg" https://www.studiokura.com/kindergarten/img/bbg-calltoaction.jpg

@@ -116,10 +116,10 @@ const EstimateCalculator = () => {
     <Layout title="お問い合わせ｜Studio Kura 絵画美術教室（福岡県　糸島市　二丈）">
       <Navigation />
       <Container height={'200px'} minW={'100%'}>
-        <Heading mt={'1em'} size={['2xl', '2xl', '2xl']}>
+        <Heading mt={'2em'} size={['2xl', '2xl', '2xl']}>
           園内レッスン 仮見積もりシミュレーション
         </Heading>
-        <Text>
+        <Text mt={'2em'}>
           見積シミュレーターで絵画造形教室園内レッスンのご利用料金を試算することができます。
         </Text>
       </Container>

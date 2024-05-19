@@ -46,7 +46,7 @@ const PhoneButton: React.FC<Props> = ({
     </Button>
   )
 }
-export default PhoneButton
+export { PhoneButton }
 
 PhoneButton.defaultProps = {
   text: '092-325-1773',

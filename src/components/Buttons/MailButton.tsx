@@ -1,5 +1,5 @@
-import { Button } from '@chakra-ui/react'
-import { EditIcon } from '@chakra-ui/icons'
+import { Button, Link as NextLink } from '@chakra-ui/react'
+import { EmailIcon } from '@chakra-ui/icons'
 
 interface Props {
   text?: string
@@ -12,7 +12,7 @@ interface Props {
   hasIcon?: boolean
 }
 
-const TrialButton: React.FC<Props> = ({
+const MailButton: React.FC<Props> = ({
   text,
   mt,
   size,
@@ -26,8 +26,8 @@ const TrialButton: React.FC<Props> = ({
     <Button
       mt={mt}
       size={size}
-      as={'a'}
-      href={'/trial'}
+      as={NextLink}
+      href={'/contact'}
       borderRadius={borderRadius}
       fontWeight={600}
       color={color}
@@ -38,7 +38,7 @@ const TrialButton: React.FC<Props> = ({
     >
       {hasIcon && (
         <>
-          <EditIcon />
+          <EmailIcon />
           &nbsp;
         </>
       )}
@@ -46,15 +46,15 @@ const TrialButton: React.FC<Props> = ({
     </Button>
   )
 }
-export default TrialButton
+export { MailButton }
 
-TrialButton.defaultProps = {
-  text: '体験レッスン',
+MailButton.defaultProps = {
+  text: 'info@studiokura.com',
   mt: 0,
   size: 'md',
-  color: 'white',
-  bg: 'blue.500',
-  hoverbg: 'blue.400',
+  color: 'text',
+  bg: 'gray.100',
+  hoverbg: 'gray.200',
   borderRadius: 4,
   hasIcon: true
 }

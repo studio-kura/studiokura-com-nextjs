@@ -1,5 +1,7 @@
+import NextLink from 'next/link'
 import {
   Box,
+  Button,
   Container,
   Heading,
   List,
@@ -18,7 +20,11 @@ import {
   KindergartenBoxSlide,
   KindergartenVideoSlide
 } from '@/components/KindergartenSlides'
-import { PhoneButton, MailButton } from '@/components/Buttons'
+import {
+  PhoneButton,
+  MailButton,
+  EstimateCalculatorButton
+} from '@/components/Buttons'
 import { Footer } from '@/components/Footer'
 
 type TdProps = {
@@ -60,6 +66,7 @@ const Kindergartens = () => {
             <ListItem>対象 3歳～5歳児</ListItem>
             <ListItem>レッスン時間 60分</ListItem>
           </List>
+          <EstimateCalculatorButton />
           <Heading size={'md'} my={'1em'}>
             課外 絵画造形教室
           </Heading>
@@ -330,6 +337,16 @@ const Kindergartens = () => {
           <Text mt={'1em'}>お問い合わせをお待ちしております。</Text>
           <Box mt={'1em'}>
             <PhoneButton /> <MailButton />
+          </Box>
+          <Box mt={'1em'}>
+            <Button
+              as={NextLink}
+              href={'/kindergartens/estimate-calculator'}
+              colorScheme="blue"
+              variant={'link'}
+            >
+              見積もりシミュレーション
+            </Button>
           </Box>
         </Box>
       </KindergartenBoxSlide>

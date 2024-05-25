@@ -1,5 +1,6 @@
+import NextLink from 'next/link'
 import { Button } from '@chakra-ui/react'
-import { PhoneIcon } from '@chakra-ui/icons'
+import { EditIcon } from '@chakra-ui/icons'
 
 interface Props {
   text?: string
@@ -12,7 +13,7 @@ interface Props {
   hasIcon?: boolean
 }
 
-const PhoneButton: React.FC<Props> = ({
+const TrialButton: React.FC<Props> = ({
   text,
   mt,
   size,
@@ -26,8 +27,8 @@ const PhoneButton: React.FC<Props> = ({
     <Button
       mt={mt}
       size={size}
-      as={'a'}
-      href={'tel:092-325-1773'}
+      as={NextLink}
+      href={'/trial'}
       borderRadius={borderRadius}
       fontWeight={600}
       color={color}
@@ -38,7 +39,7 @@ const PhoneButton: React.FC<Props> = ({
     >
       {hasIcon && (
         <>
-          <PhoneIcon />
+          <EditIcon />
           &nbsp;
         </>
       )}
@@ -46,15 +47,15 @@ const PhoneButton: React.FC<Props> = ({
     </Button>
   )
 }
-export default PhoneButton
+export { TrialButton }
 
-PhoneButton.defaultProps = {
-  text: '092-325-1773',
+TrialButton.defaultProps = {
+  text: '体験レッスン',
   mt: 0,
   size: 'md',
-  color: 'text',
-  bg: 'gray.100',
-  hoverbg: 'gray.200',
+  color: 'white',
+  bg: 'blue.500',
+  hoverbg: 'blue.400',
   borderRadius: 4,
   hasIcon: true
 }

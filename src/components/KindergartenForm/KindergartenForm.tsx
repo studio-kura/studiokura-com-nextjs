@@ -13,8 +13,8 @@ type FormInput = {
     classroom1: boolean
     classroom2: boolean
     classroom3: boolean
-    numberOfStudents: number
   }
+  numberOfStudents?: number
   trialDate: string
   message: string
 }
@@ -81,6 +81,21 @@ const KindergartenForm = (props: Props) => {
   }
   const phoneIsValid = true
 
+  const handleNumberOfStudentsChange: ChangeEventHandler<HTMLInputElement> = (
+    event
+  ) => {
+    const students: number = Number(event.target.value)
+    if (!Number.isNaN(students)) {
+      setFormInput((state) => {
+        return { ...state, numberOfStudents: students }
+      })
+    }
+  }
+  const numberOfStudentsIsValid =
+    (variant != 'trial' && variant != 'request-estimate') ||
+    (!Number.isNaN(formInput.numberOfStudents) &&
+      (formInput.numberOfStudents ?? 0) > 0)
+
   const handleMessageChange: ChangeEventHandler<HTMLTextAreaElement> = (
     event
   ) => {
@@ -140,6 +155,16 @@ const KindergartenForm = (props: Props) => {
         isValid={phoneIsValid}
         isRequired={false}
       />
+      {(variant === 'trial' || variant === 'request-estimate') && (
+        <FormItem
+          legend={'受講生の人数'}
+          inputType={'text'}
+          handler={handleNumberOfStudentsChange}
+          isValid={numberOfStudentsIsValid}
+          validationMessage={'0より大きい半角数字を入力してください。'}
+          isRequired={variant === 'trial' || variant === 'request-estimate'}
+        />
+      )}
       <FormItem
         legend={variant === 'contact' ? 'お問い合わせ内容' : '備考'}
         inputType={'textarea'}

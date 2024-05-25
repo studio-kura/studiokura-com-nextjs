@@ -55,37 +55,43 @@ const EstimateCalculator = () => {
   const [classroom3Check, setClassroom3Check] = useState<boolean>()
   const [numberOfClassrooms, setNumberOfClassrooms] = useState(0)
   const [numberOfStudents, setNumberOfStudents] = useState(0)
-  const [transportationExpenses, setTransportationExpenses] = useState(0)
+  const [transportationBaseExpenses, setTransportationBaseExpenses] =
+    useState(0)
+  const [transportationTotalExpenses, setTransportationTotalExpenses] =
+    useState(0)
 
   const handleClassroom1Check: ChangeEventHandler<HTMLInputElement> = (
     event
   ) => {
     setClassroom1Check(event.target.checked)
-    setNumberOfClassrooms(
+    const classrooms =
       (event.target.checked ? 1 : 0) +
-        (classroom2Check ? 1 : 0) +
-        (classroom3Check ? 1 : 0)
-    )
+      (classroom2Check ? 1 : 0) +
+      (classroom3Check ? 1 : 0)
+    setNumberOfClassrooms(classrooms)
+    setTransportationTotalExpenses(transportationBaseExpenses * classrooms)
   }
   const handleClassroom2Check: ChangeEventHandler<HTMLInputElement> = (
     event
   ) => {
     setClassroom2Check(event.target.checked)
-    setNumberOfClassrooms(
+    const classrooms =
+      (classroom1Check ? 1 : 0) +
       (event.target.checked ? 1 : 0) +
-        (classroom1Check ? 1 : 0) +
-        (classroom3Check ? 1 : 0)
-    )
+      (classroom3Check ? 1 : 0)
+    setNumberOfClassrooms(classrooms)
+    setTransportationTotalExpenses(transportationBaseExpenses * classrooms)
   }
   const handleClassroom3Check: ChangeEventHandler<HTMLInputElement> = (
     event
   ) => {
     setClassroom3Check(event.target.checked)
-    setNumberOfClassrooms(
-      (event.target.checked ? 1 : 0) +
-        (classroom1Check ? 1 : 0) +
-        (classroom2Check ? 1 : 0)
-    )
+    const classrooms =
+      (classroom1Check ? 1 : 0) +
+      (classroom2Check ? 1 : 0) +
+      (event.target.checked ? 1 : 0)
+    setNumberOfClassrooms(classrooms)
+    setTransportationTotalExpenses(transportationBaseExpenses * classrooms)
   }
 
   const handleStudentsChange: ChangeEventHandler<HTMLInputElement> = (
@@ -102,14 +108,15 @@ const EstimateCalculator = () => {
   ) => {
     const expenses: number = Number(event.target.value)
     if (!Number.isNaN(expenses)) {
-      setTransportationExpenses(expenses)
+      setTransportationBaseExpenses(expenses)
+      setTransportationTotalExpenses(expenses * numberOfClassrooms)
     }
   }
 
   const getTeacherRate = () => rates.per_classroom * numberOfClassrooms
   const getStudentRate = () => rates.per_student * numberOfStudents
   const getTotalBeforeTax = () =>
-    getTeacherRate() + getStudentRate() + transportationExpenses
+    getTeacherRate() + getStudentRate() + transportationTotalExpenses
   const getTotalWithTax = () => (getTotalBeforeTax() * (100 + rates.tax)) / 100
 
   return (
@@ -194,7 +201,7 @@ const EstimateCalculator = () => {
                   <Tr>
                     <Th>交通費</Th>
                     <Td textAlign={'right'}>
-                      {currencyFormatter.format(transportationExpenses)}円
+                      {currencyFormatter.format(transportationTotalExpenses)}円
                     </Td>
                   </Tr>
                   <Tr>

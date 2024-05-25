@@ -1,4 +1,5 @@
-import { Button, Link as NextLink } from '@chakra-ui/react'
+import NextLink from 'next/link'
+import { Button } from '@chakra-ui/react'
 import { EmailIcon } from '@chakra-ui/icons'
 
 interface Props {

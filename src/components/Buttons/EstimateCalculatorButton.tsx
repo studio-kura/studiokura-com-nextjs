@@ -1,3 +1,4 @@
+import NextLink from 'next/link'
 import { Button } from '@chakra-ui/react'
 import { EditIcon } from '@chakra-ui/icons'
 
@@ -26,7 +27,7 @@ const EstimateCalculatorButton: React.FC<Props> = ({
     <Button
       mt={mt}
       size={size}
-      as={'a'}
+      as={NextLink}
       href={'/kindergartens/estimate-calculator'}
       borderRadius={borderRadius}
       fontWeight={600}

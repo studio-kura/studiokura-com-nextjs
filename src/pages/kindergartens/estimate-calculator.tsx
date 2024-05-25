@@ -32,19 +32,19 @@ const rates = {
   per_student: 100,
   tax: 10, //消費税 10%
   transportation: {
-    itoshima: 500,
-    nishiku: 500,
-    sawaraku: 800,
-    fukuoka_other: 1000,
-    kitakyushu: 3000,
-    chikugo: 2000,
-    chikuho: 2000,
-    karatsu: 800,
-    imari: 1500,
-    taku: 1500,
-    saga: 2000,
-    shimonoseki: 4000,
-    other: 3000
+    itoshima: 1500,
+    nishiku: 1500,
+    sawaraku: 1800,
+    fukuoka_other: 2000,
+    kitakyushu: 4000,
+    chikugo: 3000,
+    chikuho: 3000,
+    karatsu: 1800,
+    imari: 2500,
+    taku: 2500,
+    saga: 3000,
+    shimonoseki: 5000,
+    other: 4000
   }
 }
 const currencyFormatter = new Intl.NumberFormat('ja-JA')

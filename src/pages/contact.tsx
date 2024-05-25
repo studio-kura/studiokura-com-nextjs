@@ -53,8 +53,8 @@ const Contact = () => {
       method: 'POST',
       body: JSON.stringify(formData)
     })
-    const apiResponse = await apiRequest.json()
-    console.log('FORM SUBMITTED', formData, apiResponse)
+    // const apiResponse = await apiRequest.json()
+    // console.log('FORM SUBMITTED', formData, apiResponse)
   }
 
   return (

@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 
-const uri = process.env.CONTACT_FORM_API_URI || ''
+const uri = process.env.KINDERGARTENS_FORM_API_URI || ''
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method !== 'POST') {
@@ -15,6 +15,13 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     const formData = new FormData()
     formData.append('name', reqFields.name)
     formData.append('email', reqFields.email)
+    formData.append('address', reqFields.address)
+    formData.append('phone', reqFields.phone)
+    formData.append('classroom1', reqFields.classroom1 ? '1' : '0')
+    formData.append('classroom2', reqFields.classroom2 ? '1' : '0')
+    formData.append('classroom3', reqFields.classroom3 ? '1' : '0')
+    formData.append('students', reqFields.numberOfStudents)
+    formData.append('trial_date', reqFields.trialDate)
     formData.append('message', reqFields.message)
     const apiRequest = await fetch(uri, {
       method: 'POST',

@@ -6,13 +6,12 @@ import {
   Input,
   Textarea
 } from '@chakra-ui/react'
-import { ChangeEventHandler } from 'react'
-
-const formWidth = ['90%', '90%', '80%', '60%']
+import { type ChangeEventHandler } from 'react'
 
 interface Props {
   inputType: 'text' | 'email' | 'textarea'
   legend: string
+  formWidth: string[]
   isRequired?: boolean
   isValid: boolean
   validationMessage?: string
@@ -21,8 +20,15 @@ interface Props {
     | ChangeEventHandler<HTMLTextAreaElement>
 }
 const FormItem = (props: Props) => {
-  const { inputType, legend, isRequired, isValid, validationMessage, handler } =
-    props
+  const {
+    inputType,
+    legend,
+    formWidth,
+    isRequired,
+    isValid,
+    validationMessage,
+    handler
+  } = props
   return (
     <>
       <FormControl

@@ -1,7 +1,7 @@
 import { FormControl, Button } from '@chakra-ui/react'
 import { ChangeEventHandler, useState } from 'react'
 import { type FormData } from '@/utils'
-import { FormItem } from '@/components/KindergartenForm'
+import { FormItem, ClassroomCheckboxGroup } from '@/components/KindergartenForm'
 
 type FormInput = {
   kindergarten: string
@@ -81,6 +81,49 @@ const KindergartenForm = (props: Props) => {
   }
   const phoneIsValid = true
 
+  const handleClassroom1Check: ChangeEventHandler<HTMLInputElement> = (
+    event
+  ) => {
+    setFormInput((state) => {
+      return {
+        ...state,
+        students: {
+          classroom1: event.target.checked,
+          classroom2: state.students?.classroom2 ?? false,
+          classroom3: state.students?.classroom3 ?? false
+        }
+      }
+    })
+  }
+  const handleClassroom2Check: ChangeEventHandler<HTMLInputElement> = (
+    event
+  ) => {
+    setFormInput((state) => {
+      return {
+        ...state,
+        students: {
+          classroom1: state.students?.classroom1 ?? false,
+          classroom2: event.target.checked,
+          classroom3: state.students?.classroom3 ?? false
+        }
+      }
+    })
+  }
+  const handleClassroom3Check: ChangeEventHandler<HTMLInputElement> = (
+    event
+  ) => {
+    setFormInput((state) => {
+      return {
+        ...state,
+        students: {
+          classroom1: state.students?.classroom1 ?? false,
+          classroom2: state.students?.classroom2 ?? false,
+          classroom3: event.target.checked
+        }
+      }
+    })
+  }
+
   const handleNumberOfStudentsChange: ChangeEventHandler<HTMLInputElement> = (
     event
   ) => {
@@ -122,6 +165,7 @@ const KindergartenForm = (props: Props) => {
       <FormItem
         legend={'園名'}
         inputType={'text'}
+        formWidth={formWidth}
         handler={handleKindergartenChange}
         isValid={kindergartenIsValid}
         isRequired
@@ -129,6 +173,7 @@ const KindergartenForm = (props: Props) => {
       <FormItem
         legend={'お名前'}
         inputType={'text'}
+        formWidth={formWidth}
         handler={handleNameChange}
         isValid={nameIsValid}
         isRequired={false}
@@ -136,6 +181,7 @@ const KindergartenForm = (props: Props) => {
       <FormItem
         legend={'メールアドレス'}
         inputType={'email'}
+        formWidth={formWidth}
         handler={handleEmailChange}
         isValid={emailIsValid}
         validationMessage={'正しいメールアドレスが必要です。'}
@@ -144,6 +190,7 @@ const KindergartenForm = (props: Props) => {
       <FormItem
         legend={'所在地'}
         inputType={'text'}
+        formWidth={formWidth}
         handler={handleAddressChange}
         isValid={addressIsValid}
         isRequired={false}
@@ -151,23 +198,34 @@ const KindergartenForm = (props: Props) => {
       <FormItem
         legend={'お電話番号'}
         inputType={'text'}
+        formWidth={formWidth}
         handler={handlePhoneChange}
         isValid={phoneIsValid}
         isRequired={false}
       />
       {(variant === 'trial' || variant === 'request-estimate') && (
-        <FormItem
-          legend={'受講生の人数'}
-          inputType={'text'}
-          handler={handleNumberOfStudentsChange}
-          isValid={numberOfStudentsIsValid}
-          validationMessage={'0より大きい半角数字を入力してください。'}
-          isRequired={variant === 'trial' || variant === 'request-estimate'}
-        />
+        <>
+          <ClassroomCheckboxGroup
+            formWidth={formWidth}
+            handleClassroom1Check={handleClassroom1Check}
+            handleClassroom2Check={handleClassroom2Check}
+            handleClassroom3Check={handleClassroom3Check}
+          />
+          <FormItem
+            legend={'受講生の人数'}
+            inputType={'text'}
+            formWidth={formWidth}
+            handler={handleNumberOfStudentsChange}
+            isValid={numberOfStudentsIsValid}
+            validationMessage={'0より大きい半角数字を入力してください。'}
+            isRequired={variant === 'trial' || variant === 'request-estimate'}
+          />
+        </>
       )}
       <FormItem
         legend={variant === 'contact' ? 'お問い合わせ内容' : '備考'}
         inputType={'textarea'}
+        formWidth={formWidth}
         handler={handleMessageChange}
         isValid={messageIsValid}
         isRequired={variant === 'contact'}

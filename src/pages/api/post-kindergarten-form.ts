@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
+import { type KindergartenFormData } from '@/utils'
 
 const uri = process.env.KINDERGARTENS_FORM_API_URI || ''
 
@@ -11,17 +12,19 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   }
 
   try {
-    const reqFields = JSON.parse(req.body)
+    const reqFields: KindergartenFormData = JSON.parse(req.body)
     const formData = new FormData()
+    formData.append('contact_type', reqFields.contact_type)
+    formData.append('kindergarten', reqFields.kindergarten)
     formData.append('name', reqFields.name)
     formData.append('email', reqFields.email)
     formData.append('address', reqFields.address)
     formData.append('phone', reqFields.phone)
-    formData.append('classroom1', reqFields.classroom1 ? '1' : '0')
-    formData.append('classroom2', reqFields.classroom2 ? '1' : '0')
-    formData.append('classroom3', reqFields.classroom3 ? '1' : '0')
-    formData.append('students', reqFields.numberOfStudents)
-    formData.append('trial_date', reqFields.trialDate)
+    formData.append('classroom1', reqFields.classroom1)
+    formData.append('classroom2', reqFields.classroom2)
+    formData.append('classroom3', reqFields.classroom3)
+    formData.append('students', reqFields.students)
+    formData.append('trial_date', reqFields.trial_date)
     formData.append('message', reqFields.message)
     const apiRequest = await fetch(uri, {
       method: 'POST',

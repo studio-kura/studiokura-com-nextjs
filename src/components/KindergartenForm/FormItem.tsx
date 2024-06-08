@@ -11,6 +11,7 @@ import { type ChangeEventHandler } from 'react'
 interface Props {
   inputType: 'text' | 'email' | 'textarea'
   legend: string
+  placeholder?: string
   formWidth: string[]
   isRequired?: boolean
   isValid: boolean
@@ -23,6 +24,7 @@ const FormItem = (props: Props) => {
   const {
     inputType,
     legend,
+    placeholder,
     formWidth,
     isRequired,
     isValid,
@@ -41,6 +43,7 @@ const FormItem = (props: Props) => {
         {(inputType === 'text' || inputType === 'email') && (
           <Input
             type={inputType}
+            placeholder={placeholder}
             onChange={handler as ChangeEventHandler<HTMLInputElement>}
           />
         )}
@@ -48,6 +51,7 @@ const FormItem = (props: Props) => {
           <Textarea
             rows={5}
             onChange={handler as ChangeEventHandler<HTMLTextAreaElement>}
+            placeholder={placeholder}
           />
         )}
         <FormHelperText>

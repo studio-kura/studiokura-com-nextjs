@@ -1,6 +1,6 @@
 import { FormControl, Button } from '@chakra-ui/react'
 import { ChangeEventHandler, useState } from 'react'
-import { type FormData } from '@/utils'
+import { type KindergartenFormData } from '@/utils'
 import { FormItem, ClassroomCheckboxGroup } from '@/components/KindergartenForm'
 
 type FormInput = {
@@ -38,10 +38,19 @@ const KindergartenForm = (props: Props) => {
   const { variant } = props
   const [formInput, setFormInput] = useState<FormInput>(initialFormInput)
   const [formWasSubmitted, setFormWasSubmitted] = useState(false)
-  const formData: FormData = {
+  const formData: KindergartenFormData = {
+    contact_type: variant,
+    kindergarten: formInput.kindergarten,
     name: formInput.name,
     email: formInput.email,
-    message: formInput.message ?? ''
+    address: formInput.address,
+    phone: formInput.phone,
+    classroom1: formInput.students?.classroom1 ? '1' : '0',
+    classroom2: formInput.students?.classroom2 ? '1' : '0',
+    classroom3: formInput.students?.classroom3 ? '1' : '0',
+    students: `${formInput.numberOfStudents}`,
+    trial_date: formInput.trialDate,
+    message: formInput.message
   }
 
   const handleKindergartenChange: ChangeEventHandler<HTMLInputElement> = (
@@ -139,6 +148,15 @@ const KindergartenForm = (props: Props) => {
     (!Number.isNaN(formInput.numberOfStudents) &&
       (formInput.numberOfStudents ?? 0) > 0)
 
+  const handleTrialDateChange: ChangeEventHandler<HTMLInputElement> = (
+    event
+  ) => {
+    setFormInput((state) => {
+      return { ...state, trialDate: event.target.value }
+    })
+  }
+  const trialDateIsValid = true
+
   const handleMessageChange: ChangeEventHandler<HTMLTextAreaElement> = (
     event
   ) => {
@@ -164,6 +182,7 @@ const KindergartenForm = (props: Props) => {
     <>
       <FormItem
         legend={'園名'}
+        placeholder={''}
         inputType={'text'}
         formWidth={formWidth}
         handler={handleKindergartenChange}
@@ -172,6 +191,7 @@ const KindergartenForm = (props: Props) => {
       />
       <FormItem
         legend={'お名前'}
+        placeholder={'あなたのお名前を入力してください'}
         inputType={'text'}
         formWidth={formWidth}
         handler={handleNameChange}
@@ -197,6 +217,7 @@ const KindergartenForm = (props: Props) => {
       />
       <FormItem
         legend={'お電話番号'}
+        placeholder={'090-'}
         inputType={'text'}
         formWidth={formWidth}
         handler={handlePhoneChange}
@@ -213,6 +234,7 @@ const KindergartenForm = (props: Props) => {
           />
           <FormItem
             legend={'受講生の人数'}
+            placeholder={'半角数字'}
             inputType={'text'}
             formWidth={formWidth}
             handler={handleNumberOfStudentsChange}
@@ -222,6 +244,15 @@ const KindergartenForm = (props: Props) => {
           />
         </>
       )}
+      <FormItem
+        legend={'希望日'}
+        placeholder={'「3月の２週目」、「木曜日の午前中」など'}
+        inputType={'text'}
+        formWidth={formWidth}
+        handler={handleTrialDateChange}
+        isValid={trialDateIsValid}
+        isRequired={false}
+      />
       <FormItem
         legend={variant === 'contact' ? 'お問い合わせ内容' : '備考'}
         inputType={'textarea'}

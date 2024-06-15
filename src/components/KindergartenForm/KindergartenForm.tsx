@@ -24,6 +24,7 @@ const initialFormInput = {
   email: '',
   address: '',
   phone: '',
+  numberOfStudents: 0,
   trialDate: '',
   message: ''
 }

@@ -10,17 +10,15 @@ import {
   Image,
   Stack,
   Box,
-  Button,
   Link
 } from '@chakra-ui/react'
-import { EditIcon, PhoneIcon, EmailIcon } from '@chakra-ui/icons'
 import Iframe from 'react-iframe'
 
 import { Layout } from '@/components/Layout'
 import { Container } from '@/components/Container'
 import { Footer } from '@/components/Footer'
 import { Navigation } from '@/components/Navigation'
-import React from 'react'
+import { MailButton, PhoneButton, TrialButton } from '@/components/Buttons'
 
 type classWeekday = {
   title: string
@@ -154,54 +152,15 @@ const AdultsClass = () => {
                   <Heading size="lg" mb={'0.5em'}>
                     体験教室
                   </Heading>
-                  <Button
-                    as={Link}
-                    size={'sm'}
-                    fontWeight={600}
-                    color={'white'}
-                    bg={'blue.500'}
-                    href={'/trial'}
-                    _hover={{
-                      bg: 'blue.400'
-                    }}
-                  >
-                    <EditIcon />
-                    &nbsp;体験レッスンのお申し込み
-                  </Button>{' '}
+                  <TrialButton text={'体験レッスンのお申し込み'} size={'sm'} />
                   <Text mt={'0.5em'} mb={'0.5em'}>
                     初心者・希望者の方には、ご希望のお日にちで体験レッスン(2750円)を行っております。
                     ご一緒に参加していただきながらの体験レッスンですので
                     教室の雰囲気や講師の指導方法などを実際に感じていただけます。
                     お気軽にご参加くださいませ。
                   </Text>
-                  <Button
-                    as={Link}
-                    size={'sm'}
-                    variant="outline"
-                    href={'/contact'}
-                    fontWeight={600}
-                    color={'text'}
-                    _hover={{
-                      bg: 'gray.100'
-                    }}
-                  >
-                    <EmailIcon />
-                    &nbsp;info@studiokura.com
-                  </Button>{' '}
-                  <Button
-                    as={'a'}
-                    size={'sm'}
-                    variant="outline"
-                    fontWeight={600}
-                    href={`tel:${phoneNumber}`}
-                    color={'text'}
-                    _hover={{
-                      bg: 'gray.100'
-                    }}
-                  >
-                    <PhoneIcon />
-                    &nbsp;{phoneNumber}
-                  </Button>{' '}
+                  <MailButton variant="outline" size={'sm'} mr={1} />
+                  <PhoneButton variant="outline" size={'sm'} mr={1} />
                   <Text mt={'0.5em'} mb={'0.5em'}>
                     前日・当日のお申し込みはお電話のみとさせていただきます。
                   </Text>

@@ -1,15 +1,9 @@
-import {
-  Text,
-  Center,
-  Box,
-  Heading,
-  Button,
-  Image,
-  Link as NextLink
-} from '@chakra-ui/react'
-import { EditIcon, PhoneIcon, CheckIcon, EmailIcon } from '@chakra-ui/icons'
+import NextLink from 'next/link'
+import { Text, Center, Box, Heading, Button, Image } from '@chakra-ui/react'
+import { CheckIcon } from '@chakra-ui/icons'
 import { Container } from '@/components/Container'
 import { Main } from '@/components/Main'
+import { MailButton, PhoneButton, TrialButton } from '../Buttons'
 
 type ClassPlaceSlide3Props = {
   placeName: string
@@ -23,18 +17,10 @@ type ClassPlaceSlide3Props = {
 
 const cdnDomain = process.env.NEXT_PUBLIC_CDN_DOMAIN ?? ''
 const cdnDirectory = process.env.NEXT_PUBLIC_CDN_DIRECTORY ?? ''
-const phoneNumber = process.env.NEXT_PUBLIC_PHONE_NUMBER ?? ''
 
 const ClassPlaceSlide3 = (props: ClassPlaceSlide3Props) => {
-  const {
-    placeName,
-    tagline,
-    bgImageUrl,
-    mapImageUrl,
-    mapUrl,
-    address,
-    children
-  } = props
+  const { placeName, bgImageUrl, mapImageUrl, mapUrl, address, children } =
+    props
   return (
     <Container
       bgImage={
@@ -69,55 +55,22 @@ const ClassPlaceSlide3 = (props: ClassPlaceSlide3Props) => {
             )}
             <Text color="white" fontSize={'2em'}>
               <>{children}</>
-              <Button
-                as={'a'}
-                fontWeight={600}
-                color={'white'}
-                bg={'blue.500'}
-                href={'/trial'}
-                _hover={{
-                  bg: 'blue.400'
-                }}
-              >
-                <EditIcon />
-                &nbsp;体験レッスン
-              </Button>{' '}
-              <Button
-                as={'a'}
-                fontWeight={600}
-                href={`tel:${phoneNumber}`}
-                color={'text'}
-                _hover={{
-                  bg: 'green.100'
-                }}
-              >
-                <PhoneIcon />
-                &nbsp;{phoneNumber}
-              </Button>{' '}
+              <TrialButton mr={1} />
+              <PhoneButton mr={1} />
               <Button
                 as={NextLink}
                 href={'/pricing'}
                 fontWeight={600}
                 color={'text'}
+                mr={1}
                 _hover={{
                   bg: 'green.100'
                 }}
               >
                 <CheckIcon />
                 &nbsp;受講料
-              </Button>{' '}
-              <Button
-                as={NextLink}
-                href={'/contact'}
-                fontWeight={600}
-                color={'text'}
-                _hover={{
-                  bg: 'green.100'
-                }}
-              >
-                <EmailIcon />
-                &nbsp;info@studiokura.com
               </Button>
+              <MailButton />
             </Text>
           </Main>
         </Box>

@@ -3,6 +3,7 @@ import { PhoneIcon } from '@chakra-ui/icons'
 
 interface Props {
   text?: string
+  mr?: number
   mt?: number
   size?: string
   color?: string
@@ -14,6 +15,7 @@ interface Props {
 
 const PhoneButton: React.FC<Props> = ({
   text,
+  mr,
   mt,
   size,
   color,
@@ -24,6 +26,7 @@ const PhoneButton: React.FC<Props> = ({
 }) => {
   return (
     <Button
+      mr={mr}
       mt={mt}
       size={size}
       as={'a'}
@@ -50,6 +53,7 @@ export { PhoneButton }
 
 PhoneButton.defaultProps = {
   text: '092-325-1773',
+  mr: 0,
   mt: 0,
   size: 'md',
   color: 'text',

@@ -1,3 +1,4 @@
+export * from './ContactButton'
 export * from './MailButton'
 export * from './PhoneButton'
 export * from './TrialButton'

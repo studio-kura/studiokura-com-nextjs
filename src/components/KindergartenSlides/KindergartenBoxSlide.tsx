@@ -1,6 +1,6 @@
 import { Text, Center, Box } from '@chakra-ui/react'
 import { Container } from '@/components/Container'
-import { PhoneButton } from '@/components/Buttons'
+import { ContactButton, PhoneButton } from '@/components/Buttons'
 
 type KindergartenBoxSlideProps = {
   title: string
@@ -42,6 +42,7 @@ const KindergartenBoxSlide = (props: KindergartenBoxSlideProps) => {
           </Box>
           {addButtons && (
             <Box mt={'1em'}>
+              <ContactButton href={'/kindergartens/contact'} mr={1} />
               <PhoneButton />
             </Box>
           )}

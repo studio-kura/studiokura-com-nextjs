@@ -4,6 +4,7 @@ import { EditIcon } from '@chakra-ui/icons'
 
 interface Props {
   text?: string
+  href?: string
   mr?: number
   mt?: number
   size?: string
@@ -14,8 +15,9 @@ interface Props {
   hasIcon?: boolean
 }
 
-const EstimateCalculatorButton: React.FC<Props> = ({
+const ContactButton: React.FC<Props> = ({
   text,
+  href,
   mr,
   mt,
   size,
@@ -31,7 +33,7 @@ const EstimateCalculatorButton: React.FC<Props> = ({
       mt={mt}
       size={size}
       as={NextLink}
-      href={'/kindergartens/estimate-calculator'}
+      href={href}
       borderRadius={borderRadius}
       fontWeight={600}
       color={color}
@@ -50,10 +52,11 @@ const EstimateCalculatorButton: React.FC<Props> = ({
     </Button>
   )
 }
-export { EstimateCalculatorButton }
+export { ContactButton }
 
-EstimateCalculatorButton.defaultProps = {
-  text: '見積もりシミュレーション',
+ContactButton.defaultProps = {
+  text: 'お問い合わせ',
+  href: '/contact',
   mr: 0,
   mt: 0,
   size: 'md',

@@ -42,7 +42,7 @@ const KindergartenBoxSlide = (props: KindergartenBoxSlideProps) => {
           </Box>
           {addButtons && (
             <Box mt={'1em'}>
-              <ContactButton href={'/kindergartens/contact'} mr={2} />
+              <ContactButton href={'/kindergartens/contact'} mr={1} />
               <PhoneButton />
             </Box>
           )}

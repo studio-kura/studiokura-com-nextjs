@@ -22,8 +22,8 @@ import {
 } from '@/components/KindergartenSlides'
 import {
   PhoneButton,
-  MailButton,
-  EstimateCalculatorButton
+  EstimateCalculatorButton,
+  ContactButton
 } from '@/components/Buttons'
 import { Footer } from '@/components/Footer'
 
@@ -336,16 +336,48 @@ const Kindergartens = () => {
           </Table>
           <Text mt={'1em'}>お問い合わせをお待ちしております。</Text>
           <Box mt={'1em'}>
-            <PhoneButton /> <MailButton />
+            <ContactButton href={'/kindergartens/contact'} mr={1} />
+            <PhoneButton />
           </Box>
           <Box mt={'1em'}>
+            <Button
+              as={NextLink}
+              href={'/kindergartens/trial'}
+              colorScheme="blue"
+              variant={'link'}
+              mr={2}
+            >
+              体験教室
+            </Button>
+            |
             <Button
               as={NextLink}
               href={'/kindergartens/estimate-calculator'}
               colorScheme="blue"
               variant={'link'}
+              mx={2}
             >
               見積もりシミュレーション
+            </Button>
+            |
+            <Button
+              as={NextLink}
+              href={'/kindergartens/request-estimate'}
+              colorScheme="blue"
+              variant={'link'}
+              mx={2}
+            >
+              見積もり依頼
+            </Button>
+            |
+            <Button
+              as={NextLink}
+              href={'/kindergartens/request-docs'}
+              colorScheme="blue"
+              variant={'link'}
+              ml={2}
+            >
+              資料請求
             </Button>
           </Box>
         </Box>

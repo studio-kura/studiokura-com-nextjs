@@ -9,6 +9,7 @@ import {
   Stack,
   Collapse,
   Icon,
+  Link,
   Popover,
   PopoverTrigger,
   PopoverContent,
@@ -59,9 +60,9 @@ function Navigation() {
             fontFamily={'heading'}
             color={useColorModeValue('gray.800', 'white')}
           >
-            <NextLink passHref href={'/'}>
+            <Link as={NextLink} passHref href={'/'}>
               <Image src="/images/studio-kura-logo.png" height="2em" />
-            </NextLink>
+            </Link>
           </Text>
 
           <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
@@ -76,7 +77,7 @@ function Navigation() {
           spacing={6}
         >
           <Button
-            as={'a'}
+            as={NextLink}
             size={{ base: 'xs', md: 'sm' }}
             fontSize={'sm'}
             fontWeight={400}
@@ -86,7 +87,7 @@ function Navigation() {
             生徒様予約
           </Button>
           <Button
-            as={'a'}
+            as={NextLink}
             size={{ base: 'xs', md: 'sm' }}
             fontSize={'sm'}
             fontWeight={600}
@@ -135,20 +136,18 @@ const DesktopNav = () => {
                 </Box>
               </PopoverTrigger>
             ) : (
-              <NextLink href={navItem.href ?? '#'}>
-                <Box
-                  p={2}
-                  fontSize={'sm'}
-                  fontWeight={500}
-                  color={linkColor}
-                  _hover={{
-                    textDecoration: 'none',
-                    color: linkHoverColor
-                  }}
-                >
-                  {navItem.label}
-                </Box>
-              </NextLink>
+              <Link
+                as={NextLink}
+                href={navItem.href ?? '#'}
+                color={linkColor}
+                fontSize={'sm'}
+                fontWeight={500}
+                _hover={{
+                  color: linkHoverColor
+                }}
+              >
+                <Box p={2}>{navItem.label}</Box>
+              </Link>
             )}
 
             {navItem.children && (

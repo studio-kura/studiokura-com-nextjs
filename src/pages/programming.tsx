@@ -19,6 +19,7 @@ import {
   CardBody
 } from '@chakra-ui/react'
 import { CheckCircleIcon } from '@chakra-ui/icons'
+import Iframe from 'react-iframe'
 
 import { Layout } from '@/components/Layout'
 import { Container } from '@/components/Container'
@@ -87,10 +88,10 @@ const ProgrammingClass = () => (
           </Box>
           <Box minW={'40vw'}>
             <AspectRatio ratio={16 / 9}>
-              <iframe
+              <Iframe
+                url={'https://www.youtube.com/embed/Ph9gzC7ytsM'}
                 width="640"
                 height="360"
-                src="https://www.youtube.com/embed/Ph9gzC7ytsM"
               />
             </AspectRatio>
           </Box>
@@ -110,11 +111,11 @@ const ProgrammingClass = () => (
         {/* Languages section */}
         <Stack direction={['column', 'column', 'row']} my={'16'}>
           <Box w={['100%', '530px', '530px']}>
-            <iframe
-              src="https://scratch.mit.edu/projects/645939820/embed"
+            <Iframe
+              url="https://scratch.mit.edu/projects/645939820/embed"
               width="485"
               height="402"
-            ></iframe>
+            />
           </Box>
           <Box>
             <Heading>
@@ -300,11 +301,11 @@ const ProgrammingClass = () => (
             minH={320}
           >
             <AspectRatio ratio={1}>
-              <iframe
+              <Iframe
                 width={'100%'}
                 height={'100%'}
-                src={'https://editor.p5js.org/alecrem/full/n4DEIJP55'}
-              ></iframe>
+                url={'https://editor.p5js.org/alecrem/full/n4DEIJP55'}
+              />
             </AspectRatio>
           </Box>
           <Box>

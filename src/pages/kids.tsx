@@ -14,6 +14,7 @@ import {
   Link
 } from '@chakra-ui/react'
 import { EditIcon, PhoneIcon, EmailIcon } from '@chakra-ui/icons'
+import Iframe from 'react-iframe'
 
 import { Layout } from '@/components/Layout'
 import { Container } from '@/components/Container'
@@ -185,10 +186,10 @@ const KidsClass = () => {
               <Card mt={'1em'} mb={'1em'} minW={'100%'}>
                 <CardBody p={'0px'}>
                   <AspectRatio ratio={16 / 9}>
-                    <iframe
+                    <Iframe
                       width="640"
                       height="360"
-                      src="https://www.youtube.com/embed/JJt_fkEJvKU"
+                      url="https://www.youtube.com/embed/JJt_fkEJvKU"
                     />
                   </AspectRatio>
                 </CardBody>

@@ -21,9 +21,10 @@ import {
   KindergartenVideoSlide
 } from '@/components/KindergartenSlides'
 import {
-  PhoneButton,
+  ContactButton,
   EstimateCalculatorButton,
-  ContactButton
+  LinkButton,
+  PhoneButton
 } from '@/components/Buttons'
 import { Footer } from '@/components/Footer'
 
@@ -340,45 +341,31 @@ const Kindergartens = () => {
             <PhoneButton />
           </Box>
           <Box mt={'1em'}>
-            <Button
-              as={NextLink}
+            <LinkButton
+              text={'体験教室'}
               href={'/kindergartens/trial'}
-              colorScheme="blue"
-              variant={'link'}
               mr={2}
-            >
-              体験教室
-            </Button>
+            />
             |
-            <Button
-              as={NextLink}
+            <LinkButton
+              text={'見積もりシミュレーション'}
               href={'/kindergartens/estimate-calculator'}
-              colorScheme="blue"
-              variant={'link'}
-              mx={2}
-            >
-              見積もりシミュレーション
-            </Button>
-            |
-            <Button
-              as={NextLink}
-              href={'/kindergartens/request-estimate'}
-              colorScheme="blue"
-              variant={'link'}
-              mx={2}
-            >
-              見積もり依頼
-            </Button>
-            |
-            <Button
-              as={NextLink}
-              href={'/kindergartens/request-docs'}
-              colorScheme="blue"
-              variant={'link'}
+              mr={2}
               ml={2}
-            >
-              資料請求
-            </Button>
+            />
+            |
+            <LinkButton
+              text={'見積もり依頼'}
+              href={'/kindergartens/request-estimate'}
+              mr={2}
+              ml={2}
+            />
+            |
+            <LinkButton
+              text={'資料請求'}
+              href={'/kindergartens/request-docs'}
+              ml={2}
+            />
           </Box>
         </Box>
       </KindergartenBoxSlide>

@@ -1,7 +1,7 @@
-import { Text, Center, Box, Heading, Button } from '@chakra-ui/react'
-import { EditIcon } from '@chakra-ui/icons'
+import { Text, Center, Box, Heading } from '@chakra-ui/react'
 import { Container } from '@/components/Container'
 import { Main } from '@/components/Main'
+import { TrialButton } from '../Buttons'
 
 type ClassPlaceSlideOtonaProps = {
   children?: string | Element
@@ -43,19 +43,7 @@ const ClassPlaceSlideOtona = (props: ClassPlaceSlideOtonaProps) => {
             </Box>
             <Text color="white" fontSize={'2em'}>
               <>{children}</>
-              <Button
-                as={'a'}
-                fontWeight={600}
-                color={'white'}
-                bg={'blue.500'}
-                href={'/trial'}
-                _hover={{
-                  bg: 'blue.400'
-                }}
-              >
-                <EditIcon />
-                &nbsp;体験レッスン
-              </Button>
+              <TrialButton />
             </Text>
           </Main>
         </Box>

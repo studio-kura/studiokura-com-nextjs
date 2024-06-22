@@ -3,13 +3,12 @@ import {
   Center,
   Box,
   Heading,
-  Button,
   ListItem,
   UnorderedList
 } from '@chakra-ui/react'
-import { EditIcon } from '@chakra-ui/icons'
 import { Container } from '@/components/Container'
 import { Main } from '@/components/Main'
+import { TrialButton } from '../Buttons'
 
 type ClassPlaceSlideDenshiProps = {
   children?: string | Element
@@ -56,19 +55,7 @@ const ClassPlaceSlideDenshi = (props: ClassPlaceSlideDenshiProps) => {
             </Box>
             <Text color="white" fontSize={'2em'}>
               <>{children}</>
-              <Button
-                as={'a'}
-                fontWeight={600}
-                color={'white'}
-                bg={'blue.500'}
-                href={'/trial'}
-                _hover={{
-                  bg: 'blue.400'
-                }}
-              >
-                <EditIcon />
-                &nbsp;体験レッスン
-              </Button>
+              <TrialButton />
             </Text>
           </Main>
         </Box>

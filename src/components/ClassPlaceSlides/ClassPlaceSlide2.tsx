@@ -1,8 +1,8 @@
-import { Text, Center, Box, Heading, Button } from '@chakra-ui/react'
-import { EditIcon } from '@chakra-ui/icons'
+import { Text, Center, Box, Heading } from '@chakra-ui/react'
 import { Container } from '@/components/Container'
 import { Main } from '@/components/Main'
 import Iframe from 'react-iframe'
+import { TrialButton } from '../Buttons'
 
 type ClassPlaceSlide2Props = {
   placeName: string
@@ -13,7 +13,7 @@ type ClassPlaceSlide2Props = {
 }
 
 const ClassPlaceSlide2 = (props: ClassPlaceSlide2Props) => {
-  const { placeName, tagline, bgImageUrl, calendarUrl, children } = props
+  const { bgImageUrl, calendarUrl, children } = props
   const cdnDomain = process.env.NEXT_PUBLIC_CDN_DOMAIN ?? ''
   const cdnDirectory = process.env.NEXT_PUBLIC_CDN_DIRECTORY ?? ''
   return (
@@ -47,19 +47,7 @@ const ClassPlaceSlide2 = (props: ClassPlaceSlide2Props) => {
             </Box>
             <Text color="white" fontSize={'2em'}>
               <>{children}</>
-              <Button
-                as={'a'}
-                fontWeight={600}
-                color={'white'}
-                bg={'blue.500'}
-                href={'/trial'}
-                _hover={{
-                  bg: 'blue.400'
-                }}
-              >
-                <EditIcon />
-                &nbsp;体験レッスン
-              </Button>
+              <TrialButton />
             </Text>
           </Main>
         </Box>

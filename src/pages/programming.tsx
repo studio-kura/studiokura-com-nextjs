@@ -27,7 +27,7 @@ import { Footer } from '@/components/Footer'
 import { Navigation } from '@/components/Navigation'
 import { HeaderSketch } from '@/components/Programming/HeaderSketch'
 import { PricingBox } from '@/components/Pricing'
-import { PhoneButton, TrialButton } from '@/components/Buttons'
+import { LinkButton, PhoneButton, TrialButton } from '@/components/Buttons'
 
 const cdnDomain = process.env.NEXT_PUBLIC_CDN_DOMAIN ?? ''
 const cdnDirectory = process.env.NEXT_PUBLIC_CDN_DIRECTORY ?? ''
@@ -272,18 +272,7 @@ const ProgrammingClass = () => (
           絵画教室から電子工作室までどの教室も同一料金です。
           <br />
           入会金は4400円です（
-          <Button
-            variant={'link'}
-            as={'a'}
-            fontWeight={600}
-            color={'blue.500'}
-            href={'/pricing'}
-            _hover={{
-              color: 'blue.400'
-            }}
-          >
-            受講料詳細
-          </Button>
+          <LinkButton text={'受講料詳細'} href={'/pricing'} />
           ）。
         </Text>
         <PricingBox />

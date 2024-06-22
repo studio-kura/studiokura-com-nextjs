@@ -1,8 +1,8 @@
-import { Text, Center, Box, Button } from '@chakra-ui/react'
-import { PhoneIcon, EditIcon } from '@chakra-ui/icons'
+import { Text, Center, Box } from '@chakra-ui/react'
 import { Hero } from '@/components/Hero'
 import { Container } from '@/components/Container'
 import { Main } from '@/components/Main'
+import { PhoneButton, TrialButton } from '../Buttons'
 
 type ClassPlaceSlide1Props = {
   placeName: string
@@ -13,7 +13,6 @@ type ClassPlaceSlide1Props = {
 
 const cdnDomain = process.env.NEXT_PUBLIC_CDN_DOMAIN ?? ''
 const cdnDirectory = process.env.NEXT_PUBLIC_CDN_DIRECTORY ?? ''
-const phoneNumber = process.env.NEXT_PUBLIC_PHONE_NUMBER ?? ''
 
 const ClassPlaceSlide1 = (props: ClassPlaceSlide1Props) => {
   const { placeName, tagline, bgImageUrl, children } = props
@@ -53,30 +52,8 @@ const ClassPlaceSlide1 = (props: ClassPlaceSlide1Props) => {
               <>{children}</>
             </Text>
             <Box>
-              <Button
-                as={'a'}
-                fontWeight={600}
-                color={'white'}
-                bg={'blue.500'}
-                href={'/trial'}
-                _hover={{
-                  bg: 'blue.400'
-                }}
-              >
-                <EditIcon />
-                &nbsp;体験レッスン
-              </Button>{' '}
-              <Button
-                as={'a'}
-                fontWeight={600}
-                href={`tel:${phoneNumber}`}
-                _hover={{
-                  bg: 'green.100'
-                }}
-              >
-                <PhoneIcon />
-                &nbsp;{phoneNumber}
-              </Button>
+              <TrialButton mr={1} />
+              <PhoneButton />
             </Box>
           </Main>
         </Box>

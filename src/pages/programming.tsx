@@ -103,7 +103,7 @@ const ProgrammingClass = () => (
         </Box>
         <Stack direction={['column', 'column', 'row']} mb={16}>
           <ClassPlaceLinkButton name={'糸島校'} href={'/itoshima'} />
-          <ClassPlaceLinkButton name={'橋本校'} href={'/hashimoto'} />
+          <ClassPlaceLinkButton name={'西新校'} href={'/nishijin'} />
           <ClassPlaceLinkButton name={'久留米校'} href={'/kurume'} />
           <ClassPlaceLinkButton name={'オンライン校'} href={'/online'} />
         </Stack>

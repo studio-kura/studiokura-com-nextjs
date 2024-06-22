@@ -36,6 +36,7 @@ type classTimesResponse = {
 
 const cdnDomain = process.env.NEXT_PUBLIC_CDN_DOMAIN ?? ''
 const cdnDirectory = process.env.NEXT_PUBLIC_CDN_DIRECTORY ?? ''
+const phoneNumber = process.env.NEXT_PUBLIC_PHONE_NUMBER ?? ''
 const totalCarouselImages = 3
 const carouselPeriod = 5000
 
@@ -191,14 +192,14 @@ const AdultsClass = () => {
                     size={'sm'}
                     variant="outline"
                     fontWeight={600}
-                    href={'tel:092-325-1773'}
+                    href={`tel:${phoneNumber}`}
                     color={'text'}
                     _hover={{
                       bg: 'gray.100'
                     }}
                   >
                     <PhoneIcon />
-                    &nbsp;092-325-1773
+                    &nbsp;{phoneNumber}
                   </Button>{' '}
                   <Text mt={'0.5em'} mb={'0.5em'}>
                     前日・当日のお申し込みはお電話のみとさせていただきます。

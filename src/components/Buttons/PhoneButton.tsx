@@ -1,6 +1,8 @@
 import { Button } from '@chakra-ui/react'
 import { PhoneIcon } from '@chakra-ui/icons'
 
+const phoneNumber = process.env.NEXT_PUBLIC_PHONE_NUMBER ?? ''
+
 interface Props {
   text?: string
   mr?: number
@@ -30,7 +32,7 @@ const PhoneButton: React.FC<Props> = ({
       mt={mt}
       size={size}
       as={'a'}
-      href={'tel:092-325-1773'}
+      href={`tel:${phoneNumber}`}
       borderRadius={borderRadius}
       fontWeight={600}
       color={color}
@@ -52,7 +54,7 @@ const PhoneButton: React.FC<Props> = ({
 export { PhoneButton }
 
 PhoneButton.defaultProps = {
-  text: '092-325-1773',
+  text: phoneNumber,
   mr: 0,
   mt: 0,
   size: 'md',

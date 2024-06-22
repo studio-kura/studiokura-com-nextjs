@@ -11,10 +11,12 @@ type ClassPlaceSlide1Props = {
   children?: string | Element
 }
 
+const cdnDomain = process.env.NEXT_PUBLIC_CDN_DOMAIN ?? ''
+const cdnDirectory = process.env.NEXT_PUBLIC_CDN_DIRECTORY ?? ''
+const phoneNumber = process.env.NEXT_PUBLIC_PHONE_NUMBER ?? ''
+
 const ClassPlaceSlide1 = (props: ClassPlaceSlide1Props) => {
   const { placeName, tagline, bgImageUrl, children } = props
-  const cdnDomain = process.env.NEXT_PUBLIC_CDN_DOMAIN ?? ''
-  const cdnDirectory = process.env.NEXT_PUBLIC_CDN_DIRECTORY ?? ''
   return (
     <Container
       bgImage={`https://${cdnDomain}/${cdnDirectory}${bgImageUrl}`}
@@ -67,13 +69,13 @@ const ClassPlaceSlide1 = (props: ClassPlaceSlide1Props) => {
               <Button
                 as={'a'}
                 fontWeight={600}
-                href={'tel:092-325-1773'}
+                href={`tel:${phoneNumber}`}
                 _hover={{
                   bg: 'green.100'
                 }}
               >
                 <PhoneIcon />
-                &nbsp;092-325-1773
+                &nbsp;{phoneNumber}
               </Button>
             </Box>
           </Main>

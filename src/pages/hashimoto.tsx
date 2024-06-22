@@ -7,8 +7,8 @@ import {
   ClassPlaceSlide2,
   ClassPlaceSlide3,
   // ClassPlaceSlideOtona,
-  ClassPlaceSlideKodomo,
-  ClassPlaceSlideDenshi
+  ClassPlaceSlideKodomo
+  // ClassPlaceSlideDenshi
 } from '@/components/ClassPlaceSlides/'
 import { Footer } from '@/components/Footer'
 
@@ -37,7 +37,6 @@ const HashimotoPlace = () => (
       address="〒819-0031 福岡県福岡市西区橋本2-27-2 木の葉モール橋本 JEUGIAカルチャーセンター内"
     ></ClassPlaceSlide3>
     <ClassPlaceSlideKodomo />
-    <ClassPlaceSlideDenshi />
     <Container>
       <Footer />
     </Container>

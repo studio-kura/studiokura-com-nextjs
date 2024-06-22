@@ -1,4 +1,4 @@
-import Link, { LinkProps } from 'next/link'
+import NextLink, { LinkProps } from 'next/link'
 import { Button, Box } from '@chakra-ui/react'
 import { PropsWithChildren } from 'react'
 
@@ -20,11 +20,11 @@ const ScrollLink = ({ children, ...props }: ScrollLinkProps) => {
   }
   return (
     <Box display={'inline'} mr={2}>
-      <Link {...props} onClick={handleScroll}>
+      <NextLink {...props} onClick={handleScroll}>
         <Button size={'sm'} mb={2}>
           {children}
         </Button>
-      </Link>
+      </NextLink>
     </Box>
   )
 }

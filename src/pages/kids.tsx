@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import NextLink from 'next/link'
 import {
   Text,
   AspectRatio,
@@ -155,7 +156,10 @@ const KidsClass = () => {
                   </Text>
                   <Text mt={'0.5em'} mb={'0.5em'}>
                     Studio Kuraは毎月8名の海外アーティストを滞在製作させる
-                    <Link href="http://www.studiokura.info/residence/">
+                    <Link
+                      as={NextLink}
+                      href="http://www.studiokura.info/residence/"
+                    >
                       レジデンスプログラム
                     </Link>
                     を行っています（現在まで24カ国50名の作家が滞在）。海外の作家の様々な考え方、製作現場を身近に見るこができます。又海外作家によるワークショップを行っています。

@@ -45,7 +45,8 @@ const Pricing = () => (
       </Text>
       <TrialButton text={'体験レッスンのお申し込み'} mt={4} />
       <Text mt={4}>
-        <MailButton size={'sm'} /> <PhoneButton size={'sm'} />
+        <MailButton size={'sm'} mr={1} />
+        <PhoneButton size={'sm'} />
       </Text>
       <Text mt={4}>
         ※ 前日・当日のお申し込みはお電話のみとさせていただきます。

@@ -4,6 +4,7 @@ import { EditIcon } from '@chakra-ui/icons'
 
 interface Props {
   text?: string
+  mr?: number
   mt?: number
   size?: string
   color?: string
@@ -15,6 +16,7 @@ interface Props {
 
 const EstimateCalculatorButton: React.FC<Props> = ({
   text,
+  mr,
   mt,
   size,
   color,
@@ -25,6 +27,7 @@ const EstimateCalculatorButton: React.FC<Props> = ({
 }) => {
   return (
     <Button
+      mr={mr}
       mt={mt}
       size={size}
       as={NextLink}
@@ -51,6 +54,7 @@ export { EstimateCalculatorButton }
 
 EstimateCalculatorButton.defaultProps = {
   text: '見積もりシミュレーション',
+  mr: 0,
   mt: 0,
   size: 'md',
   color: 'white',

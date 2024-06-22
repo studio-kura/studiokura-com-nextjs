@@ -65,13 +65,11 @@ const ClassPlaceCard = (props: ClassPlaceCardProps) => {
         />
         <Box px={4}>
           <Heading fontSize={'2xl'} fontFamily={'body'}>
-            <NextLink href={linkHref}>
-              <Button flex={1} variant="outline">
-                {placeName}
-                &nbsp;&nbsp;
-                <ChevronRightIcon />
-              </Button>
-            </NextLink>
+            <Button href={linkHref} as={NextLink} flex={1} variant="outline">
+              {placeName}
+              &nbsp;&nbsp;
+              <ChevronRightIcon />
+            </Button>
           </Heading>
           <Box py={4}>
             {adultsClass && (

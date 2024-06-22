@@ -62,11 +62,15 @@ const ClassTypeCard = (props: ClassTypeCardProps) => {
           <>{children}</>
         </Text>
         {linkHref && (
-          <NextLink href={linkHref}>
-            <Button flex={1} fontSize="sm" variant="outline">
-              {linkText ?? 'さらに詳しく観る'}
-            </Button>
-          </NextLink>
+          <Button
+            href={linkHref}
+            as={NextLink}
+            flex={1}
+            fontSize="sm"
+            variant="outline"
+          >
+            {linkText ?? 'さらに詳しく観る'}
+          </Button>
         )}
       </Box>
     </Center>

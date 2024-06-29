@@ -5,6 +5,7 @@ Studio Kura 絵画教室のウェブサイト。
 - パッケージマネージャー: [Yarn](https://yarnpkg.com/)
 - フレームワーク: [Next.js](https://nextjs.org/)
 - React コンポーネント: [Chakra UI](https://v2.chakra-ui.com/)
+- デプロイ: [Vercel](https://vercel.com/)
 
 ## ローカル環境での開発までの準備
 
@@ -30,7 +31,7 @@ git clone https://github.com/studio-kura/studiokura-com-nextjs.git
 `.env.sample` を複製し `.env.local` と名付ける。
 
 ```sh
-cp  .env.sample .env.local
+cp .env.sample .env.local
 ```
 
 `.env.sample` をそのままにし `.env.local` の環境変数を埋める。
@@ -49,7 +50,7 @@ cp  .env.sample .env.local
 - `NEXT_PUBLIC_CDN_DOMAIN`: 画像が置いてあるドメインかサブドメイン (例: cdn.\*\*\*\*\*\*\*\*.com)
 - `NEXT_PUBLIC_CDN_DIRECTORY`: ドメインの中で、画像が置いてあるディレクトリ（ない場合は `/` で良い）
 
-* 実際の環境変数の値は、非公開ドキュメントを参照
+\* 実際の環境変数の値は、非公開ドキュメントを参照
 
 新しい画像を追加する場合は `tools/populate-cdn.sh` に新しい画像をダウンロードできるコマンドを追加する。
 

@@ -6,7 +6,7 @@ import Iframe from 'react-iframe'
 const Trial = () => (
   <Layout title="体験レッスン｜Studio Kura 絵画美術教室（福岡県　糸島市　二丈）">
     <Navigation />
-    <Container height={'100vh'} width={'100vw'}>
+    <Container height={'100vh'} width={'100vw'} px={'0'}>
       <Iframe
         url={
           'https://online.studiokura.com/cake/class_reservations/taiken/barebones/true'

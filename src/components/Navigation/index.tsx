@@ -206,6 +206,8 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
 const MobileNav = () => {
   return (
     <Stack
+      zIndex={100}
+      position={'relative'}
       bg={useColorModeValue('white', 'gray.800')}
       p={4}
       display={{ md: 'none' }}

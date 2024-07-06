@@ -29,7 +29,7 @@ import {
 const Index = () => (
   <Layout>
     <Navigation />
-    <Container height="100vh" pt="18em">
+    <Container zIndex={0} pt="18em">
       <Main>
         <CardStack>
           <ClassTypeCard

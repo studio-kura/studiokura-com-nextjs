@@ -10,7 +10,7 @@ const CardStack: React.FC<Props> = ({ children }) => {
     <Stack
       align={'center'}
       justify={'center'}
-      direction={'row'}
+      direction={['column', 'column', 'column', 'row']}
       mt={6}
       display={'flex'}
       alignItems={'flex-start'}

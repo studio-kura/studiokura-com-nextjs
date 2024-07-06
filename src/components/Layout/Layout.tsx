@@ -1,5 +1,6 @@
 import { ReactElement, ReactNode } from 'react'
 import Head from 'next/head'
+import { Box } from '@chakra-ui/react'
 
 interface Props {
   title?: string
@@ -13,7 +14,16 @@ const Layout: React.FC<Props> = ({ children, title }) => {
         <title>{title}</title>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </Head>
-      <>{children}</>
+      <Box
+        bg="gray.50"
+        color="black"
+        _dark={{
+          bg: 'gray.900',
+          color: 'white'
+        }}
+      >
+        {children}
+      </Box>
     </>
   )
 }

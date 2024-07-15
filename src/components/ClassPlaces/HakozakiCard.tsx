@@ -1,4 +1,4 @@
-import { ClassPlaceCard } from '@/components/ClassPlaceCard'
+import { ClassPlaceCard } from '@/components/ClassPlaceCard';
 
 const HakozakiCard = () => (
   <ClassPlaceCard
@@ -11,6 +11,6 @@ const HakozakiCard = () => (
   >
     福岡市東区箱崎3丁目8-18 先崎哲進オフィス内
   </ClassPlaceCard>
-)
+);
 
-export { HakozakiCard }
+export { HakozakiCard };

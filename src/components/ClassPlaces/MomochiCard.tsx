@@ -1,4 +1,4 @@
-import { ClassPlaceCard } from '@/components/ClassPlaceCard'
+import { ClassPlaceCard } from '@/components/ClassPlaceCard';
 
 const MomochiCard = () => (
   <ClassPlaceCard
@@ -12,6 +12,6 @@ const MomochiCard = () => (
     福岡県福岡市早良区百道浜1-3-70ザ・レジデンシャルスイート福岡
     ブリジストンアリーナ内
   </ClassPlaceCard>
-)
+);
 
-export { MomochiCard }
+export { MomochiCard };

@@ -1,4 +1,4 @@
-import { ClassPlaceCard } from '@/components/ClassPlaceCard'
+import { ClassPlaceCard } from '@/components/ClassPlaceCard';
 
 const OnlineCard = () => (
   <ClassPlaceCard
@@ -11,6 +11,6 @@ const OnlineCard = () => (
   >
     ※ skypeを使った1~4人の少人数制レッスンです。
   </ClassPlaceCard>
-)
+);
 
-export { OnlineCard }
+export { OnlineCard };

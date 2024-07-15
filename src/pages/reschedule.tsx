@@ -1,12 +1,7 @@
-import { Text, Center, Box, Heading, Button } from '@chakra-ui/react'
-
-import { Layout } from '@/components/Layout'
-import { Hero } from '@/components/Hero'
-import { Container } from '@/components/Container'
-import { Main } from '@/components/Main'
-import { Footer } from '@/components/Footer'
-import { Navigation } from '@/components/Navigation'
-import Iframe from 'react-iframe'
+import { Container } from '@/components/Container';
+import { Layout } from '@/components/Layout';
+import { Navigation } from '@/components/Navigation';
+import Iframe from 'react-iframe';
 
 const Reschedule = () => (
   <Layout title="生徒様予約｜Studio Kura 絵画美術教室（福岡県　糸島市　二丈）">
@@ -23,6 +18,6 @@ const Reschedule = () => (
       />
     </Container>
   </Layout>
-)
+);
 
-export default Reschedule
+export default Reschedule;

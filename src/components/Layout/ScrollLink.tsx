@@ -1,23 +1,23 @@
-import NextLink, { LinkProps } from 'next/link'
-import { Button, Box } from '@chakra-ui/react'
-import { PropsWithChildren } from 'react'
+import { Box, Button } from '@chakra-ui/react';
+import NextLink, { LinkProps } from 'next/link';
+import { PropsWithChildren } from 'react';
 
 type AnchorProps = Omit<
   React.AnchorHTMLAttributes<HTMLAnchorElement>,
   keyof LinkProps
->
-type ScrollLinkProps = AnchorProps & LinkProps & PropsWithChildren
+>;
+type ScrollLinkProps = AnchorProps & LinkProps & PropsWithChildren;
 
 const ScrollLink = ({ children, ...props }: ScrollLinkProps) => {
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    e.preventDefault()
-    const targetId = e.currentTarget.href.replace(/.*\#/, '')
-    const elem = document.getElementById(targetId)
+    e.preventDefault();
+    const targetId = e.currentTarget.href.replace(/.*\#/, '');
+    const elem = document.getElementById(targetId);
     window.scrollTo({
       top: elem?.getBoundingClientRect().top,
-      behavior: 'smooth'
-    })
-  }
+      behavior: 'smooth',
+    });
+  };
   return (
     <Box display={'inline'} mr={2}>
       <NextLink {...props} onClick={handleScroll}>
@@ -26,6 +26,6 @@ const ScrollLink = ({ children, ...props }: ScrollLinkProps) => {
         </Button>
       </NextLink>
     </Box>
-  )
-}
-export { ScrollLink }
+  );
+};
+export { ScrollLink };

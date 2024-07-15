@@ -1,23 +1,26 @@
-import { FormControl, Button } from '@chakra-ui/react'
-import { ChangeEventHandler, useState } from 'react'
-import { type KindergartenFormData } from '@/utils'
-import { FormItem, ClassroomCheckboxGroup } from '@/components/KindergartenForm'
+import {
+  ClassroomCheckboxGroup,
+  FormItem,
+} from '@/components/KindergartenForm';
+import { type KindergartenFormData } from '@/utils';
+import { Button, FormControl } from '@chakra-ui/react';
+import { ChangeEventHandler, useState } from 'react';
 
 type FormInput = {
-  kindergarten: string
-  name: string
-  email: string
-  address: string
-  phone: string
+  kindergarten: string;
+  name: string;
+  email: string;
+  address: string;
+  phone: string;
   students?: {
-    classroom1: boolean
-    classroom2: boolean
-    classroom3: boolean
-  }
-  numberOfStudents?: number
-  trialDate: string
-  message: string
-}
+    classroom1: boolean;
+    classroom2: boolean;
+    classroom3: boolean;
+  };
+  numberOfStudents?: number;
+  trialDate: string;
+  message: string;
+};
 const initialFormInput = {
   kindergarten: '',
   name: '',
@@ -26,19 +29,19 @@ const initialFormInput = {
   phone: '',
   numberOfStudents: 0,
   trialDate: '',
-  message: ''
-}
+  message: '',
+};
 
-const formWidth = ['90%', '90%', '80%', '60%']
-const emailPattern: RegExp = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
+const formWidth = ['90%', '90%', '80%', '60%'];
+const emailPattern: RegExp = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
 
 interface Props {
-  variant: 'contact' | 'request-docs' | 'trial' | 'request-estimate'
+  variant: 'contact' | 'request-docs' | 'trial' | 'request-estimate';
 }
 const KindergartenForm = (props: Props) => {
-  const { variant } = props
-  const [formInput, setFormInput] = useState<FormInput>(initialFormInput)
-  const [formWasSubmitted, setFormWasSubmitted] = useState(false)
+  const { variant } = props;
+  const [formInput, setFormInput] = useState<FormInput>(initialFormInput);
+  const [formWasSubmitted, setFormWasSubmitted] = useState(false);
   const formData: KindergartenFormData = {
     contact_type: variant,
     kindergarten: formInput.kindergarten,
@@ -51,45 +54,45 @@ const KindergartenForm = (props: Props) => {
     classroom3: formInput.students?.classroom3 ? '1' : '0',
     students: `${formInput.numberOfStudents}`,
     trial_date: formInput.trialDate,
-    message: formInput.message
-  }
+    message: formInput.message,
+  };
 
   const handleKindergartenChange: ChangeEventHandler<HTMLInputElement> = (
     event
   ) => {
     setFormInput((state) => {
-      return { ...state, kindergarten: event.target.value }
-    })
-  }
-  const kindergartenIsValid = formInput.kindergarten.length > 0
+      return { ...state, kindergarten: event.target.value };
+    });
+  };
+  const kindergartenIsValid = formInput.kindergarten.length > 0;
 
   const handleNameChange: ChangeEventHandler<HTMLInputElement> = (event) => {
     setFormInput((state) => {
-      return { ...state, name: event.target.value }
-    })
-  }
-  const nameIsValid = true
+      return { ...state, name: event.target.value };
+    });
+  };
+  const nameIsValid = true;
 
   const handleEmailChange: ChangeEventHandler<HTMLInputElement> = (event) => {
     setFormInput((state) => {
-      return { ...state, email: event.target.value }
-    })
-  }
-  const emailIsValid = emailPattern.test(formInput.email)
+      return { ...state, email: event.target.value };
+    });
+  };
+  const emailIsValid = emailPattern.test(formInput.email);
 
   const handleAddressChange: ChangeEventHandler<HTMLInputElement> = (event) => {
     setFormInput((state) => {
-      return { ...state, address: event.target.value }
-    })
-  }
-  const addressIsValid = true
+      return { ...state, address: event.target.value };
+    });
+  };
+  const addressIsValid = true;
 
   const handlePhoneChange: ChangeEventHandler<HTMLInputElement> = (event) => {
     setFormInput((state) => {
-      return { ...state, phone: event.target.value }
-    })
-  }
-  const phoneIsValid = true
+      return { ...state, phone: event.target.value };
+    });
+  };
+  const phoneIsValid = true;
 
   const handleClassroom1Check: ChangeEventHandler<HTMLInputElement> = (
     event
@@ -100,11 +103,11 @@ const KindergartenForm = (props: Props) => {
         students: {
           classroom1: event.target.checked,
           classroom2: state.students?.classroom2 ?? false,
-          classroom3: state.students?.classroom3 ?? false
-        }
-      }
-    })
-  }
+          classroom3: state.students?.classroom3 ?? false,
+        },
+      };
+    });
+  };
   const handleClassroom2Check: ChangeEventHandler<HTMLInputElement> = (
     event
   ) => {
@@ -114,11 +117,11 @@ const KindergartenForm = (props: Props) => {
         students: {
           classroom1: state.students?.classroom1 ?? false,
           classroom2: event.target.checked,
-          classroom3: state.students?.classroom3 ?? false
-        }
-      }
-    })
-  }
+          classroom3: state.students?.classroom3 ?? false,
+        },
+      };
+    });
+  };
   const handleClassroom3Check: ChangeEventHandler<HTMLInputElement> = (
     event
   ) => {
@@ -128,56 +131,56 @@ const KindergartenForm = (props: Props) => {
         students: {
           classroom1: state.students?.classroom1 ?? false,
           classroom2: state.students?.classroom2 ?? false,
-          classroom3: event.target.checked
-        }
-      }
-    })
-  }
+          classroom3: event.target.checked,
+        },
+      };
+    });
+  };
 
   const handleNumberOfStudentsChange: ChangeEventHandler<HTMLInputElement> = (
     event
   ) => {
-    const students: number = Number(event.target.value)
+    const students: number = Number(event.target.value);
     if (!Number.isNaN(students)) {
       setFormInput((state) => {
-        return { ...state, numberOfStudents: students }
-      })
+        return { ...state, numberOfStudents: students };
+      });
     }
-  }
+  };
   const numberOfStudentsIsValid =
     (variant != 'trial' && variant != 'request-estimate') ||
     (!Number.isNaN(formInput.numberOfStudents) &&
-      (formInput.numberOfStudents ?? 0) > 0)
+      (formInput.numberOfStudents ?? 0) > 0);
 
   const handleTrialDateChange: ChangeEventHandler<HTMLInputElement> = (
     event
   ) => {
     setFormInput((state) => {
-      return { ...state, trialDate: event.target.value }
-    })
-  }
-  const trialDateIsValid = true
+      return { ...state, trialDate: event.target.value };
+    });
+  };
+  const trialDateIsValid = true;
 
   const handleMessageChange: ChangeEventHandler<HTMLTextAreaElement> = (
     event
   ) => {
     setFormInput((state) => {
-      return { ...state, message: event.target.value }
-    })
-  }
-  const messageIsValid = variant != 'contact' || formInput.message.length > 0
+      return { ...state, message: event.target.value };
+    });
+  };
+  const messageIsValid = variant != 'contact' || formInput.message.length > 0;
 
   const formSubmittable =
-    emailIsValid && nameIsValid && messageIsValid && !formWasSubmitted
+    emailIsValid && nameIsValid && messageIsValid && !formWasSubmitted;
   const handleSubmit = async () => {
-    setFormWasSubmitted(true)
+    setFormWasSubmitted(true);
     const apiRequest = await fetch('/api/post-kindergarten-form', {
       method: 'POST',
-      body: JSON.stringify(formData)
-    })
+      body: JSON.stringify(formData),
+    });
     // const apiResponse = await apiRequest.json()
     // console.log('FORM SUBMITTED', formData, apiResponse)
-  }
+  };
 
   return (
     <>
@@ -268,7 +271,7 @@ const KindergartenForm = (props: Props) => {
           color={'white'}
           bg={'blue.500'}
           _hover={{
-            bg: 'blue.400'
+            bg: 'blue.400',
           }}
           onClick={handleSubmit}
           isDisabled={!formSubmittable}
@@ -277,7 +280,7 @@ const KindergartenForm = (props: Props) => {
         </Button>
       </FormControl>
     </>
-  )
-}
+  );
+};
 
-export { KindergartenForm }
+export { KindergartenForm };

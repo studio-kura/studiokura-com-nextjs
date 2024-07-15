@@ -1,4 +1,4 @@
-import { ClassPlaceCard } from '@/components/ClassPlaceCard'
+import { ClassPlaceCard } from '@/components/ClassPlaceCard';
 
 const KashiiCard = () => (
   <ClassPlaceCard
@@ -12,6 +12,6 @@ const KashiiCard = () => (
     〒813-0016 福岡県福岡市東区香椎浜３丁目１２−１ イオン香椎浜店
     JEUGIAカルチャーセンター内
   </ClassPlaceCard>
-)
+);
 
-export { KashiiCard }
+export { KashiiCard };

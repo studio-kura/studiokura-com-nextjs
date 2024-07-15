@@ -1,43 +1,41 @@
-import NextLink from 'next/link'
+import {
+  ContactButton,
+  EstimateCalculatorButton,
+  LinkButton,
+  PhoneButton,
+} from '@/components/Buttons';
+import { Footer } from '@/components/Footer';
+import {
+  KindergartenBoxSlide,
+  KindergartenTitleSlide,
+  KindergartenVideoSlide,
+} from '@/components/KindergartenSlides';
+import { Layout } from '@/components/Layout';
+import { Navigation } from '@/components/Navigation';
 import {
   Box,
-  Button,
+  Td as ChakraTd,
   Container,
   Heading,
   List,
   ListItem,
   Table,
-  Text,
   Tbody,
-  Tr,
+  Text,
   Th,
-  Td as ChakraTd
-} from '@chakra-ui/react'
-import { Layout } from '@/components/Layout'
-import { Navigation } from '@/components/Navigation'
-import {
-  KindergartenTitleSlide,
-  KindergartenBoxSlide,
-  KindergartenVideoSlide
-} from '@/components/KindergartenSlides'
-import {
-  ContactButton,
-  EstimateCalculatorButton,
-  LinkButton,
-  PhoneButton
-} from '@/components/Buttons'
-import { Footer } from '@/components/Footer'
+  Tr,
+} from '@chakra-ui/react';
 
 type TdProps = {
-  children?: JSX.Element | string
-}
+  children?: JSX.Element | string;
+};
 const Td = (props: TdProps) => (
   <ChakraTd p={'8px'}>
     <Box>
       <Text fontSize={'12px'}>{props.children}</Text>
     </Box>
   </ChakraTd>
-)
+);
 
 const Kindergartens = () => {
   return (
@@ -142,7 +140,7 @@ const Kindergartens = () => {
           'https://www.youtube.com/embed/PhoKEZPiVO4?list=PLPXP4x-4k9UI7ftxWK4NHvYZRsmPga45S&amp;controls=0&amp;showinfo=0',
           'https://www.youtube.com/embed/YrAsSjsRoEc?list=PLPXP4x-4k9UI7ftxWK4NHvYZRsmPga45S&amp;controls=0&amp;showinfo=0',
           'https://www.youtube.com/embed/PaxQnw6RXJQ?list=PLPXP4x-4k9UI7ftxWK4NHvYZRsmPga45S&amp;controls=0&amp;showinfo=0',
-          'https://www.youtube.com/embed/eAE5OIA_BvY?list=PLPXP4x-4k9UI7ftxWK4NHvYZRsmPga45S&amp;controls=0&amp;showinfo=0'
+          'https://www.youtube.com/embed/eAE5OIA_BvY?list=PLPXP4x-4k9UI7ftxWK4NHvYZRsmPga45S&amp;controls=0&amp;showinfo=0',
         ]}
       />
 
@@ -374,7 +372,7 @@ const Kindergartens = () => {
         <Footer />
       </Container>
     </Layout>
-  )
-}
+  );
+};
 
-export default Kindergartens
+export default Kindergartens;

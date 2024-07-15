@@ -1,12 +1,12 @@
-import NextLink from 'next/link'
-import { Button, ThemeTypings } from '@chakra-ui/react'
+import { Button, ThemeTypings } from '@chakra-ui/react';
+import NextLink from 'next/link';
 
 interface Props {
-  text: string
-  href: string
-  ml?: number
-  mr?: number
-  colorScheme?: ThemeTypings['colorSchemes']
+  text: string;
+  href: string;
+  ml?: number;
+  mr?: number;
+  colorScheme?: ThemeTypings['colorSchemes'];
 }
 
 const LinkButton: React.FC<Props> = ({ text, href, ml, mr, colorScheme }) => {
@@ -21,12 +21,12 @@ const LinkButton: React.FC<Props> = ({ text, href, ml, mr, colorScheme }) => {
     >
       {text}
     </Button>
-  )
-}
-export { LinkButton }
+  );
+};
+export { LinkButton };
 
 LinkButton.defaultProps = {
   ml: 0,
   mr: 0,
-  colorScheme: 'blue'
-}
+  colorScheme: 'blue',
+};

@@ -1,4 +1,4 @@
-import { ClassPlaceCard } from '@/components/ClassPlaceCard'
+import { ClassPlaceCard } from '@/components/ClassPlaceCard';
 
 const OnojyoCard = () => (
   <ClassPlaceCard
@@ -11,6 +11,6 @@ const OnojyoCard = () => (
   >
     〒816-0935 福岡県大野城市錦町４丁目１−１カルチャータウン大野城内
   </ClassPlaceCard>
-)
+);
 
-export { OnojyoCard }
+export { OnojyoCard };

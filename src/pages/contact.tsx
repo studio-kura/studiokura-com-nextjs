@@ -1,61 +1,61 @@
+import { Container } from '@/components/Container';
+import { Footer } from '@/components/Footer';
+import { Layout } from '@/components/Layout';
+import { Navigation } from '@/components/Navigation';
+import { type FormData } from '@/utils';
+import { CheckCircleIcon, WarningIcon } from '@chakra-ui/icons';
 import {
-  Heading,
-  FormControl,
-  FormLabel,
-  FormHelperText,
-  Input,
+  Button,
   Center,
+  FormControl,
+  FormHelperText,
+  FormLabel,
+  Heading,
+  Input,
   Textarea,
-  Button
-} from '@chakra-ui/react'
-import { Layout } from '@/components/Layout'
-import { Container } from '@/components/Container'
-import { Footer } from '@/components/Footer'
-import { Navigation } from '@/components/Navigation'
-import { ChangeEventHandler, useState } from 'react'
-import { CheckCircleIcon, WarningIcon } from '@chakra-ui/icons'
-import { type FormData } from '@/utils'
+} from '@chakra-ui/react';
+import { ChangeEventHandler, useState } from 'react';
 
-const formWidth = ['90%', '90%', '80%', '60%']
-const emailPattern: RegExp = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
+const formWidth = ['90%', '90%', '80%', '60%'];
+const emailPattern: RegExp = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
 
 const Contact = () => {
-  const [nameInput, setNameInput] = useState('')
-  const [emailInput, setEmailInput] = useState('')
-  const [messageInput, setMessageInput] = useState('')
-  const [formWasSubmitted, setFormWasSubmitted] = useState(false)
+  const [nameInput, setNameInput] = useState('');
+  const [emailInput, setEmailInput] = useState('');
+  const [messageInput, setMessageInput] = useState('');
+  const [formWasSubmitted, setFormWasSubmitted] = useState(false);
   const formData: FormData = {
     name: nameInput,
     email: emailInput,
-    message: messageInput
-  }
-  const nameIsValid = nameInput.length > 0
-  const emailIsValid = emailPattern.test(emailInput)
-  const messageIsValid = messageInput.length > 0
+    message: messageInput,
+  };
+  const nameIsValid = nameInput.length > 0;
+  const emailIsValid = emailPattern.test(emailInput);
+  const messageIsValid = messageInput.length > 0;
   const formSubmittable =
-    emailIsValid && nameIsValid && messageIsValid && !formWasSubmitted
+    emailIsValid && nameIsValid && messageIsValid && !formWasSubmitted;
 
   const handleNameChange: ChangeEventHandler<HTMLInputElement> = (event) => {
-    setNameInput(event.target.value)
-  }
+    setNameInput(event.target.value);
+  };
   const handleEmailChange: ChangeEventHandler<HTMLInputElement> = (event) => {
-    const email = event.target.value
-    setEmailInput(email)
-  }
+    const email = event.target.value;
+    setEmailInput(email);
+  };
   const handleMessageChange: ChangeEventHandler<HTMLTextAreaElement> = (
     event
   ) => {
-    setMessageInput(event.target.value)
-  }
+    setMessageInput(event.target.value);
+  };
   const handleSubmit = async () => {
-    setFormWasSubmitted(true)
+    setFormWasSubmitted(true);
     const apiRequest = await fetch('/api/post-contact-form', {
       method: 'POST',
-      body: JSON.stringify(formData)
-    })
+      body: JSON.stringify(formData),
+    });
     // const apiResponse = await apiRequest.json()
     // console.log('FORM SUBMITTED', formData, apiResponse)
-  }
+  };
 
   return (
     <Layout title="お問い合わせ｜Studio Kura 絵画美術教室（福岡県　糸島市　二丈）">
@@ -115,7 +115,7 @@ const Contact = () => {
               color={'white'}
               bg={'blue.500'}
               _hover={{
-                bg: 'blue.400'
+                bg: 'blue.400',
               }}
               onClick={handleSubmit}
               isDisabled={!formSubmittable}
@@ -129,7 +129,7 @@ const Contact = () => {
         <Footer />
       </Container>
     </Layout>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

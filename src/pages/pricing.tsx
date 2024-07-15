@@ -1,12 +1,12 @@
-import { Heading, Text, List, ListItem, ListIcon, Box } from '@chakra-ui/react'
-import { ChevronRightIcon } from '@chakra-ui/icons'
+import { ChevronRightIcon } from '@chakra-ui/icons';
+import { Heading, List, ListIcon, ListItem, Text } from '@chakra-ui/react';
 
-import { Layout } from '@/components/Layout'
-import { Container } from '@/components/Container'
-import { Footer } from '@/components/Footer'
-import { Navigation } from '@/components/Navigation'
-import { PricingBox } from '@/components/Pricing'
-import { MailButton, PhoneButton, TrialButton } from '@/components/Buttons'
+import { MailButton, PhoneButton, TrialButton } from '@/components/Buttons';
+import { Container } from '@/components/Container';
+import { Footer } from '@/components/Footer';
+import { Layout } from '@/components/Layout';
+import { Navigation } from '@/components/Navigation';
+import { PricingBox } from '@/components/Pricing';
 
 const Pricing = () => (
   <Layout title="受講料｜Studio Kura 絵画美術教室（福岡県　糸島市　二丈）">
@@ -54,6 +54,6 @@ const Pricing = () => (
       <Footer />
     </Container>
   </Layout>
-)
+);
 
-export default Pricing
+export default Pricing;

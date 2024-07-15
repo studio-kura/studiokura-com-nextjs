@@ -1,4 +1,4 @@
-import { ClassPlaceCard } from '@/components/ClassPlaceCard'
+import { ClassPlaceCard } from '@/components/ClassPlaceCard';
 
 const NishijinCard = () => (
   <ClassPlaceCard
@@ -11,6 +11,6 @@ const NishijinCard = () => (
   >
     福岡県福岡市西新一丁目11-27 ロフティ西新903号室
   </ClassPlaceCard>
-)
+);
 
-export { NishijinCard }
+export { NishijinCard };

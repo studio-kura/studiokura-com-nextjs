@@ -1,9 +1,9 @@
-import { Heading, Center } from '@chakra-ui/react'
-import { Layout } from '@/components/Layout'
-import { Container } from '@/components/Container'
-import { Footer } from '@/components/Footer'
-import { Navigation } from '@/components/Navigation'
-import { KindergartenForm } from '@/components/KindergartenForm'
+import { Container } from '@/components/Container';
+import { Footer } from '@/components/Footer';
+import { KindergartenForm } from '@/components/KindergartenForm';
+import { Layout } from '@/components/Layout';
+import { Navigation } from '@/components/Navigation';
+import { Center, Heading } from '@chakra-ui/react';
 
 const Trial = () => {
   return (
@@ -23,7 +23,7 @@ const Trial = () => {
         <Footer />
       </Container>
     </Layout>
-  )
-}
+  );
+};
 
-export default Trial
+export default Trial;

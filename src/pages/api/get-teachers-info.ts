@@ -1,12 +1,12 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { teachers } from '@/data/teachers'
+import { teachers } from '@/data/teachers';
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 export type TeacherData = {
-  slug: string
-  name?: string
-  content?: string
-  images?: string[]
-}
+  slug: string;
+  name?: string;
+  content?: string;
+  images?: string[];
+};
 
 const handler = async (
   req: NextApiRequest,
@@ -15,18 +15,18 @@ const handler = async (
   if (req.method !== 'GET') {
     res
       .status(405)
-      .json([{ slug: 'error', content: `'${req.method}' method not allowed` }])
-    return
+      .json([{ slug: 'error', content: `'${req.method}' method not allowed` }]);
+    return;
   }
 
   try {
-    const teachersData: TeacherData[] = teachers
+    const teachersData: TeacherData[] = teachers;
     if (teachersData.length < 1)
-      res.status(404).json([{ slug: 'error', content: 'Teacher not found' }])
-    res.status(200).json(teachersData)
+      res.status(404).json([{ slug: 'error', content: 'Teacher not found' }]);
+    res.status(200).json(teachersData);
   } catch (error: any) {
-    res.status(500).json([{ slug: 'error', content: error }])
-    return
+    res.status(500).json([{ slug: 'error', content: error }]);
+    return;
   }
-}
-export default handler
+};
+export default handler;

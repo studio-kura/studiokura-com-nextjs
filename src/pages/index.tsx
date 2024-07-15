@@ -1,11 +1,5 @@
-import { Heading } from '@chakra-ui/react'
+import { Heading } from '@chakra-ui/react';
 
-import { Layout, CardStack } from '@/components/Layout'
-import { Container } from '@/components/Container'
-import { Main } from '@/components/Main'
-import { Footer } from '@/components/Footer'
-import { Navigation } from '@/components/Navigation'
-import { ClassTypeCard } from '@/components/ClassTypeCard'
 import {
   BefuCard,
   HakozakiCard,
@@ -23,8 +17,14 @@ import {
   OnlineCard,
   OnojyoCard,
   SarayamaCard,
-  TakeoCard
-} from '@/components/ClassPlaces'
+  TakeoCard,
+} from '@/components/ClassPlaces';
+import { ClassTypeCard } from '@/components/ClassTypeCard';
+import { Container } from '@/components/Container';
+import { Footer } from '@/components/Footer';
+import { CardStack, Layout } from '@/components/Layout';
+import { Main } from '@/components/Main';
+import { Navigation } from '@/components/Navigation';
 
 const Index = () => (
   <Layout>
@@ -94,6 +94,6 @@ const Index = () => (
       <Footer />
     </Container>
   </Layout>
-)
+);
 
-export default Index
+export default Index;

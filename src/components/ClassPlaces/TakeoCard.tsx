@@ -1,4 +1,4 @@
-import { ClassPlaceCard } from '@/components/ClassPlaceCard'
+import { ClassPlaceCard } from '@/components/ClassPlaceCard';
 
 const TakeoCard = () => (
   <ClassPlaceCard
@@ -11,6 +11,6 @@ const TakeoCard = () => (
   >
     〒843-0022 佐賀県武雄市武雄町大字武雄7271 ARTS ITOYA
   </ClassPlaceCard>
-)
+);
 
-export { TakeoCard }
+export { TakeoCard };

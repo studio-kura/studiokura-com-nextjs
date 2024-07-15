@@ -7,39 +7,39 @@ const nextConfig = {
       {
         source: '/blog/:path*',
         destination: 'https://blog.studiokura.com/:path*',
-        permanent: false
+        permanent: false,
       },
       {
         source: '/kodomo(/?)',
         destination: '/kids',
-        permanent: false
+        permanent: false,
       },
       {
         source: '/otona(/?)',
         destination: '/adults',
-        permanent: false
+        permanent: false,
       },
       {
         source: '/otona/otona-works(/?)',
         destination: '/adults',
-        permanent: false
+        permanent: false,
       },
       {
         source: '/otona/otona-works.php(/?)',
         destination: '/adults',
-        permanent: false
+        permanent: false,
       },
       {
         source: '/denshikousaku(/?)',
         destination: '/programming',
-        permanent: false
+        permanent: false,
       },
       {
         source: '/kindergarten/koushi(/?)',
         destination: '/teachers',
-        permanent: false
-      }
-    ]
+        permanent: false,
+      },
+    ];
     const teachers = [
       'matsuzaki',
       'alejandro',
@@ -54,17 +54,17 @@ const nextConfig = {
       'nakajima',
       'moriyama',
       'sakai',
-      'maki'
-    ]
+      'maki',
+    ];
     teachers.forEach((teacher) => {
       redirects.push({
         source: `/kindergarten/koushi/${teacher}(/?)`,
         destination: `/teachers/${teacher}`,
-        permanent: false
-      })
-    })
-    return redirects
-  }
-}
+        permanent: false,
+      });
+    });
+    return redirects;
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

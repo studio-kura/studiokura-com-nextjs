@@ -1,5 +1,5 @@
-import { Heading, Stack, Card, CardBody } from '@chakra-ui/react'
-import { TrialButton } from '@/components/Buttons'
+import { TrialButton } from '@/components/Buttons';
+import { Card, CardBody, Heading, Stack } from '@chakra-ui/react';
 
 const PricingBox = () => (
   <Stack
@@ -38,6 +38,6 @@ const PricingBox = () => (
       </CardBody>
     </Card>
   </Stack>
-)
+);
 
-export { PricingBox }
+export { PricingBox };

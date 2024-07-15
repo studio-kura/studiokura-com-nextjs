@@ -1,10 +1,10 @@
-import { ReactElement, ReactNode } from 'react'
-import Head from 'next/head'
-import { Box } from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react';
+import Head from 'next/head';
+import { ReactElement, ReactNode } from 'react';
 
 interface Props {
-  title?: string
-  children: ReactElement | ReactNode
+  title?: string;
+  children: ReactElement | ReactNode;
 }
 
 const Layout: React.FC<Props> = ({ children, title }) => {
@@ -19,17 +19,17 @@ const Layout: React.FC<Props> = ({ children, title }) => {
         color="black"
         _dark={{
           bg: 'gray.900',
-          color: 'white'
+          color: 'white',
         }}
       >
         {children}
       </Box>
     </>
-  )
-}
+  );
+};
 
-export { Layout }
+export { Layout };
 
 Layout.defaultProps = {
-  title: 'Studio Kura絵画教室 | 大人から子どもまで、絵画教室ならStudio Kura'
-}
+  title: 'Studio Kura絵画教室 | 大人から子どもまで、絵画教室ならStudio Kura',
+};

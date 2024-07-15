@@ -10,71 +10,71 @@ export const teachers = [
       'teachers-matsuzaki-3.jpg',
       'teachers-matsuzaki-4.jpg',
       'teachers-matsuzaki-5.jpg',
-      'teachers-matsuzaki-6.jpg'
-    ]
+      'teachers-matsuzaki-6.jpg',
+    ],
   },
   {
     slug: 'alejandro',
     name: 'Alejandro Cremades (アレハンドロ)',
     content:
       '<p>1980年、スペイン出身。</p><ul><li>1997年からWeb制作、プログラミングのを依頼を受ける。</li><li>2002年にMiguel Hern&aacute;ndez大学 工学部電気通信工学科卒業。</li><li>2004年にゲームボーイの音源を使ったバンド「pepino」を結成。ヨーロッパの諸国、アメリカ、日本でライブ。</li><li>2005年から福岡在住。</li><li>2008年に国際理解教育と、Web／スマートフォン アプリケーション開発の事業を初める。</li><li>2009年に写真集「So&ntilde;ar con Jap&oacute;n」（Fotocompra）がスペインで発売。</li><li>2012年度のNHK「テレビでスペイン語」に出演。</li><li>2012年9月〜 Studio Kura <a href="/denshikousaku/index.html">電子工作室</a>を担当しています。</li></ul><p>スペイン語動画Podcast「<a href="http://escuchaespanol.com/" target="_blank">聞くスペイン語</a>」',
-    images: ['teachers-alejandro-1.jpg', 'teachers-alejandro-2.jpg']
+    images: ['teachers-alejandro-1.jpg', 'teachers-alejandro-2.jpg'],
   },
   {
     slug: 'azuma',
     name: '東希衣',
     content:
       '<p>大分県日田市出身</p><p>2013 広島市立大学芸術学部デザイン工芸学科卒業</p><p>2015 広島市立大学大学院芸術学研究科造形芸術専攻修了</p><p>絵を描くことが好きです。レッスンが楽しい時間になるよう努めるとともに、アートを通じて子どもたちと一緒に豊かな心や想像力を学んでいきたいです。</p>',
-    images: ['teachers-azuma-1.jpg']
+    images: ['teachers-azuma-1.jpg'],
   },
   {
     slug: 'ogawa',
     name: '小川博起',
     content:
       '<p>長崎県佐世保市出身 </p><p>麻生建築&デザイン専門学校ビジュアルデザイン科卒<br />油彩画が好きです。特にシュルレアリスムの絵。</p>',
-    images: ['teachers-ogawa-1.jpg']
+    images: ['teachers-ogawa-1.jpg'],
   },
   {
     slug: 'ito',
     name: '渭東節江',
     content:
       '<p>大阪府出身</p><p>京都の短大専攻科（造形芸術専攻）修了ののち、大阪・京都で個展、グループ展多数。2003年、ACRYLAWARD（ターナー色彩株式会社）に入選。２級カラーコーディネーター（東京商工会議所）。現在は紙を素材とした立体表現のほか、人とのつながりの中でアートを実践するソーシャルアートなどに関心があります。毎週クロッキーに通って基礎描写力を鍛えています。<br>2015年5月より幼稚園・保育園でのレッスン業務を担当</p>',
-    images: ['teachers-ito-1.jpg']
+    images: ['teachers-ito-1.jpg'],
   },
   {
     slug: 'nakamura',
     name: '中村裕介',
     content:
       '<p>久留米市出身</p><p>九州産業芸術学部美術学科<br>東京、福岡などで個展を多数開催。<a href="https://www.studiokura.com/kurume/">久留米校</a>の大人教室を担当しています。</p>',
-    images: ['teachers-nakamura-1.jpg']
+    images: ['teachers-nakamura-1.jpg'],
   },
   {
     slug: 'jou',
     name: '城玲奈',
     content:
       '<p>福岡市出身</p><p>九州産業大学 芸術学部デザイン学科 プロダクトコース 卒業</p><p>大人のための絵画教室、子ども絵画造形教室を担当しています。<br />在学中は古賀市の小学生を対象に絵画工作教室でボランティア活動をしておりました。絵が好きなお子様はもちろん、苦手だなと感じているお子様にも楽しくわかりやすく指導致します。</p>',
-    images: ['teachers-jou-1.jpg']
+    images: ['teachers-jou-1.jpg'],
   },
   {
     slug: 'watanabe',
     name: '渡邉香奈',
     content:
       '<p>大分県立芸術文化短期大学工芸デザイン専攻科修了<br />染色デザインを専攻していました。絵を描いたり物作りが大好きです。毎年長崎でインスタレーションによる作品展をしています。美しいと感じる心を養うと彩り豊かな人生をより味わうことができるのではないかな、と4人の子育てをしながら感じています。たくさんの彩り豊かな方々との出会いを楽しみにしています。よろしくお願いします。<br>2018年1月よりこども絵画造形教室でのレッスン業務を担当</p>',
-    images: ['teachers-watanabe-1.jpg']
+    images: ['teachers-watanabe-1.jpg'],
   },
   {
     slug: 'tanoue',
     name: '田上詩織',
     content:
       '<p>武蔵野美術大学造形学部油絵科　油絵専攻　卒業</p><p>表現をすることの楽しさ、難しさが、人生を豊かに広げてくれることを信じて指導にあたっております。スタジオクラで学んで良かったと思ってもらえるように、ひとりひとりの好奇心に寄り添い、引き出していきたいです。<br /><br />',
-    images: ['teachers-tanoue-1.jpg']
+    images: ['teachers-tanoue-1.jpg'],
   },
   {
     slug: 'tanaka',
     name: '田中杏奈',
     content:
       '<p>大分県中津市出身</p><p>2013年大分県立芸術文化短期大学　デザイン専攻　卒業</p><p>2015年女子美術大学　アート・デザイン表現学科　卒業</p><p>小さい頃からアートに触れ合っており、絵を描くことや、ものづくりはもちろん、音楽、演劇、映像など、ジャンルを問わず表現をすることが大好きです！</p><p>みなさんの自由な発想や表現の可能性を一緒に楽しく広げていければと思います！よろしくお願いします。<br>幼稚園・保育園でのレッスン業務を担当</p>',
-    images: ['teachers-tanaka-1.jpg']
+    images: ['teachers-tanaka-1.jpg'],
   },
   {
     slug: 'nakajima',
@@ -84,8 +84,8 @@ export const teachers = [
     images: [
       'teachers-nakajima-1.jpg',
       'teachers-nakajima-2.jpg',
-      'teachers-nakajima-3.jpg'
-    ]
+      'teachers-nakajima-3.jpg',
+    ],
   },
   {
     slug: 'moriyama',
@@ -95,8 +95,8 @@ export const teachers = [
     images: [
       'teachers-moriyama-1.jpg',
       'teachers-moriyama-2.jpg',
-      'teachers-moriyama-3.jpg'
-    ]
+      'teachers-moriyama-3.jpg',
+    ],
   },
   {
     slug: 'sakai',
@@ -107,14 +107,14 @@ export const teachers = [
       'teachers-sakai-1.jpg',
       'teachers-sakai-2.jpg',
       'teachers-sakai-3.jpg',
-      'teachers-sakai-4.jpg'
-    ]
+      'teachers-sakai-4.jpg',
+    ],
   },
   {
     slug: 'maki',
     name: '牧 弘子',
     content:
       '	<p>福岡県出身</p><p>2011年佐賀大学大学院修了　大学では西洋画を専攻し、銅版画や油彩画の作品を制作しました。大学院修了後上京し、グループ展や個展を中心に作品を発表してきました。画家業と並行して子供〜大人までさまざまな年齢の方を対象に美術の指導の経験を積んできました。現在は福岡県にアトリエを構え日々制作活動に励んでいます。アートを通じて豊かな心が育まれるよう楽しく指導できればと思います。よろしくお願いいたします。</p>',
-    images: ['teachers-maki-1.jpg']
-  }
-]
+    images: ['teachers-maki-1.jpg'],
+  },
+];

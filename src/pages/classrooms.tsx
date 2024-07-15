@@ -1,8 +1,3 @@
-import { Heading, Box } from '@chakra-ui/react'
-import { Layout, CardStack, ScrollLink } from '@/components/Layout'
-import { Container } from '@/components/Container'
-import { Footer } from '@/components/Footer'
-import { Navigation } from '@/components/Navigation'
 import {
   BefuCard,
   HakozakiCard,
@@ -20,8 +15,13 @@ import {
   OnlineCard,
   OnojyoCard,
   SarayamaCard,
-  TakeoCard
-} from '@/components/ClassPlaces'
+  TakeoCard,
+} from '@/components/ClassPlaces';
+import { Container } from '@/components/Container';
+import { Footer } from '@/components/Footer';
+import { CardStack, Layout, ScrollLink } from '@/components/Layout';
+import { Navigation } from '@/components/Navigation';
+import { Box, Heading } from '@chakra-ui/react';
 
 const Classrooms = () => (
   <Layout title="教室一覧｜Studio Kura 絵画美術教室（福岡県）">
@@ -151,6 +151,6 @@ const Classrooms = () => (
       <Footer />
     </Container>
   </Layout>
-)
+);
 
-export default Classrooms
+export default Classrooms;

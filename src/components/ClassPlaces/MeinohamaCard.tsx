@@ -1,4 +1,4 @@
-import { ClassPlaceCard } from '@/components/ClassPlaceCard'
+import { ClassPlaceCard } from '@/components/ClassPlaceCard';
 
 const MeinohamaCard = () => (
   <ClassPlaceCard
@@ -11,6 +11,6 @@ const MeinohamaCard = () => (
   >
     〒819-0002 福岡県福岡市西区姪の浜３丁目３−３５ ハイツ千峰
   </ClassPlaceCard>
-)
+);
 
-export { MeinohamaCard }
+export { MeinohamaCard };

@@ -1,4 +1,4 @@
-import { ClassPlaceCard } from '@/components/ClassPlaceCard'
+import { ClassPlaceCard } from '@/components/ClassPlaceCard';
 
 const KasuyaCard = () => (
   <ClassPlaceCard
@@ -12,6 +12,6 @@ const KasuyaCard = () => (
     〒811-2303 福岡県糟屋郡粕屋町酒殿字老ノ木192-1 イオンモール福岡
     JEUGIAカルチャーセンター内
   </ClassPlaceCard>
-)
+);
 
-export { KasuyaCard }
+export { KasuyaCard };

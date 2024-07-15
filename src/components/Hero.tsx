@@ -1,13 +1,13 @@
-import { Flex, Heading } from '@chakra-ui/react'
+import { Flex, Heading } from '@chakra-ui/react';
 
 export const Hero = ({
   title,
   color,
-  textShadow
+  textShadow,
 }: {
-  title: string
-  color: string
-  textShadow: string
+  title: string;
+  color: string;
+  textShadow: string;
 }) => (
   <Flex
     justifyContent="center"
@@ -19,10 +19,10 @@ export const Hero = ({
       {title}
     </Heading>
   </Flex>
-)
+);
 
 Hero.defaultProps = {
   title: 'with-chakra-ui-typescript',
   color: 'text',
-  textShadow: 'none'
-}
+  textShadow: 'none',
+};

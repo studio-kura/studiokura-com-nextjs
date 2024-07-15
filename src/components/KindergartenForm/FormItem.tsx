@@ -1,24 +1,24 @@
-import { WarningIcon } from '@chakra-ui/icons'
+import { WarningIcon } from '@chakra-ui/icons';
 import {
   FormControl,
   FormHelperText,
   FormLabel,
   Input,
-  Textarea
-} from '@chakra-ui/react'
-import { type ChangeEventHandler } from 'react'
+  Textarea,
+} from '@chakra-ui/react';
+import { type ChangeEventHandler } from 'react';
 
 interface Props {
-  inputType: 'text' | 'email' | 'textarea'
-  legend: string
-  placeholder?: string
-  formWidth: string[]
-  isRequired?: boolean
-  isValid: boolean
-  validationMessage?: string
+  inputType: 'text' | 'email' | 'textarea';
+  legend: string;
+  placeholder?: string;
+  formWidth: string[];
+  isRequired?: boolean;
+  isValid: boolean;
+  validationMessage?: string;
   handler?:
     | ChangeEventHandler<HTMLInputElement>
-    | ChangeEventHandler<HTMLTextAreaElement>
+    | ChangeEventHandler<HTMLTextAreaElement>;
 }
 const FormItem = (props: Props) => {
   const {
@@ -29,8 +29,8 @@ const FormItem = (props: Props) => {
     isRequired,
     isValid,
     validationMessage,
-    handler
-  } = props
+    handler,
+  } = props;
   return (
     <>
       <FormControl
@@ -63,7 +63,7 @@ const FormItem = (props: Props) => {
         </FormHelperText>
       </FormControl>
     </>
-  )
-}
+  );
+};
 
-export { FormItem }
+export { FormItem };

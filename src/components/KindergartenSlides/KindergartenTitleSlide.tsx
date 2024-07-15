@@ -1,17 +1,17 @@
-import { Text, Center, Box, Heading } from '@chakra-ui/react'
-import { Container } from '@/components/Container'
+import { Container } from '@/components/Container';
+import { Box, Center, Heading, Text } from '@chakra-ui/react';
 
 type KindergartenTitleSlideProps = {
-  title: string
-  tagline: string
-  bgImageUrl: string
-  children?: JSX.Element
-}
+  title: string;
+  tagline: string;
+  bgImageUrl: string;
+  children?: JSX.Element;
+};
 
 const KindergartenTitleSlide = (props: KindergartenTitleSlideProps) => {
-  const { title, tagline, bgImageUrl, children } = props
-  const cdnDomain = process.env.NEXT_PUBLIC_CDN_DOMAIN ?? ''
-  const cdnDirectory = process.env.NEXT_PUBLIC_CDN_DIRECTORY ?? ''
+  const { title, tagline, bgImageUrl, children } = props;
+  const cdnDomain = process.env.NEXT_PUBLIC_CDN_DOMAIN ?? '';
+  const cdnDirectory = process.env.NEXT_PUBLIC_CDN_DIRECTORY ?? '';
   return (
     <Container
       bgImage={`https://${cdnDomain}/${cdnDirectory}${bgImageUrl}`}
@@ -47,7 +47,7 @@ const KindergartenTitleSlide = (props: KindergartenTitleSlideProps) => {
         </Box>
       </Center>
     </Container>
-  )
-}
+  );
+};
 
-export { KindergartenTitleSlide }
+export { KindergartenTitleSlide };

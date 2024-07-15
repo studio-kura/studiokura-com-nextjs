@@ -1,5 +1,5 @@
-import NextLink from 'next/link'
-import { Flex, FlexProps, Text } from '@chakra-ui/react'
+import { Flex, FlexProps, Text } from '@chakra-ui/react';
+import NextLink from 'next/link';
 
 export const Footer = (props: FlexProps) => (
   <Flex as="footer" py="8rem" {...props}>
@@ -8,4 +8,4 @@ export const Footer = (props: FlexProps) => (
       | <NextLink href="/contact">お問い合わせ</NextLink>
     </Text>
   </Flex>
-)
+);

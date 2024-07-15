@@ -74,11 +74,6 @@
     "@chakra-ui/shared-utils" "2.0.5"
     "@chakra-ui/spinner" "2.1.0"
 
-"@chakra-ui/anatomy@2.1.1":
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/@chakra-ui/anatomy/-/anatomy-2.1.1.tgz#819a1458ff727157e5500a69fc26bfea6e944495"
-  integrity sha512-LUHAoqJAgxAqmyckG5bUpBrfEo1FleEyY+1A8hkWciy58gZ+h3GoY9oBpHcdo7XdHPpy3G+3hieK/7i9NLwxAw==
-
 "@chakra-ui/anatomy@2.2.2":
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/@chakra-ui/anatomy/-/anatomy-2.2.2.tgz#2d0e14cba2534d92077ca28abf8c183b6e27897b"
@@ -668,11 +663,6 @@
     "@chakra-ui/form-control" "2.2.0"
     "@chakra-ui/shared-utils" "2.0.5"
 
-"@chakra-ui/shared-utils@2.0.4":
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/@chakra-ui/shared-utils/-/shared-utils-2.0.4.tgz#8661f2b48dd93d04151b10a894a4290c9d9a080c"
-  integrity sha512-JGWr+BBj3PXGZQ2gxbKSD1wYjESbYsZjkCeE2nevyVk4rN3amV1wQzCnBAhsuJktMaZD6KC/lteo9ou9QUDzpA==
-
 "@chakra-ui/shared-utils@2.0.5":
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/@chakra-ui/shared-utils/-/shared-utils-2.0.5.tgz#cb2b49705e113853647f1822142619570feba081"
@@ -802,7 +792,7 @@
     "@chakra-ui/form-control" "2.2.0"
     "@chakra-ui/shared-utils" "2.0.5"
 
-"@chakra-ui/theme-tools@2.1.2":
+"@chakra-ui/theme-tools@2.1.2", "@chakra-ui/theme-tools@^2.1.2":
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/@chakra-ui/theme-tools/-/theme-tools-2.1.2.tgz#913be05879cd816c546993ccb9ff7615f85ff69f"
   integrity sha512-Qdj8ajF9kxY4gLrq7gA+Azp8CtFHGO9tWMN2wfF9aQNgG9AuMhPrUzMq9AMQ0MXiYcgNq/FD3eegB43nHVmXVA==
@@ -810,15 +800,6 @@
     "@chakra-ui/anatomy" "2.2.2"
     "@chakra-ui/shared-utils" "2.0.5"
     color2k "^2.0.2"
-
-"@chakra-ui/theme-tools@^2.0.2":
-  version "2.0.16"
-  resolved "https://registry.yarnpkg.com/@chakra-ui/theme-tools/-/theme-tools-2.0.16.tgz#17caae14a61f93759f072b16c7346489eb8be643"
-  integrity sha512-B/LD+2LNDeHYd/LVCHIJqckVZfhrycTUpNbhRVAiDRaS0AAcsPxKas7liTFkkMkM076YjiHlcla3KpVX+E9tzg==
-  dependencies:
-    "@chakra-ui/anatomy" "2.1.1"
-    "@chakra-ui/shared-utils" "2.0.4"
-    color2k "^2.0.0"
 
 "@chakra-ui/theme-utils@2.0.21":
   version "2.0.21"
@@ -1261,11 +1242,6 @@ color-name@1.1.3:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/color-name/-/color-name-1.1.3.tgz#a7d0558bd89c42f795dd42328f740831ca53bc25"
   integrity sha512-72fSenhMw2HZMTVHeCA9KCmpEIbzWiQsjN+BHcBbS9vr1mtt+vJjPdksIBNUmKAW8TFUDPJK5SUU3QhE9NEXDw==
-
-color2k@^2.0.0:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/color2k/-/color2k-2.0.2.tgz#ac2b4aea11c822a6bcb70c768b5a289f4fffcebb"
-  integrity sha512-kJhwH5nAwb34tmyuqq/lgjEKzlFXn1U99NlnB6Ws4qVaERcRUYeYP1cBw6BJ4vxaWStAUEef4WMr7WjOCnBt8w==
 
 color2k@^2.0.2:
   version "2.0.3"

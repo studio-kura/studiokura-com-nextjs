@@ -1,17 +1,17 @@
-import NextLink from 'next/link'
-import { Button } from '@chakra-ui/react'
-import { EditIcon } from '@chakra-ui/icons'
+import { EditIcon } from '@chakra-ui/icons';
+import { Button } from '@chakra-ui/react';
+import NextLink from 'next/link';
 
 interface Props {
-  text?: string
-  mr?: number
-  mt?: number
-  size?: string
-  color?: string
-  bg?: string
-  hoverbg?: string
-  borderRadius?: number
-  hasIcon?: boolean
+  text?: string;
+  mr?: number;
+  mt?: number;
+  size?: string;
+  color?: string;
+  bg?: string;
+  hoverbg?: string;
+  borderRadius?: number;
+  hasIcon?: boolean;
 }
 
 const EstimateCalculatorButton: React.FC<Props> = ({
@@ -23,7 +23,7 @@ const EstimateCalculatorButton: React.FC<Props> = ({
   bg,
   hoverbg,
   borderRadius,
-  hasIcon
+  hasIcon,
 }) => {
   return (
     <Button
@@ -37,7 +37,7 @@ const EstimateCalculatorButton: React.FC<Props> = ({
       color={color}
       bg={bg}
       _hover={{
-        bg: hoverbg
+        bg: hoverbg,
       }}
     >
       {hasIcon && (
@@ -48,9 +48,9 @@ const EstimateCalculatorButton: React.FC<Props> = ({
       )}
       {text}
     </Button>
-  )
-}
-export { EstimateCalculatorButton }
+  );
+};
+export { EstimateCalculatorButton };
 
 EstimateCalculatorButton.defaultProps = {
   text: '見積もりシミュレーション',
@@ -61,5 +61,5 @@ EstimateCalculatorButton.defaultProps = {
   bg: 'blue.500',
   hoverbg: 'blue.400',
   borderRadius: 4,
-  hasIcon: true
-}
+  hasIcon: true,
+};

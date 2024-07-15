@@ -1,22 +1,22 @@
-import NextLink from 'next/link'
-import { Button, ResponsiveValue } from '@chakra-ui/react'
-import { EmailIcon } from '@chakra-ui/icons'
+import { EmailIcon } from '@chakra-ui/icons';
+import { Button, ResponsiveValue } from '@chakra-ui/react';
+import NextLink from 'next/link';
 
 interface Props {
-  text?: string
-  mr?: number
-  mt?: number
-  size?: string
-  color?: string
-  bg?: string
-  hoverbg?: string
-  borderRadius?: number
-  hasIcon?: boolean
+  text?: string;
+  mr?: number;
+  mt?: number;
+  size?: string;
+  color?: string;
+  bg?: string;
+  hoverbg?: string;
+  borderRadius?: number;
+  hasIcon?: boolean;
   variant?:
     | ResponsiveValue<
         'link' | 'outline' | (string & {}) | 'ghost' | 'solid' | 'unstyled'
       >
-    | undefined
+    | undefined;
 }
 
 const MailButton: React.FC<Props> = ({
@@ -29,7 +29,7 @@ const MailButton: React.FC<Props> = ({
   hoverbg,
   borderRadius,
   hasIcon,
-  variant
+  variant,
 }) => {
   return (
     <Button
@@ -53,9 +53,9 @@ const MailButton: React.FC<Props> = ({
       )}
       {text}
     </Button>
-  )
-}
-export { MailButton }
+  );
+};
+export { MailButton };
 
 MailButton.defaultProps = {
   text: 'info@studiokura.com',
@@ -67,5 +67,5 @@ MailButton.defaultProps = {
   hoverbg: 'gray.200',
   borderRadius: 4,
   hasIcon: true,
-  variant: 'solid'
-}
+  variant: 'solid',
+};

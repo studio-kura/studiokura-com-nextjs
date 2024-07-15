@@ -1,24 +1,24 @@
-import { useState } from 'react'
-import { Text, Center, Box, Button, HStack } from '@chakra-ui/react'
-import { ArrowLeftIcon, ArrowRightIcon } from '@chakra-ui/icons'
-import { Container } from '@/components/Container'
-import Iframe from 'react-iframe'
+import { Container } from '@/components/Container';
+import { ArrowLeftIcon, ArrowRightIcon } from '@chakra-ui/icons';
+import { Box, Button, Center, HStack, Text } from '@chakra-ui/react';
+import { useState } from 'react';
+import Iframe from 'react-iframe';
 
 type KindergartenVideoSlideProps = {
-  title: string
-  bgImageUrl: string
-  iframeUrls: string[]
-}
+  title: string;
+  bgImageUrl: string;
+  iframeUrls: string[];
+};
 
 const KindergartenVideoSlide = (props: KindergartenVideoSlideProps) => {
-  const { title, bgImageUrl, iframeUrls } = props
-  const cdnDomain = process.env.NEXT_PUBLIC_CDN_DOMAIN ?? ''
-  const cdnDirectory = process.env.NEXT_PUBLIC_CDN_DIRECTORY ?? ''
+  const { title, bgImageUrl, iframeUrls } = props;
+  const cdnDomain = process.env.NEXT_PUBLIC_CDN_DOMAIN ?? '';
+  const cdnDirectory = process.env.NEXT_PUBLIC_CDN_DIRECTORY ?? '';
 
-  const [videoIndex, setVideoIndex] = useState(0)
-  const switchRight = () => setVideoIndex((videoIndex + 1) % iframeUrls.length)
+  const [videoIndex, setVideoIndex] = useState(0);
+  const switchRight = () => setVideoIndex((videoIndex + 1) % iframeUrls.length);
   const switchLeft = () =>
-    setVideoIndex((videoIndex + iframeUrls.length - 1) % iframeUrls.length)
+    setVideoIndex((videoIndex + iframeUrls.length - 1) % iframeUrls.length);
 
   return (
     <Container
@@ -58,7 +58,7 @@ const KindergartenVideoSlide = (props: KindergartenVideoSlideProps) => {
         </Box>
       </Center>
     </Container>
-  )
-}
+  );
+};
 
-export { KindergartenVideoSlide }
+export { KindergartenVideoSlide };

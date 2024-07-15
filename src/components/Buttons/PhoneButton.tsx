@@ -1,23 +1,23 @@
-import { Button, ResponsiveValue } from '@chakra-ui/react'
-import { PhoneIcon } from '@chakra-ui/icons'
+import { PhoneIcon } from '@chakra-ui/icons';
+import { Button, ResponsiveValue } from '@chakra-ui/react';
 
-const phoneNumber = process.env.NEXT_PUBLIC_PHONE_NUMBER ?? ''
+const phoneNumber = process.env.NEXT_PUBLIC_PHONE_NUMBER ?? '';
 
 interface Props {
-  text?: string
-  mr?: number
-  mt?: number
-  size?: string
-  color?: string
-  bg?: string
-  hoverbg?: string
-  borderRadius?: number
-  hasIcon?: boolean
+  text?: string;
+  mr?: number;
+  mt?: number;
+  size?: string;
+  color?: string;
+  bg?: string;
+  hoverbg?: string;
+  borderRadius?: number;
+  hasIcon?: boolean;
   variant?:
     | ResponsiveValue<
         'link' | 'outline' | (string & {}) | 'ghost' | 'solid' | 'unstyled'
       >
-    | undefined
+    | undefined;
 }
 
 const PhoneButton: React.FC<Props> = ({
@@ -30,7 +30,7 @@ const PhoneButton: React.FC<Props> = ({
   hoverbg,
   borderRadius,
   hasIcon,
-  variant
+  variant,
 }) => {
   return (
     <Button
@@ -44,7 +44,7 @@ const PhoneButton: React.FC<Props> = ({
       color={color}
       bg={variant === 'solid' ? bg : undefined}
       _hover={{
-        bg: hoverbg
+        bg: hoverbg,
       }}
       variant={variant}
     >
@@ -56,9 +56,9 @@ const PhoneButton: React.FC<Props> = ({
       )}
       {text}
     </Button>
-  )
-}
-export { PhoneButton }
+  );
+};
+export { PhoneButton };
 
 PhoneButton.defaultProps = {
   text: phoneNumber,
@@ -70,5 +70,5 @@ PhoneButton.defaultProps = {
   hoverbg: 'gray.200',
   borderRadius: 4,
   hasIcon: true,
-  variant: 'solid'
-}
+  variant: 'solid',
+};

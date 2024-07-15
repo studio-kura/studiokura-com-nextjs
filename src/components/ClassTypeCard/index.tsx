@@ -1,26 +1,26 @@
-import NextLink from 'next/link'
 import {
+  Box,
+  Button,
+  Center,
   Heading,
   Image,
-  Box,
-  Center,
   Text,
-  Button,
-  useColorModeValue
-} from '@chakra-ui/react'
+  useColorModeValue,
+} from '@chakra-ui/react';
+import NextLink from 'next/link';
 
 type ClassTypeCardProps = {
-  title: string
-  imageSrc: string
-  linkText?: string
-  linkHref?: string
-  children?: Element | string
-}
+  title: string;
+  imageSrc: string;
+  linkText?: string;
+  linkHref?: string;
+  children?: Element | string;
+};
 
 const ClassTypeCard = (props: ClassTypeCardProps) => {
-  const { title, imageSrc, linkText, linkHref, children } = props
-  const cdnDomain = process.env.NEXT_PUBLIC_CDN_DOMAIN ?? ''
-  const cdnDirectory = process.env.NEXT_PUBLIC_CDN_DIRECTORY ?? ''
+  const { title, imageSrc, linkText, linkHref, children } = props;
+  const cdnDomain = process.env.NEXT_PUBLIC_CDN_DOMAIN ?? '';
+  const cdnDirectory = process.env.NEXT_PUBLIC_CDN_DIRECTORY ?? '';
   return (
     <Center py={6} px={4}>
       <Box
@@ -47,7 +47,7 @@ const ClassTypeCard = (props: ClassTypeCardProps) => {
             rounded: 'full',
             pos: 'absolute',
             bottom: 0,
-            right: 3
+            right: 3,
           }}
         />
         <Heading fontSize={'2xl'} fontFamily={'body'}>
@@ -74,7 +74,7 @@ const ClassTypeCard = (props: ClassTypeCardProps) => {
         )}
       </Box>
     </Center>
-  )
-}
+  );
+};
 
-export { ClassTypeCard }
+export { ClassTypeCard };

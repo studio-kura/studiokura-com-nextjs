@@ -1,66 +1,66 @@
-import { useState, useEffect } from 'react'
-import NextLink from 'next/link'
 import {
-  Text,
   AspectRatio,
-  Heading,
-  Card,
-  CardHeader,
-  CardBody,
-  Center,
-  Image,
-  Stack,
   Box,
-  Link
-} from '@chakra-ui/react'
-import Iframe from 'react-iframe'
+  Card,
+  CardBody,
+  CardHeader,
+  Center,
+  Heading,
+  Image,
+  Link,
+  Stack,
+  Text,
+} from '@chakra-ui/react';
+import NextLink from 'next/link';
+import { useEffect, useState } from 'react';
+import Iframe from 'react-iframe';
 
-import { Layout } from '@/components/Layout'
-import { Container } from '@/components/Container'
-import { Footer } from '@/components/Footer'
-import { Navigation } from '@/components/Navigation'
-import { MailButton, PhoneButton, TrialButton } from '@/components/Buttons'
+import { MailButton, PhoneButton, TrialButton } from '@/components/Buttons';
+import { Container } from '@/components/Container';
+import { Footer } from '@/components/Footer';
+import { Layout } from '@/components/Layout';
+import { Navigation } from '@/components/Navigation';
 
 type classWeekday = {
-  title: string
-  slots: string[]
-}
+  title: string;
+  slots: string[];
+};
 type classPlace = {
-  name: string
-  weekdays: classWeekday[]
-}
+  name: string;
+  weekdays: classWeekday[];
+};
 type classTimesResponse = {
-  status: string
-  classTimes: classPlace[]
-}
+  status: string;
+  classTimes: classPlace[];
+};
 
-const cdnDomain = process.env.NEXT_PUBLIC_CDN_DOMAIN ?? ''
-const cdnDirectory = process.env.NEXT_PUBLIC_CDN_DIRECTORY ?? ''
-const phoneNumber = process.env.NEXT_PUBLIC_PHONE_NUMBER ?? ''
-const totalCarouselImages = 3
-const carouselPeriod = 5000
+const cdnDomain = process.env.NEXT_PUBLIC_CDN_DOMAIN ?? '';
+const cdnDirectory = process.env.NEXT_PUBLIC_CDN_DIRECTORY ?? '';
+const phoneNumber = process.env.NEXT_PUBLIC_PHONE_NUMBER ?? '';
+const totalCarouselImages = 3;
+const carouselPeriod = 5000;
 
 const AdultsClass = () => {
-  const [carouselIndex, setCarouselIndex] = useState(0)
-  const [classTimes, setClassTimes] = useState<Array<classPlace> | null>()
-  const [isLoading, setLoading] = useState(true)
+  const [carouselIndex, setCarouselIndex] = useState(0);
+  const [classTimes, setClassTimes] = useState<Array<classPlace> | null>();
+  const [isLoading, setLoading] = useState(true);
   useEffect(() => {
     fetch('/api/get-class-times?classtype=adults')
       .then((res) => res.json())
       .then((data) => {
-        const responseData = data as classTimesResponse
-        if (responseData.status != 'success') return
-        setClassTimes(responseData.classTimes)
-        setLoading(false)
-      })
-  }, [])
+        const responseData = data as classTimesResponse;
+        if (responseData.status != 'success') return;
+        setClassTimes(responseData.classTimes);
+        setLoading(false);
+      });
+  }, []);
   useEffect(() => {
     const timer = setTimeout(
       () => setCarouselIndex((carouselIndex + 1) % totalCarouselImages),
       carouselPeriod
-    )
-    return () => clearTimeout(timer)
-  }, [carouselIndex])
+    );
+    return () => clearTimeout(timer);
+  }, [carouselIndex]);
   return (
     <Layout title="大人のための絵画教室｜Studio Kura 絵画教室（福岡県　糸島市　二丈）">
       <Navigation />
@@ -206,7 +206,7 @@ const AdultsClass = () => {
         <Footer />
       </Container>
     </Layout>
-  )
-}
+  );
+};
 
-export default AdultsClass
+export default AdultsClass;

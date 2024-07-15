@@ -1,16 +1,16 @@
-import { Text, Center, Box, Heading } from '@chakra-ui/react'
-import { Container } from '@/components/Container'
-import { Main } from '@/components/Main'
-import { TrialButton } from '../Buttons'
+import { Container } from '@/components/Container';
+import { Main } from '@/components/Main';
+import { Box, Center, Heading, Text } from '@chakra-ui/react';
+import { TrialButton } from '../Buttons';
 
 type ClassPlaceSlideKodomoProps = {
-  children?: string | Element
-}
+  children?: string | Element;
+};
 
 const ClassPlaceSlideKodomo = (props: ClassPlaceSlideKodomoProps) => {
-  const { children } = props
-  const cdnDomain = process.env.NEXT_PUBLIC_CDN_DOMAIN ?? ''
-  const cdnDirectory = process.env.NEXT_PUBLIC_CDN_DIRECTORY ?? ''
+  const { children } = props;
+  const cdnDomain = process.env.NEXT_PUBLIC_CDN_DOMAIN ?? '';
+  const cdnDirectory = process.env.NEXT_PUBLIC_CDN_DIRECTORY ?? '';
   return (
     <Container
       bgImage={`https://${cdnDomain}/${cdnDirectory}placeslide-kodomo.jpg`}
@@ -46,7 +46,7 @@ const ClassPlaceSlideKodomo = (props: ClassPlaceSlideKodomoProps) => {
         </Box>
       </Center>
     </Container>
-  )
-}
+  );
+};
 
-export { ClassPlaceSlideKodomo }
+export { ClassPlaceSlideKodomo };

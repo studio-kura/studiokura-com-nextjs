@@ -1,25 +1,25 @@
-import NextLink from 'next/link'
+import { ChevronRightIcon } from '@chakra-ui/icons';
 import {
+  Box,
+  Button,
+  Center,
   Heading,
   Image,
-  Box,
-  Center,
-  Text,
-  Button,
   Tag,
-  useColorModeValue
-} from '@chakra-ui/react'
-import { ChevronRightIcon } from '@chakra-ui/icons'
+  Text,
+  useColorModeValue,
+} from '@chakra-ui/react';
+import NextLink from 'next/link';
 
 type ClassPlaceCardProps = {
-  placeName: string
-  imageSrc: string
-  linkHref: string
-  adultsClass?: boolean
-  kidsClass?: boolean
-  programmingClass?: boolean
-  children?: Element | string
-}
+  placeName: string;
+  imageSrc: string;
+  linkHref: string;
+  adultsClass?: boolean;
+  kidsClass?: boolean;
+  programmingClass?: boolean;
+  children?: Element | string;
+};
 
 const ClassPlaceCard = (props: ClassPlaceCardProps) => {
   const {
@@ -29,10 +29,10 @@ const ClassPlaceCard = (props: ClassPlaceCardProps) => {
     adultsClass,
     kidsClass,
     programmingClass,
-    children
-  } = props
-  const cdnDomain = process.env.NEXT_PUBLIC_CDN_DOMAIN ?? ''
-  const cdnDirectory = process.env.NEXT_PUBLIC_CDN_DIRECTORY ?? ''
+    children,
+  } = props;
+  const cdnDomain = process.env.NEXT_PUBLIC_CDN_DOMAIN ?? '';
+  const cdnDirectory = process.env.NEXT_PUBLIC_CDN_DIRECTORY ?? '';
   return (
     <Center py={6} px={4}>
       <Box
@@ -60,7 +60,7 @@ const ClassPlaceCard = (props: ClassPlaceCardProps) => {
             rounded: 'full',
             pos: 'absolute',
             bottom: 0,
-            right: 3
+            right: 3,
           }}
         />
         <Box px={4}>
@@ -103,7 +103,7 @@ const ClassPlaceCard = (props: ClassPlaceCardProps) => {
         </Box>
       </Box>
     </Center>
-  )
-}
+  );
+};
 
-export { ClassPlaceCard }
+export { ClassPlaceCard };

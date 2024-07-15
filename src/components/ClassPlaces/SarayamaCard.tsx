@@ -1,4 +1,4 @@
-import { ClassPlaceCard } from '@/components/ClassPlaceCard'
+import { ClassPlaceCard } from '@/components/ClassPlaceCard';
 
 const SarayamaCard = () => (
   <ClassPlaceCard
@@ -11,6 +11,6 @@ const SarayamaCard = () => (
   >
     〒811-1365 福岡市南区皿山2-1-57
   </ClassPlaceCard>
-)
+);
 
-export { SarayamaCard }
+export { SarayamaCard };

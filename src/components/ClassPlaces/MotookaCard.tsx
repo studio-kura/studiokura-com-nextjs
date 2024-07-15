@@ -1,4 +1,4 @@
-import { ClassPlaceCard } from '@/components/ClassPlaceCard'
+import { ClassPlaceCard } from '@/components/ClassPlaceCard';
 
 const MotookaCard = () => (
   <ClassPlaceCard
@@ -11,6 +11,6 @@ const MotookaCard = () => (
   >
     福岡県福岡市西区元岡１５９７ がやがや門 内
   </ClassPlaceCard>
-)
+);
 
-export { MotookaCard }
+export { MotookaCard };

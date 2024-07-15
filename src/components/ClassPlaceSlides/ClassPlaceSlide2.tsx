@@ -1,21 +1,21 @@
-import { Text, Center, Box, Heading } from '@chakra-ui/react'
-import { Container } from '@/components/Container'
-import { Main } from '@/components/Main'
-import Iframe from 'react-iframe'
-import { TrialButton } from '../Buttons'
+import { Container } from '@/components/Container';
+import { Main } from '@/components/Main';
+import { Box, Center, Heading, Text } from '@chakra-ui/react';
+import Iframe from 'react-iframe';
+import { TrialButton } from '../Buttons';
 
 type ClassPlaceSlide2Props = {
-  placeName: string
-  tagline: string
-  bgImageUrl?: string
-  calendarUrl: string
-  children?: string | Element
-}
+  placeName: string;
+  tagline: string;
+  bgImageUrl?: string;
+  calendarUrl: string;
+  children?: string | Element;
+};
 
 const ClassPlaceSlide2 = (props: ClassPlaceSlide2Props) => {
-  const { bgImageUrl, calendarUrl, children } = props
-  const cdnDomain = process.env.NEXT_PUBLIC_CDN_DOMAIN ?? ''
-  const cdnDirectory = process.env.NEXT_PUBLIC_CDN_DIRECTORY ?? ''
+  const { bgImageUrl, calendarUrl, children } = props;
+  const cdnDomain = process.env.NEXT_PUBLIC_CDN_DOMAIN ?? '';
+  const cdnDirectory = process.env.NEXT_PUBLIC_CDN_DIRECTORY ?? '';
   return (
     <Container
       bgImage={
@@ -53,7 +53,7 @@ const ClassPlaceSlide2 = (props: ClassPlaceSlide2Props) => {
         </Box>
       </Center>
     </Container>
-  )
-}
+  );
+};
 
-export { ClassPlaceSlide2 }
+export { ClassPlaceSlide2 };

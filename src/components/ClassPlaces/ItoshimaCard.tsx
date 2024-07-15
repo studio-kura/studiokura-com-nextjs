@@ -1,4 +1,4 @@
-import { ClassPlaceCard } from '@/components/ClassPlaceCard'
+import { ClassPlaceCard } from '@/components/ClassPlaceCard';
 
 const ItoshimaCard = () => (
   <ClassPlaceCard
@@ -11,6 +11,6 @@ const ItoshimaCard = () => (
   >
     〒819-1613 福岡県糸島市二丈松末586
   </ClassPlaceCard>
-)
+);
 
-export { ItoshimaCard }
+export { ItoshimaCard };

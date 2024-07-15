@@ -1,32 +1,32 @@
-import { ChangeEventHandler, useState } from 'react'
+import { PhoneButton } from '@/components/Buttons';
+import { Container } from '@/components/Container';
+import { Footer } from '@/components/Footer';
+import { Layout } from '@/components/Layout';
+import { Navigation } from '@/components/Navigation';
 import {
-  Heading,
-  FormControl,
-  FormLabel,
-  Center,
-  Text,
-  CheckboxGroup,
-  Stack,
-  Checkbox,
-  Select,
   Card,
   CardBody,
-  Input,
   CardHeader,
+  Center,
+  Checkbox,
+  CheckboxGroup,
+  FormControl,
+  FormLabel,
+  Heading,
+  Input,
+  Select,
+  Stack,
   Table,
   Tbody,
-  Tr,
+  Td,
+  Text,
   Th,
-  Td
-} from '@chakra-ui/react'
-import { Layout } from '@/components/Layout'
-import { Container } from '@/components/Container'
-import { Footer } from '@/components/Footer'
-import { Navigation } from '@/components/Navigation'
-import { PhoneButton } from '@/components/Buttons'
+  Tr,
+} from '@chakra-ui/react';
+import { ChangeEventHandler, useState } from 'react';
 
-const formWidth = ['90%', '80%', '60%', '40%']
-const cardWidth = ['90%', '80%', '60%', '40%']
+const formWidth = ['90%', '80%', '60%', '40%'];
+const cardWidth = ['90%', '80%', '60%', '40%'];
 const rates = {
   per_classroom: 12000,
   per_student: 100,
@@ -44,80 +44,80 @@ const rates = {
     taku: 2500,
     saga: 3000,
     shimonoseki: 5000,
-    other: 4000
-  }
-}
-const currencyFormatter = new Intl.NumberFormat('ja-JA')
+    other: 4000,
+  },
+};
+const currencyFormatter = new Intl.NumberFormat('ja-JA');
 
 const EstimateCalculator = () => {
-  const [classroom1Check, setClassroom1Check] = useState<boolean>()
-  const [classroom2Check, setClassroom2Check] = useState<boolean>()
-  const [classroom3Check, setClassroom3Check] = useState<boolean>()
-  const [numberOfClassrooms, setNumberOfClassrooms] = useState(0)
-  const [numberOfStudents, setNumberOfStudents] = useState(0)
+  const [classroom1Check, setClassroom1Check] = useState<boolean>();
+  const [classroom2Check, setClassroom2Check] = useState<boolean>();
+  const [classroom3Check, setClassroom3Check] = useState<boolean>();
+  const [numberOfClassrooms, setNumberOfClassrooms] = useState(0);
+  const [numberOfStudents, setNumberOfStudents] = useState(0);
   const [transportationBaseExpenses, setTransportationBaseExpenses] =
-    useState(0)
+    useState(0);
   const [transportationTotalExpenses, setTransportationTotalExpenses] =
-    useState(0)
+    useState(0);
 
   const handleClassroom1Check: ChangeEventHandler<HTMLInputElement> = (
     event
   ) => {
-    setClassroom1Check(event.target.checked)
+    setClassroom1Check(event.target.checked);
     const classrooms =
       (event.target.checked ? 1 : 0) +
       (classroom2Check ? 1 : 0) +
-      (classroom3Check ? 1 : 0)
-    setNumberOfClassrooms(classrooms)
-    setTransportationTotalExpenses(transportationBaseExpenses * classrooms)
-  }
+      (classroom3Check ? 1 : 0);
+    setNumberOfClassrooms(classrooms);
+    setTransportationTotalExpenses(transportationBaseExpenses * classrooms);
+  };
   const handleClassroom2Check: ChangeEventHandler<HTMLInputElement> = (
     event
   ) => {
-    setClassroom2Check(event.target.checked)
+    setClassroom2Check(event.target.checked);
     const classrooms =
       (classroom1Check ? 1 : 0) +
       (event.target.checked ? 1 : 0) +
-      (classroom3Check ? 1 : 0)
-    setNumberOfClassrooms(classrooms)
-    setTransportationTotalExpenses(transportationBaseExpenses * classrooms)
-  }
+      (classroom3Check ? 1 : 0);
+    setNumberOfClassrooms(classrooms);
+    setTransportationTotalExpenses(transportationBaseExpenses * classrooms);
+  };
   const handleClassroom3Check: ChangeEventHandler<HTMLInputElement> = (
     event
   ) => {
-    setClassroom3Check(event.target.checked)
+    setClassroom3Check(event.target.checked);
     const classrooms =
       (classroom1Check ? 1 : 0) +
       (classroom2Check ? 1 : 0) +
-      (event.target.checked ? 1 : 0)
-    setNumberOfClassrooms(classrooms)
-    setTransportationTotalExpenses(transportationBaseExpenses * classrooms)
-  }
+      (event.target.checked ? 1 : 0);
+    setNumberOfClassrooms(classrooms);
+    setTransportationTotalExpenses(transportationBaseExpenses * classrooms);
+  };
 
   const handleStudentsChange: ChangeEventHandler<HTMLInputElement> = (
     event
   ) => {
-    const studentsNewValue: number = Number(event.target.value)
+    const studentsNewValue: number = Number(event.target.value);
     if (!Number.isNaN(studentsNewValue)) {
-      setNumberOfStudents(studentsNewValue)
+      setNumberOfStudents(studentsNewValue);
     }
-  }
+  };
 
   const handleTransportationChange: ChangeEventHandler<HTMLSelectElement> = (
     event
   ) => {
-    const expenses: number = Number(event.target.value)
+    const expenses: number = Number(event.target.value);
     if (!Number.isNaN(expenses)) {
-      setTransportationBaseExpenses(expenses)
-      setTransportationTotalExpenses(expenses * numberOfClassrooms)
+      setTransportationBaseExpenses(expenses);
+      setTransportationTotalExpenses(expenses * numberOfClassrooms);
     }
-  }
+  };
 
-  const getTeacherRate = () => rates.per_classroom * numberOfClassrooms
-  const getStudentRate = () => rates.per_student * numberOfStudents
+  const getTeacherRate = () => rates.per_classroom * numberOfClassrooms;
+  const getStudentRate = () => rates.per_student * numberOfStudents;
   const getTotalBeforeTax = () =>
-    getTeacherRate() + getStudentRate() + transportationTotalExpenses
-  const getTotalWithTax = () => (getTotalBeforeTax() * (100 + rates.tax)) / 100
+    getTeacherRate() + getStudentRate() + transportationTotalExpenses;
+  const getTotalWithTax = () => (getTotalBeforeTax() * (100 + rates.tax)) / 100;
 
   return (
     <Layout title="お問い合わせ｜Studio Kura 絵画美術教室（福岡県　糸島市　二丈）">
@@ -234,7 +234,7 @@ const EstimateCalculator = () => {
         <Footer />
       </Container>
     </Layout>
-  )
-}
+  );
+};
 
-export default EstimateCalculator
+export default EstimateCalculator;

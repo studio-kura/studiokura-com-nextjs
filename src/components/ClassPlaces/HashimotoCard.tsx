@@ -1,4 +1,4 @@
-import { ClassPlaceCard } from '@/components/ClassPlaceCard'
+import { ClassPlaceCard } from '@/components/ClassPlaceCard';
 
 const HashimotoCard = () => (
   <ClassPlaceCard
@@ -11,6 +11,6 @@ const HashimotoCard = () => (
   >
     福岡県福岡市西区橋本2-27-2 木の葉モール橋本 JEUGIAカルチャーセンター内
   </ClassPlaceCard>
-)
+);
 
-export { HashimotoCard }
+export { HashimotoCard };

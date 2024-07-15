@@ -1,16 +1,16 @@
-import { Container, Text } from '@chakra-ui/react'
+import { Container } from '@chakra-ui/react';
 
-import { Layout } from '@/components/Layout'
-import { Navigation } from '@/components/Navigation'
 import {
   ClassPlaceSlide1,
   ClassPlaceSlide2,
   ClassPlaceSlide3,
   // ClassPlaceSlideOtona,
   // ClassPlaceSlideKodomo,
-  ClassPlaceSlideDenshi
-} from '@/components/ClassPlaceSlides/'
-import { Footer } from '@/components/Footer'
+  ClassPlaceSlideDenshi,
+} from '@/components/ClassPlaceSlides/';
+import { Footer } from '@/components/Footer';
+import { Layout } from '@/components/Layout';
+import { Navigation } from '@/components/Navigation';
 
 const OnlinePlace = () => (
   <Layout title="Studio Kura 絵画教室 オンライン校">
@@ -36,6 +36,6 @@ const OnlinePlace = () => (
       <Footer />
     </Container>
   </Layout>
-)
+);
 
-export default OnlinePlace
+export default OnlinePlace;

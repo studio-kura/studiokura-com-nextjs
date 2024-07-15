@@ -1,16 +1,16 @@
-import { Text, Center, Box, Heading } from '@chakra-ui/react'
-import { Container } from '@/components/Container'
-import { Main } from '@/components/Main'
-import { TrialButton } from '../Buttons'
+import { Container } from '@/components/Container';
+import { Main } from '@/components/Main';
+import { Box, Center, Heading, Text } from '@chakra-ui/react';
+import { TrialButton } from '../Buttons';
 
 type ClassPlaceSlideOtonaProps = {
-  children?: string | Element
-}
+  children?: string | Element;
+};
 
 const ClassPlaceSlideOtona = (props: ClassPlaceSlideOtonaProps) => {
-  const { children } = props
-  const cdnDomain = process.env.NEXT_PUBLIC_CDN_DOMAIN ?? ''
-  const cdnDirectory = process.env.NEXT_PUBLIC_CDN_DIRECTORY ?? ''
+  const { children } = props;
+  const cdnDomain = process.env.NEXT_PUBLIC_CDN_DOMAIN ?? '';
+  const cdnDirectory = process.env.NEXT_PUBLIC_CDN_DIRECTORY ?? '';
   return (
     <Container
       bgImage={`https://${cdnDomain}/${cdnDirectory}placeslide-otona.jpg`}
@@ -49,7 +49,7 @@ const ClassPlaceSlideOtona = (props: ClassPlaceSlideOtonaProps) => {
         </Box>
       </Center>
     </Container>
-  )
-}
+  );
+};
 
-export { ClassPlaceSlideOtona }
+export { ClassPlaceSlideOtona };

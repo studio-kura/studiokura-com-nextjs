@@ -1,26 +1,26 @@
-import NextLink from 'next/link'
-import { Text, Center, Box, Heading, Button, Image } from '@chakra-ui/react'
-import { CheckIcon } from '@chakra-ui/icons'
-import { Container } from '@/components/Container'
-import { Main } from '@/components/Main'
-import { MailButton, PhoneButton, TrialButton } from '../Buttons'
+import { Container } from '@/components/Container';
+import { Main } from '@/components/Main';
+import { CheckIcon } from '@chakra-ui/icons';
+import { Box, Button, Center, Heading, Image, Text } from '@chakra-ui/react';
+import NextLink from 'next/link';
+import { MailButton, PhoneButton, TrialButton } from '../Buttons';
 
 type ClassPlaceSlide3Props = {
-  placeName: string
-  tagline: string
-  bgImageUrl?: string
-  mapImageUrl?: string
-  mapUrl?: string
-  address?: string
-  children?: string | Element
-}
+  placeName: string;
+  tagline: string;
+  bgImageUrl?: string;
+  mapImageUrl?: string;
+  mapUrl?: string;
+  address?: string;
+  children?: string | Element;
+};
 
-const cdnDomain = process.env.NEXT_PUBLIC_CDN_DOMAIN ?? ''
-const cdnDirectory = process.env.NEXT_PUBLIC_CDN_DIRECTORY ?? ''
+const cdnDomain = process.env.NEXT_PUBLIC_CDN_DOMAIN ?? '';
+const cdnDirectory = process.env.NEXT_PUBLIC_CDN_DIRECTORY ?? '';
 
 const ClassPlaceSlide3 = (props: ClassPlaceSlide3Props) => {
   const { placeName, bgImageUrl, mapImageUrl, mapUrl, address, children } =
-    props
+    props;
   return (
     <Container
       bgImage={
@@ -64,7 +64,7 @@ const ClassPlaceSlide3 = (props: ClassPlaceSlide3Props) => {
                 color={'text'}
                 mr={1}
                 _hover={{
-                  bg: 'green.100'
+                  bg: 'green.100',
                 }}
               >
                 <CheckIcon />
@@ -76,7 +76,7 @@ const ClassPlaceSlide3 = (props: ClassPlaceSlide3Props) => {
         </Box>
       </Center>
     </Container>
-  )
-}
+  );
+};
 
-export { ClassPlaceSlide3 }
+export { ClassPlaceSlide3 };

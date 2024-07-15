@@ -1,39 +1,39 @@
-import { useState, useEffect } from 'react'
-import NextLink from 'next/link'
+import { Container } from '@/components/Container';
+import { Footer } from '@/components/Footer';
+import { Layout } from '@/components/Layout';
+import { Navigation } from '@/components/Navigation';
+import type { TeacherData } from '@/pages/api/get-teacher-info';
 import {
-  Heading,
-  Image,
   Card,
   CardBody,
   CardHeader,
+  Heading,
+  Image,
+  SimpleGrid,
   Spinner,
-  SimpleGrid
-} from '@chakra-ui/react'
-import { Layout } from '@/components/Layout'
-import { Container } from '@/components/Container'
-import { Footer } from '@/components/Footer'
-import { Navigation } from '@/components/Navigation'
-import type { TeacherData } from '@/pages/api/get-teacher-info'
+} from '@chakra-ui/react';
+import NextLink from 'next/link';
+import { useEffect, useState } from 'react';
 
 const dummyTeacher: TeacherData = {
-  slug: '読み込み中・・・'
-}
-const cdnDomain = process.env.NEXT_PUBLIC_CDN_DOMAIN ?? ''
-const cdnDirectory = process.env.NEXT_PUBLIC_CDN_DIRECTORY ?? ''
+  slug: '読み込み中・・・',
+};
+const cdnDomain = process.env.NEXT_PUBLIC_CDN_DOMAIN ?? '';
+const cdnDirectory = process.env.NEXT_PUBLIC_CDN_DIRECTORY ?? '';
 
 const TeacherList = () => {
   const [teachersData, setTeachersData] = useState<TeacherData[]>([
-    dummyTeacher
-  ])
+    dummyTeacher,
+  ]);
   const fetchTeachers = async () => {
-    const teacherReq = await fetch('/api/get-teachers-info')
-    setTeachersData(await teacherReq.json())
-  }
+    const teacherReq = await fetch('/api/get-teachers-info');
+    setTeachersData(await teacherReq.json());
+  };
   useEffect(() => {
     if (teachersData[0].slug == dummyTeacher.slug) {
-      fetchTeachers()
+      fetchTeachers();
     }
-  }, [])
+  }, []);
 
   return (
     <Layout title="講師の紹介｜Studio Kura 絵画美術教室（福岡県　糸島市　二丈）">
@@ -67,7 +67,7 @@ const TeacherList = () => {
         <Footer />
       </Container>
     </Layout>
-  )
-}
+  );
+};
 
-export default TeacherList
+export default TeacherList;

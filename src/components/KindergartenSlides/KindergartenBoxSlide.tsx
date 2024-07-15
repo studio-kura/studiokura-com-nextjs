@@ -1,18 +1,18 @@
-import { Text, Center, Box } from '@chakra-ui/react'
-import { Container } from '@/components/Container'
-import { ContactButton, PhoneButton } from '@/components/Buttons'
+import { ContactButton, PhoneButton } from '@/components/Buttons';
+import { Container } from '@/components/Container';
+import { Box, Center, Text } from '@chakra-ui/react';
 
 type KindergartenBoxSlideProps = {
-  title: string
-  bgImageUrl: string
-  addButtons?: boolean
-  children?: JSX.Element
-}
+  title: string;
+  bgImageUrl: string;
+  addButtons?: boolean;
+  children?: JSX.Element;
+};
 
 const KindergartenBoxSlide = (props: KindergartenBoxSlideProps) => {
-  const { title, bgImageUrl, addButtons = true, children } = props
-  const cdnDomain = process.env.NEXT_PUBLIC_CDN_DOMAIN ?? ''
-  const cdnDirectory = process.env.NEXT_PUBLIC_CDN_DIRECTORY ?? ''
+  const { title, bgImageUrl, addButtons = true, children } = props;
+  const cdnDomain = process.env.NEXT_PUBLIC_CDN_DOMAIN ?? '';
+  const cdnDirectory = process.env.NEXT_PUBLIC_CDN_DIRECTORY ?? '';
   return (
     <Container
       bgImage={`https://${cdnDomain}/${cdnDirectory}${bgImageUrl}`}
@@ -49,7 +49,7 @@ const KindergartenBoxSlide = (props: KindergartenBoxSlideProps) => {
         </Box>
       </Center>
     </Container>
-  )
-}
+  );
+};
 
-export { KindergartenBoxSlide }
+export { KindergartenBoxSlide };

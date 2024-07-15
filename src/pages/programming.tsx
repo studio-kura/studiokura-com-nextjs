@@ -1,36 +1,36 @@
-import NextLink from 'next/link'
+import { CheckCircleIcon } from '@chakra-ui/icons';
 import {
-  Text,
-  Heading,
-  Stack,
+  Accordion,
+  AccordionButton,
+  AccordionIcon,
+  AccordionItem,
+  AccordionPanel,
   AspectRatio,
+  Avatar,
+  Box,
+  Button,
+  Card,
+  CardBody,
+  Heading,
+  Image,
+  Stack,
   Tag,
   TagLabel,
-  Box,
-  Image,
-  Avatar,
-  Card,
-  Button,
-  Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionPanel,
-  AccordionIcon,
-  CardBody
-} from '@chakra-ui/react'
-import { CheckCircleIcon } from '@chakra-ui/icons'
-import Iframe from 'react-iframe'
+  Text,
+} from '@chakra-ui/react';
+import NextLink from 'next/link';
+import Iframe from 'react-iframe';
 
-import { Layout } from '@/components/Layout'
-import { Container } from '@/components/Container'
-import { Footer } from '@/components/Footer'
-import { Navigation } from '@/components/Navigation'
-import { HeaderSketch } from '@/components/Programming/HeaderSketch'
-import { PricingBox } from '@/components/Pricing'
-import { LinkButton, PhoneButton, TrialButton } from '@/components/Buttons'
+import { LinkButton, PhoneButton, TrialButton } from '@/components/Buttons';
+import { Container } from '@/components/Container';
+import { Footer } from '@/components/Footer';
+import { Layout } from '@/components/Layout';
+import { Navigation } from '@/components/Navigation';
+import { PricingBox } from '@/components/Pricing';
+import { HeaderSketch } from '@/components/Programming/HeaderSketch';
 
-const cdnDomain = process.env.NEXT_PUBLIC_CDN_DOMAIN ?? ''
-const cdnDirectory = process.env.NEXT_PUBLIC_CDN_DIRECTORY ?? ''
+const cdnDomain = process.env.NEXT_PUBLIC_CDN_DOMAIN ?? '';
+const cdnDirectory = process.env.NEXT_PUBLIC_CDN_DIRECTORY ?? '';
 
 const ClassPlaceLinkButton = (props: { name: string; href: string }) => (
   <Box px={['50px', '40px', '50px']} py={'20px'}>
@@ -42,13 +42,13 @@ const ClassPlaceLinkButton = (props: { name: string; href: string }) => (
       href={props.href}
       borderRadius={20}
       _hover={{
-        bg: 'orange.400'
+        bg: 'orange.400',
       }}
     >
       {props.name}
     </Button>
   </Box>
-)
+);
 
 const ProgrammingClass = () => (
   <Layout title="Studio Kura 電子工作教室 | Studio Kura 絵画美術教室（福岡県 糸島市 二丈 西新 武雄 橋本 久留米）">
@@ -455,6 +455,6 @@ const ProgrammingClass = () => (
       <Footer />
     </Container>
   </Layout>
-)
+);
 
-export default ProgrammingClass
+export default ProgrammingClass;

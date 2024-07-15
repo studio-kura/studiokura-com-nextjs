@@ -3,16 +3,16 @@ import {
   CheckboxGroup,
   FormControl,
   FormLabel,
-  Stack
-} from '@chakra-ui/react'
-import { type ChangeEventHandler } from 'react'
+  Stack,
+} from '@chakra-ui/react';
+import { type ChangeEventHandler } from 'react';
 
 interface Props {
-  formWidth: string[]
-  isRequired?: boolean
-  handleClassroom1Check?: ChangeEventHandler<HTMLInputElement>
-  handleClassroom2Check?: ChangeEventHandler<HTMLInputElement>
-  handleClassroom3Check?: ChangeEventHandler<HTMLInputElement>
+  formWidth: string[];
+  isRequired?: boolean;
+  handleClassroom1Check?: ChangeEventHandler<HTMLInputElement>;
+  handleClassroom2Check?: ChangeEventHandler<HTMLInputElement>;
+  handleClassroom3Check?: ChangeEventHandler<HTMLInputElement>;
 }
 const ClassroomCheckboxGroup = (props: Props) => {
   const {
@@ -20,8 +20,8 @@ const ClassroomCheckboxGroup = (props: Props) => {
     isRequired,
     handleClassroom1Check,
     handleClassroom2Check,
-    handleClassroom3Check
-  } = props
+    handleClassroom3Check,
+  } = props;
   return (
     <>
       <FormControl
@@ -40,7 +40,7 @@ const ClassroomCheckboxGroup = (props: Props) => {
         </CheckboxGroup>
       </FormControl>
     </>
-  )
-}
+  );
+};
 
-export { ClassroomCheckboxGroup }
+export { ClassroomCheckboxGroup };

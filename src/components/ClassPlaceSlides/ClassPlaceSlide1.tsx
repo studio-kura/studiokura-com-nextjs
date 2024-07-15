@@ -1,21 +1,21 @@
-import { Text, Center, Box } from '@chakra-ui/react'
-import { Hero } from '@/components/Hero'
-import { Container } from '@/components/Container'
-import { Main } from '@/components/Main'
-import { PhoneButton, TrialButton } from '../Buttons'
+import { Container } from '@/components/Container';
+import { Hero } from '@/components/Hero';
+import { Main } from '@/components/Main';
+import { Box, Center, Text } from '@chakra-ui/react';
+import { PhoneButton, TrialButton } from '../Buttons';
 
 type ClassPlaceSlide1Props = {
-  placeName: string
-  tagline: string
-  bgImageUrl: string
-  children?: string | Element
-}
+  placeName: string;
+  tagline: string;
+  bgImageUrl: string;
+  children?: string | Element;
+};
 
-const cdnDomain = process.env.NEXT_PUBLIC_CDN_DOMAIN ?? ''
-const cdnDirectory = process.env.NEXT_PUBLIC_CDN_DIRECTORY ?? ''
+const cdnDomain = process.env.NEXT_PUBLIC_CDN_DOMAIN ?? '';
+const cdnDirectory = process.env.NEXT_PUBLIC_CDN_DIRECTORY ?? '';
 
 const ClassPlaceSlide1 = (props: ClassPlaceSlide1Props) => {
-  const { placeName, tagline, bgImageUrl, children } = props
+  const { placeName, tagline, bgImageUrl, children } = props;
   return (
     <Container
       bgImage={`https://${cdnDomain}/${cdnDirectory}${bgImageUrl}`}
@@ -59,7 +59,7 @@ const ClassPlaceSlide1 = (props: ClassPlaceSlide1Props) => {
         </Box>
       </Center>
     </Container>
-  )
-}
+  );
+};
 
-export { ClassPlaceSlide1 }
+export { ClassPlaceSlide1 };

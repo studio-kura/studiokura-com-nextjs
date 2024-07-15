@@ -1,3 +1,3 @@
-export * from './KindergartenTitleSlide'
-export * from './KindergartenBoxSlide'
-export * from './KindergartenVideoSlide'
+export * from './KindergartenBoxSlide';
+export * from './KindergartenTitleSlide';
+export * from './KindergartenVideoSlide';

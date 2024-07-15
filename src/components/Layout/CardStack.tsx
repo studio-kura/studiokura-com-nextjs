@@ -1,8 +1,8 @@
-import { ReactElement, ReactNode } from 'react'
-import { Stack } from '@chakra-ui/react'
+import { Stack } from '@chakra-ui/react';
+import { ReactElement, ReactNode } from 'react';
 
 interface Props {
-  children: ReactElement | ReactNode
+  children: ReactElement | ReactNode;
 }
 
 const CardStack: React.FC<Props> = ({ children }) => {
@@ -17,7 +17,7 @@ const CardStack: React.FC<Props> = ({ children }) => {
     >
       {children}
     </Stack>
-  )
-}
+  );
+};
 
-export { CardStack }
+export { CardStack };

@@ -1,31 +1,31 @@
-import NextLink from 'next/link'
+import {
+  ChevronDownIcon,
+  ChevronRightIcon,
+  CloseIcon,
+  HamburgerIcon,
+} from '@chakra-ui/icons';
 import {
   Box,
+  Button,
+  Collapse,
   Flex,
-  Text,
+  Icon,
   IconButton,
   Image,
-  Button,
-  Stack,
-  Collapse,
-  Icon,
   Link,
   Popover,
-  PopoverTrigger,
   PopoverContent,
-  useColorModeValue,
+  PopoverTrigger,
+  Stack,
+  Text,
   useBreakpointValue,
-  useDisclosure
-} from '@chakra-ui/react'
-import {
-  HamburgerIcon,
-  CloseIcon,
-  ChevronDownIcon,
-  ChevronRightIcon
-} from '@chakra-ui/icons'
+  useColorModeValue,
+  useDisclosure,
+} from '@chakra-ui/react';
+import NextLink from 'next/link';
 
 function Navigation() {
-  const { isOpen, onToggle } = useDisclosure()
+  const { isOpen, onToggle } = useDisclosure();
 
   return (
     <Box>
@@ -95,7 +95,7 @@ function Navigation() {
             bg={'green.500'}
             href={'/trial'}
             _hover={{
-              bg: 'green.400'
+              bg: 'green.400',
             }}
           >
             体験レッスン
@@ -107,13 +107,13 @@ function Navigation() {
         <MobileNav />
       </Collapse>
     </Box>
-  )
+  );
 }
 
 const DesktopNav = () => {
-  const linkColor = useColorModeValue('gray.600', 'gray.200')
-  const linkHoverColor = useColorModeValue('gray.800', 'white')
-  const popoverContentBgColor = useColorModeValue('white', 'gray.800')
+  const linkColor = useColorModeValue('gray.600', 'gray.200');
+  const linkHoverColor = useColorModeValue('gray.800', 'white');
+  const popoverContentBgColor = useColorModeValue('white', 'gray.800');
 
   return (
     <Stack zIndex={100} position={'relative'} direction={'row'} spacing={4}>
@@ -129,7 +129,7 @@ const DesktopNav = () => {
                   color={linkColor}
                   _hover={{
                     textDecoration: 'none',
-                    color: linkHoverColor
+                    color: linkHoverColor,
                   }}
                 >
                   {navItem.label}
@@ -143,7 +143,7 @@ const DesktopNav = () => {
                 fontSize={'sm'}
                 fontWeight={500}
                 _hover={{
-                  color: linkHoverColor
+                  color: linkHoverColor,
                 }}
               >
                 <Box p={2}>{navItem.label}</Box>
@@ -170,8 +170,8 @@ const DesktopNav = () => {
         </Box>
       ))}
     </Stack>
-  )
-}
+  );
+};
 
 const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
   return (
@@ -200,8 +200,8 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
         </Flex>
       </Stack>
     </NextLink>
-  )
-}
+  );
+};
 
 const MobileNav = () => {
   return (
@@ -216,11 +216,11 @@ const MobileNav = () => {
         <MobileNavItem key={navItem.label} {...navItem} />
       ))}
     </Stack>
-  )
-}
+  );
+};
 
 const MobileNavItem = ({ label, children, href }: NavItem) => {
-  const { isOpen, onToggle } = useDisclosure()
+  const { isOpen, onToggle } = useDisclosure();
 
   return (
     <Stack spacing={4} onClick={children && onToggle}>
@@ -231,7 +231,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
         justify={'space-between'}
         align={'center'}
         _hover={{
-          textDecoration: 'none'
+          textDecoration: 'none',
         }}
       >
         <Text
@@ -269,54 +269,54 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
         </Stack>
       </Collapse>
     </Stack>
-  )
-}
+  );
+};
 
 interface NavItem {
-  label: string
-  subLabel?: string
-  children?: Array<NavItem>
-  href?: string
+  label: string;
+  subLabel?: string;
+  children?: Array<NavItem>;
+  href?: string;
 }
 
 const NAV_ITEMS: Array<NavItem> = [
   {
     label: 'お知らせ',
-    href: 'https://blog.studiokura.com/category/%E3%81%8A%E3%81%97%E3%82%89%E3%81%9B/'
+    href: 'https://blog.studiokura.com/category/%E3%81%8A%E3%81%97%E3%82%89%E3%81%9B/',
   },
   {
     label: '美術教室',
     children: [
       {
         label: '大人のための絵画教室',
-        href: '/adults'
+        href: '/adults',
       },
       {
         label: '子ども絵画造形教室',
-        href: '/kids'
+        href: '/kids',
       },
       {
         label: '電子工作教室',
-        href: '/programming'
+        href: '/programming',
       },
       {
         label: '講師紹介',
-        href: '/teachers'
-      }
-    ]
+        href: '/teachers',
+      },
+    ],
   },
   {
     label: '幼稚園・保育園',
-    href: '/kindergartens'
+    href: '/kindergartens',
   },
   {
     label: '受講料',
-    href: '/pricing'
+    href: '/pricing',
   },
   {
     label: '教室一覧',
-    href: '/classrooms'
-  }
-]
+    href: '/classrooms',
+  },
+];
 
-export { Navigation }
+export { Navigation };

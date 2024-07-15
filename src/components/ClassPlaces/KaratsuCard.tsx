@@ -1,4 +1,4 @@
-import { ClassPlaceCard } from '@/components/ClassPlaceCard'
+import { ClassPlaceCard } from '@/components/ClassPlaceCard';
 
 const KaratsuCard = () => (
   <ClassPlaceCard
@@ -11,6 +11,6 @@ const KaratsuCard = () => (
   >
     佐賀県唐津市中町1868番地 中町Casa内
   </ClassPlaceCard>
-)
+);
 
-export { KaratsuCard }
+export { KaratsuCard };

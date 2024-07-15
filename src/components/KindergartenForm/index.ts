@@ -1,3 +1,3 @@
-export * from './KindergartenForm'
-export * from './FormItem'
-export * from './ClassroomCheckboxGroup'
+export * from './ClassroomCheckboxGroup';
+export * from './FormItem';
+export * from './KindergartenForm';

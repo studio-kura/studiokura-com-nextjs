@@ -1,16 +1,16 @@
-import { Container, Text } from '@chakra-ui/react'
+import { Container } from '@chakra-ui/react';
 
-import { Layout } from '@/components/Layout'
-import { Navigation } from '@/components/Navigation'
 import {
   ClassPlaceSlide1,
   ClassPlaceSlide2,
   ClassPlaceSlide3,
-  ClassPlaceSlideOtona,
+  ClassPlaceSlideDenshi,
   ClassPlaceSlideKodomo,
-  ClassPlaceSlideDenshi
-} from '@/components/ClassPlaceSlides/'
-import { Footer } from '@/components/Footer'
+  ClassPlaceSlideOtona,
+} from '@/components/ClassPlaceSlides/';
+import { Footer } from '@/components/Footer';
+import { Layout } from '@/components/Layout';
+import { Navigation } from '@/components/Navigation';
 
 const NishijinPlace = () => (
   <Layout title="Studio Kura 絵画教室 西新校">
@@ -44,6 +44,6 @@ const NishijinPlace = () => (
       <Footer />
     </Container>
   </Layout>
-)
+);
 
-export default NishijinPlace
+export default NishijinPlace;

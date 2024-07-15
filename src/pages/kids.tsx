@@ -228,8 +228,8 @@ const KidsClass = () => {
                     教室の雰囲気や講師の指導方法などを実際に感じていただけます。
                     お気軽にご参加くださいませ。
                   </Text>
-                  <MailButton variant="outline" size={'sm'} mr={1} />
-                  <PhoneButton variant="outline" size={'sm'} mr={1} />
+                  <MailButton variant="outline" size={'sm'} mr={1} mt={1} />
+                  <PhoneButton variant="outline" size={'sm'} mr={1} mt={1} />
                   <Text mt={'0.5em'} mb={'0.5em'}>
                     ◊ 前日・当日のお申し込みはお電話のみとさせていただきます。
                   </Text>

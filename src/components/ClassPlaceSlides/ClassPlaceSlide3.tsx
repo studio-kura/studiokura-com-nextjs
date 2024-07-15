@@ -1,7 +1,15 @@
 import { Container } from '@/components/Container';
 import { Main } from '@/components/Main';
 import { CheckIcon } from '@chakra-ui/icons';
-import { Box, Button, Center, Heading, Image, Text } from '@chakra-ui/react';
+import {
+  Box,
+  Button,
+  Center,
+  Heading,
+  Image,
+  Stack,
+  Text,
+} from '@chakra-ui/react';
 import NextLink from 'next/link';
 import { MailButton, PhoneButton, TrialButton } from '../Buttons';
 
@@ -55,22 +63,24 @@ const ClassPlaceSlide3 = (props: ClassPlaceSlide3Props) => {
             )}
             <Text color="white" fontSize={'2em'}>
               <>{children}</>
-              <TrialButton mr={1} />
-              <PhoneButton mr={1} />
-              <Button
-                as={NextLink}
-                href={'/pricing'}
-                fontWeight={600}
-                color={'text'}
-                mr={1}
-                _hover={{
-                  bg: 'green.100',
-                }}
-              >
-                <CheckIcon />
-                &nbsp;受講料
-              </Button>
-              <MailButton />
+              <Stack direction={['column', 'row']}>
+                <TrialButton mr={1} />
+                <PhoneButton mr={1} />
+                <Button
+                  as={NextLink}
+                  href={'/pricing'}
+                  fontWeight={600}
+                  color={'text'}
+                  mr={1}
+                  _hover={{
+                    bg: 'green.100',
+                  }}
+                >
+                  <CheckIcon />
+                  &nbsp;受講料
+                </Button>
+                <MailButton />
+              </Stack>
             </Text>
           </Main>
         </Box>

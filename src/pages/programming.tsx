@@ -83,8 +83,14 @@ const ProgrammingClass = () => (
             <Text mt={'1em'} mb={'1em'}>
               キーボードがまだ打てない方からアプリやウェブサイトを既にリリースされている方まで
             </Text>
-            <TrialButton color={'white'} bg={'blue.500'} hoverbg={'blue.400'} />{' '}
-            <PhoneButton />{' '}
+            <Stack direction={['column', 'row']}>
+              <TrialButton
+                color={'white'}
+                bg={'blue.500'}
+                hoverbg={'blue.400'}
+              />{' '}
+              <PhoneButton />{' '}
+            </Stack>
           </Box>
           <Box minW={'40vw'}>
             <AspectRatio ratio={16 / 9}>
@@ -439,14 +445,14 @@ const ProgrammingClass = () => (
             <Text my={8}>
               どちらの言語にご興味あるでしょうか？ぜひご相談ください。体験教室を受けていただきましたら、プログラミングとは何か想像がつくと思います。
             </Text>
-            <Box my={16}>
+            <Stack direction={['column', 'row']}>
               <TrialButton
                 color={'white'}
                 bg={'blue.500'}
                 hoverbg={'blue.400'}
               />{' '}
               <PhoneButton />{' '}
-            </Box>
+            </Stack>
           </Stack>
         </Box>
       </Container>

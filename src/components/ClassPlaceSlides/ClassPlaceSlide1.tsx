@@ -1,7 +1,7 @@
 import { Container } from '@/components/Container';
 import { Hero } from '@/components/Hero';
 import { Main } from '@/components/Main';
-import { Box, Center, Text } from '@chakra-ui/react';
+import { Box, Center, Stack, Text } from '@chakra-ui/react';
 import { PhoneButton, TrialButton } from '../Buttons';
 
 type ClassPlaceSlide1Props = {
@@ -51,10 +51,12 @@ const ClassPlaceSlide1 = (props: ClassPlaceSlide1Props) => {
             >
               <>{children}</>
             </Text>
-            <Box>
-              <TrialButton mr={1} />
-              <PhoneButton />
-            </Box>
+            <Center>
+              <Stack direction={['column', 'row']}>
+                <TrialButton mr={1} />
+                <PhoneButton />
+              </Stack>
+            </Center>
           </Main>
         </Box>
       </Center>

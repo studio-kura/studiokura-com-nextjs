@@ -19,6 +19,7 @@ import {
   Heading,
   List,
   ListItem,
+  Stack,
   Table,
   Tbody,
   Text,
@@ -334,10 +335,10 @@ const Kindergartens = () => {
             </Tbody>
           </Table>
           <Text mt={'1em'}>お問い合わせをお待ちしております。</Text>
-          <Box mt={'1em'}>
+          <Stack direction={['column', 'row']} mt={'1em'}>
             <ContactButton href={'/kindergartens/contact'} mr={1} />
             <PhoneButton />
-          </Box>
+          </Stack>
           <Box mt={'1em'}>
             <LinkButton
               text={'体験教室'}

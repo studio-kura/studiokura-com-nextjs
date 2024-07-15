@@ -1,6 +1,6 @@
 import { ContactButton, PhoneButton } from '@/components/Buttons';
 import { Container } from '@/components/Container';
-import { Box, Center, Text } from '@chakra-ui/react';
+import { Box, Center, Stack, Text } from '@chakra-ui/react';
 
 type KindergartenBoxSlideProps = {
   title: string;
@@ -41,10 +41,10 @@ const KindergartenBoxSlide = (props: KindergartenBoxSlideProps) => {
             <>{children}</>
           </Box>
           {addButtons && (
-            <Box mt={'1em'}>
+            <Stack direction={['column', 'row']} mt={'1em'}>
               <ContactButton href={'/kindergartens/contact'} mr={1} />
               <PhoneButton />
-            </Box>
+            </Stack>
           )}
         </Box>
       </Center>

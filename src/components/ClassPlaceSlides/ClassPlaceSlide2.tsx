@@ -28,7 +28,6 @@ const ClassPlaceSlide2 = (props: ClassPlaceSlide2Props) => {
         <Box w={'full'} rounded={'xl'} p={0} pb={2} textAlign={'center'}>
           <Box bgColor={'#fff'} pt={'2em'} pb={'1em'}>
             <Heading>時間割</Heading>
-            {`https://${cdnDomain}/${cdnDirectory}${bgImageUrl}`}
             <Box bgColor={'#fff'} width={'80vw'} height={'70vh'}>
               <Iframe
                 url={calendarUrl}

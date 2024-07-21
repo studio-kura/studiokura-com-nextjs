@@ -42,12 +42,13 @@ const ClassPlaceSlide3 = (props: ClassPlaceSlide3Props) => {
           <Box bgColor={'#fff'} pt={'2em'} pb={'1em'} px={'1rem'}>
             <Heading>{placeName}</Heading>
             {(address || mapImageUrl) && (
-              <Box bgColor={'#fff'}>
+              <Box bgColor={'#fff'} my={'1rem'}>
                 {mapImageUrl && mapUrl && (
                   <NextLink href={mapUrl}>
                     <Image
                       src={`https://${cdnDomain}/${cdnDirectory}${mapImageUrl}`}
                       alt={placeName + 'の地図'}
+                      my={'1rem'}
                     />
                   </NextLink>
                 )}

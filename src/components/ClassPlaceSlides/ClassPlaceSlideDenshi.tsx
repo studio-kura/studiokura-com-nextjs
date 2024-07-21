@@ -1,5 +1,4 @@
 import { Container } from '@/components/Container';
-import { Main } from '@/components/Main';
 import {
   Box,
   Center,
@@ -23,17 +22,17 @@ const ClassPlaceSlideDenshi = (props: ClassPlaceSlideDenshiProps) => {
       bgImage={`https://${cdnDomain}/${cdnDirectory}placeslide-denshi.jpg`}
       backgroundSize={'cover'}
       backgroundPosition={'center'}
+      py={['2em', '3em', '5em', '8em']}
     >
       <Center py={6} px={4}>
-        <Box
-          w={'full'}
-          rounded={'xl'}
-          p={0}
-          pb={2}
-          textAlign={'center'}
-          mt="30vw"
-        >
-          <Main bgColor={'#fffd'} pt={'2em'} pb={'1em'} maxWidth={'800px'}>
+        <Box w={'full'} rounded={'xl'} p={0} pb={2} textAlign={'center'}>
+          <Box
+            bgColor={'#fff'}
+            pt={'2em'}
+            pb={'1em'}
+            px={'1rem'}
+            maxWidth={'800px'}
+          >
             <Heading>電子工作教室</Heading>
             <Box textAlign={'left'} pl={16} pr={16}>
               <Text mb={4}>
@@ -57,7 +56,7 @@ const ClassPlaceSlideDenshi = (props: ClassPlaceSlideDenshiProps) => {
               <>{children}</>
               <TrialButton />
             </Text>
-          </Main>
+          </Box>
         </Box>
       </Center>
     </Container>

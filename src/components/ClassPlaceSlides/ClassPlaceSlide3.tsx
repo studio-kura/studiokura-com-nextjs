@@ -1,5 +1,4 @@
 import { Container } from '@/components/Container';
-import { Main } from '@/components/Main';
 import { CheckIcon } from '@chakra-ui/icons';
 import {
   Box,
@@ -36,17 +35,11 @@ const ClassPlaceSlide3 = (props: ClassPlaceSlide3Props) => {
       }
       backgroundSize={'cover'}
       backgroundPosition={'center'}
+      py={['2em', '3em', '5em', '8em']}
     >
       <Center py={6} px={4}>
-        <Box
-          w={'full'}
-          rounded={'xl'}
-          p={0}
-          pb={2}
-          textAlign={'center'}
-          mt="30vw"
-        >
-          <Main bgColor={'#fff'} pt={'2em'} pb={'1em'}>
+        <Box w={'full'} rounded={'xl'} p={0} pb={2} textAlign={'center'}>
+          <Box bgColor={'#fff'} pt={'2em'} pb={'1em'} px={'1rem'}>
             <Heading>{placeName}</Heading>
             {(address || mapImageUrl) && (
               <Box bgColor={'#fff'}>
@@ -82,7 +75,7 @@ const ClassPlaceSlide3 = (props: ClassPlaceSlide3Props) => {
                 <MailButton />
               </Stack>
             </Text>
-          </Main>
+          </Box>
         </Box>
       </Center>
     </Container>

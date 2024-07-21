@@ -1,5 +1,4 @@
 import { Container } from '@/components/Container';
-import { Main } from '@/components/Main';
 import { Box, Center, Heading, Text } from '@chakra-ui/react';
 import Iframe from 'react-iframe';
 import { TrialButton } from '../Buttons';
@@ -23,17 +22,11 @@ const ClassPlaceSlide2 = (props: ClassPlaceSlide2Props) => {
       }
       backgroundSize={'cover'}
       backgroundPosition={'center'}
+      py={['2em', '3em', '5em', '8em']}
     >
       <Center py={6} px={4}>
-        <Box
-          w={'full'}
-          rounded={'xl'}
-          p={0}
-          pb={2}
-          textAlign={'center'}
-          mt="30vw"
-        >
-          <Main bgColor={'#fff'} pt={'2em'} pb={'1em'}>
+        <Box w={'full'} rounded={'xl'} p={0} pb={2} textAlign={'center'}>
+          <Box bgColor={'#fff'} pt={'2em'} pb={'1em'}>
             <Heading>時間割</Heading>
             {`https://${cdnDomain}/${cdnDirectory}${bgImageUrl}`}
             <Box bgColor={'#fff'} width={'80vw'} height={'70vh'}>
@@ -49,7 +42,7 @@ const ClassPlaceSlide2 = (props: ClassPlaceSlide2Props) => {
               <>{children}</>
               <TrialButton />
             </Text>
-          </Main>
+          </Box>
         </Box>
       </Center>
     </Container>

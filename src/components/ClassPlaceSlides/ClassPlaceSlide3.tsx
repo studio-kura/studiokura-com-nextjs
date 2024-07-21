@@ -56,25 +56,25 @@ const ClassPlaceSlide3 = (props: ClassPlaceSlide3Props) => {
             )}
             <Text color="white" fontSize={'2em'}>
               <>{children}</>
-              <Stack direction={['column', 'row']}>
-                <TrialButton mr={1} />
-                <PhoneButton mr={1} />
-                <Button
-                  as={NextLink}
-                  href={'/pricing'}
-                  fontWeight={600}
-                  color={'text'}
-                  mr={1}
-                  _hover={{
-                    bg: 'green.100',
-                  }}
-                >
-                  <CheckIcon />
-                  &nbsp;受講料
-                </Button>
-                <MailButton />
-              </Stack>
             </Text>
+            <Stack direction={['column', 'row']}>
+              <TrialButton mr={1} />
+              <PhoneButton mr={1} />
+              <Button
+                as={NextLink}
+                href={'/pricing'}
+                fontWeight={600}
+                color={'text'}
+                mr={1}
+                _hover={{
+                  bg: 'green.100',
+                }}
+              >
+                <CheckIcon />
+                &nbsp;受講料
+              </Button>
+              <MailButton />
+            </Stack>
           </Box>
         </Box>
       </Center>

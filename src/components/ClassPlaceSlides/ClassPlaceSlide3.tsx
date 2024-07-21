@@ -1,5 +1,4 @@
 import { Container } from '@/components/Container';
-import { Main } from '@/components/Main';
 import { CheckIcon } from '@chakra-ui/icons';
 import {
   Box,
@@ -36,25 +35,20 @@ const ClassPlaceSlide3 = (props: ClassPlaceSlide3Props) => {
       }
       backgroundSize={'cover'}
       backgroundPosition={'center'}
+      py={['2em', '3em', '5em', '8em']}
     >
       <Center py={6} px={4}>
-        <Box
-          w={'full'}
-          rounded={'xl'}
-          p={0}
-          pb={2}
-          textAlign={'center'}
-          mt="30vw"
-        >
-          <Main bgColor={'#fff'} pt={'2em'} pb={'1em'}>
+        <Box w={'full'} rounded={'xl'} p={0} pb={2} textAlign={'center'}>
+          <Box bgColor={'#fff'} pt={'2em'} pb={'1em'} px={'1rem'}>
             <Heading>{placeName}</Heading>
             {(address || mapImageUrl) && (
-              <Box bgColor={'#fff'}>
+              <Box bgColor={'#fff'} my={'1rem'}>
                 {mapImageUrl && mapUrl && (
                   <NextLink href={mapUrl}>
                     <Image
                       src={`https://${cdnDomain}/${cdnDirectory}${mapImageUrl}`}
                       alt={placeName + 'の地図'}
+                      my={'1rem'}
                     />
                   </NextLink>
                 )}
@@ -63,26 +57,26 @@ const ClassPlaceSlide3 = (props: ClassPlaceSlide3Props) => {
             )}
             <Text color="white" fontSize={'2em'}>
               <>{children}</>
-              <Stack direction={['column', 'row']}>
-                <TrialButton mr={1} />
-                <PhoneButton mr={1} />
-                <Button
-                  as={NextLink}
-                  href={'/pricing'}
-                  fontWeight={600}
-                  color={'text'}
-                  mr={1}
-                  _hover={{
-                    bg: 'green.100',
-                  }}
-                >
-                  <CheckIcon />
-                  &nbsp;受講料
-                </Button>
-                <MailButton />
-              </Stack>
             </Text>
-          </Main>
+            <Stack direction={['column', 'row']}>
+              <TrialButton mr={1} />
+              <PhoneButton mr={1} />
+              <Button
+                as={NextLink}
+                href={'/pricing'}
+                fontWeight={600}
+                color={'text'}
+                mr={1}
+                _hover={{
+                  bg: 'green.100',
+                }}
+              >
+                <CheckIcon />
+                &nbsp;受講料
+              </Button>
+              <MailButton />
+            </Stack>
+          </Box>
         </Box>
       </Center>
     </Container>

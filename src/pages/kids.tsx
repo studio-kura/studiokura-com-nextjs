@@ -73,7 +73,7 @@ const KidsClass = () => {
         backgroundPosition={'center'}
       ></Container>
       <Center>
-        <Container maxW={['95%', '80%', '70%']}>
+        <Container maxW={['100%', '80%', '70%']}>
           <Heading mt={'1em'} mb={'1em'} size={['2xl', '4xl', '4xl']}>
             子ども絵画造形教室
           </Heading>

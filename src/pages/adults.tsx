@@ -73,7 +73,7 @@ const AdultsClass = () => {
         backgroundPosition={'center'}
       ></Container>
       <Center>
-        <Container maxW={['95%', '80%', '70%']}>
+        <Container maxW={['100%', '80%', '70%']}>
           <Heading mt={'1em'} mb={'1em'} size={['2xl', '4xl', '4xl']}>
             大人のための絵画教室
           </Heading>

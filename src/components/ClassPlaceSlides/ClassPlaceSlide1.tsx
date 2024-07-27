@@ -22,7 +22,7 @@ const ClassPlaceSlide1 = (props: ClassPlaceSlide1Props) => {
       backgroundPosition={'center'}
       py={['4em', '6em', '10em', '16em']}
     >
-      <Center py={6} px={4}>
+      <Center py={6} px={[0, 4]}>
         <Box w={'full'} rounded={'xl'} p={0} pb={2} textAlign={'center'}>
           <Hero title={placeName} />
           <ShadowText text={tagline} />

@@ -14,8 +14,8 @@ const Contact = () => {
           園内レッスン お問い合わせ
         </Heading>
       </Container>
-      <Center w={'100%'}>
-        <Container w={'100%'}>
+      <Center minW={'100%'}>
+        <Container minW={'100%'} paddingX={'0px'} marginX={'0px'}>
           <KindergartenForm variant="contact" />
         </Container>
       </Center>

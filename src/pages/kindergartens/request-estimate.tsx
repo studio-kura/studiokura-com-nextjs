@@ -14,8 +14,8 @@ const RequestEstimate = () => {
           園内レッスン 見積もり依頼フォーム
         </Heading>
       </Container>
-      <Center w={'100%'}>
-        <Container w={'100%'}>
+      <Center minW={'100%'}>
+        <Container minW={'100%'} paddingX={'0px'} marginX={'0px'}>
           <KindergartenForm variant="request-estimate" />
         </Container>
       </Center>

@@ -14,8 +14,8 @@ const Trial = () => {
           園内レッスン 体験教室
         </Heading>
       </Container>
-      <Center w={'100%'}>
-        <Container w={'100%'}>
+      <Center minW={'100%'}>
+        <Container minW={'100%'} paddingX={'0px'} marginX={'0px'}>
           <KindergartenForm variant="trial" />
         </Container>
       </Center>

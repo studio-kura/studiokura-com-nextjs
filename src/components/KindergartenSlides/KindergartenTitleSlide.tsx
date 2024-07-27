@@ -19,7 +19,7 @@ const KindergartenTitleSlide = (props: KindergartenTitleSlideProps) => {
       backgroundPosition={'center'}
       h={'90vh'}
     >
-      <Center py={6} px={4}>
+      <Center py={6} px={[0, 4]}>
         <Box w={'full'} rounded={'xl'} p={0} pb={2} textAlign={'center'}>
           <Heading
             fontSize={['2.5em', '3em', '6vw']}

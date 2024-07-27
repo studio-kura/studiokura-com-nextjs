@@ -24,7 +24,7 @@ const ClassPlaceSlideDenshi = (props: ClassPlaceSlideDenshiProps) => {
       backgroundPosition={'center'}
       py={['2em', '3em', '5em', '8em']}
     >
-      <Center py={6} px={4}>
+      <Center py={6} px={[0, 4]}>
         <Box w={'full'} rounded={'xl'} p={0} pb={2} textAlign={'center'}>
           <Box
             bgColor={'#fff'}
@@ -34,7 +34,7 @@ const ClassPlaceSlideDenshi = (props: ClassPlaceSlideDenshiProps) => {
             maxWidth={'800px'}
           >
             <Heading>電子工作教室</Heading>
-            <Box textAlign={'left'} pl={16} pr={16}>
+            <Box textAlign={'left'} px={[2, 8, 16]}>
               <Text mb={4}>
                 面白いものを作りながら、ためになるスキルを身につけましょう！
                 子供から大人まで楽しんでいただけます。

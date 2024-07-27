@@ -14,8 +14,8 @@ const RequestDocs = () => {
           園内レッスン 資料請求フォーム
         </Heading>
       </Container>
-      <Center w={'100%'}>
-        <Container w={'100%'}>
+      <Center minW={'100%'}>
+        <Container minW={'100%'} paddingX={'0px'} marginX={'0px'}>
           <KindergartenForm variant="request-docs" />
         </Container>
       </Center>

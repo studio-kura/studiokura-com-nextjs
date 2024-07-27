@@ -130,8 +130,8 @@ const EstimateCalculator = () => {
           見積シミュレーターで絵画造形教室園内レッスンのご利用料金を試算することができます。
         </Text>
       </Container>
-      <Center w={'100%'}>
-        <Container w={'100%'}>
+      <Center minW={'100%'}>
+        <Container minW={'100%'} paddingX={'0px'} marginX={'0px'}>
           <FormControl mt={'2rem'} as={'fieldset'} w={formWidth}>
             <FormLabel as={'legend'}>レッスンを受けられる学年</FormLabel>
             <CheckboxGroup>

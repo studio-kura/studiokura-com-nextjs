@@ -65,8 +65,8 @@ const Contact = () => {
           お問い合わせ
         </Heading>
       </Container>
-      <Center w={'100%'}>
-        <Container w={'100%'}>
+      <Center minW={'100%'}>
+        <Container minW={'100%'} paddingX={'0px'} marginX={'0px'}>
           <FormControl mt={'2rem'} as={'fieldset'} w={formWidth} isRequired>
             <FormLabel as={'legend'}>お名前</FormLabel>
             <Input type={'text'} onChange={handleNameChange} />

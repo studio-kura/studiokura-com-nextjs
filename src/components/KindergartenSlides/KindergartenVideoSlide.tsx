@@ -1,6 +1,13 @@
 import { Container } from '@/components/Container';
 import { ArrowLeftIcon, ArrowRightIcon } from '@chakra-ui/icons';
-import { Box, Button, Center, HStack, Text } from '@chakra-ui/react';
+import {
+  AspectRatio,
+  Box,
+  Button,
+  Center,
+  Stack,
+  Text,
+} from '@chakra-ui/react';
 import { useState } from 'react';
 import Iframe from 'react-iframe';
 
@@ -25,10 +32,10 @@ const KindergartenVideoSlide = (props: KindergartenVideoSlideProps) => {
       bgImage={`https://${cdnDomain}/${cdnDirectory}${bgImageUrl}`}
       backgroundSize={'cover'}
       backgroundPosition={'center'}
-      h={'90vh'}
+      px={[0, '32px']}
     >
-      <Center py={6} px={[0, 4]}>
-        <Box w={'full'} rounded={'xl'} p={0} pb={2}>
+      <Center py={6} px={[0, 4]} width={['100%', '95%', '80%']}>
+        <Box minW={'100%'} rounded={'xl'} p={0} pb={2}>
           <Text
             ml={'2em'}
             mt={'2em'}
@@ -40,21 +47,17 @@ const KindergartenVideoSlide = (props: KindergartenVideoSlideProps) => {
           >
             {title} {videoIndex + 1}
           </Text>
-          <HStack>
+          <Stack direction={['column', 'row']}>
             <Button variant={'solid'} bgColor={'#fff8'} onClick={switchLeft}>
               <ArrowLeftIcon />
             </Button>
-            <Iframe
-              url={iframeUrls[videoIndex]}
-              width={'560px'}
-              height={'315px'}
-              display={'block'}
-              position={'relative'}
-            />
+            <AspectRatio w={'100%'} maxW="1200px" ratio={560 / 315}>
+              <Iframe url={iframeUrls[videoIndex]} />
+            </AspectRatio>
             <Button variant={'solid'} bgColor={'#fff8'} onClick={switchRight}>
               <ArrowRightIcon />
             </Button>
-          </HStack>
+          </Stack>
         </Box>
       </Center>
     </Container>

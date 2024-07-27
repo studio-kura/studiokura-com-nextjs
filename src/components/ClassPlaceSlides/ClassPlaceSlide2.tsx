@@ -23,12 +23,13 @@ const ClassPlaceSlide2 = (props: ClassPlaceSlide2Props) => {
       backgroundSize={'cover'}
       backgroundPosition={'center'}
       py={['2em', '3em', '5em', '8em']}
+      px={['0px', '2em', '4em', '8em']}
     >
-      <Center py={6} px={4}>
+      <Center py={6} mx={'0px'} px={[0, 4]} minW={['100%']}>
         <Box w={'full'} rounded={'xl'} p={0} pb={2} textAlign={'center'}>
           <Box bgColor={'#fff'} pt={'2em'} pb={'1em'}>
             <Heading>時間割</Heading>
-            <Box bgColor={'#fff'} width={'80vw'} height={'70vh'}>
+            <Box bgColor={'#fff'} height={'70vh'}>
               <Iframe
                 url={calendarUrl}
                 width={'100%'}

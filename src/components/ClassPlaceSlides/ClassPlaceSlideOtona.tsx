@@ -17,7 +17,7 @@ const ClassPlaceSlideOtona = (props: ClassPlaceSlideOtonaProps) => {
       backgroundPosition={'center'}
       py={['2em', '3em', '5em', '8em']}
     >
-      <Center py={6} px={4}>
+      <Center py={6} px={[0, 4]}>
         <Box w={'full'} rounded={'xl'} p={0} pb={2} textAlign={'center'}>
           <Box
             bgColor={'#fff'}
@@ -27,7 +27,7 @@ const ClassPlaceSlideOtona = (props: ClassPlaceSlideOtonaProps) => {
             maxWidth={'800px'}
           >
             <Heading>大人の絵画教室</Heading>
-            <Box textAlign={'left'} pl={16} pr={16}>
+            <Box textAlign={'left'} px={[2, 8, 16]}>
               <Text mb={4}>
                 Studio
                 Kuraの絵画・美術教室は全く初めての方も気軽にいらしていただけるアトリエです。

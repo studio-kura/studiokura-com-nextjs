@@ -17,7 +17,7 @@ const ClassPlaceSlideKodomo = (props: ClassPlaceSlideKodomoProps) => {
       backgroundPosition={'center'}
       py={['2em', '3em', '5em', '8em']}
     >
-      <Center py={6} px={4}>
+      <Center py={6} px={[0, 4]}>
         <Box w={'full'} rounded={'xl'} p={0} pb={2} textAlign={'center'}>
           <Box
             bgColor={'#fff'}
@@ -27,7 +27,7 @@ const ClassPlaceSlideKodomo = (props: ClassPlaceSlideKodomoProps) => {
             maxWidth={'800px'}
           >
             <Heading>子ども絵画造形教室</Heading>
-            <Box textAlign={'left'} pl={16} pr={16}>
+            <Box textAlign={'left'} px={[2, 8, 16]}>
               <Text mb={4}>
                 スタジオ
                 クラ絵画造形教室は、現代の子どもを取り巻く環境の中で、どんどん減ってきている創造的に遊ぶ場、創作活動する場を子どもたちに提供して

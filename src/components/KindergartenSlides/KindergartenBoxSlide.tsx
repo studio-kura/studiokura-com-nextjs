@@ -20,8 +20,8 @@ const KindergartenBoxSlide = (props: KindergartenBoxSlideProps) => {
       backgroundPosition={'center'}
       minH={'90vh'}
     >
-      <Center py={6} px={4} my={'64px'}>
-        <Box w={'full'} rounded={'xl'} p={0} pb={2}>
+      <Center py={6} px={[0, 4]} my={'64px'}>
+        <Box w={'full'} rounded={'xl'} p={0} pb={2} minW={['100%', '90%']}>
           <Text
             mt={'2em'}
             mb={'1em'}

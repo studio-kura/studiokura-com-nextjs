@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   async redirects() {
-    return [
+    let redirects = [
       {
         source: '/blog/:path*',
         destination: 'https://blog.studiokura.com/:path*',
@@ -75,18 +75,8 @@ const nextConfig = {
         permanent: false,
       },
       {
-        source: '/koushi/:path*',
-        destination: '/teachers/:path*',
-        permanent: false,
-      },
-      {
         source: '/kindergarten/koushi/index:path*',
         destination: '/teachers',
-        permanent: false,
-      },
-      {
-        source: '/kindergarten/koushi/:path*',
-        destination: '/teachers/:path*',
         permanent: false,
       },
       {
@@ -130,6 +120,37 @@ const nextConfig = {
         permanent: false,
       },
     ];
+
+    const teachers = [
+      'matsuzaki',
+      'alejandro',
+      'azuma',
+      'ogawa',
+      'ito',
+      'nakamura',
+      'jou',
+      'watanabe',
+      'tanoue',
+      'tanaka',
+      'nakajima',
+      'moriyama',
+      'sakai',
+      'maki',
+    ];
+    teachers.forEach((teacher) => {
+      redirects.push({
+        source: `/koushi/${teacher}:path*`,
+        destination: `/teachers/${teacher}`,
+        permanent: false,
+      });
+      redirects.push({
+        source: `/kindergarten/koushi/${teacher}:path*`,
+        destination: `/teachers/${teacher}`,
+        permanent: false,
+      });
+    });
+
+    return redirects;
   },
 };
 

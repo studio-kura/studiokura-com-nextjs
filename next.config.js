@@ -70,7 +70,17 @@ const nextConfig = {
         permanent: false,
       },
       {
+        source: '/koushi(/?)',
+        destination: '/teachers',
+        permanent: false,
+      },
+      {
         source: '/koushi/index:path*',
+        destination: '/teachers',
+        permanent: false,
+      },
+      {
+        source: '/kindergarten/koushi(/?)',
         destination: '/teachers',
         permanent: false,
       },

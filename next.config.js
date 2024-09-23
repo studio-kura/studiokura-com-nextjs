@@ -15,7 +15,17 @@ const nextConfig = {
         permanent: false,
       },
       {
+        source: '/kodomo/index:path*',
+        destination: '/kids',
+        permanent: false,
+      },
+      {
         source: '/otona(/?)',
+        destination: '/adults',
+        permanent: false,
+      },
+      {
+        source: '/otona/index:path*',
         destination: '/adults',
         permanent: false,
       },
@@ -30,6 +40,11 @@ const nextConfig = {
         permanent: false,
       },
       {
+        source: '/denshikousaku/index:path*',
+        destination: '/programming',
+        permanent: false,
+      },
+      {
         source: '/otoiawase:path*',
         destination: '/trial',
         permanent: false,
@@ -37,6 +52,11 @@ const nextConfig = {
       {
         source: '/member/yoyaku:path*',
         destination: '/reschedule',
+        permanent: false,
+      },
+      {
+        source: '/contact.html',
+        destination: '/contact',
         permanent: false,
       },
       {

@@ -56,14 +56,14 @@ const ProgrammingClass = () => (
     <Container height={'300px'} minW={'100%'}>
       <HeaderSketch />
       <Heading mt={'1em'} mb={'1em'} size={['2xl', '4xl', '4xl']}>
-        電子工作教室
+        電子教室
       </Heading>
     </Container>
     <Stack direction={'column'} alignItems={'center'} bg="gray.50">
       <Container maxW={['95%', '95%', '70%']}>
         {/* Top section */}
         <Heading mt={'1em'} mb={'1em'} size={['2xl', '4xl', '4xl']}>
-          電子工作教室
+          電子教室
         </Heading>
         <Stack direction={['column', 'column', 'row']} my={16}>
           <Box minW={'40vw'}>
@@ -360,7 +360,7 @@ const ProgrammingClass = () => (
                     <br />
                     Kura電子工作教室卒業生！コンピュータ大好き高校生です！
                     <br />
-                    よろしくお願いします！ 　
+                    よろしくお願いします！
                   </Text>
                   <Stack direction={'row'}>
                     <Avatar

@@ -8,13 +8,14 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
+import { type ReactNode } from 'react';
 
 type ClassTypeCardProps = {
   title: string;
   imageSrc: string;
   linkText?: string;
   linkHref?: string;
-  children?: Element | string;
+  children?: ReactNode;
 };
 
 const ClassTypeCard = (props: ClassTypeCardProps) => {

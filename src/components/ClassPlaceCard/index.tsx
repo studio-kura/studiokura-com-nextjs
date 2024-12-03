@@ -10,6 +10,7 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
+import { type ReactNode } from 'react';
 
 type ClassPlaceCardProps = {
   placeName: string;
@@ -18,7 +19,7 @@ type ClassPlaceCardProps = {
   adultsClass?: boolean;
   kidsClass?: boolean;
   programmingClass?: boolean;
-  children?: Element | string;
+  children?: ReactNode;
 };
 
 const ClassPlaceCard = (props: ClassPlaceCardProps) => {

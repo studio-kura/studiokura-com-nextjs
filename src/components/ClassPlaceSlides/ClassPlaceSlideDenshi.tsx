@@ -7,10 +7,11 @@ import {
   Text,
   UnorderedList,
 } from '@chakra-ui/react';
+import { type ReactNode } from 'react';
 import { TrialButton } from '../Buttons';
 
 type ClassPlaceSlideDenshiProps = {
-  children?: string | Element;
+  children?: ReactNode;
 };
 
 const ClassPlaceSlideDenshi = (props: ClassPlaceSlideDenshiProps) => {

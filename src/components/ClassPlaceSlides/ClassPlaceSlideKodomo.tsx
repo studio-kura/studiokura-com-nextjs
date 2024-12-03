@@ -1,9 +1,10 @@
 import { Container } from '@/components/Container';
 import { Box, Center, Heading, Text } from '@chakra-ui/react';
+import { type ReactNode } from 'react';
 import { TrialButton } from '../Buttons';
 
 type ClassPlaceSlideKodomoProps = {
-  children?: string | Element;
+  children?: ReactNode;
 };
 
 const ClassPlaceSlideKodomo = (props: ClassPlaceSlideKodomoProps) => {

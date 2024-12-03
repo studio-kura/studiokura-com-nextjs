@@ -26,9 +26,10 @@ import {
   Th,
   Tr,
 } from '@chakra-ui/react';
+import { type ReactNode } from 'react';
 
 type TdProps = {
-  children?: JSX.Element | string;
+  children?: ReactNode;
 };
 const Td = (props: TdProps) => (
   <ChakraTd p={'8px'}>

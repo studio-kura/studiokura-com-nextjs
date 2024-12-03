@@ -1,9 +1,10 @@
 import { Container } from '@/components/Container';
 import { Box, Center, Heading, Text } from '@chakra-ui/react';
+import { type ReactNode } from 'react';
 import { TrialButton } from '../Buttons';
 
 type ClassPlaceSlideOtonaProps = {
-  children?: string | Element;
+  children?: ReactNode;
 };
 
 const ClassPlaceSlideOtona = (props: ClassPlaceSlideOtonaProps) => {

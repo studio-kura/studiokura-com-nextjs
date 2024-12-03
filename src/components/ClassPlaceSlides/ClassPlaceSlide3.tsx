@@ -10,6 +10,7 @@ import {
   Text,
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
+import { type ReactNode } from 'react';
 import { MailButton, PhoneButton, TrialButton } from '../Buttons';
 
 type ClassPlaceSlide3Props = {
@@ -19,7 +20,7 @@ type ClassPlaceSlide3Props = {
   mapImageUrl?: string;
   mapUrl?: string;
   address?: string;
-  children?: string | Element;
+  children?: ReactNode;
 };
 
 const cdnDomain = process.env.NEXT_PUBLIC_CDN_DOMAIN ?? '';

@@ -1,5 +1,6 @@
 import { Container } from '@/components/Container';
 import { Box, Center, Stack } from '@chakra-ui/react';
+import { type ReactNode } from 'react';
 import { PhoneButton, TrialButton } from '../Buttons';
 import { Hero, ShadowText } from './';
 
@@ -7,7 +8,7 @@ type ClassPlaceSlide1Props = {
   placeName: string;
   tagline: string;
   bgImageUrl: string;
-  children?: string | Element;
+  children?: ReactNode;
 };
 
 const cdnDomain = process.env.NEXT_PUBLIC_CDN_DOMAIN ?? '';

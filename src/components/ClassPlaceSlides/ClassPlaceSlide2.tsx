@@ -1,5 +1,6 @@
 import { Container } from '@/components/Container';
 import { Box, Center, Heading, Text } from '@chakra-ui/react';
+import { type ReactNode } from 'react';
 import Iframe from 'react-iframe';
 import { TrialButton } from '../Buttons';
 
@@ -8,7 +9,7 @@ type ClassPlaceSlide2Props = {
   tagline: string;
   bgImageUrl?: string;
   calendarUrl: string;
-  children?: string | Element;
+  children?: ReactNode;
 };
 
 const ClassPlaceSlide2 = (props: ClassPlaceSlide2Props) => {

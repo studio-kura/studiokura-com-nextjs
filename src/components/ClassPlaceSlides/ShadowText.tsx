@@ -1,4 +1,5 @@
 import { Text } from '@chakra-ui/react';
+import { type ReactNode } from 'react';
 
 export const ShadowText = ({
   text,
@@ -7,7 +8,7 @@ export const ShadowText = ({
   fontSize,
   my,
 }: {
-  text: string | Element;
+  text: ReactNode;
   color?: string;
   hasShadow?: boolean;
   fontSize?: string[];

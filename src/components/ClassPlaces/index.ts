@@ -4,7 +4,6 @@ export * from '@/components/ClassPlaces/HashimotoCard';
 export * from '@/components/ClassPlaces/ItoshimaCard';
 export * from '@/components/ClassPlaces/KaratsuCard';
 export * from '@/components/ClassPlaces/KashiiCard';
-export * from '@/components/ClassPlaces/KasuyaCard';
 export * from '@/components/ClassPlaces/KurumeCard';
 export * from '@/components/ClassPlaces/MeinohamaCard';
 export * from '@/components/ClassPlaces/MomochiCard';

@@ -7,7 +7,6 @@ import {
   ItoshimaCard,
   KaratsuCard,
   KashiiCard,
-  KasuyaCard,
   KurumeCard,
   MeinohamaCard,
   MomochiCard,
@@ -81,7 +80,6 @@ const Index = () => (
       </CardStack>
       <CardStack>
         <KurumeCard />
-        <KasuyaCard />
       </CardStack>
       <CardStack>
         <OnojyoCard />

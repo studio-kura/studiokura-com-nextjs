@@ -11,7 +11,7 @@ const PricingBox = () => (
   >
     <Card w={'300px'} px={8} py={'32px'}>
       <CardBody textAlign={'center'}>
-        <Heading>￥5.500/月</Heading>
+        <Heading>￥6,600/月</Heading>
         <Heading size={'s'}>月2回コース</Heading>
         <TrialButton
           mt={12}
@@ -25,7 +25,7 @@ const PricingBox = () => (
     </Card>
     <Card w={'300px'} px={8} py={'32px'}>
       <CardBody textAlign={'center'}>
-        <Heading>￥11.000/月</Heading>
+        <Heading>￥12,000/月</Heading>
         <Heading size={'s'}>月4回コース</Heading>
         <TrialButton
           mt={12}

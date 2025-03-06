@@ -19,7 +19,7 @@ const Pricing = () => (
     <Container>
       <Text>絵画教室から電子工作室までどの教室も同一料金です。</Text>
       <PricingBox />
-      <Text>入会金はお一人4400円です。</Text>
+      <Text>入会金はお一人4,400円です。</Text>
       <Heading size={'md'} my={'1em'}>
         お支払い方法
       </Heading>

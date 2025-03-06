@@ -1,12 +1,12 @@
-import { ChevronRightIcon } from '@chakra-ui/icons';
-import { Heading, List, ListIcon, ListItem, Text } from '@chakra-ui/react';
-
 import { TrialButton } from '@/components/Buttons';
 import { Container } from '@/components/Container';
 import { Footer } from '@/components/Footer';
 import { Layout } from '@/components/Layout';
 import { Navigation } from '@/components/Navigation';
 import { PricingBox } from '@/components/Pricing';
+import { pricing } from '@/data/pricing';
+import { ChevronRightIcon } from '@chakra-ui/icons';
+import { Heading, List, ListIcon, ListItem, Text } from '@chakra-ui/react';
 
 const Pricing = () => (
   <Layout title="受講料｜Studio Kura 絵画美術教室（福岡県　糸島市　二丈）">
@@ -19,7 +19,7 @@ const Pricing = () => (
     <Container>
       <Text>絵画教室から電子工作室までどの教室も同一料金です。</Text>
       <PricingBox />
-      <Text>入会金はお一人4,400円です。</Text>
+      <Text>入会金はお一人{pricing.nyukai.toLocaleString()}円です。</Text>
       <Heading size={'md'} my={'1em'}>
         お支払い方法
       </Heading>

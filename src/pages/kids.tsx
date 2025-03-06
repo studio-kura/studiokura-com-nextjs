@@ -1,3 +1,9 @@
+import { MailButton, PhoneButton, TrialButton } from '@/components/Buttons';
+import { Container } from '@/components/Container';
+import { Footer } from '@/components/Footer';
+import { Layout } from '@/components/Layout';
+import { Navigation } from '@/components/Navigation';
+import { pricing } from '@/data/pricing';
 import {
   AspectRatio,
   Box,
@@ -14,12 +20,6 @@ import {
 import NextLink from 'next/link';
 import { useEffect, useState } from 'react';
 import Iframe from 'react-iframe';
-
-import { MailButton, PhoneButton, TrialButton } from '@/components/Buttons';
-import { Container } from '@/components/Container';
-import { Footer } from '@/components/Footer';
-import { Layout } from '@/components/Layout';
-import { Navigation } from '@/components/Navigation';
 
 type classWeekday = {
   title: string;
@@ -179,9 +179,9 @@ const KidsClass = () => {
                     受講料
                   </Heading>
                   <Text>
-                    月額 5,500円（月2回）
+                    月額 {pricing.twopermonth.toLocaleString()}円（月2回）
                     <br />
-                    月額 11,000円（月4回）
+                    月額 {pricing.fourpermonth.toLocaleString()}円（月4回）
                   </Text>
                 </CardBody>
               </Card>

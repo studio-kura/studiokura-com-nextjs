@@ -1,4 +1,5 @@
 import { TrialButton } from '@/components/Buttons';
+import { pricing } from '@/data/pricing';
 import { Card, CardBody, Heading, Stack } from '@chakra-ui/react';
 
 const PricingBox = () => (
@@ -11,7 +12,7 @@ const PricingBox = () => (
   >
     <Card w={'300px'} px={8} py={'32px'}>
       <CardBody textAlign={'center'}>
-        <Heading>￥6,600/月</Heading>
+        <Heading>￥{pricing.twopermonth.toLocaleString()}/月</Heading>
         <Heading size={'s'}>月2回コース</Heading>
         <TrialButton
           mt={12}
@@ -25,7 +26,7 @@ const PricingBox = () => (
     </Card>
     <Card w={'300px'} px={8} py={'32px'}>
       <CardBody textAlign={'center'}>
-        <Heading>￥13,200/月</Heading>
+        <Heading>￥{pricing.fourpermonth.toLocaleString()}/月</Heading>
         <Heading size={'s'}>月4回コース</Heading>
         <TrialButton
           mt={12}

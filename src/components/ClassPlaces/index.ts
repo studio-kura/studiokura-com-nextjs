@@ -1,4 +1,5 @@
 export * from '@/components/ClassPlaces/BefuCard';
+export * from '@/components/ClassPlaces/Hakozaki2Card';
 export * from '@/components/ClassPlaces/HakozakiCard';
 export * from '@/components/ClassPlaces/HashimotoCard';
 export * from '@/components/ClassPlaces/ItoshimaCard';

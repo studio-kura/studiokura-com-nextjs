@@ -3,6 +3,7 @@ import { Heading } from '@chakra-ui/react';
 import {
   BefuCard,
   HakozakiCard,
+  Hakozaki2Card,
   HashimotoCard,
   ItoshimaCard,
   KaratsuCard,
@@ -66,24 +67,25 @@ const Index = () => (
       <CardStack>
         <KaratsuCard />
         <HakozakiCard />
-        <HashimotoCard />
+        <Hakozaki2Card />
       </CardStack>
       <CardStack>
+        <HashimotoCard />
         <MeinohamaCard />
         <SarayamaCard />
-        <MomochiCard />
       </CardStack>
       <CardStack>
+        <MomochiCard />
         <KashiiCard />
         <MotookaCard />
+      </CardStack>
+      <CardStack>
         <BefuCard />
+        <OnojyoCard />
+        <NagazumiCard />
       </CardStack>
       <CardStack>
         <KurumeCard />
-      </CardStack>
-      <CardStack>
-        <OnojyoCard />
-        <NagazumiCard />
         <OnlineCard />
       </CardStack>
       <Footer />

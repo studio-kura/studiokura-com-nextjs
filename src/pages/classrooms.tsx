@@ -1,6 +1,7 @@
 import {
   BefuCard,
   HakozakiCard,
+  Hakozaki2Card,
   HashimotoCard,
   ItoshimaCard,
   KaratsuCard,
@@ -79,6 +80,7 @@ const Classrooms = () => (
       <CardStack>
         <KashiiCard />
         <HakozakiCard />
+        <Hakozaki2Card />
       </CardStack>
       <Heading mt={16} size={'xl'} id={'minamiku'}>
         福岡市南区

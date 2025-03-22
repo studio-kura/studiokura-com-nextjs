@@ -21,16 +21,16 @@ interface Props {
 }
 
 const PhoneButton: React.FC<Props> = ({
-  text,
-  mr,
-  mt,
-  size,
-  color,
-  bg,
-  hoverbg,
-  borderRadius,
-  hasIcon,
-  variant,
+  text = phoneNumber,
+  mr = 0,
+  mt = 0,
+  size = 'md',
+  color = 'text',
+  bg = 'gray.100',
+  hoverbg = 'gray.200',
+  borderRadius = 4,
+  hasIcon = true,
+  variant = 'solid',
 }) => {
   return (
     <Button
@@ -59,16 +59,3 @@ const PhoneButton: React.FC<Props> = ({
   );
 };
 export { PhoneButton };
-
-PhoneButton.defaultProps = {
-  text: phoneNumber,
-  mr: 0,
-  mt: 0,
-  size: 'md',
-  color: 'text',
-  bg: 'gray.100',
-  hoverbg: 'gray.200',
-  borderRadius: 4,
-  hasIcon: true,
-  variant: 'solid',
-};

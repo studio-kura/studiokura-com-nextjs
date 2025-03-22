@@ -1,6 +1,6 @@
-import { EditIcon } from '@chakra-ui/icons';
 import { Button } from '@chakra-ui/react';
 import NextLink from 'next/link';
+import { LiaEdit } from 'react-icons/lia';
 
 interface Props {
   text?: string;
@@ -14,7 +14,7 @@ interface Props {
   hasIcon?: boolean;
 }
 
-const EstimateCalculatorButton: React.FC<Props> = ({
+const EstimateCalculatorButton = ({
   text = '見積もりシミュレーション',
   mr = 0,
   mt = 0,
@@ -24,7 +24,7 @@ const EstimateCalculatorButton: React.FC<Props> = ({
   hoverbg = 'blue.400',
   borderRadius = 4,
   hasIcon = true,
-}) => {
+}: Props) => {
   return (
     <Button
       mr={mr}
@@ -42,7 +42,7 @@ const EstimateCalculatorButton: React.FC<Props> = ({
     >
       {hasIcon && (
         <>
-          <EditIcon />
+          <LiaEdit />
           &nbsp;
         </>
       )}

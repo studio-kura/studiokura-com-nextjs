@@ -1,4 +1,3 @@
-import { ChevronRightIcon } from '@chakra-ui/icons';
 import {
   Box,
   Button,
@@ -11,6 +10,7 @@ import {
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import { type ReactNode } from 'react';
+import { LuChevronRight } from 'react-icons/lu';
 
 type ClassPlaceCardProps = {
   placeName: string;
@@ -69,7 +69,7 @@ const ClassPlaceCard = (props: ClassPlaceCardProps) => {
             <Button href={linkHref} as={NextLink} flex={1} variant="outline">
               {placeName}
               &nbsp;&nbsp;
-              <ChevronRightIcon />
+              <LuChevronRight />
             </Button>
           </Heading>
           <Box py={4}>

@@ -3,7 +3,6 @@ import { Footer } from '@/components/Footer';
 import { Layout } from '@/components/Layout';
 import { Navigation } from '@/components/Navigation';
 import { type FormData } from '@/utils';
-import { CheckCircleIcon, WarningIcon } from '@chakra-ui/icons';
 import {
   Button,
   Center,
@@ -11,10 +10,12 @@ import {
   FormHelperText,
   FormLabel,
   Heading,
+  Icon,
   Input,
   Textarea,
 } from '@chakra-ui/react';
 import { ChangeEventHandler, useState } from 'react';
+import { LiaCheckCircle, LiaExclamationCircleSolid } from 'react-icons/lia';
 
 const formWidth = ['90%', '90%', '80%', '60%'];
 const emailPattern: RegExp = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
@@ -73,12 +74,13 @@ const Contact = () => {
             <FormHelperText>
               {nameIsValid ? (
                 <>
-                  <CheckCircleIcon color={'green.500'} />{' '}
+                  <LiaCheckCircle color={'green.500'} />{' '}
                   個人情報は誰とも共有しません。
                 </>
               ) : (
                 <>
-                  <WarningIcon /> 必須項目です。
+                  <Icon as={LiaExclamationCircleSolid} />
+                  必須項目です。
                 </>
               )}
             </FormHelperText>
@@ -89,12 +91,13 @@ const Contact = () => {
             <FormHelperText>
               {emailIsValid ? (
                 <>
-                  <CheckCircleIcon color={'green.500'} />{' '}
+                  <LiaCheckCircle color={'green.500'} />{' '}
                   メールアドレスは誰とも共有しません。
                 </>
               ) : (
                 <>
-                  <WarningIcon /> 正しいメールアドレスが必要です。
+                  <Icon as={LiaExclamationCircleSolid} />
+                  正しいメールアドレスが必要です。
                 </>
               )}
             </FormHelperText>
@@ -105,7 +108,8 @@ const Contact = () => {
             <FormHelperText>
               {!messageIsValid && (
                 <>
-                  <WarningIcon /> 必須項目です。
+                  <Icon as={LiaExclamationCircleSolid} />
+                  必須項目です。
                 </>
               )}
             </FormHelperText>

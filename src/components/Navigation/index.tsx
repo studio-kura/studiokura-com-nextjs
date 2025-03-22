@@ -1,10 +1,4 @@
 import {
-  ChevronDownIcon,
-  ChevronRightIcon,
-  CloseIcon,
-  HamburgerIcon,
-} from '@chakra-ui/icons';
-import {
   Box,
   Button,
   Collapse,
@@ -23,6 +17,7 @@ import {
   useDisclosure,
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
+import { LuChevronDown, LuChevronRight, LuMenu, LuX } from 'react-icons/lu';
 
 function Navigation() {
   const { isOpen, onToggle } = useDisclosure();
@@ -47,9 +42,8 @@ function Navigation() {
         >
           <IconButton
             onClick={onToggle}
-            icon={
-              isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
-            }
+            size={'md'}
+            icon={isOpen ? <LuX /> : <LuMenu />}
             variant={'ghost'}
             aria-label={'メニュー開閉'}
           />
@@ -196,7 +190,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
           align={'center'}
           flex={1}
         >
-          <Icon color={'pink.400'} w={5} h={5} as={ChevronRightIcon} />
+          <Icon color={'pink.400'} w={5} h={5} as={LuChevronRight} />
         </Flex>
       </Stack>
     </NextLink>
@@ -242,7 +236,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
         </Text>
         {children && (
           <Icon
-            as={ChevronDownIcon}
+            as={LuChevronDown}
             transition={'all .25s ease-in-out'}
             transform={isOpen ? 'rotate(180deg)' : ''}
             w={6}

@@ -36,7 +36,6 @@ type classTimesResponse = {
 
 const cdnDomain = process.env.NEXT_PUBLIC_CDN_DOMAIN ?? '';
 const cdnDirectory = process.env.NEXT_PUBLIC_CDN_DIRECTORY ?? '';
-const phoneNumber = process.env.NEXT_PUBLIC_PHONE_NUMBER ?? '';
 const totalCarouselImages = 3;
 const carouselPeriod = 5000;
 

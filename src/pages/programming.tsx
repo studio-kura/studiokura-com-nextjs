@@ -1,4 +1,3 @@
-import { CheckCircleIcon } from '@chakra-ui/icons';
 import {
   Accordion,
   AccordionButton,
@@ -19,6 +18,7 @@ import {
   Text,
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
+import { LiaCheckCircle } from 'react-icons/lia';
 import Iframe from 'react-iframe';
 
 import { LinkButton, PhoneButton, TrialButton } from '@/components/Buttons';
@@ -74,7 +74,7 @@ const ProgrammingClass = () => (
               variant="solid"
               colorScheme="yellow"
             >
-              <CheckCircleIcon />
+              <LiaCheckCircle />
               &nbsp;<TagLabel>10年以上の実績 </TagLabel>
             </Tag>
             <Heading mt={'1em'} mb={'1em'}>

@@ -7,10 +7,10 @@ interface Props {
   children: ReactElement | ReactNode;
 }
 
-const Layout: React.FC<Props> = ({
+const Layout = ({
   children,
   title = 'Studio Kura絵画教室 | 大人から子どもまで、絵画教室ならStudio Kura',
-}) => {
+}: Props) => {
   return (
     <>
       <Head>

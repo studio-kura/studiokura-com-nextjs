@@ -1,6 +1,6 @@
-import { EditIcon } from '@chakra-ui/icons';
 import { Button } from '@chakra-ui/react';
 import NextLink from 'next/link';
+import { LiaEdit } from 'react-icons/lia';
 
 interface Props {
   text?: string;
@@ -15,7 +15,7 @@ interface Props {
   hasIcon?: boolean;
 }
 
-const ContactButton: React.FC<Props> = ({
+const ContactButton = ({
   text = 'お問い合わせ',
   href = '/contact',
   mr = 0,
@@ -26,7 +26,7 @@ const ContactButton: React.FC<Props> = ({
   hoverbg = 'blue.400',
   borderRadius = 4,
   hasIcon = true,
-}) => {
+}: Props) => {
   return (
     <Button
       mr={mr}
@@ -44,7 +44,7 @@ const ContactButton: React.FC<Props> = ({
     >
       {hasIcon && (
         <>
-          <EditIcon />
+          <LiaEdit />
           &nbsp;
         </>
       )}

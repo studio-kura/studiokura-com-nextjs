@@ -5,8 +5,8 @@ import { Layout } from '@/components/Layout';
 import { Navigation } from '@/components/Navigation';
 import { PricingBox } from '@/components/Pricing';
 import { pricing } from '@/data/pricing';
-import { ChevronRightIcon } from '@chakra-ui/icons';
 import { Heading, List, ListIcon, ListItem, Text } from '@chakra-ui/react';
+import { LuChevronRight } from 'react-icons/lu';
 
 const Pricing = () => (
   <Layout title="受講料｜Studio Kura 絵画美術教室（福岡県　糸島市　二丈）">
@@ -26,7 +26,7 @@ const Pricing = () => (
       <List>
         <ListItem mb={4}>
           <ListIcon>
-            <ChevronRightIcon />
+            <LuChevronRight />
           </ListIcon>
           受講料は口座振替にてお支払ください。
         </ListItem>

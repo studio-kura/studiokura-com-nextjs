@@ -9,7 +9,13 @@ interface Props {
   colorScheme?: ThemeTypings['colorSchemes'];
 }
 
-const LinkButton = ({ text, href, ml, mr, colorScheme }: Props) => {
+const LinkButton = ({
+  text,
+  href,
+  ml = 0,
+  mr = 0,
+  colorScheme = 'blue',
+}: Props) => {
   return (
     <Button
       ml={ml}
@@ -24,9 +30,3 @@ const LinkButton = ({ text, href, ml, mr, colorScheme }: Props) => {
   );
 };
 export { LinkButton };
-
-LinkButton.defaultProps = {
-  ml: 0,
-  mr: 0,
-  colorScheme: 'blue',
-};

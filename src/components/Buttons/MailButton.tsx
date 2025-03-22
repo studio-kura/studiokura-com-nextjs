@@ -20,16 +20,16 @@ interface Props {
 }
 
 const MailButton = ({
-  text,
-  mr,
-  mt,
-  size,
-  color,
-  bg,
-  hoverbg,
-  borderRadius,
-  hasIcon,
-  variant,
+  text = 'info@studiokura.com',
+  mr = 0,
+  mt = 0,
+  size = 'md',
+  color = 'text',
+  bg = 'gray.100',
+  hoverbg = 'gray.200',
+  borderRadius = 4,
+  hasIcon = true,
+  variant = 'solid',
 }: Props) => {
   return (
     <Button
@@ -56,16 +56,3 @@ const MailButton = ({
   );
 };
 export { MailButton };
-
-MailButton.defaultProps = {
-  text: 'info@studiokura.com',
-  mr: 0,
-  mt: 0,
-  size: 'md',
-  color: 'text',
-  bg: 'gray.100',
-  hoverbg: 'gray.200',
-  borderRadius: 4,
-  hasIcon: true,
-  variant: 'solid',
-};

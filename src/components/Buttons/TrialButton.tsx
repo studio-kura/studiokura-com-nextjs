@@ -15,15 +15,15 @@ interface Props {
 }
 
 const TrialButton = ({
-  text,
-  mr,
-  mt,
-  size,
-  color,
-  bg,
-  hoverbg,
-  borderRadius,
-  hasIcon,
+  text = '体験レッスン',
+  mr = 0,
+  mt = 0,
+  size = 'md',
+  color = 'white',
+  bg = 'blue.500',
+  hoverbg = 'blue.400',
+  borderRadius = 4,
+  hasIcon = true,
 }: Props) => {
   return (
     <Button
@@ -51,15 +51,3 @@ const TrialButton = ({
   );
 };
 export { TrialButton };
-
-TrialButton.defaultProps = {
-  text: '体験レッスン',
-  mr: 0,
-  mt: 0,
-  size: 'md',
-  color: 'white',
-  bg: 'blue.500',
-  hoverbg: 'blue.400',
-  borderRadius: 4,
-  hasIcon: true,
-};

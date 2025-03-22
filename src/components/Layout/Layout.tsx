@@ -7,7 +7,10 @@ interface Props {
   children: ReactElement | ReactNode;
 }
 
-const Layout = ({ children, title }: Props) => {
+const Layout = ({
+  children,
+  title = 'Studio Kura絵画教室 | 大人から子どもまで、絵画教室ならStudio Kura',
+}: Props) => {
   return (
     <>
       <Head>
@@ -29,7 +32,3 @@ const Layout = ({ children, title }: Props) => {
 };
 
 export { Layout };
-
-Layout.defaultProps = {
-  title: 'Studio Kura絵画教室 | 大人から子どもまで、絵画教室ならStudio Kura',
-};

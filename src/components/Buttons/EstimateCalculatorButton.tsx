@@ -15,15 +15,15 @@ interface Props {
 }
 
 const EstimateCalculatorButton = ({
-  text,
-  mr,
-  mt,
-  size,
-  color,
-  bg,
-  hoverbg,
-  borderRadius,
-  hasIcon,
+  text = '見積もりシミュレーション',
+  mr = 0,
+  mt = 0,
+  size = 'md',
+  color = 'white',
+  bg = 'blue.500',
+  hoverbg = 'blue.400',
+  borderRadius = 4,
+  hasIcon = true,
 }: Props) => {
   return (
     <Button
@@ -51,15 +51,3 @@ const EstimateCalculatorButton = ({
   );
 };
 export { EstimateCalculatorButton };
-
-EstimateCalculatorButton.defaultProps = {
-  text: '見積もりシミュレーション',
-  mr: 0,
-  mt: 0,
-  size: 'md',
-  color: 'white',
-  bg: 'blue.500',
-  hoverbg: 'blue.400',
-  borderRadius: 4,
-  hasIcon: true,
-};

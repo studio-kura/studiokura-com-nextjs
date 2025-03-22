@@ -1,6 +1,6 @@
-import { EmailIcon } from '@chakra-ui/icons';
 import { Button, ResponsiveValue } from '@chakra-ui/react';
 import NextLink from 'next/link';
+import { LiaEnvelopeSolid } from 'react-icons/lia';
 
 interface Props {
   text?: string;
@@ -47,7 +47,7 @@ const MailButton: React.FC<Props> = ({
     >
       {hasIcon && (
         <>
-          <EmailIcon />
+          <LiaEnvelopeSolid />
           &nbsp;
         </>
       )}

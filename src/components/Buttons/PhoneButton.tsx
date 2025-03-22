@@ -1,5 +1,5 @@
-import { PhoneIcon } from '@chakra-ui/icons';
 import { Button, ResponsiveValue } from '@chakra-ui/react';
+import { LiaPhoneSolid } from 'react-icons/lia';
 
 const phoneNumber = process.env.NEXT_PUBLIC_PHONE_NUMBER ?? '';
 
@@ -50,7 +50,7 @@ const PhoneButton: React.FC<Props> = ({
     >
       {hasIcon && (
         <>
-          <PhoneIcon />
+          <LiaPhoneSolid />
           &nbsp;
         </>
       )}

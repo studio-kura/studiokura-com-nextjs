@@ -1,5 +1,4 @@
 import { Container } from '@/components/Container';
-import { ArrowLeftIcon, ArrowRightIcon } from '@chakra-ui/icons';
 import {
   AspectRatio,
   Box,
@@ -9,6 +8,7 @@ import {
   Text,
 } from '@chakra-ui/react';
 import { useState } from 'react';
+import { LuChevronsLeft, LuChevronsRight } from 'react-icons/lu';
 import Iframe from 'react-iframe';
 
 type KindergartenVideoSlideProps = {
@@ -48,14 +48,24 @@ const KindergartenVideoSlide = (props: KindergartenVideoSlideProps) => {
             {title} {videoIndex + 1}
           </Text>
           <Stack direction={['column', 'row']}>
-            <Button variant={'solid'} bgColor={'#fff8'} onClick={switchLeft}>
-              <ArrowLeftIcon />
+            <Button
+              variant={'solid'}
+              size="md"
+              bgColor={'#fff8'}
+              onClick={switchLeft}
+            >
+              <LuChevronsLeft />
             </Button>
             <AspectRatio w={'100%'} maxW="1200px" ratio={560 / 315}>
               <Iframe url={iframeUrls[videoIndex]} />
             </AspectRatio>
-            <Button variant={'solid'} bgColor={'#fff8'} onClick={switchRight}>
-              <ArrowRightIcon />
+            <Button
+              variant={'solid'}
+              size="md"
+              bgColor={'#fff8'}
+              onClick={switchRight}
+            >
+              <LuChevronsRight />
             </Button>
           </Stack>
         </Box>

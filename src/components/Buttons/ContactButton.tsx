@@ -1,6 +1,6 @@
-import { EditIcon } from '@chakra-ui/icons';
 import { Button } from '@chakra-ui/react';
 import NextLink from 'next/link';
+import { LiaEdit } from 'react-icons/lia';
 
 interface Props {
   text?: string;
@@ -44,7 +44,7 @@ const ContactButton: React.FC<Props> = ({
     >
       {hasIcon && (
         <>
-          <EditIcon />
+          <LiaEdit />
           &nbsp;
         </>
       )}

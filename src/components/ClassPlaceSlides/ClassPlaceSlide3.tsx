@@ -1,5 +1,4 @@
 import { Container } from '@/components/Container';
-import { CheckIcon } from '@chakra-ui/icons';
 import {
   Box,
   Button,
@@ -11,6 +10,7 @@ import {
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import { type ReactNode } from 'react';
+import { LiaCheckSolid } from 'react-icons/lia';
 import { MailButton, PhoneButton, TrialButton } from '../Buttons';
 
 type ClassPlaceSlide3Props = {
@@ -78,7 +78,7 @@ const ClassPlaceSlide3 = (props: ClassPlaceSlide3Props) => {
                   bg: 'green.100',
                 }}
               >
-                <CheckIcon />
+                <LiaCheckSolid />
                 &nbsp;受講料
               </Button>
               <MailButton />

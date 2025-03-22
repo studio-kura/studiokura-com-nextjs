@@ -1,12 +1,13 @@
-import { WarningIcon } from '@chakra-ui/icons';
 import {
   FormControl,
   FormHelperText,
   FormLabel,
+  Icon,
   Input,
   Textarea,
 } from '@chakra-ui/react';
 import { type ChangeEventHandler } from 'react';
+import { LiaExclamationCircleSolid } from 'react-icons/lia';
 
 interface Props {
   inputType: 'text' | 'email' | 'textarea';
@@ -57,7 +58,8 @@ const FormItem = (props: Props) => {
         <FormHelperText>
           {!isValid && (
             <>
-              <WarningIcon /> {validationMessage || '必須項目です'}
+              <Icon as={LiaExclamationCircleSolid} />
+              {validationMessage || '必須項目です'}
             </>
           )}
         </FormHelperText>

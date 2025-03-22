@@ -19,7 +19,7 @@ interface Props {
     | undefined;
 }
 
-const MailButton: React.FC<Props> = ({
+const MailButton = ({
   text,
   mr,
   mt,
@@ -30,7 +30,7 @@ const MailButton: React.FC<Props> = ({
   borderRadius,
   hasIcon,
   variant,
-}) => {
+}: Props) => {
   return (
     <Button
       mr={mr}

@@ -14,7 +14,7 @@ interface Props {
   hasIcon?: boolean;
 }
 
-const EstimateCalculatorButton: React.FC<Props> = ({
+const EstimateCalculatorButton = ({
   text,
   mr,
   mt,
@@ -24,7 +24,7 @@ const EstimateCalculatorButton: React.FC<Props> = ({
   hoverbg,
   borderRadius,
   hasIcon,
-}) => {
+}: Props) => {
   return (
     <Button
       mr={mr}

@@ -14,7 +14,7 @@ interface Props {
   hasIcon?: boolean;
 }
 
-const TrialButton: React.FC<Props> = ({
+const TrialButton = ({
   text,
   mr,
   mt,
@@ -24,7 +24,7 @@ const TrialButton: React.FC<Props> = ({
   hoverbg,
   borderRadius,
   hasIcon,
-}) => {
+}: Props) => {
   return (
     <Button
       mr={mr}

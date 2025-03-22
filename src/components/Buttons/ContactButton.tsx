@@ -15,7 +15,7 @@ interface Props {
   hasIcon?: boolean;
 }
 
-const ContactButton: React.FC<Props> = ({
+const ContactButton = ({
   text,
   href,
   mr,
@@ -26,7 +26,7 @@ const ContactButton: React.FC<Props> = ({
   hoverbg,
   borderRadius,
   hasIcon,
-}) => {
+}: Props) => {
   return (
     <Button
       mr={mr}

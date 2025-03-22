@@ -5,7 +5,7 @@ interface Props {
   children: ReactElement | ReactNode;
 }
 
-const CardStack: React.FC<Props> = ({ children }) => {
+const CardStack = ({ children }: Props) => {
   return (
     <Stack
       align={'center'}

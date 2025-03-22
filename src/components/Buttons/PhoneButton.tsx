@@ -20,7 +20,7 @@ interface Props {
     | undefined;
 }
 
-const PhoneButton: React.FC<Props> = ({
+const PhoneButton = ({
   text,
   mr,
   mt,
@@ -31,7 +31,7 @@ const PhoneButton: React.FC<Props> = ({
   borderRadius,
   hasIcon,
   variant,
-}) => {
+}: Props) => {
   return (
     <Button
       mr={mr}

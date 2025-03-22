@@ -1,14 +1,16 @@
 import { Flex, Heading } from '@chakra-ui/react';
 
-export const Hero = ({
-  title,
-  color,
-  hasShadow,
-}: {
+type Props = {
   title: string;
   color?: string;
   hasShadow?: boolean;
-}) => (
+};
+
+export const Hero = ({
+  title = 'with-chakra-ui-typescript',
+  color = 'white',
+  hasShadow = true,
+}: Props) => (
   <Flex justifyContent="center" alignItems="center" bgClip="text" my={'2em'}>
     <Heading
       fontSize={['2em', '3em', '6vw']}
@@ -21,9 +23,3 @@ export const Hero = ({
     </Heading>
   </Flex>
 );
-
-Hero.defaultProps = {
-  title: 'with-chakra-ui-typescript',
-  color: 'white',
-  hasShadow: true,
-};

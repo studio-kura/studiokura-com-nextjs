@@ -15,15 +15,15 @@ interface Props {
 }
 
 const EstimateCalculatorButton: React.FC<Props> = ({
-  text,
-  mr,
-  mt,
-  size,
-  color,
-  bg,
-  hoverbg,
-  borderRadius,
-  hasIcon,
+  text = '見積もりシミュレーション',
+  mr = 0,
+  mt = 0,
+  size = 'md',
+  color = 'white',
+  bg = 'blue.500',
+  hoverbg = 'blue.400',
+  borderRadius = 4,
+  hasIcon = true,
 }) => {
   return (
     <Button
@@ -51,15 +51,3 @@ const EstimateCalculatorButton: React.FC<Props> = ({
   );
 };
 export { EstimateCalculatorButton };
-
-EstimateCalculatorButton.defaultProps = {
-  text: '見積もりシミュレーション',
-  mr: 0,
-  mt: 0,
-  size: 'md',
-  color: 'white',
-  bg: 'blue.500',
-  hoverbg: 'blue.400',
-  borderRadius: 4,
-  hasIcon: true,
-};

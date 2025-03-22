@@ -16,16 +16,16 @@ interface Props {
 }
 
 const ContactButton: React.FC<Props> = ({
-  text,
-  href,
-  mr,
-  mt,
-  size,
-  color,
-  bg,
-  hoverbg,
-  borderRadius,
-  hasIcon,
+  text = 'お問い合わせ',
+  href = '/contact',
+  mr = 0,
+  mt = 0,
+  size = 'md',
+  color = 'white',
+  bg = 'blue.500',
+  hoverbg = 'blue.400',
+  borderRadius = 4,
+  hasIcon = true,
 }) => {
   return (
     <Button
@@ -53,16 +53,3 @@ const ContactButton: React.FC<Props> = ({
   );
 };
 export { ContactButton };
-
-ContactButton.defaultProps = {
-  text: 'お問い合わせ',
-  href: '/contact',
-  mr: 0,
-  mt: 0,
-  size: 'md',
-  color: 'white',
-  bg: 'blue.500',
-  hoverbg: 'blue.400',
-  borderRadius: 4,
-  hasIcon: true,
-};

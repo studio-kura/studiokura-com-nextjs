@@ -1,3 +1,4 @@
+import { useColorModeValue } from '@/components/ui/color-mode';
 import {
   Box,
   Button,
@@ -6,7 +7,6 @@ import {
   Image,
   Tag,
   Text,
-  useColorModeValue,
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import { type ReactNode } from 'react';
@@ -66,32 +66,34 @@ const ClassPlaceCard = (props: ClassPlaceCardProps) => {
         />
         <Box px={4}>
           <Heading fontSize={'2xl'} fontFamily={'body'}>
-            <Button href={linkHref} as={NextLink} flex={1} variant="outline">
-              {placeName}
-              &nbsp;&nbsp;
-              <LuChevronRight />
+            <Button flex={1} variant="outline" asChild>
+              <NextLink href={linkHref}>
+                {placeName}
+                &nbsp;&nbsp;
+                <LuChevronRight />
+              </NextLink>
             </Button>
           </Heading>
           <Box py={4}>
             {adultsClass && (
               <>
-                <Tag size="md" variant="solid" colorScheme="red">
-                  大人の絵画
-                </Tag>{' '}
+                <Tag.Root size="md" variant="solid" colorPalette="red">
+                  <Tag.Label>大人の絵画</Tag.Label>
+                </Tag.Root>{' '}
               </>
             )}
             {kidsClass && (
               <>
-                <Tag size="md" variant="solid" colorScheme="yellow">
-                  子ども絵画
-                </Tag>{' '}
+                <Tag.Root size="md" variant="solid" colorPalette="yellow">
+                  <Tag.Label>子ども絵画</Tag.Label>
+                </Tag.Root>{' '}
               </>
             )}
             {programmingClass && (
               <>
-                <Tag size="md" variant="solid" colorScheme="green">
-                  電子工作
-                </Tag>{' '}
+                <Tag.Root size="md" variant="solid" colorPalette="green">
+                  <Tag.Label>電子工作</Tag.Label>
+                </Tag.Root>{' '}
               </>
             )}
           </Box>

@@ -5,7 +5,7 @@ import { Layout } from '@/components/Layout';
 import { Navigation } from '@/components/Navigation';
 import { PricingBox } from '@/components/Pricing';
 import { pricing } from '@/data/pricing';
-import { Heading, List, ListIcon, ListItem, Text } from '@chakra-ui/react';
+import { Heading, List, Text } from '@chakra-ui/react';
 import { LuChevronRight } from 'react-icons/lu';
 
 const Pricing = () => (
@@ -23,14 +23,14 @@ const Pricing = () => (
       <Heading size={'md'} my={'1em'}>
         お支払い方法
       </Heading>
-      <List>
-        <ListItem mb={4}>
-          <ListIcon>
+      <List.Root>
+        <List.Item mb={4}>
+          <List.Indicator asChild>
             <LuChevronRight />
-          </ListIcon>
+          </List.Indicator>
           受講料は口座振替にてお支払ください。
-        </ListItem>
-      </List>
+        </List.Item>
+      </List.Root>
       <Heading size={'md'} my={'1em'}>
         受講振替
       </Heading>

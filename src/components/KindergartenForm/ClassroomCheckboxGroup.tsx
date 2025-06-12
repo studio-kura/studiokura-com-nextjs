@@ -1,10 +1,4 @@
-import {
-  Checkbox,
-  CheckboxGroup,
-  FormControl,
-  FormLabel,
-  Stack,
-} from '@chakra-ui/react';
+import { Checkbox, CheckboxGroup, Field, Stack } from '@chakra-ui/react';
 import { type ChangeEventHandler } from 'react';
 
 interface Props {
@@ -14,6 +8,7 @@ interface Props {
   handleClassroom2Check?: ChangeEventHandler<HTMLInputElement>;
   handleClassroom3Check?: ChangeEventHandler<HTMLInputElement>;
 }
+
 const ClassroomCheckboxGroup = (props: Props) => {
   const {
     formWidth,
@@ -22,24 +17,30 @@ const ClassroomCheckboxGroup = (props: Props) => {
     handleClassroom2Check,
     handleClassroom3Check,
   } = props;
+
   return (
-    <>
-      <FormControl
-        mt={'2rem'}
-        as={'fieldset'}
-        w={formWidth}
-        isRequired={isRequired}
-      >
-        <FormLabel as={'legend'}>レッスンを受けられる学年</FormLabel>
-        <CheckboxGroup>
-          <Stack spacing={[1, 5]} direction={['column', 'row']}>
-            <Checkbox onChange={handleClassroom1Check}>年少</Checkbox>
-            <Checkbox onChange={handleClassroom2Check}>年中</Checkbox>
-            <Checkbox onChange={handleClassroom3Check}>年長</Checkbox>
-          </Stack>
-        </CheckboxGroup>
-      </FormControl>
-    </>
+    <Field.Root as="fieldset" w={formWidth} mt="2rem" required={isRequired}>
+      <Field.Label>レッスンを受けられる学年</Field.Label>
+
+      <CheckboxGroup>
+        <Stack gap={[1, 5]} direction={['column', 'row']}>
+          <Checkbox.Root onChange={handleClassroom1Check}>
+            <Checkbox.Control />
+            <Checkbox.Label>年少</Checkbox.Label>
+          </Checkbox.Root>
+
+          <Checkbox.Root onChange={handleClassroom2Check}>
+            <Checkbox.Control />
+            <Checkbox.Label>年中</Checkbox.Label>
+          </Checkbox.Root>
+
+          <Checkbox.Root onChange={handleClassroom3Check}>
+            <Checkbox.Control />
+            <Checkbox.Label>年長</Checkbox.Label>
+          </Checkbox.Root>
+        </Stack>
+      </CheckboxGroup>
+    </Field.Root>
   );
 };
 

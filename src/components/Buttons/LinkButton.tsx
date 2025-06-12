@@ -1,4 +1,4 @@
-import { Button, ThemeTypings } from '@chakra-ui/react';
+import { Button } from '@chakra-ui/react';
 import NextLink from 'next/link';
 
 interface Props {
@@ -6,7 +6,7 @@ interface Props {
   href: string;
   ml?: number;
   mr?: number;
-  colorScheme?: ThemeTypings['colorSchemes'];
+  colorScheme?: string;
 }
 
 const LinkButton = ({
@@ -17,15 +17,8 @@ const LinkButton = ({
   colorScheme = 'blue',
 }: Props) => {
   return (
-    <Button
-      ml={ml}
-      mr={mr}
-      as={NextLink}
-      colorScheme={colorScheme}
-      href={href}
-      variant={'link'}
-    >
-      {text}
+    <Button ml={ml} mr={mr} colorScheme={colorScheme} variant={'plain'} asChild>
+      <NextLink href={href}>{text}</NextLink>
     </Button>
   );
 };

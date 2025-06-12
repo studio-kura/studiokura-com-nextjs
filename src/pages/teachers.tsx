@@ -3,15 +3,7 @@ import { Footer } from '@/components/Footer';
 import { Layout } from '@/components/Layout';
 import { Navigation } from '@/components/Navigation';
 import type { TeacherData } from '@/pages/api/get-teacher-info';
-import {
-  Card,
-  CardBody,
-  CardHeader,
-  Heading,
-  Image,
-  SimpleGrid,
-  Spinner,
-} from '@chakra-ui/react';
+import { Card, Heading, Image, SimpleGrid, Spinner } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import { useEffect, useState } from 'react';
 
@@ -50,16 +42,16 @@ const TeacherList = () => {
           <SimpleGrid columns={{ sm: 3, md: 4 }}>
             {teachersData.map((teacher) => (
               <NextLink href={`/teachers/${teacher.slug}`}>
-                <Card maxW={150} m={4}>
-                  <CardHeader p={0}>
+                <Card.Root maxW={150} m={4}>
+                  <Card.Header p={0}>
                     <Image
                       src={`https://${cdnDomain}/${cdnDirectory}teachers-${teacher.slug}-thumbnail.jpg`}
                       alt={`${teacher.name}の写真`}
                       mb={4}
                     />
-                  </CardHeader>
-                  <CardBody>{teacher.name}</CardBody>
-                </Card>
+                  </Card.Header>
+                  <Card.Body>{teacher.name}</Card.Body>
+                </Card.Root>
               </NextLink>
             ))}
           </SimpleGrid>

@@ -29,58 +29,63 @@ const cdnDirectory = process.env.NEXT_PUBLIC_CDN_DIRECTORY ?? '';
 const ClassPlaceSlide3 = (props: ClassPlaceSlide3Props) => {
   const { placeName, bgImageUrl, mapImageUrl, mapUrl, address, children } =
     props;
+
   return (
     <Container
       bgImage={
         bgImageUrl && `https://${cdnDomain}/${cdnDirectory}${bgImageUrl}`
       }
-      backgroundSize={'cover'}
-      backgroundPosition={'center'}
+      backgroundSize="cover"
+      backgroundPosition="center"
       py={['2em', '3em', '5em', '8em']}
     >
       <Center py={6} px={[0, 4]}>
-        <Box w={'full'} rounded={'xl'} p={0} pb={2} textAlign={'center'}>
+        <Box w="full" rounded="xl" p={0} pb={2} textAlign="center">
           <Box
-            bgColor={'#fff'}
-            pt={'2em'}
-            pb={'1em'}
+            bgColor="#fff"
+            pt="2em"
+            pb="1em"
             px={['1em', '2em']}
             minW={['100%', '90%']}
           >
             <Heading>{placeName}</Heading>
+
             {(address || mapImageUrl) && (
-              <Box bgColor={'#fff'} my={'1rem'}>
+              <Box bgColor="#fff" my="1rem">
                 {mapImageUrl && mapUrl && (
                   <NextLink href={mapUrl}>
                     <Image
                       src={`https://${cdnDomain}/${cdnDirectory}${mapImageUrl}`}
-                      alt={placeName + 'の地図'}
-                      my={'1rem'}
+                      alt={`${placeName}の地図`}
+                      my="1rem"
                     />
                   </NextLink>
                 )}
                 {address || ''}
               </Box>
             )}
-            <Text color="white" fontSize={'2em'}>
-              <>{children}</>
+
+            <Text color="white" fontSize="2em">
+              {children}
             </Text>
+
             <Stack direction={['column', 'row']}>
               <TrialButton mr={1} />
               <PhoneButton mr={1} />
+
               <Button
-                as={NextLink}
-                href={'/pricing'}
+                asChild
                 fontWeight={600}
-                color={'text'}
+                color="text"
                 mr={1}
-                _hover={{
-                  bg: 'green.100',
-                }}
+                _hover={{ bg: 'green.100' }}
               >
-                <LiaCheckSolid />
-                &nbsp;受講料
+                <NextLink href="/pricing">
+                  <LiaCheckSolid />
+                  &nbsp;受講料
+                </NextLink>
               </Button>
+
               <MailButton />
             </Stack>
           </Box>

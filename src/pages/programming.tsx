@@ -1,9 +1,5 @@
 import {
   Accordion,
-  AccordionButton,
-  AccordionIcon,
-  AccordionItem,
-  AccordionPanel,
   AspectRatio,
   Avatar,
   Box,
@@ -12,9 +8,9 @@ import {
   CardBody,
   Heading,
   Image,
+  Span,
   Stack,
   Tag,
-  TagLabel,
   Text,
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
@@ -35,17 +31,16 @@ const cdnDirectory = process.env.NEXT_PUBLIC_CDN_DIRECTORY ?? '';
 const ClassPlaceLinkButton = (props: { name: string; href: string }) => (
   <Box px={['50px', '40px', '50px']} py={'20px'}>
     <Button
-      as={NextLink}
+      asChild
       fontWeight={600}
       color={'white'}
       bg={'orange.500'}
-      href={props.href}
       borderRadius={20}
       _hover={{
         bg: 'orange.400',
       }}
     >
-      {props.name}
+      <NextLink href={props.href}>{props.name}</NextLink>
     </Button>
   </Box>
 );
@@ -67,16 +62,17 @@ const ProgrammingClass = () => (
         </Heading>
         <Stack direction={['column', 'column', 'row']} my={16}>
           <Box minW={'40vw'}>
-            <Tag
+            <Tag.Root
               size={'lg'}
-              key={'lg'}
               borderRadius="full"
               variant="solid"
-              colorScheme="yellow"
+              colorPalette="yellow"
             >
-              <LiaCheckCircle />
-              &nbsp;<TagLabel>10年以上の実績 </TagLabel>
-            </Tag>
+              <Tag.StartElement>
+                <LiaCheckCircle />
+              </Tag.StartElement>
+              <Tag.Label>10年以上の実績</Tag.Label>
+            </Tag.Root>
             <Heading mt={'1em'} mb={'1em'}>
               プログラミングをはじめよう
             </Heading>
@@ -141,7 +137,7 @@ const ProgrammingClass = () => (
                     h={'64px'}
                   ></Image>
                   <Box>
-                    <Heading size={'l'}>Scratch</Heading>
+                    <Heading size={'md'}>Scratch</Heading>
                     <Text>
                       MITで開発されて、世界中で使われている
                       ドラッグ&ドロッププログラミング環境
@@ -157,7 +153,7 @@ const ProgrammingClass = () => (
                     h={'64px'}
                   ></Image>
                   <Box>
-                    <Heading size={'l'}>p5.js</Heading>
+                    <Heading size={'md'}>p5.js</Heading>
                     <Text>
                       ゲームからNFTアートまで作ることができる
                       JavaScriptで書くフレームワーク
@@ -173,7 +169,7 @@ const ProgrammingClass = () => (
                     h={'64px'}
                   ></Image>
                   <Box>
-                    <Heading size={'l'}>Arduino</Heading>
+                    <Heading size={'md'}>Arduino</Heading>
                     <Text>
                       電子回路をコンピューターで制御できる
                       C言語を駆使したフレームワーク
@@ -307,7 +303,7 @@ const ProgrammingClass = () => (
             <Heading>講師紹介</Heading>
             <Text my={8}>Studio Kura電子工作教室のチームをご紹介します！</Text>
             <Stack gap={4}>
-              <Card minW={240} maxW={640} p={4}>
+              <Card.Root minW={240} maxW={640} p={4}>
                 <CardBody>
                   <Text mb={8}>
                     1979年福岡県糸島市生まれ。広島市立大学芸術学部油絵科
@@ -316,19 +312,22 @@ const ProgrammingClass = () => (
                     Kuraを設立。糸島芸術祭「糸島芸農」実行委員長
                   </Text>
                   <Stack direction={'row'}>
-                    <Avatar
-                      name={'松崎 宏史'}
-                      size={'lg'}
-                      src={`https://${cdnDomain}/${cdnDirectory}programming-teachers-1.jpg`}
-                    />
+                    <Avatar.Root size={'lg'}>
+                      <Avatar.Image
+                        src={`https://${cdnDomain}/${cdnDirectory}programming-teachers-1.jpg`}
+                        {...({} as any)} // TODO: fix for Chakra UI v3
+                      />
+                      <Avatar.Fallback name={'松崎 宏史'} />
+                    </Avatar.Root>
                     <Box>
-                      <Heading size={'m'}>松崎 宏史</Heading>
+                      <Heading size={'md'}>松崎 宏史</Heading>
                       <Text>代表取締役</Text>
                     </Box>
                   </Stack>
                 </CardBody>
-              </Card>
-              <Card minW={240} maxW={640} p={4}>
+              </Card.Root>
+
+              <Card.Root minW={240} maxW={640} p={4}>
                 <CardBody>
                   <Text mb={8}>
                     1980年、スペイン出身。 2002年にMiguel Hernández大学
@@ -341,19 +340,22 @@ const ProgrammingClass = () => (
                     2012年9月〜 Studio Kura 電子工作教室を担当。
                   </Text>
                   <Stack direction={'row'}>
-                    <Avatar
-                      name={'アレハンドロ・クレマデス'}
-                      size={'lg'}
-                      src={`https://${cdnDomain}/${cdnDirectory}programming-teachers-2.jpg`}
-                    />
+                    <Avatar.Root size={'lg'}>
+                      <Avatar.Image
+                        src={`https://${cdnDomain}/${cdnDirectory}programming-teachers-2.jpg`}
+                        {...({} as any)} // TODO: fix for Chakra UI v3
+                      />
+                      <Avatar.Fallback name={'アレハンドロ・クレマデス'} />
+                    </Avatar.Root>
                     <Box>
-                      <Heading size={'m'}>Alejandro Cremades</Heading>
+                      <Heading size={'md'}>Alejandro Cremades</Heading>
                       <Text>アレハンドロ・クレマデス</Text>
                     </Box>
                   </Stack>
                 </CardBody>
-              </Card>
-              <Card minW={240} maxW={640} p={4}>
+              </Card.Root>
+
+              <Card.Root minW={240} maxW={640} p={4}>
                 <CardBody>
                   <Text mb={8}>
                     福岡市出身 Studio
@@ -363,67 +365,80 @@ const ProgrammingClass = () => (
                     よろしくお願いします！ 　
                   </Text>
                   <Stack direction={'row'}>
-                    <Avatar
-                      name={'小関 英斗'}
-                      size={'lg'}
-                      src={`https://${cdnDomain}/${cdnDirectory}programming-teachers-3.jpg`}
-                    />
+                    <Avatar.Root size={'lg'}>
+                      <Avatar.Image
+                        src={`https://${cdnDomain}/${cdnDirectory}programming-teachers-3.jpg`}
+                        {...({} as any)} // TODO: fix for Chakra UI v3
+                      />
+                      <Avatar.Fallback name={'小関 英斗'} />
+                    </Avatar.Root>
                     <Box>
-                      <Heading size={'m'}>小関 英斗</Heading>
+                      <Heading size={'md'}>小関 英斗</Heading>
                       <Text>教室 卒業生</Text>
                     </Box>
                   </Stack>
                 </CardBody>
-              </Card>
+              </Card.Root>
             </Stack>
           </Box>
         </Stack>
         {/* FAQ section */}
         <Stack direction={'column'} w={'100%'} maxW={800} my={16}>
           <Heading>FAQ: よくあるご質問</Heading>
-          <Accordion defaultIndex={[0]} w={'100%'}>
-            <AccordionItem>
-              <h2>
-                <AccordionButton>
-                  <Box as="span" flex="1" textAlign="left" fontWeight={'bold'}>
-                    キーボード入力に慣れていない人でも大丈夫でしょうか？
-                  </Box>
-                  <AccordionIcon />
-                </AccordionButton>
-              </h2>
-              <AccordionPanel pb={4}>
-                キーボードに慣れるのにも目標があると早くなるかもしれません。さらに、キーボード入力せずにできるプログラミング環境Scratchを導入していますので、小学校低学年でもすぐ入り込むことができます。
-              </AccordionPanel>
-            </AccordionItem>
-            <AccordionItem>
-              <h2>
-                <AccordionButton>
-                  <Box as="span" flex="1" textAlign="left" fontWeight={'bold'}>
-                    英語が全くわからない人でも大丈夫でしょうか？
-                  </Box>
-                  <AccordionIcon />
-                </AccordionButton>
-              </h2>
-              <AccordionPanel pb={4}>
-                プログラミング言語のキーワードは確かに英単語ですが、Scratchの場合はキーボード入力が不要なだけではなく、インターフェースが完全に日本語に対応しています。それも、ひらがなのみという設定もありますので未就学のお子様も使われています。
-              </AccordionPanel>
-            </AccordionItem>
-            <AccordionItem>
-              <h2>
-                <AccordionButton>
-                  <Box as="span" flex="1" textAlign="left" fontWeight={'bold'}>
-                    教えている技術ではスマートフォン向けアプリが作られるでしょうか？
-                  </Box>
-                  <AccordionIcon />
-                </AccordionButton>
-              </h2>
-              <AccordionPanel pb={4}>
-                p5.jsの場合は、可能です（Scratchはウェブ上でスマートフォンで使えるに限ります）。p5.jsでできたものをPWAやApp
-                Store/Google
-                Playで配信できるハイブリッドアプリケーションにすることが可能です。
-              </AccordionPanel>
-            </AccordionItem>
-          </Accordion>
+          <Accordion.Root multiple defaultValue={['item-0']} w={'100%'}>
+            <Accordion.Item
+              value="item-0"
+              {...({} as any)} // TODO: fix for Chakra UI v3
+            >
+              <Accordion.ItemTrigger>
+                <Span flex="1" textAlign="left" fontWeight={'bold'}>
+                  キーボード入力に慣れていない人でも大丈夫でしょうか？
+                </Span>
+                <Accordion.ItemIndicator />
+              </Accordion.ItemTrigger>
+              <Accordion.ItemContent>
+                <Accordion.ItemBody pb={4}>
+                  キーボードに慣れるのにも目標があると早くなるかもしれません。さらに、キーボード入力せずにできるプログラミング環境Scratchを導入していますので、小学校低学年でもすぐ入り込むことができます。
+                </Accordion.ItemBody>
+              </Accordion.ItemContent>
+            </Accordion.Item>
+
+            <Accordion.Item
+              value="item-1"
+              {...({} as any)} // TODO: fix for Chakra UI v3
+            >
+              <Accordion.ItemTrigger>
+                <Span flex="1" textAlign="left" fontWeight={'bold'}>
+                  英語が全くわからない人でも大丈夫でしょうか？
+                </Span>
+                <Accordion.ItemIndicator />
+              </Accordion.ItemTrigger>
+              <Accordion.ItemContent>
+                <Accordion.ItemBody pb={4}>
+                  プログラミング言語のキーワードは確かに英単語ですが、Scratchの場合はキーボード入力が不要なだけではなく、インターフェースが完全に日本語に対応しています。それも、ひらがなのみという設定もありますので未就学のお子様も使われています。
+                </Accordion.ItemBody>
+              </Accordion.ItemContent>
+            </Accordion.Item>
+
+            <Accordion.Item
+              value="item-2"
+              {...({} as any)} // TODO: fix for Chakra UI v3
+            >
+              <Accordion.ItemTrigger>
+                <Span flex="1" textAlign="left" fontWeight={'bold'}>
+                  教えている技術ではスマートフォン向けアプリが作られるでしょうか？
+                </Span>
+                <Accordion.ItemIndicator />
+              </Accordion.ItemTrigger>
+              <Accordion.ItemContent>
+                <Accordion.ItemBody pb={4}>
+                  p5.jsの場合は、可能です（Scratchはウェブ上でスマートフォンで使えるに限ります）。p5.jsでできたものをPWAやApp
+                  Store/Google
+                  Playで配信できるハイブリッドアプリケーションにすることが可能です。
+                </Accordion.ItemBody>
+              </Accordion.ItemContent>
+            </Accordion.Item>
+          </Accordion.Root>{' '}
         </Stack>
         {/* CTA section */}
       </Container>

@@ -1,3 +1,5 @@
+'use client';
+
 import { MailButton, PhoneButton, TrialButton } from '@/components/Buttons';
 import { Container } from '@/components/Container';
 import { Footer } from '@/components/Footer';
@@ -8,8 +10,6 @@ import {
   AspectRatio,
   Box,
   Card,
-  CardBody,
-  CardHeader,
   Center,
   Heading,
   Image,
@@ -44,16 +44,18 @@ const KidsClass = () => {
   const [carouselIndex, setCarouselIndex] = useState(0);
   const [classTimes, setClassTimes] = useState<Array<classPlace> | null>();
   const [isLoading, setLoading] = useState(true);
+
   useEffect(() => {
     fetch('/api/get-class-times?classtype=kids')
       .then((res) => res.json())
       .then((data) => {
         const responseData = data as classTimesResponse;
-        if (responseData.status != 'success') return;
+        if (responseData.status !== 'success') return;
         setClassTimes(responseData.classTimes);
         setLoading(false);
       });
   }, []);
+
   useEffect(() => {
     const timer = setTimeout(
       () => setCarouselIndex((carouselIndex + 1) % totalCarouselImages),
@@ -61,121 +63,109 @@ const KidsClass = () => {
     );
     return () => clearTimeout(timer);
   }, [carouselIndex]);
+
   return (
     <Layout title="子ども絵画造形教室｜Studio Kura 絵画美術教室（福岡県　糸島市　二丈）">
       <Navigation />
       <Container
-        height={'300px'}
+        height="300px"
         bgImage={`https://${cdnDomain}/${cdnDirectory}kids-headercarousel-${
           carouselIndex + 1
         }.jpg`}
-        backgroundSize={'cover'}
-        backgroundPosition={'center'}
-      ></Container>
+        backgroundSize="cover"
+        backgroundPosition="center"
+      />
       <Center>
         <Container maxW={['100%', '80%', '70%']}>
-          <Heading mt={'1em'} mb={'1em'} size={['2xl', '4xl', '4xl']}>
+          <Heading mt="1em" mb="1em" size={['2xl', '4xl', '4xl']}>
             子ども絵画造形教室
           </Heading>
           <Stack direction={['column', 'column', 'row']}>
             <Box>
-              <Card mt={'1em'} mb={'1em'} minW={'100%'}>
-                <CardHeader p={'0px'}>
-                  <Image
-                    src={`https://${cdnDomain}/${cdnDirectory}kids-body-1.jpg`}
-                  />
-                </CardHeader>
-                <CardBody>
-                  <Heading size="lg">創造する子どものために</Heading>
-                </CardBody>
-              </Card>
-              <Card mt={'1em'} mb={'1em'} minW={'100%'}>
-                <CardHeader p={'0px'}>
-                  <Image
-                    src={`https://${cdnDomain}/${cdnDirectory}kids-body-2.jpg`}
-                  />
-                </CardHeader>
-                <CardBody>
-                  <Heading size="lg">
-                    スタジオ クラ子ども絵画造形教室の方針
-                  </Heading>
-                  <Text mt={'0.5em'} mb={'0.5em'}>
-                    <b>プロセス</b>
-                    完成作品を作ることに自体に重きをおくのではなく、様々な制作の過程で子どもの感性が輝き、揺さぶられ、豊かに育つことを目的としています。
-                  </Text>
-                  <Text mt={'0.5em'} mb={'0.5em'}>
-                    <b>手触り</b>
-                    表現と認識の強い関係性に注目し、フィンガーペインティング、土粘土、木片など感覚的認識を高める素材を使った活動を豊富にカリキュラムに取り入れています。
-                  </Text>
-                  <Text mt={'0.5em'} mb={'0.5em'}>
-                    <b>発見</b>
-                    子どもの表現活動を芸術的なものとして捉え、そこに美的なものの発芽と生の表出をすくいとり、育てます。そのために、講師である私たちは芸術に対する広い視野と曇の無い目を持つ努力をしていきます。
-                  </Text>
-                </CardBody>
-              </Card>
-              <Card mt={'1em'} mb={'1em'} minW={'100%'}>
-                <CardHeader p={'0px'}>
-                  <Image
-                    src={`https://${cdnDomain}/${cdnDirectory}kids-body-3.jpg`}
-                  />
-                </CardHeader>
-                <CardBody>
-                  <Heading size="lg">
-                    スタジオクラ子ども絵画造形教室の特色
-                  </Heading>
-                  <Text mt={'0.5em'} mb={'0.5em'}>
-                    <b>創造力</b>{' '}
-                    様々な道具や素材を使った多彩な創作活動が子どもの想像力を高めます。
-                  </Text>
-                  <Text mt={'0.5em'} mb={'0.5em'}>
-                    <b>豊かな心</b>{' '}
-                    感情や情緒を育み、創造的で、個性的な心の働きを豊かにします。
-                  </Text>
-                  <Text mt={'0.5em'} mb={'0.5em'}>
-                    <b>コラボ力</b>{' '}
-                    グループで話し合い作っていく中で、現代社会で大事な単独では不可能なことを可能にし乗り越えていく（コラボレーション力）を養います。
-                  </Text>
-                  <Text mt={'0.5em'} mb={'0.5em'}>
-                    <b>国際交流</b> Studio
-                    Kuraが毎年約100名招聘している海外の作家がレッスンに参加することがあります。国際交流の貴重な機会になっています。
-                  </Text>
-                </CardBody>
-              </Card>
-              <Card mt={'1em'} mb={'1em'} minW={'100%'}>
-                <CardHeader p={'0px'}>
-                  <Image
-                    src={`https://${cdnDomain}/${cdnDirectory}kids-body-4.jpg`}
-                  />
-                </CardHeader>
-                <CardBody>
-                  <Heading size="lg">
-                    スタジオクラ子ども絵画造形教室の環境
-                  </Heading>
-                  <Text mt={'0.5em'} mb={'0.5em'}>
-                    大人の絵画教室、電子工作室の多様性に富んだ製作環境、創造物に囲まれることが子どもたちの創作意欲を掻き立てます。
-                  </Text>
-                  <Text mt={'0.5em'} mb={'0.5em'}>
-                    Studio Kuraは毎月8名の海外アーティストを滞在製作させる
-                    <Link
-                      as={NextLink}
-                      href="http://www.studiokura.info/residence/"
-                    >
-                      レジデンスプログラム
-                    </Link>
-                    を行っています（現在まで24カ国50名の作家が滞在）。海外の作家の様々な考え方、製作現場を身近に見るこができます。又海外作家によるワークショップを行っています。
-                  </Text>
-                  <Text mt={'0.5em'} mb={'0.5em'}>
-                    Studio Kura
-                    Galleryにて企画されている様々な作家の展示を見ることが出来ます。
-                  </Text>
-                  <Text mt={'0.5em'} mb={'0.5em'}>
-                    教室の前は雄大な田、後ろには山海があり、糸島の豊かな自然の中での造形活動が子どもの心をのびのびと開放させます。
-                  </Text>
-                </CardBody>
-              </Card>
-              <Card mt={'1em'} mb={'1em'} minW={'100%'}>
-                <CardBody>
-                  <Heading size="lg" mb={'0.5em'}>
+              {['1', '2', '3', '4'].map((num, i) => (
+                <Card.Root key={i} mt="1em" mb="1em" minW="100%">
+                  <Card.Header p={0}>
+                    <Image
+                      src={`https://${cdnDomain}/${cdnDirectory}kids-body-${num}.jpg`}
+                      alt={`kids-body-${num}`}
+                    />
+                  </Card.Header>
+                  <Card.Body>
+                    {i === 0 && (
+                      <Heading size="lg">創造する子どものために</Heading>
+                    )}
+                    {i === 1 && (
+                      <>
+                        <Heading size="lg">
+                          スタジオ クラ子ども絵画造形教室の方針
+                        </Heading>
+                        <Text my="0.5em">
+                          <b>プロセス</b>{' '}
+                          完成作品を作ることに自体に重きをおくのではなく、様々な制作の過程で子どもの感性が輝き、揺さぶられ、豊かに育つことを目的としています。
+                        </Text>
+                        <Text my="0.5em">
+                          <b>手触り</b>{' '}
+                          フィンガーペインティング、土粘土、木片など感覚的認識を高める素材を使った活動を豊富にカリキュラムに取り入れています。
+                        </Text>
+                        <Text my="0.5em">
+                          <b>発見</b>{' '}
+                          子どもの表現活動を芸術的なものとして捉え、美的なものの発芽と生の表出を育てます。
+                        </Text>
+                      </>
+                    )}
+                    {i === 2 && (
+                      <>
+                        <Heading size="lg">
+                          スタジオクラ子ども絵画造形教室の特色
+                        </Heading>
+                        <Text my="0.5em">
+                          <b>創造力</b>{' '}
+                          多彩な創作活動が子どもの想像力を高めます。
+                        </Text>
+                        <Text my="0.5em">
+                          <b>豊かな心</b>{' '}
+                          感情や情緒を育み、個性的な心を豊かにします。
+                        </Text>
+                        <Text my="0.5em">
+                          <b>コラボ力</b>{' '}
+                          グループでの制作活動でコラボレーション力を育てます。
+                        </Text>
+                        <Text my="0.5em">
+                          <b>国際交流</b> Studio
+                          Kuraに滞在する海外の作家と交流する機会があります。
+                        </Text>
+                      </>
+                    )}
+                    {i === 3 && (
+                      <>
+                        <Heading size="lg">
+                          スタジオクラ子ども絵画造形教室の環境
+                        </Heading>
+                        <Text my="0.5em">
+                          多様性に富んだ製作環境が子どもたちの創作意欲を掻き立てます。
+                        </Text>
+                        <Text my="0.5em">
+                          Studio Kuraは
+                          <Link
+                            as={NextLink}
+                            href="http://www.studiokura.info/residence/"
+                          >
+                            レジデンスプログラム
+                          </Link>
+                          を実施し、多国籍作家と交流する機会もあります。
+                        </Text>
+                        <Text my="0.5em">
+                          教室の前は雄大な田、後ろには山海。自然の中で心がのびのびと育ちます。
+                        </Text>
+                      </>
+                    )}
+                  </Card.Body>
+                </Card.Root>
+              ))}
+
+              <Card.Root mt="1em" mb="1em" minW="100%">
+                <Card.Body>
+                  <Heading size="lg" mb="0.5em">
                     受講料
                   </Heading>
                   <Text>
@@ -183,10 +173,11 @@ const KidsClass = () => {
                     <br />
                     月額 {pricing.fourpermonth.toLocaleString()}円（月4回）
                   </Text>
-                </CardBody>
-              </Card>
-              <Card mt={'1em'} mb={'1em'} minW={'100%'}>
-                <CardBody p={'0px'}>
+                </Card.Body>
+              </Card.Root>
+
+              <Card.Root mt="1em" mb="1em" minW="100%">
+                <Card.Body p={0}>
                   <AspectRatio ratio={16 / 9}>
                     <Iframe
                       width="640"
@@ -194,69 +185,63 @@ const KidsClass = () => {
                       url="https://www.youtube.com/embed/JJt_fkEJvKU"
                     />
                   </AspectRatio>
-                </CardBody>
-              </Card>
-              <Card mt={'1em'} mb={'1em'} minW={'100%'}>
-                <CardBody>
+                </Card.Body>
+              </Card.Root>
+
+              <Card.Root mt="1em" mb="1em" minW="100%">
+                <Card.Body>
                   <Heading size="lg">よくあるご質問</Heading>
-                  <Heading size="md" mt={'0.5em'} mb={'0.5em'}>
+                  <Heading size="md" my="0.5em">
                     絵画造形教室ではどんな事をするのですか？
                   </Heading>
-                  <Text mt={'0.5em'} mb={'0.5em'}>
-                    Studio
-                    Kura絵画造形教室では、想像力、造形力を高め、ポジティブでクリエイティブな子どもに育てることを目的としています。そのために絵を描くだけではなく、粘土や木片など様々な素材を組み合わせた造形活動を積極的に行なっています。
+                  <Text my="0.5em">
+                    想像力、造形力を高め、ポジティブでクリエイティブな子どもを育てることを目的とし、絵だけでなく様々な素材を使った造形活動を行なっています。
                   </Text>
-                </CardBody>
-              </Card>
+                </Card.Body>
+              </Card.Root>
             </Box>
+
             <Box maxW={['100%', '100%', '40%']}>
-              <Card mt={'1em'} mb={'1em'} minW={'100%'}>
-                <CardBody>
-                  <Heading size="lg" mb={'0.5em'}>
+              <Card.Root mt="1em" mb="1em" minW="100%">
+                <Card.Body>
+                  <Heading size="lg" mb="0.5em">
                     体験教室
                   </Heading>
-                  <TrialButton text={'体験レッスンのお申し込み'} size={'sm'} />
-                  <Text mt={'0.5em'} mb={'0.5em'}>
-                    初心者・希望者の方には、ご希望のお日にちで体験レッスンを行っております。
-                    ご一緒に参加していただきながらの体験レッスンですので
-                    教室の雰囲気や講師の指導方法などを実際に感じていただけます。
-                    お気軽にご参加くださいませ。
+                  <TrialButton text="体験レッスンのお申し込み" size="sm" />
+                  <Text my="0.5em">
+                    ご希望の日に体験レッスンを行っております。教室の雰囲気や指導方法を実際に体験してください。
                   </Text>
-                  <MailButton variant="outline" size={'sm'} mr={1} mt={1} />
-                  <PhoneButton variant="outline" size={'sm'} mr={1} mt={1} />
-                  <Text mt={'0.5em'} mb={'0.5em'}>
+                  <MailButton variant="outline" size="sm" mr={1} mt={1} />
+                  <PhoneButton variant="outline" size="sm" mr={1} mt={1} />
+                  <Text my="0.5em">
                     ◊ 前日・当日のお申し込みはお電話のみとさせていただきます。
                   </Text>
-                </CardBody>
-              </Card>
-              <Card mt={'1em'} mb={'1em'} minW={'100%'}>
-                <CardBody>
-                  <Heading size="lg" mb={'0.5em'}>
+                </Card.Body>
+              </Card.Root>
+
+              <Card.Root mt="1em" mb="1em" minW="100%">
+                <Card.Body>
+                  <Heading size="lg" mb="0.5em">
                     子ども絵画造形教室 実施校の時間
                   </Heading>
-                  {isLoading && (
-                    <Text mt={'0.5em'} mb={'0.5em'}>
-                      読み込み中・・・
-                    </Text>
-                  )}
-                  {classTimes != null &&
-                    classTimes.map((place) => (
-                      <>
-                        <Heading size={'md'} mt={'0.5em'}>
-                          {place.name}
-                        </Heading>
-                        {place.weekdays.map((weekday) => (
-                          <>
-                            <Text mt={'1em'}>{weekday.title}</Text>
-                            {weekday.slots.map((slot) => (
-                              <Text>{slot}</Text>
-                            ))}
-                          </>
-                        ))}
-                      </>
-                    ))}
-                </CardBody>
-              </Card>
+                  {isLoading && <Text my="0.5em">読み込み中・・・</Text>}
+                  {classTimes?.map((place) => (
+                    <Box key={place.name}>
+                      <Heading size="md" mt="0.5em">
+                        {place.name}
+                      </Heading>
+                      {place.weekdays.map((weekday, idx) => (
+                        <Box key={idx}>
+                          <Text mt="1em">{weekday.title}</Text>
+                          {weekday.slots.map((slot, i) => (
+                            <Text key={i}>{slot}</Text>
+                          ))}
+                        </Box>
+                      ))}
+                    </Box>
+                  ))}
+                </Card.Body>
+              </Card.Root>
             </Box>
           </Stack>
         </Container>

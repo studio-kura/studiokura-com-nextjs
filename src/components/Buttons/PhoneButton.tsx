@@ -1,4 +1,4 @@
-import { Button, ResponsiveValue } from '@chakra-ui/react';
+import { Button, ConditionalValue } from '@chakra-ui/react';
 import { LiaPhoneSolid } from 'react-icons/lia';
 
 const phoneNumber = process.env.NEXT_PUBLIC_PHONE_NUMBER ?? '';
@@ -7,17 +7,17 @@ interface Props {
   text?: string;
   mr?: number;
   mt?: number;
-  size?: string;
+  size?: ConditionalValue<
+    'md' | 'sm' | 'lg' | 'xl' | '2xl' | '2xs' | 'xs' | undefined
+  >;
   color?: string;
   bg?: string;
   hoverbg?: string;
   borderRadius?: number;
   hasIcon?: boolean;
-  variant?:
-    | ResponsiveValue<
-        'link' | 'outline' | (string & {}) | 'ghost' | 'solid' | 'unstyled'
-      >
-    | undefined;
+  variant?: ConditionalValue<
+    'solid' | 'outline' | 'subtle' | 'surface' | 'ghost' | 'plain' | undefined
+  >;
 }
 
 const PhoneButton = ({
@@ -37,8 +37,6 @@ const PhoneButton = ({
       mr={mr}
       mt={mt}
       size={size}
-      as={'a'}
-      href={`tel:${phoneNumber}`}
       borderRadius={borderRadius}
       fontWeight={600}
       color={color}
@@ -47,14 +45,17 @@ const PhoneButton = ({
         bg: hoverbg,
       }}
       variant={variant}
+      asChild
     >
-      {hasIcon && (
-        <>
-          <LiaPhoneSolid />
-          &nbsp;
-        </>
-      )}
-      {text}
+      <a href={`tel:${phoneNumber}`}>
+        {hasIcon && (
+          <>
+            <LiaPhoneSolid />
+            &nbsp;
+          </>
+        )}
+        {text}
+      </a>
     </Button>
   );
 };

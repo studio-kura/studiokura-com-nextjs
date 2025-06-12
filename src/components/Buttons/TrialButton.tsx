@@ -1,4 +1,4 @@
-import { Button } from '@chakra-ui/react';
+import { Button, ConditionalValue } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import { LiaEdit } from 'react-icons/lia';
 
@@ -6,7 +6,9 @@ interface Props {
   text?: string;
   mr?: number;
   mt?: number;
-  size?: string;
+  size?: ConditionalValue<
+    'sm' | 'md' | 'lg' | 'xl' | '2xl' | '2xs' | 'xs' | undefined
+  >;
   color?: string;
   bg?: string;
   hoverbg?: string;
@@ -30,8 +32,6 @@ const TrialButton = ({
       mr={mr}
       mt={mt}
       size={size}
-      as={NextLink}
-      href={'/trial'}
       borderRadius={borderRadius}
       fontWeight={600}
       color={color}
@@ -39,14 +39,17 @@ const TrialButton = ({
       _hover={{
         bg: hoverbg,
       }}
+      asChild
     >
-      {hasIcon && (
-        <>
-          <LiaEdit />
-          &nbsp;
-        </>
-      )}
-      {text}
+      <NextLink href={'/trial'}>
+        {hasIcon && (
+          <>
+            <LiaEdit />
+            &nbsp;
+          </>
+        )}
+        {text}
+      </NextLink>
     </Button>
   );
 };

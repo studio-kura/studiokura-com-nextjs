@@ -1,12 +1,5 @@
-import {
-  Box,
-  Button,
-  Center,
-  Heading,
-  Image,
-  Text,
-  useColorModeValue,
-} from '@chakra-ui/react';
+import { useColorModeValue } from '@/components/ui/color-mode';
+import { Box, Button, Center, Heading, Image, Text } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import { type ReactNode } from 'react';
 
@@ -63,14 +56,10 @@ const ClassTypeCard = (props: ClassTypeCardProps) => {
           <>{children}</>
         </Text>
         {linkHref && (
-          <Button
-            href={linkHref}
-            as={NextLink}
-            flex={1}
-            fontSize="sm"
-            variant="outline"
-          >
-            {linkText ?? 'さらに詳しく観る'}
+          <Button flex={1} fontSize="sm" variant="outline" asChild>
+            <NextLink href={linkHref}>
+              {linkText ?? 'さらに詳しく観る'}
+            </NextLink>
           </Button>
         )}
       </Box>

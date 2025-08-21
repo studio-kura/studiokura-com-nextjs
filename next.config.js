@@ -14,7 +14,7 @@ const nextConfig = {
         permanent: false,
       },
       {
-        source: '/kodomo/index:path*',
+        source: '/kodomo/index/:path*',
         destination: '/kids',
         permanent: false,
       },
@@ -24,12 +24,12 @@ const nextConfig = {
         permanent: false,
       },
       {
-        source: '/otona/index:path*',
+        source: '/otona/index/:path*',
         destination: '/adults',
         permanent: false,
       },
       {
-        source: '/otona/otona-works:path*',
+        source: '/otona/otona-works/:path*',
         destination: '/adults',
         permanent: false,
       },
@@ -39,17 +39,17 @@ const nextConfig = {
         permanent: false,
       },
       {
-        source: '/denshikousaku/index:path*',
+        source: '/denshikousaku/index/:path*',
         destination: '/programming',
         permanent: false,
       },
       {
-        source: '/otoiawase:path*',
+        source: '/otoiawase/:path*',
         destination: '/trial',
         permanent: false,
       },
       {
-        source: '/member/yoyaku:path*',
+        source: '/member/yoyaku/:path*',
         destination: '/reschedule',
         permanent: false,
       },
@@ -59,12 +59,12 @@ const nextConfig = {
         permanent: false,
       },
       {
-        source: '/jyukouryou:path*',
+        source: '/jyukouryou/:path*',
         destination: '/pricing',
         permanent: false,
       },
       {
-        source: '/basyo:path*',
+        source: '/basyo/:path*',
         destination: '/classrooms',
         permanent: false,
       },
@@ -74,7 +74,7 @@ const nextConfig = {
         permanent: false,
       },
       {
-        source: '/koushi/index:path*',
+        source: '/koushi/index/:path*',
         destination: '/teachers',
         permanent: false,
       },
@@ -84,12 +84,12 @@ const nextConfig = {
         permanent: false,
       },
       {
-        source: '/kindergarten/koushi/index:path*',
+        source: '/kindergarten/koushi/index/:path*',
         destination: '/teachers',
         permanent: false,
       },
       {
-        source: '/kindergarten/company:path*',
+        source: '/kindergarten/company/:path*',
         destination: '/kindergartens',
         permanent: false,
       },
@@ -99,32 +99,32 @@ const nextConfig = {
         permanent: false,
       },
       {
-        source: '/kindergarten/index:path*',
+        source: '/kindergarten/index/:path*',
         destination: '/kindergartens',
         permanent: false,
       },
       {
-        source: '/kindergarten/mitsumori:path*',
+        source: '/kindergarten/mitsumori/:path*',
         destination: '/kindergartens/estimate-calculator',
         permanent: false,
       },
       {
-        source: '/kindergarten/form_contact:path*',
+        source: '/kindergarten/form_contact/:path*',
         destination: '/kindergartens/contact',
         permanent: false,
       },
       {
-        source: '/kindergarten/form_documents:path*',
+        source: '/kindergarten/form_documents/:path*',
         destination: '/kindergartens/request-docs',
         permanent: false,
       },
       {
-        source: '/kindergarten/form_lesson:path*',
+        source: '/kindergarten/form_lesson/:path*',
         destination: '/kindergartens/trial',
         permanent: false,
       },
       {
-        source: '/kindergarten/form_estimate:path*',
+        source: '/kindergarten/form_estimate/:path*',
         destination: '/kindergartens/request-estimate',
         permanent: false,
       },
@@ -148,12 +148,12 @@ const nextConfig = {
     ];
     teachers.forEach((teacher) => {
       redirects.push({
-        source: `/koushi/${teacher}:path*`,
+        source: `/koushi/${teacher}/:path*`,
         destination: `/teachers/${teacher}`,
         permanent: false,
       });
       redirects.push({
-        source: `/kindergarten/koushi/${teacher}:path*`,
+        source: `/kindergarten/koushi/${teacher}/:path*`,
         destination: `/teachers/${teacher}`,
         permanent: false,
       });

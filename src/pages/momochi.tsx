@@ -20,7 +20,7 @@ const MomochiPlace = () => (
       tagline="子ども絵画造形教室"
       bgImageUrl="placeslide1-momochi.jpg"
     >
-      只今定員の為、新規の受付は停止しております。キャンセル待ちのみの受付です。
+      
     </ClassPlaceSlide1>
     <ClassPlaceSlide2
       placeName="Studio Kura 百道校"

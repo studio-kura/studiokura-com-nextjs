@@ -15,7 +15,7 @@ import { Navigation } from '@/components/Navigation';
 import { fetchTopMemoFromBff } from '@/utils/classPlacePage';
 
 const MEINOHAMA_SLUG = 'meinohama';
-const MEINOHAMA_MEMO_FALLBACK = '現在定員の為、キャンセル待ちからのご案内です';
+const MEINOHAMA_MEMO_FALLBACK = null;
 
 const meinohamaPlace = ({
   topMemo,
@@ -51,7 +51,7 @@ const meinohamaPlace = ({
 );
 
 export const getServerSideProps: GetServerSideProps<{
-  topMemo: string;
+  topMemo: string | null;
 }> = async (context) => {
   context.res.setHeader('Cache-Control', 'no-store, max-age=0');
   const result = await fetchTopMemoFromBff(context.req, MEINOHAMA_SLUG);

@@ -15,7 +15,7 @@ import { Navigation } from '@/components/Navigation';
 import { fetchTopMemoFromBff } from '@/utils/classPlacePage';
 
 const HAKOZAKI_SLUG = 'hakozaki';
-const HAKOZAKI_MEMO_FALLBACK = '1名のみ受け入れ受付中です';
+const HAKOZAKI_MEMO_FALLBACK = null;
 
 const HakozakiPlace = ({
   topMemo,
@@ -51,7 +51,7 @@ const HakozakiPlace = ({
 );
 
 export const getServerSideProps: GetServerSideProps<{
-  topMemo: string;
+  topMemo: string | null;
 }> = async (context) => {
   // Always render with the latest memo via Next.js BFF route.
   context.res.setHeader('Cache-Control', 'no-store, max-age=0');

@@ -15,7 +15,7 @@ import { Navigation } from '@/components/Navigation';
 import { fetchTopMemoFromBff } from '@/utils/classPlacePage';
 
 const SARAYAMA_SLUG = 'sarayama';
-const SARAYAMA_MEMO_FALLBACK = '現在定員の為、キャンセル待ちからのご案内です';
+const SARAYAMA_MEMO_FALLBACK = null;
 
 const SarayamaPlace = ({
   topMemo,
@@ -51,7 +51,7 @@ const SarayamaPlace = ({
 );
 
 export const getServerSideProps: GetServerSideProps<{
-  topMemo: string;
+  topMemo: string | null;
 }> = async (context) => {
   context.res.setHeader('Cache-Control', 'no-store, max-age=0');
   const result = await fetchTopMemoFromBff(context.req, SARAYAMA_SLUG);

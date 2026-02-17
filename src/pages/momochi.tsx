@@ -1,5 +1,4 @@
 import { Container } from '@chakra-ui/react';
-import { type GetServerSideProps, type InferGetServerSidePropsType } from 'next';
 
 import {
   ClassPlaceSlide1,
@@ -12,35 +11,8 @@ import {
 import { Footer } from '@/components/Footer';
 import { Layout } from '@/components/Layout';
 import { Navigation } from '@/components/Navigation';
-import { fetchTopMemoFromBff } from '@/utils/classPlacePage';
 
-const MOMOCHI_SLUG = 'momochi';
-const MOMOCHI_MEMO_FALLBACK = null;
-
-export const getServerSideProps: GetServerSideProps<{
-  topMemo: string | null;
-}> = async (context) => {
-  context.res.setHeader('Cache-Control', 'no-store, max-age=0');
-  const result = await fetchTopMemoFromBff(context.req, MOMOCHI_SLUG);
-  if (result.topMemo) {
-    return {
-      props: {
-        topMemo: result.topMemo,
-      },
-    };
-  }
-
-  return {
-    props: {
-      topMemo: MOMOCHI_MEMO_FALLBACK,
-    },
-  };
-};
-
-
-const MomochiPlace = ({
-  topMemo,
-}: InferGetServerSidePropsType<typeof getServerSideProps>) => (
+const MomochiPlace = () => (
   <Layout title="Studio Kura 絵画教室 百道校">
     <Navigation />
     <ClassPlaceSlide1
@@ -48,7 +20,7 @@ const MomochiPlace = ({
       tagline="子ども絵画造形教室"
       bgImageUrl="placeslide1-momochi.jpg"
     >
-      {topMemo}
+      
     </ClassPlaceSlide1>
     <ClassPlaceSlide2
       placeName="Studio Kura 百道校"

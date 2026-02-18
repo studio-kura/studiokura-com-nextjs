@@ -1,9 +1,9 @@
 import { type IncomingMessage } from 'http';
 
-type ClassPlaceApiResponse = {
-  slug: string;
-  topMemo: string | null;
-};
+import { fetchClassPlace } from '@/utils/classPlace';
+
+const classPlacesApiUri = process.env.CLASS_PLACES_API_URI ?? '';
+const upstreamTimeoutMs = 10000;
 
 const readRequestId = (req: IncomingMessage): string => {
   const requestIdHeader =
@@ -15,20 +15,11 @@ const readRequestId = (req: IncomingMessage): string => {
   return 'unknown';
 };
 
-const buildSiteBaseUrl = (req: IncomingMessage): string => {
-  const forwardedProto = req.headers['x-forwarded-proto'];
-  const proto = Array.isArray(forwardedProto)
-    ? forwardedProto[0]
-    : forwardedProto ?? 'http';
-  const host = req.headers.host ?? 'localhost:3000';
-  return `${proto}://${host}`;
-};
-
 type FetchTopMemoFromBffResult = {
   topMemo: string | null;
   requestId: string;
   endpoint: string;
-  status: number | 'fetch_error' | 'parse_error';
+  status: number | 'missing-env';
   error?: string;
 };
 
@@ -37,48 +28,31 @@ export const fetchTopMemoFromBff = async (
   slug: string
 ): Promise<FetchTopMemoFromBffResult> => {
   const requestId = readRequestId(req);
-  const endpoint = `${buildSiteBaseUrl(req)}/api/class-places/${slug}`;
-  try {
-    const response = await fetch(endpoint, {
-      headers: {
-        'x-request-id': requestId,
-      },
-    });
-    let payload: ClassPlaceApiResponse | null = null;
-    try {
-      payload = (await response.json()) as ClassPlaceApiResponse;
-    } catch {
-      return {
-        topMemo: null,
-        requestId,
-        endpoint,
-        status: 'parse_error',
-        error: 'ClassPlace BFF did not return JSON',
-      };
-    }
-
-    if (!response.ok || !payload.topMemo) {
-      return {
-        topMemo: null,
-        requestId,
-        endpoint,
-        status: response.status,
-      };
-    }
-
-    return {
-      topMemo: payload.topMemo,
-      requestId,
-      endpoint,
-      status: response.status,
-    };
-  } catch (error: unknown) {
+  if (!classPlacesApiUri) {
     return {
       topMemo: null,
       requestId,
-      endpoint,
-      status: 'fetch_error',
-      error: error instanceof Error ? error.message : String(error),
+      endpoint: 'unknown',
+      status: 'missing-env',
+      error: 'CLASS_PLACES_API_URI is not set',
     };
   }
+
+  const result = await fetchClassPlace(slug, classPlacesApiUri, upstreamTimeoutMs);
+  if (result.memo) {
+    return {
+      topMemo: result.memo,
+      requestId,
+      endpoint: result.endpoint,
+      status: result.status,
+    };
+  }
+
+  return {
+    topMemo: null,
+    requestId,
+    endpoint: result.endpoint,
+    status: result.status,
+    error: result.error,
+  };
 };

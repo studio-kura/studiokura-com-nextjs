@@ -1,5 +1,5 @@
 import { Container } from '@chakra-ui/react';
-import { type GetServerSideProps, type InferGetServerSidePropsType } from 'next';
+import { type InferGetServerSidePropsType } from 'next';
 
 import {
   ClassPlaceSlide1,
@@ -11,31 +11,10 @@ import {
 import { Footer } from '@/components/Footer';
 import { Layout } from '@/components/Layout';
 import { Navigation } from '@/components/Navigation';
-import { fetchTopMemoFromBff } from '@/utils/classPlacePage';
+import { getClassPlaceServerSideProps } from '@/utils/classPlacePage';
 
 const HAKOZAKI2_SLUG = 'hakozaki2';
 const HAKOZAKI2_MEMO_FALLBACK = null;
-
-export const getServerSideProps: GetServerSideProps<{
-  topMemo: string | null;
-}> = async (context) => {
-  context.res.setHeader('Cache-Control', 'no-store, max-age=0');
-  const result = await fetchTopMemoFromBff(context.req, HAKOZAKI2_SLUG);
-  if (result.topMemo) {
-    return {
-      props: {
-        topMemo: result.topMemo,
-      },
-    };
-  }
-
-  return {
-    props: {
-      topMemo: HAKOZAKI2_MEMO_FALLBACK,
-    },
-  };
-};
-
 
 const Hakozaki2Place = ({
   topMemo,
@@ -68,6 +47,11 @@ const Hakozaki2Place = ({
       <Footer />
     </Container>
   </Layout>
+);
+
+export const getServerSideProps = getClassPlaceServerSideProps(
+  HAKOZAKI2_SLUG,
+  HAKOZAKI2_MEMO_FALLBACK
 );
 
 export default Hakozaki2Place;

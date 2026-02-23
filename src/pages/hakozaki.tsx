@@ -1,5 +1,5 @@
 import { Container } from '@chakra-ui/react';
-import { type GetServerSideProps, type InferGetServerSidePropsType } from 'next';
+import { type InferGetServerSidePropsType } from 'next';
 
 import {
   ClassPlaceSlide1,
@@ -12,7 +12,7 @@ import {
 import { Footer } from '@/components/Footer';
 import { Layout } from '@/components/Layout';
 import { Navigation } from '@/components/Navigation';
-import { fetchTopMemoFromBff } from '@/utils/classPlacePage';
+import { getClassPlaceServerSideProps } from '@/utils/classPlacePage';
 
 const HAKOZAKI_SLUG = 'hakozaki';
 const HAKOZAKI_MEMO_FALLBACK = null;
@@ -50,32 +50,9 @@ const HakozakiPlace = ({
   </Layout>
 );
 
-export const getServerSideProps: GetServerSideProps<{
-  topMemo: string | null;
-}> = async (context) => {
-  // Always render with the latest memo via Next.js BFF route.
-  context.res.setHeader('Cache-Control', 'no-store, max-age=0');
-  const result = await fetchTopMemoFromBff(context.req, HAKOZAKI_SLUG);
-  if (result.topMemo) {
-    return {
-      props: {
-        topMemo: result.topMemo,
-      },
-    };
-  }
-
-  console.error('[hakozaki-page] class place api unavailable', {
-    slug: HAKOZAKI_SLUG,
-    requestId: result.requestId,
-    endpoint: result.endpoint,
-    status: result.status,
-    error: result.error,
-  });
-  return {
-    props: {
-      topMemo: HAKOZAKI_MEMO_FALLBACK,
-    },
-  };
-};
+export const getServerSideProps = getClassPlaceServerSideProps(
+  HAKOZAKI_SLUG,
+  HAKOZAKI_MEMO_FALLBACK
+);
 
 export default HakozakiPlace;

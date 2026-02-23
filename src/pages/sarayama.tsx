@@ -1,5 +1,5 @@
 import { Container } from '@chakra-ui/react';
-import { type GetServerSideProps, type InferGetServerSidePropsType } from 'next';
+import { type InferGetServerSidePropsType } from 'next';
 
 import {
   ClassPlaceSlide1,
@@ -12,7 +12,7 @@ import {
 import { Footer } from '@/components/Footer';
 import { Layout } from '@/components/Layout';
 import { Navigation } from '@/components/Navigation';
-import { fetchTopMemoFromBff } from '@/utils/classPlacePage';
+import { getClassPlaceServerSideProps } from '@/utils/classPlacePage';
 
 const SARAYAMA_SLUG = 'sarayama';
 const SARAYAMA_MEMO_FALLBACK = null;
@@ -50,31 +50,9 @@ const SarayamaPlace = ({
   </Layout>
 );
 
-export const getServerSideProps: GetServerSideProps<{
-  topMemo: string | null;
-}> = async (context) => {
-  context.res.setHeader('Cache-Control', 'no-store, max-age=0');
-  const result = await fetchTopMemoFromBff(context.req, SARAYAMA_SLUG);
-  if (result.topMemo) {
-    return {
-      props: {
-        topMemo: result.topMemo,
-      },
-    };
-  }
-
-  console.error('[sarayama-page] class place api unavailable', {
-    slug: SARAYAMA_SLUG,
-    requestId: result.requestId,
-    endpoint: result.endpoint,
-    status: result.status,
-    error: result.error,
-  });
-  return {
-    props: {
-      topMemo: SARAYAMA_MEMO_FALLBACK,
-    },
-  };
-};
+export const getServerSideProps = getClassPlaceServerSideProps(
+  SARAYAMA_SLUG,
+  SARAYAMA_MEMO_FALLBACK
+);
 
 export default SarayamaPlace;

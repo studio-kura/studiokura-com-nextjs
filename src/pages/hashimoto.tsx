@@ -1,5 +1,5 @@
 import { Container } from '@chakra-ui/react';
-import { type GetServerSideProps, type InferGetServerSidePropsType } from 'next';
+import { type InferGetServerSidePropsType } from 'next';
 
 import {
   ClassPlaceSlide1,
@@ -12,31 +12,10 @@ import {
 import { Footer } from '@/components/Footer';
 import { Layout } from '@/components/Layout';
 import { Navigation } from '@/components/Navigation';
-import { fetchTopMemoFromBff } from '@/utils/classPlacePage';
+import { getClassPlaceServerSideProps } from '@/utils/classPlacePage';
 
 const HASHIMOTO_SLUG = 'hashimoto';
 const HASHIMOTO_MEMO_FALLBACK = null;
-
-export const getServerSideProps: GetServerSideProps<{
-  topMemo: string | null;
-}> = async (context) => {
-  context.res.setHeader('Cache-Control', 'no-store, max-age=0');
-  const result = await fetchTopMemoFromBff(context.req, HASHIMOTO_SLUG);
-  if (result.topMemo) {
-    return {
-      props: {
-        topMemo: result.topMemo,
-      },
-    };
-  }
-
-  return {
-    props: {
-      topMemo: HASHIMOTO_MEMO_FALLBACK,
-    },
-  };
-};
-
 
 const HashimotoPlace = ({
   topMemo,
@@ -69,6 +48,11 @@ const HashimotoPlace = ({
       <Footer />
     </Container>
   </Layout>
+);
+
+export const getServerSideProps = getClassPlaceServerSideProps(
+  HASHIMOTO_SLUG,
+  HASHIMOTO_MEMO_FALLBACK
 );
 
 export default HashimotoPlace;

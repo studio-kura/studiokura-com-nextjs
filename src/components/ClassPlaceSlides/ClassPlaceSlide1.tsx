@@ -29,7 +29,7 @@ const ClassPlaceSlide1 = (props: ClassPlaceSlide1Props) => {
           <Hero title={placeName} />
           <ShadowText text={tagline} />
           {memoText ? (
-            <ShadowText text={memoText} color="white" hasShadow />
+            <ShadowText text={memoText} />
           ) : null}
           <Center>
             <Stack direction={['column', 'row']}>

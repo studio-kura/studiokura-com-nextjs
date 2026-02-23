@@ -1,4 +1,5 @@
 import { type IncomingMessage } from 'http';
+import { type GetServerSideProps } from 'next';
 
 import { fetchClassPlace } from '@/utils/classPlace';
 
@@ -56,3 +57,24 @@ export const fetchTopMemoFromBff = async (
     error: result.error,
   };
 };
+
+export const getClassPlaceServerSideProps = (
+  slug: string,
+  fallback: string | null
+): GetServerSideProps<{ topMemo: string | null }> =>
+  async (context) => {
+    context.res.setHeader('Cache-Control', 'no-store, max-age=0');
+    const result = await fetchTopMemoFromBff(context.req, slug);
+    if (result.topMemo) {
+      return { props: { topMemo: result.topMemo } };
+    }
+
+    console.error(`[${slug}-page] class place api unavailable`, {
+      slug,
+      requestId: result.requestId,
+      endpoint: result.endpoint,
+      status: result.status,
+      error: result.error,
+    });
+    return { props: { topMemo: fallback } };
+  };

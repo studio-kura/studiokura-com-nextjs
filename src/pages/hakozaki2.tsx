@@ -1,4 +1,5 @@
 import { Container } from '@chakra-ui/react';
+import { type InferGetServerSidePropsType } from 'next';
 
 import {
   ClassPlaceSlide1,
@@ -10,8 +11,14 @@ import {
 import { Footer } from '@/components/Footer';
 import { Layout } from '@/components/Layout';
 import { Navigation } from '@/components/Navigation';
+import { getClassPlaceServerSideProps } from '@/utils/classPlacePage';
 
-const Hakozaki2Place = () => (
+const HAKOZAKI2_SLUG = 'hakozaki2';
+const HAKOZAKI2_MEMO_FALLBACK = null;
+
+const Hakozaki2Place = ({
+  topMemo,
+}: InferGetServerSidePropsType<typeof getServerSideProps>) => (
   <Layout title="Studio Kura 絵画教室 箱崎第二校">
     <Navigation />
     <ClassPlaceSlide1
@@ -19,7 +26,7 @@ const Hakozaki2Place = () => (
       tagline="子ども絵画造形教室"
       bgImageUrl="placeslide1-hakozaki2.jpg"
     >
-      {/* メモ（トップスライドに反映） */}
+      {topMemo}
     </ClassPlaceSlide1>
     <ClassPlaceSlide2
       placeName="Studio Kura 箱崎第二校"
@@ -40,6 +47,11 @@ const Hakozaki2Place = () => (
       <Footer />
     </Container>
   </Layout>
+);
+
+export const getServerSideProps = getClassPlaceServerSideProps(
+  HAKOZAKI2_SLUG,
+  HAKOZAKI2_MEMO_FALLBACK
 );
 
 export default Hakozaki2Place;

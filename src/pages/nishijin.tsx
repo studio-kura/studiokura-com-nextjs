@@ -1,4 +1,5 @@
 import { Container } from '@chakra-ui/react';
+import { type InferGetServerSidePropsType } from 'next';
 
 import {
   ClassPlaceSlide1,
@@ -11,8 +12,14 @@ import {
 import { Footer } from '@/components/Footer';
 import { Layout } from '@/components/Layout';
 import { Navigation } from '@/components/Navigation';
+import { getClassPlaceServerSideProps } from '@/utils/classPlacePage';
 
-const NishijinPlace = () => (
+const NISHIJIN_SLUG = 'nishijin';
+const NISHIJIN_MEMO_FALLBACK = null;
+
+const NishijinPlace = ({
+  topMemo,
+}: InferGetServerSidePropsType<typeof getServerSideProps>) => (
   <Layout title="Studio Kura 絵画教室 西新校">
     <Navigation />
     <ClassPlaceSlide1
@@ -20,8 +27,7 @@ const NishijinPlace = () => (
       tagline="大人の絵画教室・子ども絵画造形教室・電子工作教室"
       bgImageUrl="placeslide1-nishijin.jpg"
     >
-      大人絵画　小・中学生は1.5時間です。
-      子ども絵画造形　第2・4日のアドバンスドクラスは振替・体験レッスンの受付不可。
+      {topMemo}
     </ClassPlaceSlide1>
     <ClassPlaceSlide2
       placeName="Studio Kura 西新校"
@@ -44,6 +50,11 @@ const NishijinPlace = () => (
       <Footer />
     </Container>
   </Layout>
+);
+
+export const getServerSideProps = getClassPlaceServerSideProps(
+  NISHIJIN_SLUG,
+  NISHIJIN_MEMO_FALLBACK
 );
 
 export default NishijinPlace;

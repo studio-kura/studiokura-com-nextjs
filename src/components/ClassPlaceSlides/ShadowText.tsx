@@ -18,6 +18,7 @@ export const ShadowText = ({
 }: Props) => (
   <Text
     fontSize={fontSize}
+    lineHeight={'1'}
     my={my}
     color={color}
     whiteSpace={'pre-line'}
